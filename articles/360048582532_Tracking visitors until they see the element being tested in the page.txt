@@ -1,0 +1,19 @@
+Tracking visitors until they see the element being tested in the page
+Description
+Sometimes an optimizer might be concerned with only measuring visitors that see the element being changed in the test, as bucketing all visitors that land on the page, might cause a degree of noise in the sample of visitors bucketed and measured in the test.
+Solution
+To aid in excluding the visitors that do not see the elements changed on the page, the following solution has been put together. This configuration will only bucket visitors in the experiment that see an element on the page, which should be the one that is being tested.
+
+First, find the selector for the element that you are changing. You might find it on the variation code for the experiment you are carrying on, or you might find that manually using the process described in this article.
+
+Add the following code to your Project Configuration> Global Javascript.
+// This extends jquery to return true when an element is viewed on the page:convert.$.fn.isInViewport = function() { var elementTop = convert.$(this).offset().top; var elementBottom = elementTop + convert.$(this).outerHeight(); var viewportTop = convert.$(window).scrollTop(); var viewportBottom = viewportTop + convert.$(window).height(); return elementBottom > viewportTop && elementTop < viewportBottom; };// This queries the last function every time there is a window scroll and resize, checking// if the element is on view. convert.$(window).on('resize scroll', function() {// MODIFY THE H2 WITH YOUR OWN SELECTOR if (convert.$('H2').isInViewport()){ // If in view run the experiment// MODIFY THE FOLLOWING LINE WITH THE ID OF YOUR EXPERIMENT: window.runExperiment123456789 = 1; window._conv_q = window._conv_q || []; window._conv_q.push(["executeExperiment","100123828"])  }  });
+
+Modify the code above with the selector and the runExperiment123456789 variable, modified with your experiment id.
+
+Add a JS Condition in the Audience as a Custom Audience that evaluates the variable that you just modified with your own experiment id, like:
+window.runExperiment123456789 == 1
+
+Congratulation. You are done. Your experiment will only bucket the visitors of the page that see the element changed on the page. 
+
+keywords: on view, increase accuracy

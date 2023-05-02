@@ -1,0 +1,25 @@
+HTML 5 Geolocation
+<h2>Overview</h2>
+<p>Although Convert provides IP Geolocation, it may happen in some cases in which be more appropriate to use the browser-based HTML 5 Geolocation. </p>
+<p>Convert recommends that the IP Geolocation is preferably used and that HTML 5.0 Geolocation is only used when the previous does not fill your requirements.</p>
+<h2>Advantage</h2>
+<p>HTML 5 is more accurate as it does not rely on IP network databases for determining location. These databases might be outdated in some cases, and IP's may be shared across geographical regions. However, some browser might also use IP based geolocation in certain cases.</p>
+<h2>Disadvantage</h2>
+<p>HTML 5 browser-based geolocation needs user authorization. When implemented, the visitor browser will ask for the visitor permission to share its location. At the same time, the Original page will be shown, until the visitor grants permission.<br><br>This might not be always ideal for some types of experiences.</p>
+<h2>Example Implementation Instructions</h2>
+<p>The following example allows geolocation by the country of Mexico. You will need to modify the current code to segment by a different country, or other address levels, such as region (state).</p>
+<ol>
+<li>Fist get a <a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="_blank" rel="noopener"><strong>Google Maps API key</strong></a> and install on the pages where you want to use the HTML 5.0 Geolocation and install it before the Convert tracking code, so Convert can read the geolocation variables. Find the instructions on how to this <a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="_blank" rel="noopener">here</a>.</li>
+<li>
+<p>Insert the following code in the Global Project Javascript.</p>
+<p class="codepen" data-height="471" data-theme-id="31058" data-slug-hash="gvVbZj" data-default-tab="js" data-user="gcrewe" data-embed-version="2" data-pen-title="Geolocation &gt; Global JS Code">See the Pen <a href="https://codepen.io/gcrewe/pen/gvVbZj/">Geolocation &amp;rt; Global JS Code</a></p>
+</li>
+<li>
+<p>Edit your Experience audience and create a new one. Add the following code as a JS Condition.</p>
+<p class="codepen" data-height="111" data-theme-id="31058" data-slug-hash="YemXwv" data-default-tab="js" data-user="gcrewe" data-embed-version="2" data-pen-title="Geolocation &gt; JS Condition">See the Pen <a href="https://codepen.io/gcrewe/pen/YemXwv/">Geolocation &amp;rt; JS Condition</a>.</p>
+</li>
+<li>Your experience should be now ready to only be triggered with the set geolocation.</li>
+</ol>
+<p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+</p>

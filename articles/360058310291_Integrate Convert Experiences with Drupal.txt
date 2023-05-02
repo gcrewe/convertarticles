@@ -1,0 +1,19 @@
+Integrate Convert Experiences with Drupal
+Introduction
+ Drupal is a scalable, open platform for web content management and digital experiences.
+This integration will allow you to use Convert Experiments A/B Testing on your Drupal powered website.
+Create a new experiment
+In Experiences screen select "New Experience"
+
+Copy the Convert Experiments Script
+Go to your Project Configuration and find the Convert tracking code:
+
+Add Drupal Module
+Go to your Drupal account and add the module Header and Footer Scripts. 
+Add Convert script into Drupal Module
+You can then add the above script into the Drupal Module and then save configurations. This way you will have Convert installed in every page. 
+Add Convert Script only to few Pages
+If you would like to only install it in few pages This can easily be achieved from a custom module by implementing hook_page_attachments(), checking the page you are on and adding the JS code to the HTML head. 
+Sample code can be found here.
+Test the Integration
+Now, go to the live site and check to see if your experiments are running. The changes you made to the variations or original should appear.

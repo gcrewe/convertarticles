@@ -1,0 +1,5 @@
+Custom Dimension in the dataLayer
+<h2>Issue</h2>
+<p>Configuring GTM  every time you configure a Convert experiment can be repetitive and cumbersome, as the optimizer might forget to change this configuration every time it launches an experiment, just to change the dimension where the new experiment data should go.</p>
+<h2>Solution</h2>
+<p>Now Convert places the dimension chosen in the <a href="https://support.convert.com/hc/en-us/articles/205160075-Integrate-Convert-Experiences-with-Google-Analytics#integrate-with-universal-analytics" target="_self">Convert Experiment Summary &gt; GA Integration</a>. So, you can configure GTM to place the data in the GA Custom Dimension that you chose while configuring the experiment. This saves precious time and prevents errors when launching a new test. It also allows for configuring GTM only once. <br><br>The data is sent in the field called <strong>gadimension</strong>.<br><br>You can see the dimension in the dataLayer if you browse it as in the following image:<br><br><img src="https://support.convert.com/hc/article_attachments/360060929751/blobid0.png" alt="blobid0.png"><br><br><br></p>

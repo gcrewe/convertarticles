@@ -1,0 +1,9 @@
+How Convert code snippet works: Order of Execution
+<p>Once you <a title="Implement the Optimizely snippet" href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">install the Convert code snippet</a>, it would be useful to know in which order the various conditions are checked and visitors are bucketed or not into an experience.</p>
+<p>The following diagram illustrates the order of operations for the Convert code snippet as it would execute during page load. </p>
+<ol>
+<li>When you first visit a page, the <a href="https://support.convert.com/hc/en-us/articles/204494069-Site-Area">Site Area Conditions</a> are checked. These conditions are using the OR operator and are tested every time you visit the page.</li>
+<li>If you match the Site Area Conditions then you continue with the Audience Conditions. These are only tested once for a visitor.</li>
+<li>If you match the Audience Conditions then you move to traffic distribution. Converts decides here based on the traffic distribution if you will see the original or one of the variations.</li>
+</ol>
+<p><img src="https://support.convert.com/hc/article_attachments/115003382531/13-11-2017_13-18-46.jpg" alt="13-11-2017_13-18-46.jpg"></p>

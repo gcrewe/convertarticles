@@ -1,0 +1,5 @@
+How to Change the Name of My Experiment Once It's Created?
+<h2>Change Your Experiment's Name</h2>
+<p>Navigate to the Experiment Summary page of the experiment that you want to edit and change the name as you want:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14272882573837"></p>
+<p>Then simply save and that's it!</p>

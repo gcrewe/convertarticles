@@ -1,0 +1,6 @@
+How to Create Your Own Opt-out Script
+<h2>Find the Opt-out Page</h2>
+<p>Convert Experiments offers an opt-out page where anybody can find out how to opt-out from any tracking activities we perform. This is located at <a href="http://www.convert.com/opt-out/">http://www.convert.com/opt-out/</a>.</p>
+<h2>Make your own Opt-out Page</h2>
+<p>Using our own page (as specified in the above link) as an example, you can create your own Opt-Out page on your site which lets visitors know that they can opt-out of running experiments.</p>
+<p> </p>

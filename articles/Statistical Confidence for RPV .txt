@@ -1,0 +1,11 @@
+Statistical Confidence for RPV 
+<h2>Introduction</h2>
+<p>Revenue per Visitor (RPV) measures the amount of revenue generated each time a user visits your site: RPV = Total Revenue/Total Users.</p>
+<p>Since RPV is a non-binomial metric, it does not follow a normal distribution, because the majority of visitors to your site will not convert or make a purchase. As a result, you will discover that RPV’s distribution contains a greater concentration of $0 values and there is no limit on how much a visitor can spend, which may result in your RPV data containing some extreme values.</p>
+<p>Therefore, RPV’s distribution tends to be right-skewed, making the standard T-test less reliable for measuring its statistical significance. Below we describe how we calculate it.</p>
+<h2>Binomial vs Non-Binomial Metrics</h2>
+<p>A <strong>binomial metric</strong> is one that can only have two possible values: true or false, yes or no, present or absent, action or no action. In the context of A/B testing these are all metrics that can are expressed as “<strong>rates</strong>“: goal conversion rate, e-commerce transaction rate, bounce rate, and, rarely, exit rate. </p>
+<p>A <strong>non-binomial metric</strong> is a metric in which the possible range of values is not limited to two possible states. These metrics are usually continuous, spanning from zero to plus infinity, or from minus infinity to plus infinity. These are usually "per visitor", "per session" or "per order" metrics, such as: average revenue per visitor, average order value (AOV), average session duration, average pages per session, average sessions per user, average products per purchase, etc..</p>
+<p>So, in short, the major difference comes from <strong>how the possible values are distributed</strong>. In the binomial case they are strictly enumerated, while in the non-binomial case they can cover all real numbers. This is the main reason why can’t we use the same statistical calculators for binomial and non-binomial metrics.</p>
+<h2>Calculating RPV Significance </h2>
+<p>First, we calculate the <a href="http://faculty.uncfsu.edu/dwallace/ssandrd.html">standard deviation</a> and then we apply <a href="https://support.convert.com/hc/en-us/articles/205160375-What-is-Statistical-Confidence-">Z-Statistics</a> to calculate the probability.</p>

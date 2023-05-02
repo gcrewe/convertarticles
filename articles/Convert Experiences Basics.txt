@@ -1,0 +1,26 @@
+Convert Experiences Basics
+<h2>What is "Convert Experiences"?</h2>
+<p>Convert is an advanced AB testing and personalization platform. Convert Experiences allows you to create changes on your website and test them before deploying them fully on your site. It also allows you to target experiences to specific website audiences through an advanced targeting tool. So you can deliver the right experience, to the right audience at the right moment and at the same time ensuring that makes a positive impact on the goals of your website. </p>
+<h2>Where I can use "Convert Experiences"?</h2>
+<p>Convert Experiences can run on any website that runs on standard web technology. As long as the website platform that you are using is reasonably open, Convert can integrate with it.</p>
+<p>Convert deploys an extra layer on your web page to deploy your experiences, without any major disruption to your current infrastructure.</p>
+<h2>What benefits can "Convert Experiences" bring me?</h2>
+<p>Convert can help improve the performance of your website, to achieve its goals it was built for. No matter if your site is a B2B or e-commerce site. Convert can help you improve email form submittals, subscriptions, e-commerce transactions or engagement or any other website goals you may have.<br><br>Convert can also target specific visitors groups based with specific content or app functionality. Convert can target this specific groups based on visitor information, such as its location, time of day it is surfing the site, website behavior, or third party data provided from external sources or other web page APIs.  </p>
+<h2>How private is "Convert Experiences"?</h2>
+<p>Convert Experiences respects the privacy of its customers and visitors of their websites. The app does not store any visitor data on Convert servers. We are GDPR compliant.</p>
+<h2>What type of resources do I need to use Convert Experiences?</h2>
+<p>We recommend to have the following resources to take the most advantage of Convert:</p>
+<ol>
+<li>
+<strong>Optimization Consultant:</strong> For AB testing efforts, an expert that can develop the optimization strategies. If you don't have one, please contact us at <a href="mailto:support@convert.com">support@convert.com</a> to pair you with a professional consultant that can provide you the most value. In our experience Optimization Consultant can bring an incredible fast ROI on your efforts. This expert would be in charge of developing the optimization strategies along with all the experiment planning and execution.<br><br>
+</li>
+<li>
+<strong>Personalization Consultant: </strong>For personalization efforts, it is also good to have an expert in implementing your personalization strategies.<br><br>
+</li>
+<li>
+<strong>Developer: </strong>A web developer to aid in experiences which require a high degree of technical competency to be deployed. A web developer would have to have web development skills such as Javascript and Jquery which are essential to developing such experiences.</li>
+</ol>
+<p>These resources are essential to make your optimization/personalization efforts highly successful and a good investment in your web strategies.</p>
+<h2>Best of Breed</h2>
+<p>You will notice that Convert does not provide heat map analysis, exit popups, or other components with the offering. This is because we follow a Best of Breed strategy, in which our aim is to concentrate our efforts on providing you the best AB testing and personalization tool in the market.</p>
+<p>However, we integrate with the major tools in the market. In the linked page you will find our long <a href="https://www.convert.com/integrations">list of integrations</a> for which we do not charge any extra fees.</p>

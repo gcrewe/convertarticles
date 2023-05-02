@@ -1,0 +1,19 @@
+Unbounce Landing Pages & Convert Experiences
+<h2>Integrate Unbounce</h2>
+<div class="user_formatted header_section clearfix">
+<p><a href="https://unbounce.com/">Unbounce</a> is a drag-and-drop builder that lets you create and publish your own landing pages, without needing a developer to code them. It's an easier and faster way to get more conversions from your traffic. </p>
+<p>You like the ability of multivariate testing on your landing pages using Convert Experiences? This is possible, read more below.</p>
+<h2><span data-mce-mark="1">Convert Experiences Project Code</span></h2>
+<p>In Convert Experiences you need to take the project code from Project Configuration as you see in the image below. This code is a small Javascript that you need to paste on the pages of Unbounce.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4432960003981/mceclip0.png" alt="mceclip0.png"></p>
+<p>Copy the code.</p>
+<h2>Paste the Project Code in Unbounce</h2>
+<p>To have access to you published landing pages you need to paste the Convert Experiences code inside the Unbounce page in the custom scripts of Script Manager.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360088831651/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Multivariate Testing on Unbounce Landing Pages.</h2>
+<ol>
+<li><span data-mce-mark="1">Add the subdomain of your Unbounce (for example: unbouce.mydomain.com) to your Project Configuration in Convert Experiences.</span></li>
+<li><span data-mce-mark="1">Load an Unbounce page inside Convert Experiences Visual Editor and start an MVT (multivariate test)</span></li>
+<li><span data-mce-mark="1">Goals can be different landing pages, or a tag on your confirmation page or even a sale or lead form submission on your main site (if both the main site domain and Unbouce domain are in the same Convert Experiences Project.</span></li>
+</ol>
+</div>

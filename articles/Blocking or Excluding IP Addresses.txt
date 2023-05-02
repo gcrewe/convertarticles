@@ -1,0 +1,46 @@
+Blocking or Excluding IP Addresses
+<h2>Blocking IPs in Convert</h2>
+<p>This feature allows you to block tracking on certain IPs or ranges of IPs. You can include your own office IPs or ranges to prevent them triggering goals or visits and showing them on the reports of your experiments. This will prevent contamination of your experiment data.</p>
+<p>You can enable the blocking for the all the projects under your account or just a specific project. </p>
+<p>When you block or unblock an IP or range of IPs, it generally takes about 5 minutes to take effect. </p>
+<p><em>Note: When you block your IP, you will be bucketed into the experiment but your visit or conversions won’t be shown on the report.</em></p>
+<h2>Account Block</h2>
+<p>This type of block will be enabled for all the experiments and projects under your account. However, it will not include projects shared with you, only the ones you own.</p>
+<p>Go to your Account Settings menu and select Blocked IPs.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423873943565/mceclip0.png" alt="mceclip0.png"></p>
+<p>Follow the block option you need as described below.</p>
+<h2>Project Block</h2>
+<p>This will block tracking on the experiments of the project that you choose. To start blocking IPs on your project you will have to:</p>
+<p>Go to your Project Configuration and select Blocked IPs.<img src="https://support.convert.com/hc/article_attachments/4423873947405/mceclip1.png" alt="mceclip1.png"></p>
+<h2>Blocking Options</h2>
+<p>In Convert, you have the 3 options to block or exclude IP addresses in your experiments: </p>
+<h3>Excluding Single IP addresses</h3>
+<p>To exclude single IP addresses, you have to:</p>
+<ol>
+<li>Click on the "Single Ip" area.</li>
+<li>Input the address that you are meant to block or exclude.</li>
+<li>Click on the "Block IP'(s)" button.<img src="https://support.convert.com/hc/article_attachments/4423903004173/mceclip2.png" alt="mceclip2.png">
+</li>
+</ol>
+<h3>Excluding a Range of IP Addresses</h3>
+<ol>
+<li>Click in the "Range" area.</li>
+<li>Enter the initial address that defines the range.</li>
+<li>Enter the final address that defines the range.</li>
+<li>Click on the "Block IP(s)" button to save the setting.<img src="https://support.convert.com/hc/article_attachments/4423873968781/mceclip3.png" alt="mceclip3.png">
+</li>
+</ol>
+<h3>Block Multiple IPs</h3>
+<ol>
+<li>Click on the "Multiple" section.</li>
+<li>Enter the addresses that you want to block or exclude from the experiment, separated by a comma. (Otherwise, it will not work).</li>
+<li>Click on the "Block IP(s)" button to save the changes.<img src="https://support.convert.com/hc/article_attachments/4423903015053/mceclip4.png" alt="mceclip4.png">
+</li>
+</ol>
+<h2>Delete the blocked or excluded IPs</h2>
+<p>To delete an address, just click on the trash icon next to the address.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423895530509/mceclip5.png" alt="mceclip5.png"></p>
+<h2>Domain-Based Blocking</h2>
+<p>Convert does not allow for domain-based blocking. You will need to rely on IP domain blocking to stop the Convert script from registering your visits and conversions from the desired location.</p>
+<p> </p>
+<p>Keyword: whitelisting whitelist</p>

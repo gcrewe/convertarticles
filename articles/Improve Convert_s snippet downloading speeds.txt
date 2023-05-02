@@ -1,0 +1,18 @@
+Improve Convert's snippet downloading speeds
+<h2>Introduction</h2>
+<p>The snippet is a line of code that you implement on your site to run Convert Experiences. It contains information about your experiments and various account settings.</p>
+<p>The snippet contains the Convert JavaScript file, which is downloaded by your visitors' browsers at the very beginning of the page load process. It is static and will be cached in your visitors' browsers after the first request. It's also hosted on Akamai CDN servers. This guarantees that the speed at which the snippet is served is very fast. </p>
+<p>However, sometimes, after Convert has been used for a long time, the Convert snippet size might become big and this might have an impact on the page load as it is downloaded, and it is time to do some house cleaning.</p>
+<p>Here are our recommendations on how to improve the script load times.</p>
+<h2>Size of the Snippet</h2>
+<p>If you think about what the snippet loads, is the experience conditions (Site Area, Audiences, Goals), and experiment code (Variation Code, Custom CSS, Custom JS). So every time you create one and activate it, it loads more overhead to the snippet. </p>
+<p>If you want to see the size of the snippet, you could open Chrome <strong>Developer tools</strong> on the needed page, switch to the <strong>Network</strong> tab and <strong>reload the page</strong>. In the <strong>Size</strong> column, you will see the size of everything loaded (<em>Documents, Stylesheets, Images, Scripts, ...</em>). You can enable the filter to help you find out only needed stuff at the bottom-center of the Developer tools frame.</p>
+<p>Search for the tracking code script in the Network tab:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/115003826792/mceclip0.png"></p>
+<p>Convert's tracking script will add approximately 450ms extra loading time to the first-page view to the web pages where it is installed. Subsequent loads should be cached either at browser level or at CDN edge level.</p>
+<p> </p>
+<h2>Reduce your goals</h2>
+<p>Reduce the number of goals being used to the minimum needed. All attached goals to your experiments add code to your snippet. Keeping this reduced to the minimum will help. </p>
+<h2>Clean your variation code</h2>
+<p>Clean and maintain your variation code in the "Code Editor" area of your experiences to the minimum. An experiment variation code should always be kept under watch. So, there are no repeated lines, and there is no code that does not add any value. This is something common to look for when using the Visual Editor. So, whenever the Visual Editor is used, someone should revise the code produced, if you want to keep it clean and to the minimum. At the end of the day, is code that runs on the page, and you should be concerned and invest in its performance, by having someone technical verify that is reduced to the minimum to prevent increased load times.<br><br><strong>tag: </strong>page speed, performance</p>
+<p> </p>

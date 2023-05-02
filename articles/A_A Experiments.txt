@@ -1,0 +1,23 @@
+A/A Experiments
+<h2>What is an A/A Experiment?</h2>
+<p>A/A Experiments are experiments in which you test the Original page against an identical copy of itself, with the purpose of finding any issues with the setup or the platform that is being used for testing.</p>
+<p>If the setup of the experiment is correct you should receive inconclusive results, and there should not be a winner declared.</p>
+<p>After this experience is created and your setup verified, you can use it as a base for your A/B or Split URL Experiments.</p>
+<p>It is good to also enable Google Analytics tracking on A/A experiment. This will foresee any differences between Convert and Google Analytics data. </p>
+<h2>What do I do if I get a winner?</h2>
+<p>If a winner is declared in your A/A test, you should check the setup of your experiment, to detect any inconsistencies on the measurement of your conversions.</p>
+<p><em>*However, there may be a small portion of these types of tests in which a false declaration may occur by pure chance.</em></p>
+<h2>How do I create one?</h2>
+<ol>
+<li>
+<span style="line-height: 1.5;">Click on the <em>Experiences</em> menu</span><span style="line-height: 1.5;">.</span>
+</li>
+<li><span style="line-height: 1.5;">Click on the "+ New Experience" on the upper right side.<br><br><img src="https://support.convert.com/hc/article_attachments/14270641475981"><br><br></span></li>
+<li><span style="line-height: 1.5;">Fill out the details of the "Experience Creation Wizard", and select the "A/A Experiment" experience type.<br><br><img src="https://support.convert.com/hc/article_attachments/14270643291533"><br><span style="line-height: 1.5;">After, this your A/A Experiment should be created. This will be identical to other types of experiments </span>in<span style="line-height: 1.5;"> the platform beside the difference that there are no options to "Edit Variations".<br></span></span></li>
+<li>Then you should Activate the experience by changing its status:<br><img src="https://support.convert.com/hc/article_attachments/14270640963341">
+</li>
+</ol>
+<h2>Get the Standard Conversion Rate of my Page</h2>
+<p><span style="line-height: 1.5;">You can also use an A/A test to get the standard conversion rate of your page while using Convert. To do this, you should pause the Original of your experiment, and run the experience with only the variation. This will get you the standard conversion rate that you can use for planning future A/B tests.</span></p>
+<p><span style="line-height: 1.5;">Access your report. </span></p>
+<p>To pause the Original, you should click the status on the Original Page and it will be paused.<br><img src="https://support.convert.com/hc/article_attachments/4423885262861/mceclip3.png" alt="mceclip3.png"></p>

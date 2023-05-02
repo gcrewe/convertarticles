@@ -1,0 +1,23 @@
+Applying Changes to Split URL Pages
+<h2>Intro</h2>
+<p>Split URL created, configured and tested, everything is working as expected: traffic is being evenly distributed, query parameters are being transferred, audiences, goals, all set! We are ready to start this Split URL test, except if you also want to apply styles on the experiment pages...</p>
+<p>Since Split URLs tests do not offer the possibility to customize/style pages through the Visual Editor, an option is to set up an "<em>hybrid"</em> experiment: <strong>Split URL + Deploy Experiment</strong></p>
+<h2>Setup your Split URL Experiment</h2>
+<p>Create your Split URL experiment as usual, detailed instructions can be found here: <a class="search-result-link" href="https://support.convert.com/hc/en-us/articles/204490279-Set-Up-Your-First-Split-URL-Experiment" target="_blank" rel="noopener">Set Up Your First Split URL Experiment</a></p>
+<h2>Get the Experience and Variations IDs</h2>
+<p class="wysiwyg-text-align-left"> Once you have finished configuring the variations of the experience, take note of the <strong>Variations IDs</strong>, from the Experience summary page, copy the link from the preview of the variation:</p>
+<p class="wysiwyg-text-align-center"><br><img src="https://support.convert.com/hc/article_attachments/14371977836429"></p>
+<p>The link copied will be similar to this:</p>
+<p class="wysiwyg-text-align-left"><em>https://url.com/?convert_action=convert_vpreview&amp;convert_<strong>v=100368636</strong>&amp;convert_<strong>e=10036216</strong></em></p>
+<p>v=100368636<em> -</em>This is the Variation ID:<em><strong> 100368636</strong></em></p>
+<p class="wysiwyg-text-align-left">e=10036216 - This is the Experience ID:<em><strong> 10036216</strong></em></p>
+<h2>Setup a Deploy for your Variation Page</h2>
+<p>Now it is time to create a <a href="https://support.convert.com/hc/en-us/articles/115000018331-What-about-Personalizations-" target="_self">deploy</a> for your variation page. Use the visual editor to apply styles and customize the page. </p>
+<h2>Setup a Custom Audience for your Deploy</h2>
+<p>To show the deploy only to visitors  coming from the Split URL Test and the specific variation, we will include a Custom Audience:<img src="https://support.convert.com/hc/article_attachments/6460073954573/mceclip0.png" alt="mceclip0.png"></p>
+<p><strong>JS Condition 1: (replace with the Split URL Original Page URL)</strong></p>
+<pre style="font-size: 13px;">document.referrer == "https://urlFromtheOriginalPage.com"</pre>
+<p><strong>JS Condition 2: (replace with the Experience and Variation ID previously noted)</strong></p>
+<pre style="font-size: 13px;">convert.historicalData.experiments[splitURLExpID].variation_id == "variationID"</pre>
+<p> </p>
+<p>This is it! You have successfully applied styles to a Split URL Experiment Page!</p>

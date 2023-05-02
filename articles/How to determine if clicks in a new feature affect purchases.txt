@@ -1,0 +1,29 @@
+How to determine if clicks in a new feature affect purchases
+<p>Let's say that we introduced a new feature called "related items" on our e-commerce website, and we would like to know how this new feature affects purchases.</p>
+<p>This article is about creating a goal that would trigger when visitors click on the feature and revenue is generated. This compounded goal could tell us the influence of that click on purchases. </p>
+<p>These would be the steps to take to create this compounded goal. </p>
+<ol>
+<li>First, create a variation that would show the feature. We can do this by using the Visual Editor and also adding Custom JS to the new variation. I am not going to expand on this detail as it is not the goal of this article.</li>
+<li>Create two goals. One goal for the click on the new feature section, and another goal for when revenue is generated on the page. As in the prior step, I am not going to go into detail on how to do this as it is not the goal of this article.</li>
+<li>Write down the goal id numbers located in each of your goal configurations in the goal editor.<br><img src="https://support.convert.com/hc/article_attachments/6449536931085/mceclip0.png" alt="mceclip0.png">
+</li>
+<li>Open the Goal Editor and Click on the "Create Advanced Goal" tab. <br><img src="https://support.convert.com/hc/article_attachments/6449571509901/mceclip1.png" alt="mceclip1.png">
+</li>
+<li>Click on the "Page Tags" and drag the "JS Condition" item onto the main panel.</li>
+<li>Paste the following code into the 'JS Condition' text box, replacing the 'JS Code'. Make sure that you replace 'XXXX' and 'YYYY' with your own goal IDs, and name this new goal and save it. In this case, I am naming it 'New Feature Influence on Conversions'.<br>
+<pre><code class="language-markup">
+(<em>XXXX</em> in convert.currentData.goals) &amp;&amp; (<em>YYYY</em> in convert.currentData.goals)<br>
+</code></pre>
+<img src="https://support.convert.com/hc/article_attachments/6449580927117/mceclip2.png" alt="mceclip2.png">
+</li>
+<li>You are now done. Your goal should track when both the feature is clicked and a purchase is completed. This should help you identify if this new feature is influencing the purchases. </li>
+</ol>
+<div class="special-content special-content--important">
+<div class="special-content__icon">
+<p> <img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></p>
+</div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>The above compound goal works only if the goals are triggered on the same page view.  If goals are triggered on different page views, then you may instead create an Advanced Goal using Visitor Data / Visitor Cookie, and check that the cookie named _conv_v contains [<em>1st goal ID</em>] AND cookie named _conv_v contains [<em>2nd goal ID</em>].<br><br></p>
+</div>
+</div>

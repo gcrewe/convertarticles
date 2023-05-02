@@ -1,0 +1,53 @@
+Cookie size limits and the impact on the use of Convert goals
+<h2><span style="font-weight: 400;">Cookies</span></h2>
+<p><span style="font-weight: 400;">A web cookie (sometimes known as a "cookie") is a small piece of data stored by a website in a user's web browser. A cookie can give the browser information about a person's visit or past visits when they visit a website. This information may be used by the site to remember preferences set during a prior visit or to recall behavior from one of those previous visits.</span></p>
+<p><span style="font-weight: 400;">Have you ever gone to an e-commerce site and put something in your shopping cart but never finished the transaction? You've seen a cookie in action if you went back to that website later and found your products waiting for you in your cart.</span></p>
+<h2><span style="font-weight: 400;">The size of a cookie</span></h2>
+<p><span style="font-weight: 400;">The user agent determines the size of a cookie. You should count the bytes in the full "name=value" combination, including the equal-sign, when determining the size of your cookie.</span></p>
+<p><span style="font-weight: 400;"><img src="https://support.convert.com/hc/article_attachments/4511602681741/mceclip2.png" alt="mceclip2.png"></span></p>
+<h2><span style="font-weight: 400;">Cookie limits imposed by RFC</span></h2>
+<p><span style="font-weight: 400;">While it may appear to be a strange joke, browsers do impose cookie limits. A browser should be able to accept at least <strong>300 cookies</strong> with a maximum size of <strong>4096 bytes</strong>, as stipulated by </span><a href="http://www.ietf.org/rfc/rfc2109.txt"><span style="font-weight: 400;">RFC 2109</span></a><span style="font-weight: 400;"> (#6.3), </span><a href="http://www.ietf.org/rfc/rfc2965.txt"><span style="font-weight: 400;">RFC 2965</span></a><span style="font-weight: 400;"> (#5.3), and </span><a href="https://datatracker.ietf.org/doc/html/rfc6265"><span style="font-weight: 400;">RFC 6265</span></a><span style="font-weight: 400;">. (including all parameters, so not just the value itself). While the majority of browsers adhere to the RFC (you can check the actual limits of the browsers and even test your browser in real-time </span><a href="http://browsercookielimits.iain.guru/"><span style="font-weight: 400;">here</span></a><span style="font-weight: 400;">).</span></p>
+<p><span style="font-weight: 400;">We got the following information for their newest versions after running this test in a few browsers:</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Google Chrome - 4096 bytes</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Internet Explorer - 5117 bytes</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Firefox - 4097 bytes</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Microsoft Edge - 4097 bytes</span></li>
+</ul>
+<p><span style="font-weight: 400;">Typically, the following are allowed:</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">300 cookies in total</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">4096 bytes per cookie</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">20 cookies per domain</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">81920 bytes per domain</span></li>
+</ul>
+<p><span style="font-weight: 400;">Even though the RFC has suggested limits on cookie sizes, different browsers have implemented limits in subtly different ways, creating interoperability issues and providing a browser fingerprinting mechanism which neither we at Convert, nor the browsers want to take part in.</span></p>
+<h2><span style="font-weight: 400;">Request size</span></h2>
+<p><span style="font-weight: 400;">Another key aspect that is sometimes forgotten is the size of the subsequent request when cookies are used.</span></p>
+<p><span style="font-weight: 400;">Let's say the total size of your cookies is 4kB. The website downloads new resources when you visit it (like CSS, JS, images etc.). If the requests all come from the same domain, the cookie header will be included to all of them, making the request much larger than it would otherwise be.</span></p>
+<p><span style="font-weight: 400;">While we don't have to worry about this on PCs with fast connections, an increasing portion of the Internet's user population is using mobile devices. While the number of mobile device users is fast increasing, operator coverage is still limited, and in many regions of the world, EDGE and similar speeds are still the norm. Every kilobyte counts at EDGE speeds.</span></p>
+<h2><span style="font-weight: 400;">When many cookies are set, how does the browser respond?</span></h2>
+<p><span style="font-weight: 400;">As for what happens when you exceed the cookie limits, that depends on each browser and which limit you exceed. </span></p>
+<p><span style="font-weight: 400;">Except for Safari (you can set all cookies, regardless of the number), there are two methods:</span></p>
+<ol>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">The least recently used (LRU) method: When the cookie has reached the limit, the oldest cookie is automatically kicked out to give some space to the latest cookie. Internet Explorer and Opera use this method.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">The random method: Firefox is unique, although the last set of cookies is always retained, it seems to randomly decide which cookies are retained. There seems to be no plan.</span></li>
+</ol>
+<h2><span style="font-weight: 400;">So, what does it all mean?</span></h2>
+<p><span style="font-weight: 400;">Consider the following scenario: you have a nice-looking website that works, but you later add a third-party script for analytics, marketing, or a content experiment, and you lose control of your website visitors' cookies!</span></p>
+<p><span style="font-weight: 400;">If your clients' cookie size grows to a size that your web server cannot handle, users will be unable to access your website. And the worst part is that you may not even be aware of the problem unless one of your visitors contacts you (and from our experience, just a small percentage of visitors will report a problem).</span></p>
+<p><span style="font-weight: 400;">Large cookies, in general, should be avoided because they are sent with every request to a server, consuming bandwidth and slowing down website speed even if they are not utilized on this page.</span></p>
+<h2><span style="font-weight: 400;">Convert and cookie sizes</span></h2>
+<p><span style="font-weight: 400;">How does that impact Convert?</span></p>
+<p><span style="font-weight: 400;">In Convert, </span><a href="https://support.convert.com/hc/en-us/articles/360012210052-Types-of-Experiences"><span style="font-weight: 400;">each experience made</span></a><span style="font-weight: 400;"> (all experiences including <a href="https://support.convert.com/hc/en-us/articles/115000018331-What-about-Personalizations-" target="_self">Deploy</a>) uses 37 characters/bytes in the </span><a href="https://support.convert.com/hc/en-us/articles/204495429-Convert-Experiences-Tracking-Cookies-Structure"><span style="font-weight: 400;">cookie of the visitors</span></a><span style="font-weight: 400;">. Each </span><a href="https://support.convert.com/hc/en-us/articles/204494109-Goals"><span style="font-weight: 400;">goal triggered</span></a><span style="font-weight: 400;"> during an experience will add another 13 characters/bytes.</span></p>
+<p><em><span style="font-weight: 400;">example Convert cookie value</span></em><em><span style="font-weight: 400;">: vi:1*sc:2*cs:1374079443*fs:1374074823*pv:4*seg:{100246.1}*exp:{10001236.{v.10008683-g.{10001841.1}}-10001237.{v.10008687-g.{10001841.1}}}*ps:1374074823</span></em></p>
+<p><span style="font-weight: 400;">For companies that use cookies to do transparent and compliant A/B testing this might cap the amount of experiences and goals they can run (or even add under their project) since most browsers have a limit of 4096 bytes per domain per cookie. </span></p>
+<p><span style="font-weight: 400;">If you want to support most browsers, then </span><strong>don't exceed 30 cookies per domain, and don't exceed 4095 bytes per cookie</strong><span style="font-weight: 400;">.</span></p>
+<h2><span style="font-weight: 400;">Example</span></h2>
+<p><span style="font-weight: 400;">To understand the impact of using cookies as a method to store experiences and goal conversions, the below example uses the 37 bytes per experience and 13 bytes per goal (<a href="https://support.convert.com/hc/en-us/articles/115000018331-What-about-Personalizations-" target="_self">deployments</a> do not have goals).</span></p>
+<p><span style="font-weight: 400;">If you are running 30 experiences with 10 goals each or 10 experiences with 30 goals you have possibly exceeded the cookie limit. </span></p>
+<p><img src="https://support.convert.com/hc/article_attachments/4511592406925/mceclip1.png" alt="mceclip1.png"></p>
+<h2><span style="font-weight: 400;">When cookie capping is really happening?</span></h2>
+<p><span style="font-weight: 400;">This is hard to say, as the maximum experiences and goals only reach the cookie cap when all experiences and all goals are fired for the visitor. So that may be a small percentage of the visitors. If you are testing on different user groups e.g. 20 tests in 2 different groups, each 10 goals it does not automatically mean every visitor will hit the 6741 bytes cap. It’s very unlikely that a website with consumers and business users using different logins will be exposed to the same experiences and then fire all the goals.</span></p>
+<p><span style="font-weight: 400;">This article is a guideline to consider when running dozens of experiences. We have other features and plans that offer userID storage and reconnect that do not have limits like cookie capping. </span></p>
+<p><span style="font-weight: 400;">Talk to your account manager for the best solution for your business and how to be reactive with diagnosis and remedying of the problem before it does any real damage to your business.</span></p>

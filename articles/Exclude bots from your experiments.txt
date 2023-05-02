@@ -1,0 +1,12 @@
+Exclude bots from your experiments
+<h2>Introduction</h2>
+<p>Convert Experiences automatically <a class="markup--anchor markup--p-anchor" href="https://support.convert.com/hc/en-us/articles/204506609-How-Do-You-Filter-Bots-" target="_blank" rel="nofollow noopener" data-href="https://help.optimizely.com/Account_Settings/Bot_and_spider_filtering_in_Optimizely_X">filters known bots</a> from your experiment reporting results, but bots can still be bucketed in experience variations when they meet experience’s conditions.</p>
+<p>In this article we will show you how to exclude bots from experience variations, as long as real visitors still see the Original version and you are not intentionally <a class="markup--anchor markup--p-anchor" href="https://support.convert.com/hc/en-us/articles/115003789332-Avoid-Cloaking-Penalties-with-Convert-Experiments" target="_blank" rel="nofollow noopener" data-href="https://support.google.com/webmasters/answer/66355?hl=en">cloaking</a>.</p>
+<h2>Add an Audience JS Condition</h2>
+<p>You can exclude bots from viewing an experience variation by simply adding the following Custom JavaScript condition to the Audience definition:</p>
+<pre><code>navigator.userAgent.indexOf("Googlebot") &lt; 0 &amp;&amp; navigator.userAgent.indexOf("Yahoo!") &lt; 0</code></pre>
+<p>This condition ensures that bots with known user agents such as Googlebot do not trigger the experiment.  </p>
+<p><img src="https://support.convert.com/hc/article_attachments/6448764093197/mceclip0.png" alt="mceclip0.png"></p>
+<p>You can narrow it down for specific bots by referencing the <a href="http://user-agent-string.info/list-of-ua/bots" rel="noreferrer">bot userAgent list here.</a></p>
+<h2>Verify the Audience Condition</h2>
+<p>Test the audience by overriding your web browser’s user agent using any of the popular "User-Agent Switcher" plugins.</p>

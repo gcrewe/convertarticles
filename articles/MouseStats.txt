@@ -1,0 +1,42 @@
+MouseStats
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Warning</h3>
+<p>In respect to <a href="https://support.convert.com/hc/en-us/articles/360001030172-GDPR-and-ePrivacy" target="_self" rel="undefined">GDPR</a>, MouseStats no longer support "tag" and "identify".<strong> </strong>Please contact MouseStats support in case you want "tag" to be enabled.</p>
+</div>
+</div>
+<h2>Introduction</h2>
+<p>Integrating MouseStats with Convert Experiments allows you to view reports of your Convert experiments in the MouseStats reports.</p>
+<p>For each experiment, the integration will pass along the experiment name and variation name as that the Visitor is currently bucketed into (if any) as tags using MouseStats. You will have to install an additional script to your website, along with the Convert Experiments and MouseStats codes. This will only need to be done once, on the pages where you want to track, in order for this to work for all current and future experiments.</p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the Convert tracking code and the MouseStats tracking code are installed on your page. Convert Tracking Code can be found in Project Configuration:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423903987341/mceclip0.png" alt="mceclip0.png"></p>
+<p>You should find your MouseStats tracking code in by logging into your MouseStats account.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360002051432/mceclip0.png"></p>
+<h2>Add the Integration Code</h2>
+<p>Copy this code, <strong>after</strong> the two tracking codes, to activate the integration:</p>
+<pre><code>var refObject = window['convert']['data']['experiments']
+			for (var key in window["convert"]["currentData"]["experiments"]) {
+				if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+					continue;
+				}}
+            
+		var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+		var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+		curExperimentName = curExperimentName.replace("Test #", "Test ");
+		var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+		curVariant = curVariant.replace("Var #", "Variation ");
+
+       MouseStats_Commands.push(["tag", "Experiment_Name",curExperimentName]);
+       MouseStats_Commands.push(["tag", "Variation_Name",curVariant]);</code></pre>
+<h2>Verify Installation</h2>
+<p>The easiest way to verify that your integration code is correctly installed is to:</p>
+<ol>
+<li><span style="font-weight: 400;">Go to the page you are running these tests on.</span></li>
+<li><span style="font-weight: 400;">Verify on the MouseStats app if you receiving any visits. </span></li>
+<li>You should be able to filter the visits by tags. So you could filter them by experiment name and variation name.<img src="https://support.convert.com/hc/article_attachments/360001632012/blobid0.png" alt="save image">
+</li>
+</ol>
+<p><em><span style="font-weight: 400;"><strong> </strong>(Note: It may take up to 10 minutes for the experiment to show up. If you don’t see it at first, give it a little time.)</span></em></p>
+<p> </p>

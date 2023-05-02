@@ -1,0 +1,33 @@
+Integrate Convert Experiences with Amplitude
+<h2>Convert-Amplitude Integration</h2>
+<p>Integration of <a href="https://amplitude.com">Amplitude</a> with Convert Experiences will help you to import Convert data into your Amplitude account. </p>
+<p>For each experiment, the integration can pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<h2>Add Tracking Code Snippets</h2>
+<p>Make sure the Convert tracking code is <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">installed</a> on your page.</p>
+<p>Then, create an Amplitude account. If you have not already done so, go to <a href="https://amplitude.com/">https://amplitude.com</a> and register for an account. Then, create an organization and a project. You will immediately receive an API Key for the project you have just created. On every page that you want to install Amplitude analytics, paste the code snippet just before the &lt;/head&gt; tag.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000040612/mceclip0.png"></p>
+<h2>Send Events</h2>
+<p>You can send an event from anywhere in the page where Convert experiences are running:</p>
+<p>Example code for sending Experiment Name and Variation Name:</p>
+<pre><code>var refObject = window['convert']['data']['experiments']
+        for (var key in window["convert"]["currentData"]["experiments"]) {
+            if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+                continue;
+            }}
+            
+var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+    var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+    curExperimentName = curExperimentName.replace("Test #", "Test ");
+    var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+    curVariant = curVariant.replace("Var #", "Variation ");
+
+var eventProperties = {
+ 'Exp_Name': curExperimentName,
+ 'Var_Name': curVariant
+};
+
+amplitude.getInstance().logEvent('Convert', eventProperties);
+</code></pre>
+<h2>View Convert Data in Amplitude</h2>
+<p>In order to see the data sent, you must login into your Amplitude account and create your own dashboard/chart based on the events you sent:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000046712/mceclip0.png"></p>

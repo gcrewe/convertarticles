@@ -1,0 +1,12 @@
+Developing on localhost
+<h2>Why</h2>
+<p>For developers it is practical to develop experiments on a local web server while developing them. When using Convert QA audiences it is not actually necessary, nevertheless some people prefer this method of development. </p>
+<h2>How</h2>
+<p>Convert has no issues if you install its tracking code on pages on a web server installed on your local machine. However, you need a fully qualified domain name as a domain like "localhost" or "mymachine" wont work. A fully qualified domain is required for the tracking script to run and write the required cookies it uses to function. </p>
+<p>Even if you don't own, or have control of a domain and it's DNS settings, you can use whatever qualified domain you like as "domain.com", "mymachine.com", etc. </p>
+<p>The way to do it is to edit the "hosts" file on your machine and put an entry to point to your own IP address.</p>
+<p><em>Example:</em></p>
+<p><strong>domain.com   127.0.0.1</strong></p>
+<p>127.0.0.1 usually stands as an alias for your own machine, so it is safe to use it.</p>
+<p>Be sure that the domain matches the domains in your Projects' Active Websites and also the Site Area of your experiment.  Also, make sure your goals URL settings can be matched to the domain you are using.</p>
+<p>If you are using your local machine to develop, make sure you choose a different domain than the one used on your live site to prevent launching experiments on your live site in the same Project.</p>

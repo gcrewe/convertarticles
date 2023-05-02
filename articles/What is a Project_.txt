@@ -1,0 +1,23 @@
+What is a Project?
+<h2>Project definition</h2>
+<p>A project is a way of creating a subsection in your Convert account. Each project has its own snippet, set of experiments, and set of collaborators. Projects are designed to help you organize your experiments across multiple sites (or different sections of large sites). The hierarchy of experiment organization looks like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/115003363392/mceclip0.png" width="712" height="216"></p>
+<p>With projects, you can group your experiments in ways that make sense for your organization. For example, if you run experiments on multiple domains, you can assign a unique project for each domain. You can also invite other users to collaborate on a project without allowing them complete access to your account. </p>
+<h2>Things to know before creating a Project</h2>
+<p>Some things you need to know about how a project behaves:</p>
+<ul>
+<li>Each project has a unique JavaScript code, this code splits the databases of clients and ensures website visitor information is private and never reusable in another project.</li>
+<li>Each project can have unlimited experiments, goals and domains in it.</li>
+<li>Inside a Project, an experiment can include websites with different domains as long as the same JavaScript code is pasted in the header of each website inside the project.</li>
+<li>When a project is deleted all data will be purged from our servers within 7 days and is unrecoverable after that time.</li>
+<li>When a project is deleted the visitor cookies will be unable to reconnect to any new project you set up on the same domain.</li>
+<li>Each plan has a maximum number of projects you can create. For reference please check <a href="https://www.convert.com/pricing/" target="_self">here</a>.</li>
+</ul>
+<h2>Create a new Project</h2>
+<p>Users that have already purchased a subscription for Convert, can simply click on the "New project" button to initiate a new project and fill in the project name and domain URL</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14269611971341"></p>
+<p>If you are logging in to the app after singing up for the trial, you will be re-directed to the project screen where you will see a modal as show in the screenshot below.</p>
+<p><img src="https://support.convert.com/hc/en-us/article_attachments/14269615600397/084f885cc2632fbd89bfbbae0a0c4cefc74c636cdc0af2bbe26b3971a62af0fe.png"></p>
+<p>In order to create a new project, you need to select the last option "Create a New Project" and then click continue. On the next screen you need to enter the Project Name and Project Main Domain. You can also customize other project settings in that screen.</p>
+<p>As a trial user, you may also explore the demo project and its summaries and reports to understand how the tool works better. <u></u></p>
+<p>Congratulations! You have now created you first project with Convert.  </p>

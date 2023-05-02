@@ -1,0 +1,355 @@
+Audience - Targeting Visitors, Users, Clients and People
+<h2>Targeting Options</h2>
+<p dir="ltr">An audience is a group of users that have something in common. We have made 111 predefined groups that are targeting the top segments of our users. We allow you to take a template and switch to an advanced audience to customize that in any way.</p>
+<p dir="ltr">The mix of template audiences and advanced audiences make the targeting of your audience easy and powerful.</p>
+<p dir="ltr">We have four main groups:</p>
+<ol>
+<li dir="ltr">
+<p dir="ltr">Traffic</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Social</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Language &amp; Geo</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Behavior</p>
+</li>
+</ol>
+<p>Within these four main groups, you find one of the 111 audience templates. You can combine these to define the perfect target audience.</p>
+<ol>
+<li dir="ltr">
+<p dir="ltr">Google Traffic</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Bing Traffic</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Yahoo Traffic</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Ask Traffic</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">AOL Traffic</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Search Engine Traffic</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Google Adwords Traffic</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">New Visitor</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Returning Visitors</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Facebook</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Twitter</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From LinkedIn</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Pinterest</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From MySpace</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Google+</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From URL shorteners</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Africa</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Europe</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Asia</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From North America (yep that includes Canada and Mexico :-)</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From South America</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Australia</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Australia</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Canada</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Mexico</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From the UK</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From the USA</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Alabama</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Alaska</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Arizona</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Arkansas</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From California</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Colorado</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Connecticut</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Delaware</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Florida</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Georgia</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Hawaii</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Idaho</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Illinois</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Indiana</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Iowa</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Kansas</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Kentucky</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Louisiana</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Maine</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Maryland</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Massachusetts</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Michigan</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Minnesota</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Mississippi</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Missouri</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Montana</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Nebraska</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Nevada</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From New Hampshire</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From New Jersey</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From New Mexico</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From New York</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From North Carolina</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From North Dakota</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Ohio</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Oklahoma</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Oregon</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Pennsylvania</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Rhode Island</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From South Carolina</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From South Dakota</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Tennessee</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Texas</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Utah</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Vermont</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Virginia</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Washington</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From West Virginia</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Wisconsin</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Wyoming</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Eastern Time Zone</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Central Time Zone</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Mountain Time Zone</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Pacific Time Zone</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">From Tax-Free (US) States</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Prefers English</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Prefers Chinese</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Prefers Spanish</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Prefers Russian</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Prefers Arabic</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Prefers Portuguese</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Prefers French</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Visited 5 Pages</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Visited 10 Pages</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Visited 50 Pages</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Visited Site Several Times This Week</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Visiting On A Weekday</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Visiting In Weekend</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Visiting During Morning</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Visiting During Day</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Visiting During Evening</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Device is Mobile</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">The device is Game Console</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Browser Is Chrome</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Browser Is Firefox</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Browser Is IE</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Browser Is Safari</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Using Windows</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Using a Mac</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Using Linux</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Using Android</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Using iOS</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Device Supports FlashS</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Device Supports Java</p>
+</li>
+</ol>

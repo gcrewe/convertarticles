@@ -1,0 +1,23 @@
+Test different website menu order configurations
+<h2>Issue</h2>
+<p>One of the easiest experiments to set up, and that might help improve your conversion can be testing different menu arrangements. This could be to drive people to certain sections to your site, maybe even based on some audience targeting.</p>
+<h2>Solution</h2>
+<p>You can easily create a new website menu arrangement by creating a new variation and reordering the menu there. So, here are the instructions on how to do it:<br><br></p>
+<ol>
+<li>
+<strong>Open your Convert Project:<br></strong><strong><br><img src="https://support.convert.com/hc/article_attachments/4423899678733/mceclip0.png" alt="mceclip0.png"><br></strong>
+</li>
+<li><strong>Create an A/B Experiment:<br><br><img src="https://support.convert.com/hc/article_attachments/4423907952909/mceclip1.png" alt="mceclip1.png"><br><br></strong></li>
+<li>
+<strong>Select the menu item element that you want to move:<br><br><img src="https://support.convert.com/hc/article_attachments/360060209251/blobid11.png" alt="blobid11.png"><br></strong><strong><br><br></strong>Make sure you select the <strong>LI element</strong>. You may need to navigate the HTML tree with the <strong>Select Container </strong>or <strong>Select Child </strong>menu items like in the image, until you select the <strong>LI element.<br><br><img src="https://support.convert.com/hc/article_attachments/360060208491/blobid3.png" alt="blobid3.png"><br><br><span style="font-weight: bolder;"><img src="https://support.convert.com/hc/article_attachments/360060039172/blobid5.png" alt="blobid5.png"><br></span><br><img src="https://support.convert.com/hc/article_attachments/360060208551/blobid4.png" alt="blobid4.png"><br><br></strong><strong><br><br><img src="https://support.convert.com/hc/article_attachments/360060039352/blobid7.png" alt="blobid7.png"><br><br></strong>
+</li>
+<li>
+<strong>Rearrange the Menu Item</strong>, by selecting the <strong>Arrange &gt; Rearrange </strong>action on the Visual Editor menu:<br><br><img src="https://support.convert.com/hc/article_attachments/360060039392/blobid8.png" alt="blobid8.png"><br><br>
+</li>
+<li>Drag the selected menu item where you want it to place it on the menu. <br><br><img src="https://support.convert.com/hc/article_attachments/360060039532/blobid10.png" alt="blobid10.png"><br><br>
+</li>
+<li>Once you complete this, <strong>Save </strong>your experiment.<br><br><img src="https://support.convert.com/hc/article_attachments/360060209531/blobid15.png" alt="blobid15.png"><br><br><img src="https://support.convert.com/hc/article_attachments/360060039912/blobid17.png" alt="blobid17.png"><br><br>
+</li>
+<li>Configure your experiment further and<strong> Activate it</strong>. <strong>You should see your experiment report signaling that both variations are Running clearly.</strong>
+</li>
+</ol>

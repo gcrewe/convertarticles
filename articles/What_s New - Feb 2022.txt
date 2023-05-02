@@ -1,0 +1,38 @@
+What's New - Feb 2022
+<p>On March 8th, Convert is releasing a new version of its web app.</p>
+<p>Here are the changes you will see as a part of the new version:</p>
+<ol class="ProsemirrorEditor-list">
+<li class="ProsemirrorEditor-listItem" data-list-indent="1" data-list-type="numbered">
+<p>Columns and filtering in the experiment report now has sorting and ordering functionality</p>
+</li>
+<li class="ProsemirrorEditor-listItem" data-list-indent="1" data-list-type="numbered">
+<p>Experiment Report has been updated and has a new report with a view of goals/variations but also the existing variations/goals angle. <a class="ProsemirrorEditor-link" href="https://support.convert.com/hc/en-us/articles/204490289-Experiment-Report">https://support.convert.com/hc/en-us/articles/204490289-Experiment-Report</a></p>
+</li>
+<li class="ProsemirrorEditor-listItem" data-list-indent="1" data-list-type="numbered">
+<p>Introduced advice and suggestions in the report to give more concrete action/suggestions per variation: <a class="ProsemirrorEditor-link" href="https://support.convert.com/hc/en-us/articles/4442683563149-Experience-Report-Smart-Recommendations">https://support.convert.com/hc/en-us/articles/4442683563149-Experience-Report-Smart-Recommendations</a></p>
+</li>
+<li class="ProsemirrorEditor-listItem" data-list-indent="1" data-list-type="numbered">
+<p>Change History is provided on Experience level and project level, previously it was only available on account level: <a class="ProsemirrorEditor-link" href="https://support.convert.com/hc/en-us/articles/360017961312-Track-User-Changes-with-Change-History">https://support.convert.com/hc/en-us/articles/360017961312-Track-User-Changes-with-Change-History</a></p>
+</li>
+<li class="ProsemirrorEditor-listItem" data-list-indent="1" data-list-type="numbered">
+<p>Introduced Accounts as top-level selection. It allows users to add new user levels and simplifies switching for people that have large client sets like agencies. </p>
+</li>
+<li class="ProsemirrorEditor-listItem" data-list-indent="1" data-list-type="numbered">
+<p>Goals can now have the status of Archive which allows users to remove goals from the overview but not break the flow <a class="ProsemirrorEditor-link" href="https://support.convert.com/hc/en-us/articles/204494109-Goals#archive-goals">https://support.convert.com/hc/en-us/articles/204494109-Goals#archive-goals</a></p>
+</li>
+<li class="ProsemirrorEditor-listItem" data-list-indent="1" data-list-type="numbered">
+<p>Report and graphs are now viewed in the time zone of the project settings <a class="ProsemirrorEditor-link" href="https://support.convert.com/hc/en-us/articles/204506349-Project-Configuration">https://support.convert.com/hc/en-us/articles/204506349-Project-Configuration</a></p>
+</li>
+<li class="ProsemirrorEditor-listItem" data-list-indent="1" data-list-type="numbered">
+<p>Project Timezone now also shifts reporting stats (was not happening in old app) making reporting now on project timezone instead of GMT) <a class="ProsemirrorEditor-link" href="https://support.convert.com/hc/en-us/articles/204506349-Project-Configuration">https://support.convert.com/hc/en-us/articles/204506349-Project-Configuration</a></p>
+</li>
+<li class="ProsemirrorEditor-listItem" data-list-indent="1" data-list-type="numbered">
+<p>Introduced the “stopped” column in experiment overviews so you can get all info you need <a class="ProsemirrorEditor-link" href="https://support.convert.com/hc/en-us/articles/114094116591-The-Experience-Overview-Screen#experience-overview-columns">https://support.convert.com/hc/en-us/articles/114094116591-The-Experience-Overview-Screen#experience-overview-columns</a></p>
+</li>
+<li class="ProsemirrorEditor-listItem" data-list-indent="1" data-list-type="numbered">
+<p>Introduced two new graphs in the report for more details and <strong>analysis </strong><a class="ProsemirrorEditor-link" href="https://support.convert.com/hc/en-us/articles/204490289-Experiment-Report">https://support.convert.com/hc/en-us/articles/204490289-Experiment-Report</a></p>
+</li>
+<li class="ProsemirrorEditor-listItem" data-list-indent="1" data-list-type="numbered">
+<p>Sample Rate Mismatch is implemented on reports allowing easier detection of possible errors <a class="ProsemirrorEditor-link" href="https://support.convert.com/hc/en-us/articles/4412567998221-What-is-SRM-">https://support.convert.com/hc/en-us/articles/4412567998221-What-is-SRM-</a></p>
+</li>
+</ol>

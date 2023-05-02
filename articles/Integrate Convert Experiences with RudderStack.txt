@@ -1,0 +1,15 @@
+Integrate Convert Experiences with RudderStack
+<h2>Convert-Rudderstack Integration</h2>
+<p><span><a href="https://rudderstack.com/" target="_blank" rel="noopener">RudderStack</a> is an open-source, warehouse-first customer data platform (CDP) that builds your CDP on your data warehouse for you. It provides a powerful transformation framework to process your event data on the fly.</span></p>
+<p>For each experiment, the integration uses semantic track events to pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<h2>Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the RudderStack tracking code (<a href="https://docs.rudderstack.com/rudderstack-sdk-integration-guides/rudderstack-javascript-sdk" target="_self">rudder-analytics.js</a>) are installed on your page. You will need your Write Key and Data Plane URL that you can find in your Rudderstack account:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360090227532/mceclip1.png" alt="mceclip1.png"></p>
+<h2>Send Events to RudderStack</h2>
+<p>The example code below is using the <a href="https://docs.rudderstack.com/rudderstack-api-spec" target="_self">track API call</a> and will send Convert Experience and Variation names to RudderStack. This can be inserted inside Convert on the <strong>Project &gt; Configuration &gt; Project Global Javascript</strong> and will be appended to the page, before any experiment is evaluated and executed after the variations have been decided.</p>
+<pre>/* Push Convert data to external tracking tool */<br><br>function afterVariationsDecidedActions(){<br>console.log('afterVariationDecidedActions() called');<br><br>var exp = convert.currentData.experiments;<br>var number_of_experiments = Object.keys(exp).length;<br>var loop_counter = 0;<br>for (var expID in exp){<br>// Next Line is where the code to send the <br>// data goes<br>rudderanalytics.track('Convert Experiences', {<br>Exp_Name: expID,<br>Var_Name: exp[expID].variation_id<br>});<br>console.log('Convert is sending data for the following experiment/variation to your third party too: '+expID+','+exp[expID].variation_id)<br>}<br>}<br><br>_conv_q = window._conv_q || [];<br>_conv_q.push({<br>what: 'addListener',<br>params: {<br>event: 'snippet.experiences_evaluated',<br>handler: (event) =&gt; afterVariationsDecidedActions()<br>}<br>})</pre>
+<h2>View Convert Data in RudderStack</h2>
+<p>Using a semantic event in RudderStack, you will be able to view all of your Convert Experiences data as they associate to the values that you pass in the event.</p>
+<p>When you log in to your RudderStack account, you should go to your Live Events. There, you can see all of the track events that you are sending through RudderStack.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360090227612/mceclip2.png" alt="mceclip2.png"></p>
+<p> </p>

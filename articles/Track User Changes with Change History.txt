@@ -1,0 +1,22 @@
+Track User Changes with Change History
+<h2>Introduction</h2>
+<p dir="ltr">Convert logs most actions that can be made in a Project; for example: creating an experiment, modifying a variation, adding and removing audiences, and more. The Change History shows a record of user activity for each of your projects.</p>
+<p dir="ltr">If an experiment seems to behave strangely or stops working correctly, you can troubleshoot by checking the change history to see what changes were made, when they were made, and who they were made by.  This detailed change history creates an activity trail that provides additional security to individuals and teams with multiple collaborators.</p>
+<h2>View Project or Experiment Change History</h2>
+<p>Go to My Projects dashboard and from there select "Change History":</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423784708237/mceclip0.png" alt="mceclip0.png"></p>
+<p>Once you do that you will be able to see a table with several events.</p>
+<h2>Events that are tracked</h2>
+<p>Here is a list of the changes Convert saves in each Project's change history:</p>
+<ul>
+<li>A/B and MVT Experiments: Archive, Create, Delete, Start/Pause, Update, Modify name or description, Add/remove Variation.</li>
+<li>Split test: Archive, Create, Delete, Start/Pause, Update, Modify name or description, Add/remove Variation.</li>
+<li>Variation (not specifically what was changed but that there was a change): Change, Insert HTML or Image, Change Variation CSS or JavaScript</li>
+<li>Update Project Settings</li>
+<li>Audience: Archive, Create, Delete and Update</li>
+<li>Profile: First name, Last name, Password, Turning 2FA Auth On/Off</li>
+<li>Billing: Billing information, Payment Method, Current plan</li>
+<li>Subscription settings, <span>Over Quota charges: allowed / not allowed</span>
+</li>
+</ul>
+<p>Please note Convert stores Audit Logs/Change History data only for a span of 6 months.</p>

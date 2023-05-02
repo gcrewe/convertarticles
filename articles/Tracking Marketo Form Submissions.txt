@@ -1,0 +1,23 @@
+Tracking Marketo Form Submissions
+<h2>Marketo Form Submissions</h2>
+<p>It is possible to track <a href="https://www.marketo.com/">Marketo</a> form submission within Convert Experiences. To do it follow the steps below.</p>
+<h2>Create a Javascript Triggered Goal</h2>
+<p>In your Experiment Summary page go to your Goals:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14269991528589"></p>
+<p>Then to Goal Templates and select Javascript Triggered Goal:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6449469546765/mceclip1.png" alt="mceclip1.png"></p>
+<p>Name the goal and save it:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6449472765325/mceclip2.png" alt="mceclip2.png"></p>
+<p>Once it is saved, go to edit the goal and copy its ID:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6449514390413/mceclip3.png" alt="mceclip3.png"></p>
+<h2>Copy Code into Global Project JS</h2>
+<p class="codepen" data-height="360" data-theme-id="31058" data-slug-hash="vePEQP" data-default-tab="js" data-user="gcrewe" data-embed-version="2" data-pen-title="Marketo Form Submission Goal">See the Pen <a href="https://codepen.io/gcrewe/pen/vePEQP/">Marketo Form Submission Goal</a> by George Crewe (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</p>
+<p>Replace the goal ID with your own:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/115003048211/blobid1.png" alt="save image"></p>
+<h2>Attach Goal to Experience</h2>
+<p>Attach this goal to the experience where you want to track submissions:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6449496833933/mceclip4.png" alt="mceclip4.png"></p>
+<p>You are ready to go!</p>

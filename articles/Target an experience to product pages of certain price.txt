@@ -1,0 +1,17 @@
+Target an experience to product pages of certain price
+<h2>Issue</h2>
+<p>When testing in e-commerce sites, the opportunity might arise to test certain changes only on products of a certain price, over a certain price, or under a certain price.</p>
+<h2>Solution</h2>
+<p>You can target pages with your experience by adding a Page Tag Condition or a <a href="https://support.convert.com/hc/en-us/articles/205159965-Targeting-Experiments-and-Firing-Goals-Based-on-a-JavaScript-Condition" target="_self">JS Condition</a> to the <a href="https://support.convert.com/hc/en-us/articles/204494069-Site-Area" target="_self" rel="undefined">Locations</a> of your experience.</p>
+<p>This will trigger the experience only on pages that match the price condition that you set.</p>
+<p>First, you need to make sure that <a href="https://support.convert.com/hc/en-us/articles/205152665-Targeting-with-Advanced-Page-Tagging" target="_blank" rel="noopener">Page Tags</a> have been implemented with the <strong>_conv_product_price</strong> variable.</p>
+<ol>
+<li>
+<strong>Targeting products that match an exact price:</strong><br>In this example, we are going to target product pages over 25. Go into the Locations and create and create a condition like the following:<br><img src="https://support.convert.com/hc/article_attachments/14273606896397">
+</li>
+<li>
+<strong>Targeting products over or under a certain price:<br></strong>Create a JS Condition like the following, adjusting the comparison operator to what you need, &lt; (less than) or &gt; (greater than):<br><br><span style="font-weight: bolder;">location.href.includes('products') &amp;&amp; _conv_product_price &lt; 25<img src="https://support.convert.com/hc/article_attachments/14273701614349"><br></span>
+</li>
+<li>
+<strong>Targeting products based on a another price, besides the standard price, such a discounted price.<br></strong>Sometimes we need to target prices based on a discounted price. In this case, you need to either map the <strong>_conv_product_price </strong>variable to the discounted price, or you can also target the price based on the element displayed in the product page.<br><br>Here is an example:<br><br><strong>location.href.includes('/<wbr></wbr>products/') &amp;&amp; document.querySelector('.<wbr></wbr>price--highlight').<wbr></wbr>textContent.replace(/\$/g,'') &lt; 25</strong><br><br><img src="https://support.convert.com/hc/article_attachments/14273707553805"><br><br>In this example, we are targeting the element with the CSS selector <strong>'.price--highlight'</strong>.<br><br>You can learn how to <a href="https://support.convert.com/hc/en-us/articles/360024399211-How-to-create-a-CSS-Selector-for-use-in-the-Convert-Experiences-platform" target="_self">create a selector</a>.</li>
+</ol>

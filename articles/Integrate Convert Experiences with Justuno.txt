@@ -1,0 +1,41 @@
+Integrate Convert Experiences with Justuno
+<h2 id="convert-eulerian-integration">Convert-Justuno Integration</h2>
+<p><a href="https://www.justuno.com">Justuno</a> is a popup, special promotions, and notifications software platform. Designed to increase engagement, capture more mails, increase conversions, and help companies reduce shopping cart abandonment.</p>
+<p>This article will walk you through how to place a json object on any page you wish to utilize the Justuno promotion rules based on Convert data. This way you will be able to apply your promotions at the right time, at the right page and the right audience.</p>
+<p>For each experiment, the integration will pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the Justuno embed code are installed on your page. Justuno tracking code looks like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360005233232/mceclip0.png"></p>
+<h2>Activate Integration Manually</h2>
+<p>You should add this extra code to your website to track <a href="https://support.justuno.com/hc/en-us/articles/115004364088">custom data</a> (from the Justuno documentation we used method 2 with json object):</p>
+<pre><code>		var refObject = window['convert']['data']['experiments']
+			for (var key in window["convert"]["currentData"]["experiments"]) {
+				if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+					continue;
+				}}
+            
+		var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+		var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+		curExperimentName = curExperimentName.replace("Test #", "Test ");
+		var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+		curVariant = curVariant.replace("Var #", "Variation ");
+		
+		window.juapp=window.juapp||function(){(window.juapp.q=window.juapp.q||[]).push(arguments)};
+     
+   var ju_options = 
+    {
+      'targeting': {
+           'Variation_Name':curVariant,
+           'Experiment_Name':curExperimentName
+      }
+    };</code></pre>
+<h2 id="view-convert-data-in-heap-analytics">View Convert Data in Justuno</h2>
+<p>You will be able to create rules for your promotions based on your Convert Experiences data, e.g. present a promotion only when people are bucketed to Variation (and not to Original from a Convert Experiment).</p>
+<p>Once logged in, go to Promotions and search for the <a href="https://support.justuno.com/hc/en-us/articles/115004364088">custom json object</a> you created and build the advanced rule as you wish.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360005306471/mceclip1.png"></p>
+<p>If you recently installed Justuno, please allow 48hrs for Justuno to collect information on your website. Once you have collected your Convert data to Justuno, you will then be able to send it to several other tools through integrations:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360005296371/mceclip0.png"></p>
+<h2>Troubleshooting</h2>
+<p>You can use console and ju_options to see what is saved in your targeting variables:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360005306571/mceclip2.png"></p>
+<p> </p>

@@ -1,0 +1,18 @@
+Finding Problems In Your Experiment Installation - A/A Testing
+<h2>Troubleshoot A/A Testing</h2>
+<div class="user_formatted header_section clearfix">
+<p data-pm-slice="1 1 []">A good way to understand if your site has the Convert tracking code installed properly, is to run an A/B experiment on ALL visitors for ALL pages, but without any real variation.</p>
+<p data-pm-slice="1 1 []">The idea is to see if your total traffic/visitors and your goals/conversions match between your Convert installation, and your analytics system.</p>
+<p data-pm-slice="1 1 []">When you include all pages in Locations and the "All Visitors" audience, the numbers between the systems should match up closely.</p>
+<p data-pm-slice="1 1 []">We found that discrepancy in numbers appear because of not tagging all pages, having an audience or location definition that excludes some visits/conversions.</p>
+<p>So setting up a simple A/A experiment goes as follows:</p>
+<ul>
+<li>Select an A/B experiment</li>
+<li>As variation for example remove a space or dot in the footer where nobody sees it.</li>
+<li>Continue to the summary</li>
+<li>In Audience select all visitors (removing any targeting)</li>
+<li>In Locations target your entire site by changing the target group: Page URL, Starts with http:///<a href="http://www.domain.com/" rel="nofollow noreferrer">www.domain.com</a> </li>
+<li>Run the experiment</li>
+</ul>
+<p>This should be including 100% of all the visitors and will allow you to see if there are visitors missing.</p>
+</div>

@@ -1,0 +1,42 @@
+Integrate Convert Experiences with Mapp
+<h2 id="convert-oracle-bluekai-integration">Convert-Mapp Integration</h2>
+<p>Integration of <a href="https://mapp.com/" target="_self">Mapp</a> (formerly <a href="https://www.webtrekk.com/en/home/">Webtrekk</a>) with Convert Experiences will help you to import Convert data into your Mapp account. </p>
+<p>For each experiment, the integration can pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>This integration is still in beta status. Use with caution the steps described below.</p>
+</div>
+</div>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the <a href="https://docs.mapp.com/display/TI/Tag+Integration" target="_self" rel="undefined">Mapp Tag</a> are installed on your site. Integrating the Mapp tracking script into the head of the website is fundamental for the implementation of Mapp. The JavaScript file has to be hosted on your web server and should be integrated at the highest position on all your pages. </p>
+<h2>Create Mapp Container</h2>
+<p>Mapp Tag Integration is managed with the help of containers.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000116531/mceclip0.png"></p>
+<h2 id="send-convert-data">Add Mapp Plugin</h2>
+<p>Once the tracking script is integrated into the website and the container has been created, only<br>the Mapp plugin is missing to complete the basic Mapp implementation. Follow the steps on the Mapp interface and fill in the relevant information.</p>
+<p>If you have followed the instructions to this point, you have implemented Mapp in the<br>standard configuration and tracking runs on autopilot. Now comes the interesting part: The<br>customization of tracking with additional values so your individual requirements are met. This<br>is achieved by integrating the data layer in Tag Integration.</p>
+<p>Example code for the data layer to send Convert Experiment and Variation names:</p>
+<pre><code>var refObject = window['convert']['data']['experiments']
+    for (var key in window["convert"]["currentData"]["experiments"]) {
+        if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+            continue;
+        }}
+            
+var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+curExperimentName = curExperimentName.replace("Test #", "Test ");
+var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+curVariant = curVariant.replace("Var #", "Variation ");  
+
+var wt = new webtrekkV3(webtrekk);
+wt.customClickParameter = {
+    linkId_1: {
+        1: curExperimentName,
+        2: curVariant
+    }
+};
+</code></pre>
+<h2 id="view-convert-data-in-bluekai">View Convert Data in Mapp</h2>
+<p>In order to see the Convert data sent, you must log in to your Mapp account and go to your Reports. </p>

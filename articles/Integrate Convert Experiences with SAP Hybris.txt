@@ -1,0 +1,45 @@
+Integrate Convert Experiences with SAP Hybris
+<h2>Convert-SAP Hybris Integration</h2>
+<p>Integration of <a href="https://cx.sap.com/en/">SAP Hybris</a> with Convert Experiences will help you to import Convert data into your SAP Hybris account by using the help of <a href="http://segment.io">Segment.io</a> and <a href="http://blendr.io">Blendr.io</a>. </p>
+<p>For each experiment, the integration uses semantic track events to pass along the experiment name and variation name that the visitor is currently bucketed into.</p>
+<p>We will need:</p>
+<ol>
+<li>A <a href="https://segment.com/">Segment</a> account to be used as the data source to send data from Convert Experiences to Blendr.</li>
+<li>A <a href="http://blendr.io">Blendr</a> account to be used as the data blender between Segment and SAP Hybris.</li>
+<li>A <a href="https://cx.sap.com/en/">SAP Hybris</a> account to connect your data with SAP Hybris Campaigns.</li>
+</ol>
+<h2>Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the Segment tracking code (analytics.js) are installed on your page. The Segment tracking code looks like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000014292/mceclip0.png"></p>
+<h2 id="activate-convert-segment-integration ">Activate Convert-Segment Integration </h2>
+<p>Add the code below to your website right after the Convert + Segment tracking codes which will send Convert Experience and Variation names to Segment Debugger/Schema:</p>
+<p> </p>
+<pre><code>var refObject = window['convert']['data']['experiments']
+	for (var key in window["convert"]["currentData"]["experiments"]) {
+			if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+				continue;
+	}}
+            
+var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+curExperimentName = curExperimentName.replace("Test #", "Test ");
+var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+curVariant = curVariant.replace("Var #", "Variation ");
+		
+analytics.track('Convert Experiences', {
+	Exp_Name: curExperimentName,
+	Var_Name: curVariant
+	});</code></pre>
+<h2>View Convert Data in Segment</h2>
+<p>Using a semantic event in Segment, you will be able to view all of your Convert Experiences data as they associate to the values that you pass in the event.</p>
+<p>When you log in to your Segment account, you should go to your Schema. Inside your Schema, you can see all of the track events that you are sending through Segment, and if they are active or inactive.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000075032/mceclip0.png"></p>
+<h2>Add SAP Hybris and Segment.io as Data Sources in Blendr.io</h2>
+<p>Go to Blendr.io and add SAP Hybris and Segment.io as data sources. For Segment you will need the API Write Key which you can find in Segment settings, while for SAP Hybris you will need the Apikey and InstanceURL:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360012077112/mceclip0.png"></p>
+<h2>Add a Data Blend</h2>
+<p>In My Data Blends section add a data blend where you will use custom code to send Segment data (which already have events to pick Convert Experiences data) to SAP Hybris:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360012068851/mceclip1.png"></p>
+<h2>View Data in SAP Hybris</h2>
+<p>You can now login to your SAP Hybris account and view Convert Experiences data.</p>
+<p> </p>

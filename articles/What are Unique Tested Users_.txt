@@ -1,0 +1,12 @@
+What are Unique Tested Users?
+<h2>What are Unique Tested Users?</h2>
+<p>Tested users are the number of site visitors participating in A/B tests you have running on the Convert Experiences platform.</p>
+<p>Let’s break down how we count users.</p>
+<p>The people who come to your site are termed as your site visitors. Not all site visitors though are Convert app tested users.</p>
+<p>Users are specifically the people who are bucketed into tests that you have running on your site. In counting users, we do one key thing. We disregard overlaps. So if there are 100,000 site visitors who see Test #1, and another 100,000 visitors who see Test #2… the total app tested users will be:</p>
+<ul>
+<li>200,000 people if the two <a href="http://convert.com/calculator/" target="_self">sample sizes</a> (of 100,000 each) have no overlaps. That means no one person has seen both tests.</li>
+<li>Less than 200,000 if the two sample sizes (of 100,000 each) have overlaps. If both sample sizes have 50,000 people who are unique to one test and 50,000 people who have seen both tests, then the tested users count will be 150,000.</li>
+</ul>
+<p>Tested users count is thus the same as (or less than) your website’s total unique site visitors, depending on how you choose to bucket your visitors into tests.</p>
+<p>In our new plans, this method of counting unique users replaces the older (pre-June 2020) counting of unique tested visitors which took overlaps into consideration and gave a net tested visitors count based on all the visitors to each test.</p>

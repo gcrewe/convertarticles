@@ -1,0 +1,31 @@
+Send variations as GA events to use advanced segments (audiences)
+<h2>Introduction</h2>
+<p>Convert Experiences offers a <a href="https://support.convert.com/hc/en-us/articles/205160075-Integrate-Convert-Experiences-with-Google-Analytics">built-in Google Analytics integration</a>. However if you want to send variations as events to GA to use advanced segments in reporting you can follow the instructions below.</p>
+<h2>Add Global Experience Javascript Code</h2>
+<p>You should open your experience in Visual Editor and find the Global Experience JS option:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14341779395853"></p>
+<p>There you should add these lines of code:</p>
+<pre><code>setTimeout(function(){<br>//Make an empty variable for experiment ID<br>var experimentId = xxxxxxxx;<br>//if Convert object exists AND an experiment with a specific experiment ID is running<br>if (typeof(convert) != "undefined" &amp;&amp;<br>convert.currentData.experiments.hasOwnProperty(experimentId)) {<br>window.ga=window.ga||function(){(window.ga.q=window.ga.q||[]).push(arguments);};window.ga.l=+new Date();<br>}},1000);<br><br></code></pre>
+<p>This makes sure that the GA tracker gets all the information once it loads. Also, please make sure to fill in your own experiment ID in place of xxxxxxxx.</p>
+<h2>Add Custom Javascript Code</h2>
+<p>Now you need to add a line of <a href="https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide#SettingUpEventTracking" target="_blank" rel="noopener">event tracking</a> code at the end of each variation (including Original). You need to change the Experiment ID number, the name of the Variation, and the Google Analytics property id (instead of UA-xxxxxxx-y):</p>
+<p><img src="https://support.convert.com/hc/en-us/article_attachments/14341856426765/15b873d5df6c089a68917e4b41974eafeffc7baea258db58074a65b5753df49c.png"></p>
+<pre><code>setTimeout(function(){
+//Make an empty variable for experiment ID
+var experimentId = xxxxxxx;
+//if Convert object exists AND an experiment with a specific experiment ID is running
+if (typeof(convert) != "undefined" &amp;&amp;
+convert.currentData.experiments.hasOwnProperty(experimentId)) {
+//Send a non-interaction event to Google Analytics each time the experiment is displayed. That event has a Category of “Convert,” an Action that is the experiment ID, and a Label that is the variation ID of the experiment that was displayed.
+window.ga = window.ga || [];
+ga('create', 'UA-xxxxxxx-y', 'auto');
+ga('send', 'event', 'Convert', 'exp-10023753', 'Variation1', true);
+}},1000);</code></pre>
+<p>So what the code does is send an event to GA where the event category is Convert, action is Experiment ID and label is Variation1 (can also be Original, Variation 2 etc). </p>
+<h2>Create GA Segments</h2>
+<p>Now you are able to create segments in Google Analytics for each of the variations. Segments are available in Admin left menu and then under Personal Tools &amp; Assets:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360011618291/mceclip1.png"></p>
+<p>Create separate segments for each variation, and apply them onto any report that you want.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360011618491/mceclip2.png"></p>
+<p>So you could see something like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360011619432/mceclip3.png"></p>

@@ -1,0 +1,13 @@
+What's New - February 2023
+<p><strong><span class="wysiwyg-font-size-large">Updates:</span></strong></p>
+<ol>
+<li>We've simplified how you can export raw data for your experiment. You simply need to visit experiment reports &gt; click on More options on top-right &gt; select Export &amp; Download and then select <strong>Export Raw Data. <img src="https://support.convert.com/hc/article_attachments/13774004297101" alt="IMG_4442.PNG"></strong>
+</li>
+<li>
+<strong>Optimized Summary tab:</strong> The summary tab has been optimized so that it's easy to access important features. There has been an overall improvement in the responsiveness of the Summary dashboard along with improved functionality for tablets.</li>
+<li>
+<strong>Improved messaging of the Summary tab:</strong> The Summary tab messaging has been improved so that key information like Site area and targetted Audience is presented upfront, along with insights into Original and Variation's performance.<img src="https://support.convert.com/hc/article_attachments/13774101538829" alt="IMG_4414.PNG">
+</li>
+<li>Easy access to Reports: Experiment Reports can now be accessed easily form the overview screen through a single click.         </li>
+</ol>
+<p><img src="https://support.convert.com/hc/article_attachments/13774110771085" alt="IMG_8311.JPG"></p>

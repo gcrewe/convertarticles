@@ -1,0 +1,9 @@
+Inserting the variation CSS at the bottom of the body tag
+<h2>Issue</h2>
+<p>When inserting CSS via the CSS Editor when building a variation, the "<strong>!important</strong>" CSS property is needed so, the added CSS rules take precedence from the styles added on the page. This is sometimes not convenient.</p>
+<h2>Solution</h2>
+<p>By adding the following script to the <strong>Project Configuration &gt; Project Javascript</strong>, the variation CSS will be appended as an additional style tag at the bottom of the <strong>BODY</strong> tag. <br><br>This will make the CSS rules take precedence of any CSS rules already included on the page. </p>
+<p>Here is the code:</p>
+<p>// Code for appending the variation CSS rules to the bottom of the BODY tag.</p>
+<pre><br>convert.$( document ).ready(function() {<br> var exp = convert.currentData.experiments;<br> for(var expID in exp) {<br> var varID = exp[expID].variation_id;<br> console.log('Variation: ' + expID + ':' + varID);<br> css_in_variation = convert.data.experiments[expID].vars[varID].content.html[0].c;<br> if (!(typeof css_in_variation === 'undefined')) convert.$('body').append(css_in_variation);<br> else console.log('No CSS in Variation'); <br> break;<br> }<br>});</pre>
+<p><em> Notes:</em><br><em>Tag inline styles will still take precedence over the added CSS styles of the variation. </em><br><em>Also, blinking or flashing might be brought upon by implementing CSS rules this way. As the changes will be implemented when the CSS rules are loaded and interpreted at the bottom of the page.</em></p>

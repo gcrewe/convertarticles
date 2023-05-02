@@ -1,0 +1,19 @@
+Create a holdout group and track your goal metrics while testing
+<h2>Issue</h2>
+<p>Some customers have come up with their desire to keep a segment of their visitors without any testing while providing metrics for the main goals. </p>
+<h2>Solution</h2>
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Warning</h3>
+<p>This solution depends on browser cookies data to track visitors that have not been tested. Once the browser removes the visitor cookies Convert will not be able to determine if the visitor was never tested before. Also, this solution will not be able to know if a visitor has been tested before being implemented. For extending the default Convert cookies duration, we recommend using <a href="https://support.convert.com/hc/en-us/articles/360043492592" target="_blank" rel="noopener">the CNAME solution</a> included in certain packages.</p>
+</div>
+</div>
+<p>Let's say we want to keep 10% of visitors untested and tracked.</p>
+<ol>
+<li>First, create an <strong>A/A experiment </strong>and name it <strong>Untested Visitor Tracking. </strong>Set it on any page that you like. We will modify the <strong>Locations</strong> settings later.<br><br><img src="https://support.convert.com/hc/article_attachments/14342039522701"><br><br>Then modify the Locations to match all the traffic coming into your site:<br><br><img src="https://support.convert.com/hc/article_attachments/14342100723469"><br><br>Then modify the Traffic Distribution of your experiment to only target 10% of your traffic:<br><br><img src="https://support.convert.com/hc/article_attachments/14342140803597"><br><br>Next write down the experiment id, of your AA experiment:<br><br><img src="https://support.convert.com/hc/article_attachments/14342158190989"><br>Add all the goals to this experiment that you would like to be tracked for this segment. You will be able to look at this report and find the numbers for these metrics for this segment.<br><br>Do not start this experiment, until just before you create your first test that will not bucket this Untested Visitors. <br><br>
+</li>
+<li>Now for each test that you create afterward, you need to exclude the traffic from your <strong>Untested Visitor Tracking </strong>AA Experiment. <br><br>Go to your new experiment Audience and create a New Audience that will exclude these Visitors:<br><br>You need to insert the following code in a JS Condition:<br><br>
+<pre><span>(!(convert.currentData.</span><wbr></wbr><span>experiments['100000001'])&amp;&amp;!(</span><wbr></wbr><span>convert.historicalData.</span><wbr></wbr><span>experiments['100000001']))</span></pre>
+<br><img src="https://support.convert.com/hc/article_attachments/6460096113421/mceclip0.png" alt="mceclip0.png"><br><br>Make sure you replace the <strong>100000001 </strong>with the experiment id of the <strong>Untested Visitors </strong>AA experiment. Also, make sure that if you need to add another audience on AND fashion, you need to add inside the same Custom Audience. </li>
+</ol>

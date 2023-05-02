@@ -1,0 +1,33 @@
+Integrate Convert Experiences with mParticle
+<h2>Convert-mParticle Integration</h2>
+<p>Integration of <a href="https://www.mparticle.com/" target="_self">mParticle</a> with Convert Experiences makes it simple for marketers and product managers to leverage user behavior data from web applications and sites to create personalized digital experiences based on data insights.</p>
+<p>For each experiment, the integration can pass along the experiment name/id and variation name/id that the visitor is currently bucketed into.</p>
+<h2>Add Tracking Code Snippets</h2>
+<p>First make sure the Convert tracking code is <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">installed</a> on your page.</p>
+<p>On every page that you want to install mParticle, paste the javascript SDK as described <a href="https://docs.mparticle.com/developers/sdk/web/getting-started/" target="_self">here</a>.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360023632371/mceclip0.png"></p>
+<h2>Send Custom Events</h2>
+<p>You should then create the custom events you want to send (e.g. Convert Experiment Name and Convert Variation Name that the website visitor is bucketed into) by using the logEvent method. The logEvent method allows you to record any actions your customers perform. Each action is known as an event and corresponds to an event type. You can send a custom event from anywhere in the page where Convert experiences are running.</p>
+<p>Example code for sending Experiment Name and Variation Name:</p>
+<pre><code>var refObject = window['convert']['data']['experiments']
+        for (var key in window["convert"]["currentData"]["experiments"]) {
+            if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+                continue;
+            }}
+            
+var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+    var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+    curExperimentName = curExperimentName.replace("Test #", "Test ");
+    var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+    curVariant = curVariant.replace("Var #", "Variation ");
+
+mParticle.logEvent(
+  'Convert',
+  mParticle.EventType.Navigation,
+  {'Experiment ID':'curExperimentName','Variation ID':'curVariant'}
+);
+ </code></pre>
+<h2>View Convert Data in mParticle</h2>
+<p>Track events can be found in the <strong>Event Types</strong> tab in <strong>Admin Settings</strong>. Click <strong>view</strong> next to an event type to see all of the corresponding events.</p>
+<p>Navigate to <strong>Activity &gt; Live Stream</strong> in the left column. The Live Stream lets you inspect all incoming data from your environments. It’s an easy way to check that you have correctly initialized mParticle integration.  </p>
+<p><img src="https://docs.mparticle.com/images/gs-empty-livestream.png"></p>

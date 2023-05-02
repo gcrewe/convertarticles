@@ -1,0 +1,81 @@
+Push Convert data to GA with Event Tracking
+<h2>Push Convert data to GA using Custom Dimensions or Custom Variables</h2>
+<p>If you want to push Convert data to <a href="https://developers.google.com/analytics/devguides/collection/gajs" target="_self">legacy Google Analytics (Classic Analytics ga.js)</a> using <strong>Custom Variables</strong>, you can do it like this:</p>
+<div class="special-content special-content--tips">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-04.png" alt="Tip"></div>
+<div class="special-content__info">
+<h3>Tips</h3>
+<p><a href="https://support.convert.com/hc/en-us/articles/360058877931-Integrate-Convert-Experiences-with-Google-Analytics-legacy-ga-js-" target="_self" rel="undefined">Integrate Convert with legacy Classic Analytics ga.js</a>: Use the Experiment Settings and enable the integration with GA by assigning a specific GA Custom Variable.</p>
+</div>
+</div>
+<p>If you want to push Convert data to Google Analytics (<a href="https://developers.google.com/analytics/devguides/collection/analyticsjs" target="_self">Universal Analytics analytics.js</a> or <a href="https://developers.google.com/analytics/devguides/collection/gtagjs" target="_self">Global Site Tag gtag.js</a>) using <strong>Custom Dimensions</strong>, you can do it like this:</p>
+<div class="special-content special-content--tips">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-04.png" alt="Tip"></div>
+<div class="special-content__info">
+<h3>Tips</h3>
+<p><a href="https://support.convert.com/hc/en-us/articles/205160075-Integrate-Convert-Experiences-with-Google-Analytics-analytics-js-or-gtag-js-" target="_self" rel="undefined">Integrate Convert with GA (analytics.js or gtag.js)</a>: Use the Experiment Settings and enable the integration with GA by assigning a specific GA Custom Dimension.</p>
+</div>
+</div>
+<h2>Push Convert data to GA using GTM Data layer</h2>
+<p>If you want to push Convert data to Google Analytics (<a href="https://developers.google.com/analytics/devguides/collection/analyticsjs" target="_self">Universal Analytics analytics.js</a> or <a href="https://developers.google.com/analytics/devguides/collection/gtagjs" target="_self">Global Site Tag gtag.js</a>) using the Google Tag Manager Data layer you can do it like this:</p>
+<div class="special-content special-content--tips">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-04.png" alt="Tip"></div>
+<div class="special-content__info">
+<h3>Tips</h3>
+<p><a href="https://support.convert.com/hc/en-us/articles/204506509-Use-GTM-Data-Layer-to-integrate-Convert-with-GA">Use GTM datalayer to push Convert data to GA</a>: Create a GTM tag and define the appropriate variables and dimensions to push Convert data to a specific GA Custom Dimension.</p>
+</div>
+</div>
+<p>If you want to push Convert data to <a href="https://developers.google.com/analytics/devguides/collection/ga4" target="_self">Google Analytics 4</a> using the Google Tag Manager Data layer you can do it like this:</p>
+<div class="special-content special-content--tips">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-04.png" alt="Tip"></div>
+<div class="special-content__info">
+<h3>Tips</h3>
+<p><a href="https://support.convert.com/hc/en-us/articles/360058788431" target="_self" rel="undefined">Use GTM datalayer to push Convert data to GA4</a>: Create a GTM tag and define the appropriate event parameters to push Convert data to a specific GA4 Custom Dimension.</p>
+</div>
+</div>
+<h2>Push Convert data to GA using Event Tracking</h2>
+<p>However, there might be a case where you do not want to touch your GA Custom Dimensions or Variables or the GTM Data Layer. In that scenario, you can use <strong>GA Event Tracking</strong>. Depending on the version of GA that you use, find some useful documentation here on the commands that you should use:</p>
+<ol class="extended-list-wrapper">
+<li class="extended-list indent-1" data-extended-list="1" data-indent="1">Event Tracking in GA Legacy (ga.js): <a class="textEditor-link" href="https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide" target="_blank" rel="nofollow noopener noreferrer" data-is-link="https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide">https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide</a>
+</li>
+<li class="extended-list indent-1" data-extended-list="1" data-indent="1">Event Tracking in Universal Analytics (analytics.js): <a class="textEditor-link" href="https://developers.google.com/analytics/devguides/collection/analyticsjs/events" target="_blank" rel="nofollow noopener noreferrer" data-is-link="https://developers.google.com/analytics/devguides/collection/analyticsjs/events">https://developers.google.com/analytics/devguides/collection/analyticsjs/events</a>
+</li>
+<li class="extended-list indent-1" data-extended-list="1" data-indent="1">Event Tracking in GTAG (gtag.js): <a class="textEditor-link" href="https://developers.google.com/analytics/devguides/collection/gtagjs/migration#track_events" target="_blank" rel="nofollow noopener noreferrer" data-is-link="https://developers.google.com/analytics/devguides/collection/gtagjs/migration#track_events">https://developers.google.com/analytics/devguides/collection/gtagjs/events</a>
+</li>
+<li class="extended-list indent-1" data-extended-list="1" data-indent="1">Event Tracking in GA4: <a href="https://developers.google.com/analytics/devguides/collection/ga4/events">https://developers.google.com/analytics/devguides/collection/ga4/events</a> </li>
+</ol>
+<p>Then you can view Convert data inside GA through Events reports.</p>
+<p><strong>Below we describe how this is possible in Universal Analytics (universal.js), Global Site Tag (gtag.js) and in Google Analytics 4.</strong></p>
+<h2>Event Tracking in Universal Analytics (universal.js)</h2>
+<h3>Add Global Project Javascript</h3>
+<p>Go to your Convert Project Configuration and under Global Project Javascript add the code:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423785812237/mceclip0.png" alt="mceclip0.png"></p>
+<pre>/* Push Convert data to GA (Universal Analytics) with Event Tracking */<br>setTimeout(function(){<br> if (ga){<br> var exp = convert.currentData.experiments;<br> var number_of_experiments = Object.keys(exp).length;<br> var loop_counter = 0;<br> var reporting_string = '';<br> for (var expID in exp){<br> reporting_string = reporting_string + 'e:' + expID + '=' + 'v:' + exp[expID].variation_id;<br> if (loop_counter &lt; (number_of_experiments - 1)) {<br> reporting_string = reporting_string + '|';<br> }<br> loop_counter++<br> } <br> var trackername = window.ga.getAll()[0].get("name");<br> ga('create', trackername, 'auto');<br> ga(trackername+'.send', 'event' ,'Convert', reporting_string, true);<br> }<br>},1000);<br>/* End of code*/</pre>
+<ul>
+<li>If you use ga.js, then you have to use _gaq.push.</li>
+<li>If you use analytics.js, you need to use ga('send'...) like in the code example above.</li>
+<li>If you use gtag.js you should use the syntax with gtag('event'...and add Action, Category, Label, Value)</li>
+<li>if you use GA4 you should use the new syntax with gtag('event'... and adding up to 4 parameters). </li>
+</ul>
+<h3>View Convert Data in GA</h3>
+<p>Once the experiment runs, you can go to Real Time&gt; Events and see the Convert data:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360091056552/mceclip1.png" alt="mceclip1.png"></p>
+<h2>Event Tracking in Global Site Tag (gtag.js)</h2>
+<h3>Add Global Project Javascript</h3>
+<p>Go to your Convert Project Configuration and under Global Project Javascript add the code:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423774035469/mceclip4.png" alt="mceclip4.png"></p>
+<pre>/* Push Convert data to GA (Global Site Tag) with Event Tracking */<br>setTimeout(function(){<br> if (gtag){<br> var exp = convert.currentData.experiments;<br> var number_of_experiments = Object.keys(exp).length;<br> var loop_counter = 0;<br> var reporting_string = '';<br> for (var expID in exp){<br> reporting_string = reporting_string + 'e:' + expID + '=' + 'v:' + exp[expID].variation_id;<br> if (loop_counter &lt; (number_of_experiments - 1)) {<br> reporting_string = reporting_string + '|';<br> }<br> loop_counter++<br> } <br> gtag('event', 'Convert', {'event_category':reporting_string, 'event_label':'true'});<br> }<br>},1000);<br>/* End of code*/</pre>
+<ul>
+<li>If you use ga.js, then you have to use _gaq.push.</li>
+<li>if you use GA4 you should use the new syntax with gtag('event'... and adding up to 4 parameters). </li>
+</ul>
+<h3>View Convert Data in GA</h3>
+<p>Once the experiment runs, you can go to Real Time&gt; Events and see the Convert data:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360091059212/mceclip2.png" alt="mceclip2.png"></p>
+<h2>Event Tracking in Google Analytics 4 (GA4)</h2>
+<h3>Add Global Project Javascript</h3>
+<p>Go to your Convert Project Configuration and under Global Project Javascript add the code:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423774021005/mceclip3.png" alt="mceclip3.png"></p>
+<pre>/* Push Convert data to GA4 with Event Tracking */<br>setTimeout(function(){<br> if (gtag){<br> var exp = convert.currentData.experiments;<br> var number_of_experiments = Object.keys(exp).length;<br> var loop_counter = 0;<br> var reporting_string = '';<br> for (var expID in exp){<br> reporting_string = reporting_string + 'e:' + expID + '=' + 'v:' + exp[expID].variation_id;<br> if (loop_counter &lt; (number_of_experiments - 1)) {<br> reporting_string = reporting_string + '|';<br> }<br> loop_counter++<br> } <br> gtag('event', 'Convert', reporting_string);<br> }<br>},1000);<br>/* End of code*/</pre>
+<h3>View Convert Data in GA</h3>
+<p>Once the experiment runs, you can go to Real Time&gt; Events and see the Convert data.</p>

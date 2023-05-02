@@ -1,0 +1,42 @@
+Create Custom Segments
+<h2>Segments </h2>
+<p>Segments are a group of visitors that qualify for some Audience conditions (such as location, the device used to access the site, the hour of the day, and any other user behaviors) and can be used at a later time for targeting. Visitors in a specific segment are likely to behave or purchase in the same way. Thus, you can create segments by defining audience conditions that allow Convert Experiences to determine which segment a visitor qualifies for and run the appropriate variation.<br><br>Segments also have the capability of being tracked separately in every experiment run after the visitor has qualified for the segment or programmatically assigned to.</p>
+<h3>Subsequent Visits</h3>
+<p>A segment basically allows a visitor to qualify for an audience on <strong>subsequent</strong> visits even if they do not meet the audience conditions. That is why we call segments <strong>persistent</strong>. This means that if a visitor qualifies for such an audience in the first visit, he will continue to qualify for that audience every time he visits the page. If he visited multiple times, sometimes meeting the conditions and sometimes not, he will keep seeing the experiment.</p>
+<p><strong>You need to attach a segment to visitors before they are bucketed in an experiment, for that segment to be tracked separately within that experiment. </strong></p>
+<h3>Not attached to any experiment</h3>
+<p>You can also create an Audience that you would signal as a segment and not attach to any experiment. Users which match the audience will be put on this segment, even if this audience has not been added to any experience. Later on, you can use this segment in an experience and use already bucketed visitors on to it.</p>
+<h3>Project Level</h3>
+<p>Segments are evaluated at the project level, so any visitor that reaches a page with the project tracking code and matches the Audience conditions designated as a Segment will be added to it.</p>
+<p>Saved segments of a project can be used on other experiments as well.</p>
+<h2>How do I create a Segment?</h2>
+<p>You can enable an Audience for segmentation by following one of the two methods described below.</p>
+<h3>Using Experience Summary</h3>
+<p>Go to the Experience Summary and create a new Audience; when saving it, you will have the option to mark it as a Segment. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/14270266168973"></p>
+<p><img src="https://support.convert.com/hc/article_attachments/6443081254157/mceclip0.png" alt="mceclip0.png"></p>
+<h3>Using Audiences</h3>
+<p>Select the Audiences tab and add an Audience. When saving it, you will have the option to save it as a Segment.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14270268190093"></p>
+<p><img src="https://support.convert.com/hc/article_attachments/6443081254157/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Content Conditions</h2>
+<p>Once you check Segmentation for an Audience, Content conditions will become available to use:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6443124228237/mceclip2.png" alt="mceclip2.png"></p>
+<div class="special-content special-content--tips">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-04.png" alt="Tip"></div>
+<div class="special-content__info">
+<h3>Tip</h3>
+<ol>
+<li>If you need to do targeting based on <strong>visitor data</strong>, use <em>Audience Conditions</em>.</li>
+<li>If you need to do targeting based on <strong>page content</strong>, use the <em>Site Area</em>.</li>
+<li>If you want to create a persistent group of visitors, your can use <strong>page content</strong> Conditions and/or <strong>visitor data</strong> Conditions, configured in the Audience Conditions. Content conditions are available only when the Audience is checked as a Segment.</li>
+</ol>
+</div>
+</div>
+<h2>Number of Segments </h2>
+<p>The number of Segments you can have at one time depends on your Convert plan limits.  If you have used the maximum, you can delete a segment and create a new one if needed.</p>
+<h2>Remove a Visitor from a Segment</h2>
+<p>At the moment, it is not possible to remove a visitor from a Segment once added. However, if you do not want to make an experience persistent, then you should look at our Transient Audiences.</p>
+<h2>GDPR Warning Message</h2>
+<p>If the Segmentation feature is enabled, this could be interpreted by Privacy Authorities in Europe that data subjects might be identified. Therefore a warning was added to inform users when segmentation is enabled for at least one audience. You can find <a href="https://support.convert.com/hc/en-us/articles/360001361312">here</a> the screens where this warning appears.</p>
+<p><strong>keyword:</strong> segmentation segment</p>

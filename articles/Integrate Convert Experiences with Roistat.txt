@@ -1,0 +1,32 @@
+Integrate Convert Experiences with Roistat
+<h2>Convert-Roistat Integration</h2>
+<p>Integration of <a href="https://roistat.com/">Roistat</a> with Convert Experiences will help you to import Convert data into your Roistat reports and dashboards. </p>
+<p>For each experiment, the integration can pass along the experiment name and variation name that the visitor is currently bucketed into.</p>
+<h2>Add Tracking Code Snippets</h2>
+<p>Make sure the Convert tracking code is <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">installed</a> on your page.</p>
+<p>Then, create a Roistat account. On every page that you want to install Roistat, paste the code snippet inside the HTML &lt;body&gt; tag. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/360019300291/mceclip0.png"></p>
+<h2>Send Custom Events</h2>
+<p>You should then create through the Developments menu the custom events you want to send (e.g. Convert Experiment Name and Convert Variation Name that the website visitor is bucketed into):</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360019300451/mceclip1.png"></p>
+<p>You can send a custom event from anywhere in the page where Convert experiences are running:</p>
+<p>Example code for sending Experiment Name and Variation Name:</p>
+<pre><code>var refObject = window['convert']['data']['experiments']
+        for (var key in window["convert"]["currentData"]["experiments"]) {
+            if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+                continue;
+            }}
+            
+var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+    var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+    curExperimentName = curExperimentName.replace("Test #", "Test ");
+    var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+    curVariant = curVariant.replace("Var #", "Variation ");
+
+window.onRoistatAllModulesLoaded = function () {
+            roistat.event.send('curVariant', {'Variation ID':curVariant});
+            roistat.event.send('curExperimentName', {'Experiment ID':curExperimentName});
+    };</code></pre>
+<h2>View Convert Data in Roistat</h2>
+<p>The Custom Events will now be included in every Roistat visit. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/360019310471/mceclip0.png"></p>

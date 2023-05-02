@@ -1,0 +1,20 @@
+Resources: Explore a Demo Project! 
+Trial Users - Welcome Screen
+Ok, you just signed up for a trial with us, great!  We have released a new welcome screen (available for all users, yes, trial users included!) that will be presented right after you log in for the first time in our app:
+Explore Demo Project
+This option will create a new project called Demo Project, including experiences of different types (A/A, A/B. Split url), statuses (Scheduled, Paused, Active, Draft, etc) available to test, explore and discover more about Convert and its features.
+
+Explore Summary of a Demo A/B Test Experiment
+This option will take you to the Experience Summary section. Here you have visibility of details, integrations, goals, audiences and more. The setup of an experience is configured in this section. 
+
+Explore Report of a Demo A/B Test Experiment...
+ This option will take you to the Experience Report section. Visits, conversions, improvement, conversion rate and analytics related metrics are available here, and all data is presented in Real-Time!
+
+Create a new Project
+If you feel ready to create and configure your first Project, this is the option for you. It will bring you the  firsts steps needed to create a project from scratch:
+
+ 
+Start the Welcome Screen Manually
+This welcome screen will not be presented again automatically, if you want to trigger the Welcome Screen, just access the following link while logged in on the app:
+https://app.convert.com/accounts/10001?demo_project=true
+Using this method will also work on collaborator accounts.

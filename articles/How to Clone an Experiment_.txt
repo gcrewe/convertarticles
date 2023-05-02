@@ -1,0 +1,8 @@
+How to Clone an Experiment?
+<h2>Clone an Experiment</h2>
+<p>Sometimes you want to create a new experiment that is very similar to an existing experiment that you have made. In order to save time, you can essentially use any existing experiment as a template from which another experiment can be created and edited. This is called "cloning."</p>
+<p>To do this, choose your desired Project and select "Experiences":</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14272885158157"></p>
+<p>Hover your mouse over the experience row that you are interested to clone and click on the 3 dots. From the drop down menu, click on "Clone Experiment":</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14272886939661"></p>
+<p>This will automatically create a clone of your selected experiment. You can make changes and then activate when you're ready.</p>

@@ -1,0 +1,19 @@
+How to create an exit pop-up on Convert with Ouibounce.js
+<p>Convert does not provide built in widgets, such as exit pop up, banners or widgets. However, it is relatively easy to install one using open source libraries, such as <a href="http://carlsednaoui.github.io/ouibounce/" target="_self">O</a><span><a href="http://carlsednaoui.github.io/ouibounce/" target="_self">uibounce</a>. This article will describe how to install one on Convert.</span></p>
+<p>First, you will need to add the HTML, JavaScript, and CSS for your pop up modal. Here is a sample for the code.</p>
+<p class="codepen" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-height="300" data-default-tab="js" data-slug-hash="GRXrwJM" data-preview="true" data-user="gcrewe"><span>See the Pen <a href="https://codepen.io/gcrewe/pen/GRXrwJM"> Ouibounce _Modal_13471967463437</a> by Convert.com (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</span></p>
+<p>
+<script async="" src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+</p>
+<p>The code will need to be added to your page, using the Visual Editor and adding it to the specific sections:</p>
+<ul>
+<li>
+<strong>HTML:</strong> Add it using the Insert HTML option in the contextual menu of the Visual Editor. Add it anywhere.</li>
+<li>
+<strong>JavaScript:</strong> Add it to the <strong>Custom JavaScript Editor.</strong>
+</li>
+<li>
+<strong>CSS:</strong> Add it to the <strong>Custom CSS Editor.</strong>
+</li>
+</ul>
+<p>Customize it using the <a href="https://cdnjs.com/libraries/ouibounce" target="_self">Ouibounce documentation</a>.<strong><br></strong></p>

@@ -1,0 +1,12 @@
+What's New - February 2023
+Updates:
+
+We've simplified how you can export raw data for your experiment. You simply need to visit experiment reports > click on More options on top-right > select Export & Download and then select Export Raw Data. 
+
+
+Optimized Summary tab: The summary tab has been optimized so that it's easy to access important features. There has been an overall improvement in the responsiveness of the Summary dashboard along with improved functionality for tablets.
+
+Improved messaging of the Summary tab: The Summary tab messaging has been improved so that key information like Site area and targetted Audience is presented upfront, along with insights into Original and Variation's performance.
+
+Easy access to Reports: Experiment Reports can now be accessed easily form the overview screen through a single click.         
+

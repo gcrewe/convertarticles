@@ -1,0 +1,18 @@
+Selectively installing the convert tracking code only on some pages
+<h2>Issue</h2>
+<p>It could be the case that you only want to install the Convert tracking code just in some pages rather than in the whole site for performance reasons.</p>
+<p>Can it be done? And if so, in what pages is required to be installed?</p>
+<h2>Solution</h2>
+<p>Convert needs to be installed in the following pages when doing it selectively:</p>
+<ol>
+<li>
+<strong>Landing Pages:</strong> Where your traffic lands, so Convert can enable experiences based on origin conditions, such as UTM tags, landing pages. If you do not need this, then no need to install it on these pages.<br><br>
+</li>
+<li>
+<strong>Experiment Pages: </strong>Pages where you are executing experiences. Where actual changes go, and any pages included in the Site Area conditions of your experiences.</li>
+<li>
+<strong>Goal Conversion Pages: </strong>Anywhere where you want to track conversions.</li>
+<li>
+<strong>Inter-Domain Pages:</strong> Pages where a visitor may jump from one page to another through a link. It has to be installed on the page with the link and the linked page as well. This is because Convert transmits visitor data through added link query parameters. If the tracking code is not installed on both of these pages when the visitor lands in the second domain it will be counted as another new visitor.</li>
+</ol>
+<p>If installed on these pages, you should be able to run experiences, while at the same time not impacting your whole site performance.</p>

@@ -1,0 +1,21 @@
+What is an Experiment?
+<h2>Differentiate Between Convert Experiments</h2>
+<p dir="ltr">Experiments come in six types: A/B, Split URL, Multivariate (MVT), Deploy, A/A and Multi-page (funnel) experiment. They all are designed to prove a hypothesis on your (mobile) website or web app.</p>
+<ul>
+<li dir="ltr">
+<p dir="ltr"><a href="https://support.convert.com/hc/en-us/articles/205107815-Create-a-New-Experiment"><strong>A/B </strong>experiment</a> (or A/B/n test) is an experiment that is created with the Convert Experiment visual editor by loading one or multiple pages in the editor and changing the content or behavior. In an A/B experiment, you test an original (baseline or control) with variations (contestants). These variations can be an unlimited amount of variations and you could call this an A/B/C/D/E/... experiment. The idea is that you can test one or multiple changes on one page versus the original page. This is ideal for small incremental changes. All the changes are hosted by us. In the end, if the changes are selected as the winner, you need to make your developers implement the changes on the real page.</p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><a href="https://support.convert.com/hc/en-us/articles/204490279-Set-Up-Your-First-Split-URL-Experiment"><strong>Split URL</strong> experiments</a> are similar to an A/B experiment in the way they are run. One or multiple variations are shown to visitors randomly to measure if the original or the variations improve the goal of the experiment. The difference is that a Split URL variation is made by the website owner and placed on their site. Convert Experiments just loads this variation using a different URL or URL variable. This is recommended for bigger changes, like a completely new page, or site. At the end of the test, we will tell you which page is the winner. And you will need to switch on your own.</p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><a href="https://support.convert.com/hc/en-us/articles/205208075-Creating-a-Multivariate-Experiment"><strong>Multivariate</strong> experiments</a> are designed to test specific sections of a page to other sections of a page. For example, 3 different logos and three different call-to-action buttons will create 9 variations (9 combinations). Like in the A/B experiment, you can create these sections inside the visual editor of Convert Experiments.</p>
+</li>
+<li dir="ltr">
+<strong><a href="https://support.convert.com/hc/en-us/articles/115000018331-What-about-Personalizations-" target="_self" rel="undefined">Deploy</a> </strong>is an experience designed specifically for an audience on a page (or pages). You make this experience, we host it and will serve it to your specific audience. No reporting is provided.</li>
+<li dir="ltr">
+<p dir="ltr"><a href="https://support.convert.com/hc/en-us/articles/115000007112-A-A-Experiments"><strong>A/A </strong>experiment</a> tests the same original versions of a page (or pages) against each other. We make the empty variations in our system and we serve them to the visitors in a way to test the implementation.</p>
+</li>
+<li dir="ltr">
+<a href="https://support.convert.com/hc/en-us/articles/360017966372"><strong>Multi-page</strong> experiences</a> allow you to link together variations of different pages. For example, visitors who saw the original version of Page 1 will also see the original version of Page 2, visitors who saw Variation 1 of Page 1 will also see Variation 1 of Page 2, and so on. This is particularly helpful for funnel testing.</li>
+</ul>

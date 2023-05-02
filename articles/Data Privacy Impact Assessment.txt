@@ -1,0 +1,8 @@
+Data Privacy Impact Assessment
+<h2>Introduction</h2>
+<p>A new requirement under <a href="https://www.convert.com/gdpr/gdpr-general-data-protection-regulation/">GDPR</a>, is the process of conducting Data Processing Impact Assessments (DPIAs) for any new high risk processing projects. </p>
+<p>A DPIA is the process of systematically considering the potential impact that a project or initiative might have on the privacy of individuals. It will allow organisations to identify potential privacy issues before they arise, and come up with a way to mitigate them. A DPIA can involve discussions with relevant parties/stakeholders. Ultimately such an assessment may prove invaluable in determining the viability of future projects and initiatives. The GDPR introduces mandatory DPIAs for those organisations involved in high-risk processing; for example, where a new technology is being deployed, where a profiling operation is likely to significantly affect individuals, or where there is large scale monitoring of a publicly accessible area.</p>
+<p>You can find detailed guidance on DPIAs <a href="http://gdprandyou.ie/data-protection-impact-assessments-dpia/">here</a>.</p>
+<h2>What is Convert doing about DPIAs?</h2>
+<p>As part of <a href="https://www.convert.com/gdpr/">Convert’s GDPR Project</a>, Convert developed guidance for staff and a template to be used to carry out DPIAs. You can find the template with the screening question filled in attached in this article.</p>
+<p>For further information, please contact support@convert.com.</p>

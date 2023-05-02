@@ -1,0 +1,10 @@
+Cookie Targeting
+<h2>Target Cookies</h2>
+<p>In the case that you want to use cookies to either trigger a goal or target a specific audience, Convert Experiments offers this ability in <strong>all</strong> <strong>plans</strong>. In <strong>Advanced Goals</strong> and <strong>Custom Audiences</strong> you will find under the <strong>Visitor Data </strong>category a field called <strong>Visitor Cookie</strong>. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/6447947232525/mceclip0.png" alt="mceclip0.png"></p>
+<p>There are three fields you need to use:</p>
+<ol>
+<li>First is the<strong> Cookie Name: </strong>the name of the cookie that Convert needs to look for.</li>
+<li>Second is the<strong> Matching Option: </strong>use Contains, Matches Exactly or Regular Expressions to find the right cookie content.</li>
+<li>And third is the<strong> Cookie value: </strong>this is the value contained in the cookie that you are looking for.</li>
+</ol>

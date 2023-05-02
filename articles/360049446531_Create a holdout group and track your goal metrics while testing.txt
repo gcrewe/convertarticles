@@ -1,0 +1,18 @@
+Create a holdout group and track your goal metrics while testing
+Issue
+Some customers have come up with their desire to keep a segment of their visitors without any testing while providing metrics for the main goals. 
+Solution
+
+
+
+Warning
+This solution depends on browser cookies data to track visitors that have not been tested. Once the browser removes the visitor cookies Convert will not be able to determine if the visitor was never tested before. Also, this solution will not be able to know if a visitor has been tested before being implemented. For extending the default Convert cookies duration, we recommend using the CNAME solution included in certain packages.
+
+
+Let's say we want to keep 10% of visitors untested and tracked.
+
+First, create an A/A experiment and name it Untested Visitor Tracking. Set it on any page that you like. We will modify the Locations settings later.Then modify the Locations to match all the traffic coming into your site:Then modify the Traffic Distribution of your experiment to only target 10% of your traffic:Next write down the experiment id, of your AA experiment:Add all the goals to this experiment that you would like to be tracked for this segment. You will be able to look at this report and find the numbers for these metrics for this segment.Do not start this experiment, until just before you create your first test that will not bucket this Untested Visitors. 
+
+Now for each test that you create afterward, you need to exclude the traffic from your Untested Visitor Tracking AA Experiment. Go to your new experiment Audience and create a New Audience that will exclude these Visitors:You need to insert the following code in a JS Condition:
+(!(convert.currentData.experiments['100000001'])&&!(convert.historicalData.experiments['100000001']))
+Make sure you replace the 100000001 with the experiment id of the Untested Visitors AA experiment. Also, make sure that if you need to add another audience on AND fashion, you need to add inside the same Custom Audience. 

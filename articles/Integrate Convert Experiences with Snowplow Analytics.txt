@@ -1,0 +1,36 @@
+Integrate Convert Experiences with Snowplow Analytics
+<h2 id="convert-eulerian-integration">Convert-Snowplow Integration</h2>
+<p><a href="https://snowplow.io/" target="_self" rel="undefined">Snowplow Analytics technology</a> gives you control of your own data, setting your team free to use data to be transformative. This article will walk you through how to set up a Snowplow tracker and send custom Convert data to it. </p>
+<p>For each experiment, the integration will pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and <a href="https://docs.snowplow.io/docs/collecting-data/collecting-from-own-applications/javascript-trackers/javascript-tracker/self-hosting-the-javascript-tracker/" target="_self" rel="undefined">sp.js</a> are installed on your page. Snowplow tracking code looks like this:</p>
+<pre><code>;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[]; p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments) };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1; n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","{{URL to sp.js}}","snowplow"));</code></pre>
+<h2>Set Up a Snowplow Collector</h2>
+<p>Follow these <a href="https://docs.snowplow.io/docs/collecting-data/collecting-from-own-applications/" target="_self" rel="undefined">instructions</a> to set up your Snowplow collector.</p>
+<h2>Set Up a Snowplow JavaScript Tracker</h2>
+<p>Follow these <a href="https://docs.snowplow.io/docs/collecting-data/collecting-from-own-applications/javascript-trackers/javascript-tracker/" target="_self" rel="undefined">instructions</a> to set up your Snowplow JavaScript tracker. </p>
+<h2>Activate Integration Manually</h2>
+<p>You should add this extra code to your website to track <a href="https://docs.snowplow.io/docs/collecting-data/collecting-from-own-applications/javascript-trackers/javascript-tracker/javascript-tracker-v3/tracking-events/#tracking-custom-structured-events" target="_self" rel="undefined">custom structured events</a>:</p>
+<pre><code>		var refObject = window['convert']['data']['experiments']
+			for (var key in window["convert"]["currentData"]["experiments"]) {
+				if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+					continue;
+				}}
+            
+		var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+		var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+		curExperimentName = curExperimentName.replace("Test #", "Test ");
+		var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+		curVariant = curVariant.replace("Var #", "Variation ");
+		
+				snowplow('trackStructEvent', {
+  					category: 'Convert Experiences', 
+ 					 action: 'Visit a Variation', 
+  				label: 'Variation name', 
+ 					 property: '',
+  				value: curVariant
+		});
+</code></pre>
+<h2 id="view-convert-data-in-heap-analytics">View Convert Data in Snowplow</h2>
+<p>Snowplow has been designed to make it as easy as possible for analysts to use whatever analysis tools they want, to crunch Snowplow data.</p>
+<p>Choose one of the methods described <a href="https://docs.snowplow.io/docs/modeling-your-data/" target="_self" rel="undefined">here</a> to make your own analysis.</p>

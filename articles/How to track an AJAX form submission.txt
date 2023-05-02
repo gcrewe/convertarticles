@@ -1,0 +1,36 @@
+How to track an AJAX form submission
+<p>Convert does not provide an out-of-the-box solution for tracking AJAX forms. </p>
+<p>However, we provide the following recipe that you can follow to track your AJAX forms like Marketo forms or tags.</p>
+<p>AJAX forms submit the data without reloading the page. After the submission, they usually display an HTML element that will contain the notification that the form is submitted.</p>
+<p>This method relies on identifying this element and monitoring for this element to be displayed. You should identify this element and the properties that change when the form is submitted.</p>
+<p>The script show monitors the element identified by the selector '.thank-you' and monitors if the element has a class hidden.  </p>
+<p>The 'checkSubmitted' assigned function will run the script every 500 milliseconds and will trigger the goal once the element class 'hidden' is removed from the '.thank-you' element. This can be configured to the time you find convenient.</p>
+<p>You can change this to monitor for a certain value of a CSS element.  </p>
+<p>I recommend inserting this code in the Experience Custom JS section found on the gear icon of the "Visual Editor".</p>
+<p>Alternatively, it can be inserted in the "Global Project JS" section found on your project configuration. Just include an "if" function to filter the running of the code on the page that you want to monitor the goal.</p>
+<pre><code class="language-markup">
+if(window.location.href=="http://www.domain.com/page1.html") { 
+// URL of page you are going to monitor the element (only needed when addin the code to the Global JS area)
+
+  var checkSubmitTimer = setInterval(checkSubmit, 500);
+
+  function checkSubmit() {
+    console.log('checkSubmit is Running')
+    
+    if (!convert.$('.thank-you').hasClass('hide')){ // change this condition to monitor for the element changes
+        triggerGoal("100018186");
+        console.log('Free Trial Request Form Submit Goal triggered');
+        clearInterval(checkSubmitTimer);
+    }
+    else {
+      console.log('Form has not been submitted')
+    }
+  }
+
+  function triggerGoal (goal) {
+    conv_q = _conv_q || [];
+    conv_q.push(["triggerConversion",goal]);
+  }
+}
+</code></pre>
+<pre> </pre>

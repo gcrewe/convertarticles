@@ -1,0 +1,10 @@
+Third Party Cookie blocking (browser setting or plug-in)
+<h2>Chrome</h2>
+<p>You may run into some issues (for example, when in the Visual editor, using Browse mode and trying to add an item to your cart) that are caused because your browser is not allowing Convert to set cookies.</p>
+<p>There is a visual indication of this in the address bar (see the cookie with the little red x):</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360023212351/mceclip0.png"></p>
+<p>To resolve this, go to chrome://settings/content/cookies, and then if you see this setting, turn it off:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360023212531/mceclip1.png"></p>
+<p>Like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360023212571/mceclip2.png"></p>
+<p>Exit and re-enter the Visual Editor and see if the cookie icon has disappeared and if you are able to work.  If you still encounter an issue, please contact Convert Support.</p>

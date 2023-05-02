@@ -1,0 +1,38 @@
+What are Locations?
+<h2>What are Locations?</h2>
+<p>The Locations are the place within the app where you configure the criteria that would trigger your experience.</p>
+<p>The most basic configuration triggers the experiment based on a URL, for example: "http://www.convert.com".</p>
+<p>This setting is configured automatically when you first create your experiment. And is set to the URL which you input to create your AB Experiment / MVT Experiment / Deployment or the Original URL on a Split URL Experiment. </p>
+<p>There are several options that the Locations provide for triggering your experience.</p>
+<p><img src="https://support.convert.com/hc/en-us/article_attachments/14272805109005/fa2cc404b35b67994accd408c784e2b2828eef1667b796ce5bf5b10314cad4c6.png"></p>
+<h2>Trigger by URL</h2>
+<p>You can trigger experiments based on the URL of your page. You can also add many pages by adding them with the "+" sign..</p>
+<p>For a page URL like the following:</p>
+<p><em><strong>"http://domain.com/page1.html?name1=value1&amp;name2=value2"</strong></em></p>
+<p>You would be setting a comparison criteria based only on the first portion of the URL:</p>
+<p><em><strong>"http://domain.com/page1.html"</strong></em></p>
+<h2>Trigger by URL and Query Parameters</h2>
+<p>You can trigger an experiment based on the URL and its Query Parameters.</p>
+<p>For a URL like the following:</p>
+<p><em><strong>"http://domain.com/page1.html?name1=value1&amp;name2=value2"</strong></em></p>
+<p>You would be setting a comparison criteria based on the whole URL</p>
+<p><em><strong>"http://domain.com/page1.html?name1=value1&amp;name2=value2"</strong></em></p>
+<h2>Trigger by Query Parameters</h2>
+<p>You can trigger an experiment based on the URL and its Query Parameters.</p>
+<p>For a URL like the following:</p>
+<p><em><strong>"http://domain.com/page1.html?name1=value1&amp;name2=value2"</strong></em></p>
+<p>You would set a comparison criteria based on the whole URL</p>
+<p><em><strong>"name1=value1&amp;name2=value2"</strong></em></p>
+<h2>Trigger by Page Tags</h2>
+<p>You can trigger an experiment based on the Page Tags that you setup implementing an Advanced Tracking code.</p>
+<p>Page tags are variables that are mapped from your e-commerce system or other to Convert via javascipt variables using Convert advanced tracking code.</p>
+<p>You can find more information regarding page tags in the following article: <a href="https://support.convert.com/hc/en-us/articles/205152665-Targeting-with-Advanced-Page-Tagging">https://convert.zendesk.com/hc/en-us/articles/205152665-Targeting-with-Advanced-Page-Tagging</a></p>
+<h2>Trigger by JS Condition</h2>
+<p>If any of the options above did not fit how you want to trigger the experiment you can also use a Javascript Condition. </p>
+<p>A Javascript Condition is a piece of code that when is run and returns true, then the experiment would trigger. </p>
+<p>You can find how to use a JS condition to trigger your test in the following article: <a href="https://support.convert.com/hc/en-us/articles/205159965">https://convert.zendesk.com/hc/en-us/articles/205159965</a></p>
+<h2>Trigger Programmatically</h2>
+<p>You can also trigger a test programmatically. This is not done from the Site Area. It is triggered by code, and can be done in any page where the Convert tracking code is installed on. </p>
+<p>For more information about this, please read the following article: <a href="https://support.convert.com/hc/en-us/articles/114094164352-Bucketing-Visitors-into-an-Experiment-Programmatically">https://convert.zendesk.com/hc/en-us/articles/114094164352-Bucketing-Visitors-into-an-Experiment-Programmatically</a></p>
+<p> </p>
+<p>keyword: dynamyc url</p>

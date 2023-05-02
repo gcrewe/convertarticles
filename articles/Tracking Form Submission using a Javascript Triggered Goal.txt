@@ -1,0 +1,25 @@
+Tracking Form Submission using a Javascript Triggered Goal
+<h2><span>Introduction</span></h2>
+<p><span>In some cases, a  form that you want to track does not have an <em>"action"</em> attribute, and therefore cannot be tracked with the standard form submission goal template. For those cases, an alternative is to create a Javascript Triggered Goal.</span></p>
+<h2>Create a Javascript Triggered Goal</h2>
+<p>In your Experiment Summary page go to your Goals. Then to Goal Templates and select Javascript Triggered Goal:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/5989648604685/mceclip0.png" alt="mceclip0.png"></p>
+<p>Name the goal and save it. Once it is saved, go to the goals page and copy its ID:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14269920538893"></p>
+<h2>Add JS code on Global Project Javascript</h2>
+<p>To apply the tracking code on the project, copy the below code into the Global Project JS section located on the Project Configuration, replacing the goal ID with your own:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360058486332/mceclip0.png" alt="mceclip0.png"></p>
+<p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</p>
+<p>Code:</p>
+<pre>window.addEventListener('DOMContentLoaded', (event) =&gt; {
+    convert.$("#formID").submit(function(event) {
+        window.conv_q = _conv_q || [];
+        conv_q.push(["triggerConversion", "12345678"]);
+    });
+})</pre>
+<h2>Attach Goal to Experience</h2>
+<p>Attach this goal to the experience where you want to track submissions:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/5989650633613/mceclip2.png" alt="mceclip2.png"></p>
+<p>You are ready to go!</p>

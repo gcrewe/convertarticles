@@ -1,0 +1,13 @@
+Adding tags to your Experiences
+<h2>What are tags?</h2>
+<p>Tags are keywords that you can use to group or classify your experiments and organize them.</p>
+<p>If you create many experiments in Convert, tags can help you classify and find them when you need to.</p>
+<h2>How to add a tag?</h2>
+<p>To add a tag to an experience, just go to your Experiment's "Experience Summary" and click on the Experience ID to edit it. Then you will see this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14272710445709"></p>
+<p>Type a tag name and hit Enter. Or, click the drop-down and select an existing tag.</p>
+<h2>Search for experiences with a particular tag</h2>
+<p>In your Project, click on Experiences on the left-hand side menu, which will take you to the Experiences screen.  Once there, click on the search box on the top left.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14272766565901"></p>
+<p>In the search box, type <strong>#</strong> and then the keyword you are searching for. If you are looking for experiences with the tag "cro", then enter <strong>#cro</strong>. You should then see a list of experiences which contain that tag.</p>
+<p>To clear the search, click the "X" in the search box. </p>

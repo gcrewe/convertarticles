@@ -1,0 +1,23 @@
+Integrate Convert Experiences with Magento 2
+<h2 id="convert-justuno-integration">Convert-Magento Integration</h2>
+<p><a href="https://devdocs.magento.com/">Magento 2</a> is an improved version of the previous Magento with new features, developer tools, and a robust architecture.</p>
+<p>Integrating Convert Experiences with your Magento 2 website allows you to A/B test the website by simply adding the Convert tracking code through the Magento admin panel.</p>
+<p>For this implementation we used the demo Magento website that is available here: https://www.ubertheme.com/magento-news/magento-2-demo-sample-data-admin-access/</p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippet</h2>
+<p>To add the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> to your Magento 2 website, sign in to the admin panel then select <strong>Stores</strong> &gt; <strong>Configuration</strong>. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/360010800591/mceclip0.png">On the <strong>Configuration</strong> page, select the <strong>Design</strong> tab and click <strong>HTML Head</strong> section.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360010801671/mceclip1.png"></p>
+<p>In the <strong>Miscellaneous Scripts</strong> text box, paste your Convert tracking code and then click <strong>Save Config</strong>.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360010780812/mceclip2.png"></p>
+<h2>Refresh Cache</h2>
+<p>You might see a message: "One or more of the Cache Types are invalidated: Configuration. Please go to <a href="http://magento2.demo.ubertheme.com/admin/admin/cache/index/key/cdeea9ec668c62326599ef591f2fedfb0169b13c7d02b71827d4de52aaa4d534/">Cache Management</a> and refresh cache types". Go to <strong>Cache Management:</strong></p>
+<p><strong><img src="https://support.convert.com/hc/article_attachments/360010788052/mceclip3.png"></strong></p>
+<p>Select <strong>Configuration</strong> from the list and hit the <strong>Refresh</strong> Submit. Configuration then will be enabled:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360010789052/mceclip4.png"></p>
+<h2>Add Magento website in Active Websites</h2>
+<p>Go to Project Configuration to add your Magento URL to the active websites (in our case we added the demo frontend URL: http://magento2.demo.ubertheme.com/</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423874895757/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Create your A/B Experience</h2>
+<p>Create an A/B experience as described <a href="https://support.convert.com/hc/en-us/articles/205107815-Create-a-New-Experiment">here</a>.</p>
+<h2>View Report</h2>
+<p>After the experience has been created, you will be able to view data into your report, as website visitors are bucketed to original or to variation.</p>

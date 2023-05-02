@@ -1,0 +1,13 @@
+Programmatically personalizing a page using geolocation
+<h2>Issue Description</h2>
+<p>There are times that we may need to personalize a page using code. This may be to further personalize a deploy using certain dynamic data.</p>
+<p>For example, we may need to personalize a page with different messages for different <strong>regions/states</strong> with different messaging. </p>
+<h2>Solution</h2>
+<p>For this solution, we will need to create a standard <a href="https://support.convert.com/hc/en-us/articles/115000018331-What-about-Personalizations-" target="_self">deploy</a> within the Convert application. We should set the Audience targeting to the multiple groups that we are going to show the deploy. So if we are doing certain states, make sure you include them in the experience audience:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6442659802253/mceclip0.png" alt="mceclip0.png"></p>
+<p>Then we need to open the visual editor and add the deploy code in the <strong>Code Editor</strong> or<strong> Custom Javascript area</strong>. In this case, we will add to the <strong>Code Editor </strong>area since we are using the <strong>convert._$()</strong> anti-blink library.</p>
+<p>Since we are going to use the <strong>Region </strong>to personalize the content, we are going to use the <strong>convert.getUserData().geo.state</strong>.</p>
+<p>But you could also use the following for geolocation:</p>
+<p><strong>convertData.geo.country</strong><br><strong>convert.getUserData().geo.city</strong>.<br><br>Next, you can see a simple example of how to programmatically personalize for specific regions. This should be added to the <strong>Code Editor </strong>area:</p>
+<pre>var state = convert.getUserData().geo.state;<br>if (state == 'Texas') {<br>convert._$('H1').text('Personalized for Texas').val('Personalized for Texas');<br>}<br>else if (state == 'Georgia') {<br>convert._$('H1').text('Personalized for Georgia').val('Personalized for Georgia');<br>}<br>After you save this. You should check if your deploy is working.</pre>
+<p>You can check it by using a VPN Client and opening the experiment page from the specific location you want to get the data. Just be aware that IP geolocation is 85% accurate. So there could be discrepancies between the IP Geo Location data and the VPN presence point location that you may be accessing the site from. Also, consider this to make a decision if the 85% IP geolocation is good enough for the problem that you are trying to solve. </p>

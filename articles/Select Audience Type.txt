@@ -1,0 +1,30 @@
+Select Audience Type
+<p> </p>
+<p>Nowadays you can create <strong>Permanent Audiences</strong>, <strong>Segments, and</strong> <strong>Transient Audiences </strong>with Convert Experiences.  </p>
+<h2 id="permanent-audience">Permanent Audiences</h2>
+<p>This type of audience is checked only at visitor bucketing time and will not be checked again on their subsequent visits. If the audience conditions are met by the visitor, the Experience will run. If the audience conditions are not met anymore by the visitor on subsequent visits, it will not cause the Experience to be stopped for that visitor.<img src="https://support.convert.com/hc/article_attachments/6442995043341/mceclip0.png" alt="mceclip0.png"><strong><br></strong></p>
+<p>For example, if you define an audience for a specific hour and minute, e.g. hour 12 and minute 5, and when you visit the page the hour is 12 and the minute is 3, the permanent audience conditions will not be matched and the Experience will be skipped (the screenshot was taken from Google Chrome console while the <a href="https://support.convert.com/hc/en-us/articles/204506699-Chrome-Debugger-Extension-For-Convert-Experiences" target="_self">Convert Experiences Debugger</a> is ON):</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360026158471/mceclip0.png"></p>
+<p>If the permanent audience conditions were matched, then the Experience will randomly decide which variation to present to you:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360026158771/mceclip3.png" alt="mceclip3.png"></p>
+<p>If after a few minutes you try again, because audience conditions were checked previously for you and a variation was served, the same variation will still be served to you, even though you are outside of the correct minutes (as defined in the audience conditions).</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360026158731/mceclip2.png"></p>
+<h2>Segments </h2>
+<p>Segments are a group of visitors that can be tracked separately from the rest of the visitors on an experiment. Visitors can belong to a segment by qualifying base on matching Audience conditions (such as location, the device used to access the site, the hour of the day, and any other visitor behaviors). These segments can be analyzed separately in the experiment reports. This enables you to find variation winners on certain segments, that may not be winners on the general experiment visitor sample. <br><span style="font-size: 1.2em; font-weight: 600;">Not attached to any experiment</span></p>
+<p>Segments are independent of experiments. Segments do not need to be attached to an experiment to be tracked within them. However, they can also be used to target experiments to them, when needed, in the same way as a Permanent Audience.</p>
+<h3>Project Level</h3>
+<p>Segments are evaluated at the Project level, so any visitor that reaches a page with the Project tracking code and who matches the Audience conditions designated as a Segment will be added to it.</p>
+<p>Saved Segments in a Project can be used on other Experiences in that Project as well.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6443046847501/mceclip1.png" alt="mceclip1.png"></p>
+<p>You can read more about Segments <a href="https://support.convert.com/hc/en-us/articles/115000995732" target="_self">here</a>.</p>
+<h2>Transient Audiences</h2>
+<p>With this audience type, audience conditions will be re-checked each time an experience is to be presented (versus the Permanent ones that will only be checked at visitor bucketing time).</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6443035727629/mceclip2.png" alt="mceclip2.png"></p>
+<p>For example, if you define an audience for a specific hour, e.g. 9, and when you visit the page the hour is 11, the transient audience conditions will not be matched and the experiment will be skipped:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360026158811/mceclip5.png"></p>
+<p>If you define an audience for a specific hour, e.g. 11, and when you visit the page the hour is 11, the transient audience conditions will be matched and the experiment will run:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360026159051/mceclip6.png"></p>
+<p>If you then open another tab after the Experience had already decided which variation to serve to you, transient audience conditions will be checked again.  <em>If they still match</em>, it will serve you the same variation that was presented before:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360026159111/mceclip7.png"></p>
+<p>If you visit again, perhaps an hour later where transient audience conditions <em>no longer match</em>, the Experience will be skipped.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360026159151/mceclip8.png"></p>

@@ -1,0 +1,26 @@
+Excluding/Including visitors that have been bucketed on another experiment
+<p>Convert allows you to exclude or include visitors in your experiment that have been included in another one.</p>
+<p>This article shows how to exclude a visitor that has been included in another specific experiment. If you want to exclude visitors that have been excluded in all other experiments, look at <a href="https://support.convert.com/hc/en-us/articles/115000414332-Running-experiments-simultaneously-on-a-page-or-set-of-pages-" target="_self">this article</a>.</p>
+<p>To do this you have to configure an Advanced Audience.</p>
+<ol>
+<li>Edit your Audience.<br><img src="https://support.convert.com/hc/article_attachments/14270332773517">
+</li>
+<li>Create New Audience.</li>
+<li>Select and drag to the main panel the "Visitor Data &gt; Visitor Cookie" option.</li>
+<li>To <strong>exclude</strong> visitors who have been bucketed on a specified experience, enter for <strong>Cookie Name:</strong> <em>"_conv_v"</em>. <strong>Select:</strong> <em>"Does not contain"</em>. <strong>Enter the experiment id</strong>, for which its visitors should be excluded in this experiment, for example, <em>"12345678"</em>. Then Save the audience.<br><br><img src="https://support.convert.com/hc/article_attachments/6443237550989/mceclip1.png" alt="mceclip1.png"><br><br>Now, the visitors that have been bucketed on the specified experience, won't be bucketed in the one in which you have created the "Advanced Audience". <br><br>
+</li>
+<li>To <strong>include</strong> only visitors who have been bucketed on a specified experience, enter for <strong>Cookie Name:</strong> <em>"_conv_v"</em>. <strong>Select:</strong> <em>"Contains"</em>. <strong>Enter the experiment id</strong>, for which its visitors should be included in this experiment, for example, <em>"12345678"</em>. Then Save the audience.<br><br><img src="https://support.convert.com/hc/article_attachments/6443340154637/mceclip2.png" alt="mceclip2.png"><br><br>Now, only visitors that have been bucketed on the specified experience, will be bucketed in the one in which you have created the "Advanced Audience". </li>
+</ol>
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>Note that if trying to exclude visitors that were included on a test configured with less than 100% traffic, a cookie is still written if they met the Site Area and Audience conditions but due to the traffic restriction, <em>were not actually included in that experiment</em>.</p>
+<p>The cookie will look similar to this:</p>
+<p>exp:{12345678.{v.1-g.{}}}</p>
+<p>Note that there is no variation value - only v.1 - because they were not included in the experiment.  However, we still keep track of this with cookies so that next time they visit they will again be excluded from the same experiment with less than 100% of traffic.</p>
+<p>In this case, in your audience where you want to exclude people that were part of a particular previous experiment, you could include them if the cookie value DOES contain</p>
+<pre class=" language-javascript"><em>12345678.{v.1-</em></pre>
+<p>This will match only visitors that were considered but rejected for inclusion in the previous experiment (because they fell outside of the percentage of visitors that would be added to that previous experiment).</p>
+</div>
+</div>

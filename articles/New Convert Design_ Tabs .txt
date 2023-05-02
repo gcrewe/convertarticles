@@ -1,0 +1,21 @@
+New Convert Design: Tabs 
+<p data-id="block-ember3742" data-generated-at="15384318214740.7547395831743597" data-align="left"><strong data-id="entity-ember3746">What has changed?</strong></p>
+<ul data-id="block-ember3751" data-generated-at="15384318214740.6692683113624149">
+<li data-id="block-ember3756" data-generated-at="15384318214740.29995132717950534">We have moved the sections from a column view to Tabs on the top of the screen.<br><br>
+</li>
+</ul>
+<p>The app functionality was not touched, everything remains the same,  the sections of the experience you were used to just moved from the left column to a "tab" view to bring more agility to the interface:</p>
+<p> </p>
+<p><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;"><strong>Project View:</strong></span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;"></span></p>
+<p>Before:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360053210651/mceclip1.png" alt="mceclip1.png"></p>
+<p>New:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360053073492/mceclip2.png" alt="mceclip2.png"></p>
+<p> </p>
+<p><strong>Experience View:</strong></p>
+<p><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">Before:</span></p>
+<p><img src="https://support.convert.com/hc/article_attachments/360053072752/mceclip0.png" alt="mceclip0.png" width="882" height="247"></p>
+<p>New:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360053210151/mceclip0.png" alt="mceclip0.png"></p>
+<p>As we can see above, the navigation through the Summary and Report of the experience got more agile in a Tab view.</p>
+<p>Also, now it is visible from which Project the Experience belongs, the title contains <strong>Project Name &gt; Experience Name</strong>. This is also clickable and from here you can navigate to the project Experiences.</p>

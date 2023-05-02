@@ -1,0 +1,24 @@
+Server Side Testing 
+<h2>Overview</h2>
+<p>It is possible to write Server Side driven tests that work along with Convert Experiences AB testing. The following article is meant to explain how can this be achieved.<br><br><br></p>
+<div class="special-content special-content--tips">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-04.png" alt="Tip"></div>
+<div class="special-content__info">
+<h3>Tips</h3>
+<p>There is a <a href="https://support.convert.com/hc/en-us/articles/360019498251-Server-Side-Testing-with-PHP" target="_blank" rel="noopener">Convert Server Side PHP example</a> available to you.</p>
+</div>
+</div>
+<h2>Process</h2>
+<ol>
+<li>Determine if customers have been bucketed in the experiment already.<br><br>Read the _conv_v cookie and parse it according to the structure described here:<br><br><a href="https://support.convert.com/hc/en-us/articles/204495429-Convert-Experiences-Tracking-Cookies-Structure">Cookie Structure Article<br><br></a>
+</li>
+<li>Determine if the experiment id is included in the cookie and if it is read the variation id to which the visitor was assigned to.<br><br>With the variation id, execute the logic associated with this variation.<br><br>If the experiment id is not found, go to the next step.<br><br>
+</li>
+<li>Generate a random number between 0 and 1 and use it do decide which variation is to be presented, based on the number of variations you have on the test in question.<br><br>Example: if you have 3 variations and the number generated is 0.55 then the variation would be the second one. <br><br>Next, you will need to id of the selected variation (second on the example), which you can get from <a href="https://support.convert.com/hc/en-us/articles/360013456431-Retrieving-Experiment-Configuration-Data-Programmatically">REST Project Endpoint</a> or just hard code the list of <a href="https://support.convert.com/hc/en-us/articles/204506639-Where-Do-I-Find-my-Experiment-and-Variation-IDs">variations IDs</a> for that experiment in your code (this more convenient and faster).<br><br>
+</li>
+<li>To tell Convert which variation has been selected for this visitor write the following cookie.<br><br><strong>Name: </strong>_conv_sptest<br><strong>Value:</strong> experiment_id:variation_id (Replace it with the real values)<br><strong>Expiration:</strong> 10 seconds (This should be enough)<br><br>
+</li>
+<li>Based on the selected variation do your internal logic, the same as if variations were there from the previously bucketed visitor as in Step 2.<br><br>
+</li>
+<li>The experiment has to be set up with a Location that prevents it from firing and be set to active. This could be achieved by including an unreachable <a href="https://support.convert.com/hc/en-us/articles/205159965-Targeting-Experiments-and-Firing-Goals-Based-on-a-JavaScript-Condition">Boolean JS condition</a>. </li>
+</ol>

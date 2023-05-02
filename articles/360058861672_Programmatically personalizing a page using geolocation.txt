@@ -1,0 +1,13 @@
+Programmatically personalizing a page using geolocation
+Issue Description
+There are times that we may need to personalize a page using code. This may be to further personalize a deploy using certain dynamic data.
+For example, we may need to personalize a page with different messages for different regions/states with different messaging. 
+Solution
+For this solution, we will need to create a standard deploy within the Convert application. We should set the Audience targeting to the multiple groups that we are going to show the deploy. So if we are doing certain states, make sure you include them in the experience audience:
+
+Then we need to open the visual editor and add the deploy code in the Code Editor or Custom Javascript area. In this case, we will add to the Code Editor area since we are using the convert._$() anti-blink library.
+Since we are going to use the Region to personalize the content, we are going to use the convert.getUserData().geo.state.
+But you could also use the following for geolocation:
+convertData.geo.countryconvert.getUserData().geo.city.Next, you can see a simple example of how to programmatically personalize for specific regions. This should be added to the Code Editor area:
+var state = convert.getUserData().geo.state;if (state == 'Texas') {convert._$('H1').text('Personalized for Texas').val('Personalized for Texas');}else if (state == 'Georgia') {convert._$('H1').text('Personalized for Georgia').val('Personalized for Georgia');}After you save this. You should check if your deploy is working.
+You can check it by using a VPN Client and opening the experiment page from the specific location you want to get the data. Just be aware that IP geolocation is 85% accurate. So there could be discrepancies between the IP Geo Location data and the VPN presence point location that you may be accessing the site from. Also, consider this to make a decision if the 85% IP geolocation is good enough for the problem that you are trying to solve. 

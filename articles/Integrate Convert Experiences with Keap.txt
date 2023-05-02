@@ -1,0 +1,37 @@
+Integrate Convert Experiences with Keap
+<h2 id="introduction">Introduction</h2>
+<p><a href="https://keap.com/">Keap</a> (formerly Infusionsoft) is a CRM &amp; marketing automation platform for small business that enables you to organize and automate your processes.</p>
+<p>This article will walk you through how to send Convert Experiences Project and Variation data along with visitor submissions through Keap forms.</p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the Convert tracking code is <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">installed</a> on your page.</p>
+<p>Then, create a Keap account. On every page that you want to install Keap, paste the code snippet inside the HTML &lt;body&gt; tag. The Keap tracking code is available under Marketing&gt;Lead Generation.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360022090151/mceclip0.png"></p>
+<h2>Create a Custom Field in Contact</h2>
+<p>From admin settings you should add a new <a href="https://help.infusionsoft.com/help/choose-custom-field-types">custom field</a> for Contact record and give it a name. Here we name it ConvertVariationID and will hold the Convert Variation ID that the user will be bucketed into.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360022091891/mceclip0.png"></p>
+<h2 id="create-your-form-fields in-formstack">Create your Form in Keap</h2>
+<p>Create a new Web form in Keap. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/360022099452/mceclip1.png"></p>
+<p>On the webform, drag a Hidden Field snippet and assign it to your custom field you created in previous step. Don’t put a value in the box. We are going to use some JavaScript to populate that field.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360022090811/mceclip2.png"></p>
+<p>Once you have got that, drag an HTML snippet out and put it on your form as well:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360022091171/mceclip3.png"></p>
+<p>In your HTML Snippet, you will want to copy/paste the code from below. It should look like this, where instead of 10023753 you should insert your own <a href="https://support.convert.com/hc/en-us/articles/204506639-Where-Do-I-Find-my-Experiment-and-Variation-IDs">Convert experiment id</a> that is running on your page:</p>
+<pre><code> convert.$(document).ready(function(){
+var ConvertVariation = convert.currentData.experiments[10023753].variation_id;
+convert.$('#_Converttest').val(unescape(ConvertVariation));
+console.log(ConvertVariation);
+    });
+</code></pre>
+<h2 id="embed-the-form-in-your-website">Embed the Form in your Website</h2>
+<p>Then go to Publish options in Keap.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360022100312/mceclip4.png"></p>
+<p> </p>
+<p>Copy and paste that HTML code into the page on your website where you want the form to show. It will look like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360022091531/mceclip7.png"></p>
+<h2 id="submit-the-form">Submit the Form</h2>
+<p>Submit the form to test it out:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360022091471/mceclip6.png"></p>
+<h2 id="view-convert-data-in-formstack">View Convert data in Keap</h2>
+<p>After submitting your form, go to your Contacts records in Keap and see the Custom Field populated with a value. This is the Convert Variation ID that the specific user was bucketed into.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360022100552/mceclip8.png"></p>

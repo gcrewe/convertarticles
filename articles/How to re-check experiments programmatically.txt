@@ -1,0 +1,5 @@
+How to re-check experiments programmatically
+<p>When the page loads initially, Convert evaluates each of the active experiment conditions. However, you might need to be recheck them again after the page loads. </p>
+<p>For this, we provide a function that can be programmatically called. We call this <strong>polling</strong>. This can be called in the following way:</p>
+<pre>_conv_q = window._conv_q || []; <br>_conv_q.push(["run","true"]);</pre>
+<p><strong>keyword: recheck experiments</strong></p>

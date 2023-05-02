@@ -1,0 +1,25 @@
+Targeting visitors included on Hubspot lists
+<h2>Overview</h2>
+<p>It is possible to target and post-segment visitors that are members of Hubspot lists or Hubspot Campaigns with Convert experiences on Hubspot web pages.</p>
+<p>This allows you to leverage the investment the organization might have in their Hubspot lists.</p>
+<h2>Hubspot Templates</h2>
+<p>It is possible to achieve this by modifying the Hubspot templates by assigning the <a href="https://developers.hubspot.com/docs/cms/hubl/variables" target="_self">Hubspot Template variable list</a> to a <a href="https://support.convert.com/hc/en-us/articles/205152665-Targeting-with-Advanced-Page-Tagging" target="_self">Custom Convert Page Tag</a>. This allows you to use this Custom Page Tag to target experiences or create post-segmentation segments.</p>
+<p>To do this, modify the Hubspot template, and insert the following code at the beginning and inside of the HEAD tag.</p>
+<pre><code class="language-markup"><span>&lt;!--begin Convert Experiences code--&gt; <br>
+&lt;script type="text/javascript"&gt;<br>
+// The following line assign the Convert page tag variable with the Hubspot template variable<br>
+let _conv_custom_v1 = {request_contact.list_memberships};<br>
+let _conv_custom_v2 = {content.campaign_name};<br>
+&lt;/script&gt;<br>
+&lt;script type="text/javascript" src="//cdn-3.convertexperiments.com/js/123456789-123456789.js"&gt;&lt;/script&gt;<br>
+&lt;!-- end Convert Experiences code --&gt;</span>
+</code></pre>
+<p>Make sure that the project id, of the Convert tracking code, corresponds to your own Convert Project Tracking code, replacing the <em>1234568-123456789.js</em> with your own. You will not need to insert the Convert tracking code again on your page. If you already have it inserted on your pages, you might want to remove it or make sure that the page-tag variable is assigned before the Convert tracking code is declared.<br><br>You can map other Hubspot variables as needed, or you could assign it to your owned name variables and call them directly from a <a href="https://support.convert.com/hc/en-us/articles/206631623" target="_blank" rel="noopener">JS Condition</a>. The variables have to be assigned while editing the Hubspot templates as described above.</p>
+<h2><strong>Creating the Convert Audiences or Segments with the Convert Custom Page Tags</strong></h2>
+<p>Create an Audience or Segment within the Advanced Audience Editor when creating a Custom Audience.</p>
+<p>Select a Custom Page Tag condition and compare it to the Hubspot List or Hubspot Campaign that you want to target. If you are targeting different Hubspot Lists or Hubspot Campaigns use a separate condition for each as in the example pictured below. Hubspot Lists numbers can be found on the URL when editing them.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6448258271245/mceclip0.png" alt="mceclip0.png"></p>
+<p> </p>
+<p>When creating the conditions, make sure it does not match any other of your existing campaigns.</p>
+<h2>Targeting visitors that have met certain criteria in Hubspot</h2>
+<p>To do this, simply create a contact list in Hubspot build with the <a href="https://knowledge.hubspot.com/lists/determine-your-list-criteria#object-activity-line-item-or-quote-properties" target="_blank" rel="noopener">criteria</a> available in Hubspot under your plan and then target the list in Convert as explained above.</p>

@@ -1,0 +1,24 @@
+Integrating with Marketo Personalization Javascript API
+<h2>Overview</h2>
+<p><a href="https://www.marketo.com/" target="_self">Marketo</a> offers personalization options via its Javascript API. Here we are going to refer to how to access Marketo website visitor stored data and how to personalize with it. This integration allows you to target experiences based on Marketo stored marketing data via its user context personalization javascript api.</p>
+<h2>Instructions</h2>
+<p>This integration refers to Marketo personalization API related to the User Context documented in <a href="https://developers.marketo.com/javascript-api/web-personalization/user-context/" target="_blank" rel="noopener">this article</a>.<br><br>Let's say that we want to target an experience for users that are part of a certain Marketo campaign. <br><br></p>
+<p>1) First we need to create the <a href="https://support.convert.com/hc/en-us/articles/205107815" target="_blank" rel="noopener">experience</a> we want to target in Convert.</p>
+<p>2) We need to create an <a href="https://support.convert.com/hc/en-us/articles/115000021251" target="_blank" rel="noopener">Advanced Audience</a> and add a <a href="https://support.convert.com/hc/en-us/articles/205159965" target="_blank" rel="noopener">JS Condition</a> to it.</p>
+<p>3) Then you need to set the JS Condition to query Marketo and return true or false. We are going to utilize two examples provided in the Marketo documentation. Each of these JS Conditions should return a boolean value.<br><br>a) Targeting the experience based on the state location based on Marketo stored data:</p>
+<pre><code class="language-markup">
+(function() {
+   if(typeof(rtp.userContext.location.state)=="undefined") {
+       convert_recheck_experiment(); return false;} 
+   else return (rtp.userContext.location.state == 'CA');
+})()
+</code></pre>
+<p>b) Targeting the experience if the visitor viewed a certain campaign.</p>
+<pre><code class="language-markup">
+(function() {
+if(typeof(rtp.userContext.viewedCampaign('45'))=="undefined") {
+convert_recheck_experiment(); return false;} 
+else return (rtp.userContext.viewedCampaign('45'));
+})()
+</code></pre>
+<p>With these instructions, you should be able to accomplish the targeting to the users based on Marketo data.</p>

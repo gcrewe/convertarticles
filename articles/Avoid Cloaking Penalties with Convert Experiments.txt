@@ -1,0 +1,29 @@
+Avoid Cloaking Penalties with Convert Experiments
+<h2>Introduction</h2>
+<p><em>Is A/B Testing allowed by Google?</em></p>
+<p><em>Am I going to get penalized in Google Search results because of cloaking?</em></p>
+<p>This article guides you through the definition of cloaking, provides some cloaking examples and then instructs you on how to avoid Google's cloaking penalties by creating your experiments in Convert Experiments.</p>
+<h2>What is Cloaking</h2>
+<p>Google suggests that if they detect cloaking on your site you may be removed entirely from the Google index.</p>
+<p>So what does cloaking mean? Simply put, you display different content to search engine bots and to humans to manipulate your search engine rankings. Most of the cloaking scripts identify the IP of the user agent (humans or search engine bots) and, based on a predefined list of IPs of search engine bots, will guess if the visitor is a search engine or a human. Other scripts use "traps" to identify robots. Based on who’s visiting your site, you can set up your web server to serve the tricky content to the search engine and nice-looking content to the human.</p>
+<p>Some historical information on cloaking if you are interested:</p>
+<p><em>Cloaking content was mentioned in the early days of search engines (around the 1990s). In those days, SEO was all about keyword stuffing. So, smart SEO geeks used to display a page full of keywords when a search engine bot visited to crawl/index the page. While if a user visited the same page, they displayed the default (normal) version. This strategy of keyword stuffing used to work like wonders so naturally, search engines started devising clever ways to detect and penalize such cloaking. But thanks to Google’s PageRank algorithm, keyword stuffing no longer works. </em></p>
+<h2>Examples of Cloaking</h2>
+<p>Some examples of cloaking include:</p>
+<ul>
+<li>Serving a page of HTML text to search engines while showing a page of images or Flash to users</li>
+<li>Inserting text or keywords into a page only when the User-agent requesting the page is a search engine, not a human visitor</li>
+</ul>
+<h2>Use Convert Experiments to avoid Cloaking</h2>
+<p>The Convert experimental setup is designed specifically to avoid any issues with cloaking, as long as you keep a few things in mind.</p>
+<h3>Do not distinct on Googlebot User-Agent</h3>
+<p>As long as you are not basing your traffic allocation on a search engine vs. human distinction (using Googlebot user-agent in Audiences feature) you will not be punished for cloaking. Google doesn’t care if its bot sees one version or another; it just cares that its bot has the same user experience as that of a random visitor.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6448817202317/mceclip0.png" alt="mceclip0.png"></p>
+<h3>Use rel="canonical"</h3>
+<p>If an A/B test has multiple URLs, place the rel=canonical link attribute on all of your alternate links, pointing to your original page. This will help point bots index your website to your original page. Experiments involving redirects should be fine if they don't redirect to unexpected or unrelated content.</p>
+<h3>Use 302s for redirect</h3>
+<p>Google recommends using the temporary direction method, a 302, over the permanent 301 redirects. This tells search engines that this redirect is temporary—it will only be in place as long as you’re running the experiment—and that they should keep the original URL in their index rather than replacing it with the target of the redirect (the test page). JavaScript-based redirects are also fine.</p>
+<h3>Only run the experiment "as long as necessary."</h3>
+<p>You can run an experiment if there is sufficient traffic to justify it in the first place and either shut it off if it fails to conclude within your estimated timeframe or immediately after it does.</p>
+<p> </p>
+<p>keywords: google indexing prevention</p>

@@ -1,0 +1,31 @@
+Integrate Convert Experiences with Pendo
+<h2>Convert-Pendo Integration</h2>
+<p><a href="https://www.pendo.io/" target="_self">Pendo</a><span><a href="https://www.pendo.io/" target="_self"> </a>is a product-analytics app built to help software companies develop products that resonate with customers. The app allows software makers to embed in their products a wide range of tools that can lead both to a better product experience for users and new insights for the product team.</span></p>
+<p>This article will walk you through how to send data from Convert experiences/variations to your Pendo account. For each experiment, the integration will pass along the experiment name and variation name that the visitor is currently bucketed into (if any) as a track event.</p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the Pendo code are installed on your page. Pendo tracking code installation instructions can be found <a href="https://support.pendo.io/hc/en-us/articles/360032201071-Client-side-data-installation" target="_self">here</a>.</p>
+<div class="user_formatted header_section clearfix">
+<h2>Activate Integration Manually</h2>
+<p>Once you have the two tracking codes in your website, then you should add this extra code to track <a href="https://support.pendo.io/hc/en-us/articles/360032294291-Track-Events-Configuration" target="_self" rel="undefined">events </a> (one for experiment name and one for variation name). <em>You can add this to the <a href="https://support.convert.com/hc/en-us/articles/115000006251-Project-Experience-Experiment-or-Personalization-Variation-Javascript" target="_blank" rel="noopener">Project Global Javascript</a> section or directly on your pages, after the Kissmetrics and Convert tracking codes.</em></p>
+<pre><code>   
+    var refObject = window['convert']['data']['experiments']
+	for (var key in window["convert"]["currentData"]["experiments"]) {
+		if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+			continue;
+		}		
+            
+	var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+	var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+	curExperimentName = curExperimentName.replace("Test #", "Test ");
+	var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+	curVariant = curVariant.replace("Var #", "Variation ");
+
+pendo.track("Convert", {
+  'Experiment Name': 'curExperimentName',
+  'Variation Name': 'curVariant'
+});
+
+}</code></pre>
+<h2>View Convert data in Pendo</h2>
+<p>After integration is enabled and your experiment is activated, you will be able to find in your Pendo account the custom user data that you sent.</p>
+</div>

@@ -1,0 +1,126 @@
+Integrate with Cookie Consent Management Platforms (Cookiebot)
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<p>No personal data is used or stored in Convert Experiences if you use the default settings.</p>
+</div>
+</div>
+<h2 id="introduction" data-post-processed="true">Introduction</h2>
+<p class="no-margin">To comply with the <a href="https://www.convert.com/gdpr/" target="_self">GDPR</a> and <a href="https://www.convert.com/eprivacy-regulations/" target="_self" rel="undefined">ePrivacy</a> <span>Convert's EU customers as well as non-EU customers</span> <strong>processing personal data of visitors from EU/EEA </strong>have to respect the user's choice with respect to cookie tracking. This means that the website owner needs the ability to control when a cookie-setting script is executed on the website.</p>
+<p class="no-margin">This is required as the GDPR and ePrivacy state that the website owner is required to block cookie-setting script until they have collected consent from the user.</p>
+<p class="no-margin">Compliant use of cookie tracking can be achieved by first executing cookie setting scripts after the user has given their consent.</p>
+<h2><span>How GDPR &amp; ePrivacy influence tracking</span></h2>
+<p><span>Under GDPR and ePrivacy, you need to notify your customers about what personal data you are processing through a <strong>privacy notice</strong> and also need to collect <strong>consent</strong> for processing this personal data. You can collect consent by using one of the <strong>Cookie Consent Management Platforms</strong> (CMP) </span><span>(<a href="https://www.cookiebot.com/en/" target="_self">Cookiebot</a>, <a href="https://www.onetrust.com/products/cookie-consent/" target="_self">OneTrust</a>, <a href="https://www.cookieconsent.io/" target="_self">CookieConsent</a>, <a href="https://cookieinformation.com/" target="_self">CookieInformation</a>, <a href="https://www.uniconsent.com/" target="_self">UniConsent</a>, <a href="https://www.consentmanager.net/" target="_self">ConsentManager</a>, <a href="https://www.civicuk.com/cookie-control" target="_self" rel="undefined">Civic Cookie Control</a>) for tracking the visitor by adding a “tracking consent” notice on your webpages. This notice should contain a button that the visitor can click to give their consent.</span></p>
+<p><span>From a user perspective, a CMP is a tool that enables the pop-up boxes on many of the websites you visit. For each visit, the CMP asks for the user’s consent to data collection and cookie placement. Upon the consent selection by the user, the CMP is then providing an indicator that can be used to conditionally execute (fire) tags – resulting in cookie placement and data collection. </span></p>
+<p><span>The style of pop-up box displayed, language used for consent, and granularity of options will depend upon the use and configuration of the CMP. By optimizing the combination of these factors, an organization can maximize the proportion of consenting users (allowing you to collect data about their behavior and place cookies for advertising). This is referred to as <strong>Consent Rate Optimization</strong>.</span></p>
+<p><span>One common complaint about CMPs is that there is no native functionality within the platforms to test the user behavior when presented with various options for banner configuration. For example – do more users accept consent when presented with a small banner at the top of a webpage, or when presented with a full-screen message?</span></p>
+<h2><span>Integrate Convert with CMP </span></h2>
+<div class="elementor-element elementor-element-d11bb3a elementor-widget elementor-widget-text-editor" data-id="d11bb3a" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-text-editor elementor-clearfix">
+<p><span>To address this deficiency, we are presenting below a custom configuration of A/B testing using Cookiebot banner deployed through Convert. With this configuration, you will be able to answer the following questions:</span></p>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-d384b5b elementor-widget elementor-widget-text-editor" data-id="d384b5b" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-text-editor elementor-clearfix">
+<ol>
+<li><span>How many users arrived on the website? Which consent option were they presented with, and did they consent or not?</span></li>
+<li><span>How many users consented or rejected with each consent type?</span></li>
+<li><span>What is the potential traffic loss or visibility loss from users that don’t consent with each consent type?</span></li>
+<li><span>How are other top-line metrics such as pageviews, bounce rate, etc. impacted by the consent experience?</span></li>
+<li><span>What is the percentage of Consent Rate Optimization?</span></li>
+</ol>
+</div>
+</div>
+</div>
+<p><span>For the sake of this article we are going to use Cookiebot as the CMP and describe how this is feasible with Convert.</span></p>
+<h2>Step 1 - Create a CMP account and add your domain</h2>
+<p><a href="https://www.cookiebot.com/en/signup">Sign up</a><span> to create a Cookiebot account. </span><a href="https://manage.cookiebot.com/goto/login" target="_blank" rel="noopener noreferrer">Log in</a><span> to your account and add your website domain name(s). Save. The website will now be scanned (please allow up to 24 hours for the scan to complete).</span></p>
+<h2>Step 2 - Build your own cookie consent banner exactly the way you want it</h2>
+<p><span>With a premium subscription, the cookie consent banner can be styled in a number of ways using the built-in templates and CSS styling, see </span><em><a class="article-list-link" href="https://support.cookiebot.com/hc/en-us/articles/360003942753-Can-I-style-the-cookie-consent-banner-" target="_blank" rel="noopener">Can I style the cookie consent banner?</a></em><span>. However, if you prefer to build your own banner, which you can customize completely to your liking, that is possible, too (premium subscriptions only).</span></p>
+<p><img src="https://support.convert.com/hc/article_attachments/360089396592/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Step 3 - Insert the Cookiebot scripts on your website </h2>
+<p><span>You will need to include both <a href="https://support.cookiebot.com/hc/en-us/categories/360000349993-Implementing-Cookiebot-on-your-website" target="_self">the Cookie Consent banner, and your own cookie declaration</a> at an appropriate place in your document.</span></p>
+<ol>
+<li>
+<strong>Cookie consent banner:</strong><span> Copy the top script and insert it as the </span><strong>very first script</strong><span> within the HEAD-tag of your website. Inserting it as the very first script ensures that no cookies or trackers escape our automatic cookie blocking.</span>
+</li>
+<li>
+<strong>Cookie Declaration:</strong> Copy the second script and insert it in the HTML on the specific page and at the <strong>exact position</strong> where you would like the Cookie Declaration to appear. This could be as a separate page on your website or embedded into an existing privacy policy. The standard Cookie Declaration lists all cookies and trackers discovered on your website and allows the user to withdraw (or change) a consent at any time – as required under e.g. GDPR.</li>
+</ol>
+<h2>Step 4 - Insert the Convert script on your website </h2>
+<p>Use <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Convert-Tracking-Code-JavaScript-" target="_self">these instructions</a> to install the Convert tag on your site.</p>
+<h2>Step 5 - Create an A/B Experience to modify consent banner design</h2>
+<p>Next you need to <a href="https://support.convert.com/hc/en-us/articles/204506859-How-do-I-setup-a-new-A-B-experiment-" target="_self">setup an A/B experience</a> through your Convert account.</p>
+<p>In the variation, either by using the Visual Editor or the Custom HTML/JS/CSS editors you will be able to change the design of the consent banner. </p>
+<p>You may test any variable that may impact the "conversion rate" for accepting cookies, including:</p>
+<ul>
+<li>Presentation (popup/lightbox vs accordion)</li>
+<li>Copy (tone, length, motivators / value props for accepting cookies, headline)</li>
+<li>Calls to action (label, size, style, color, placement)</li>
+<li>Point-of-action assurance (copy, motivators)</li>
+</ul>
+<p>To change the colors:</p>
+<ol>
+<li>You can change the colors by clicking on any element of the banner and then use the CSS Editor.</li>
+<li>Choose the color you like – either by clicking anywhere on the color palette or by entering a HEX code.</li>
+<li>Click ‘Save changes’ to apply the chosen color.</li>
+<li>
+<a href="https://support.convert.com/hc/en-us/articles/204506649-How-Do-I-Preview-Variations-" target="_self">Preview the styling</a> to see what it would look like on your website </li>
+<li>If you are happy with the styling, save and continue.</li>
+</ol>
+<p><img src="https://support.convert.com/hc/article_attachments/360089396812/mceclip2.png" alt="mceclip2.png"></p>
+<p>To customize or add a logo:</p>
+<ol>
+<li>Decide if you want to display a logo on the cookie consent banner or not</li>
+<li>Use your own logo. Use an image/logo from the internet or select a file to upload</li>
+<li>Save your changes</li>
+</ol>
+<p><span>To change the consent options:</span></p>
+<ol>
+<li>Decide which are the words you would like to use for Consent/Agree - No Consent/Disagree by following <a href="https://www.convert.com/eu-gdpr/article-7-gdpr/" target="_self">GDPR principles for consent</a>
+</li>
+<li>
+<a href="https://support.convert.com/hc/en-us/articles/204506649-How-Do-I-Preview-Variations-" target="_self">Preview the styling</a> to see what it would look like on your website </li>
+<li>If you are happy with the styling, save and continue.</li>
+</ol>
+<p><img src="https://support.convert.com/hc/article_attachments/360089396591/mceclip3.png" alt="mceclip3.png"></p>
+<h2>Step 6 - Define your goals and what you want to measure</h2>
+<p>You can now <a href="https://support.convert.com/hc/en-us/articles/204494109-Goals" target="_self">define your own goals</a> and what you want to measure.</p>
+<p>For example you can measure how many visitors clicked on the "I Accept" option of the consent banner while you changed its color.</p>
+<p>You can also add goals to measure which visitors have consented to all cookies and which of them have consented only to Necessary. This can be done by using the Advanced Goal Editor and add your own JS conditions there.</p>
+<h2>Step 7 - Run the A/B Experience </h2>
+<p>Once you are ready with all changes you can activate the experience and wait for the results. Use our <a href="https://www.convert.com/calculator/" target="_self">A/B Testing Statistical Calculator</a> to answer all you pre- and post-analysis questions.</p>
+<p>Below for example t<span>he hypothesis was that uniformizing the colors would not change users' behavior, but it ended up doing so. We observed a statistically significant dip of -9%, at a 99% confidence level and a power of 72%. </span></p>
+<p><span><img src="https://support.convert.com/hc/article_attachments/360088603551/mceclip2.png" alt="mceclip2.png"></span></p>
+<h2 id="step-8---exclude-visitors-who-selected-no-consent">Step 8 - Exclude Visitors who selected No Consent</h2>
+<p>In the above A/B experience you need also to take care of visitors who selected No on the cookie consent banner and accepted only the Strictly Necessary cookies. In such case there are some challenges:</p>
+<ul>
+<li>Allowing experience users to opt out of testing and analytics cookies means no tracking after the conversion event (in this case opt in, out or abandonment)</li>
+<li>If users opt out, you are expected to honor their request forever. Allowing them to opt out before you absolutely have to ask means losing out on data and disabling site features that could improve conversion rates</li>
+<li>If running a cookie permission test concurrently with other tests, it's not guaranteed the tests will play nicely together.</li>
+<li>This type of test may have a short half-life, meaning that consumer behavior is expected to change over time. As people get used to encountering permission requests, they are likely to become more tolerant, and respond to prompts differently than today.</li>
+</ul>
+<p>Cookiebot has a function called "<a href="https://www.cookiebot.com/en/developer/" target="_self" rel="undefined">CookiebotOnDecline</a>" which you can use and disable this single A/B experience for non consented users by using the parameter "<a href="https://support.convert.com/hc/en-us/articles/114094130151-Disable-AB-testing" target="_self">_conv_eignore</a>". For example once a visitor navigates to your page and select the No option on cookie consent banner you can have this:</p>
+<p><em><strong>http://www.convert.com/page1.html?_conv_eignore=experienceID</strong></em></p>
+<p>This would disable any variations showing and collecting any experiment data.</p>
+<h2>Step 9 - IAB Consent Framework and Google Consent Mode</h2>
+<p><span>Cookiebot offers support for the <a href="https://iabeurope.eu/transparency-consent-framework/" target="_self">IAB Transparency and Consent Framework (TCF v2.0)</a>, should the attribute <a href="https://support.cookiebot.com/hc/en-us/articles/360007652694" target="_self"><strong>data-framework="IAB" </strong></a></span><span>be enabled. </span><span>This effectively turns Cookiebot into an IAB registered Consent Management Provider (CMP), where the panels in Cookiebot's settings allow users to access information about IAB registered vendors and control the purposes and features that a vendor wishes to leverage. When using Cookiebot banner with the IAB TCF v2.0 integration framework enabled, <a href="https://support.cookiebot.com/hc/en-us/articles/360015693200" target="_self">a number of IAB compliance policy rules are enforced on the banner</a> that will be shown to your visitors. This can result in a difference in the appearance of the consent banner configured in your Cookiebot account and the consent banner shown to visitors on your website.</span></p>
+<p><span>You can also integrate with <a href="https://support.cookiebot.com/hc/en-us/articles/360016047000-Cookiebot-and-Google-Consent-Mode" target="_self" rel="undefined">Google Consent Mode</a>, if data-framework="IAB" attribute is not enabled. Here’s what the default snippet would look like and you can also read <a href="https://www.convert.com/blog/privacy/google-consent-mode-user-privacy/" target="_self">here</a> why the consent mode is important:</span></p>
+<pre><code>
+    window.dataLayer = window.dataLayer || [];
+function gtag() { window.dataLayer.push(arguments); }
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  analytics_storage: granted,
+  wait_for_update: 500,
+  region: ['US-CA']
+});
+gtag('event', Convert Experiences, {
+  'event_category' : 'Experience',
+  'event_label' : 'Experience1234098_Variation1'
+});</code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<p><span>In the new privacy environment, consent is in many cases a requirement. It is important to start looking at user consent as the first conversion point and looking critically at the user experience driving consent in this manner. Employing strategies such as A/B testing on the consent experience will lead to an optimization of the proportion of consenting users for whom you can collect data and use in audience creation – giving your business a competitive advantage over your competition. This is how you can achieve your website's Consent Rate Optimization.</span></p>

@@ -1,0 +1,7 @@
+Data Processing Agreement
+<h2>Data Processing Agreement (DPA)</h2>
+<p>In the course of providing our service, Convert may process personal data on your behalf. In order to outline specifics of how we will perform this processing and what our obligations are as well as the obligations of our users/customers, we’ve developed a Data Processing Agreement (DPA) that we enter into free of charge with anyone that uses our service and requests it. This document forms part of a contract of service with Convert (as the Data Processor) and our users/customers (as the Controllers). The DPA reflects the parties’ agreement with regard to the processing of personal data performed using our service.</p>
+<p>As a Controller, in order to sign this agreement, you must review and digitally sign a copy of the Data Processing Agreement. We will countersign it and provide you with a fully executed downloadable copy via email within 5 business days.</p>
+<p>Upon Convert’s receipt of the validly completed and digitally signed Agreement, this Agreement shall be in full force and effect.</p>
+<h2>Request to Sign a Digital Copy</h2>
+<p>Attached is the example agreement that you should sign. Please send us a request on <a href="mailto:upport@convert.com">support@convert.com</a> by telling us the name and email that wants to sign it and we will provide you a digital copy where you can fill all relevant fields and send it back to us.</p>

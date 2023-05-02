@@ -1,0 +1,21 @@
+Weather Targeting Based on Current Local Conditions
+<h2>Introduction</h2>
+<p>Weather affects everyone daily. It influences countless decisions we make, from what we wear to what we eat to our entertainment choices. The weather is a key driver of consumer behavior, greatly influencing what we buy, when we buy, and where we buy it.</p>
+<p>In marketing, it is becoming more common to leverage the weather to create strong messages that resonate with your target market. Weather allows marketers to connect with consumers on a highly local level, targeting them with a relevant message at the right time.</p>
+<p><strong>In short, weather targeting is the practice of tailoring influential messages to visitors based on local temperatures or weather conditions, and is accomplished by integrating a real-time weather forecast data stream (in our case <a href="https://www.apixu.com/">Apixu</a>) into your existing a/b testing platform, Convert Experiences.</strong></p>
+<h2>How Weather Data can be used</h2>
+<ol>
+<li class="vc_custom_heading">Ad Targeting: Use weather data as targeting signals in your ad logic (e.g. show one ad variation if raining, show a different one if conditions are clear).</li>
+<li class="vc_custom_heading">
+<p class="vc_custom_heading">Ad Content: Use weather data as content within the ads (e.g. show current conditions / temperature values).</p>
+</li>
+<li class="vc_custom_heading">
+<p class="vc_custom_heading">Both Ad Targeting &amp; Content: Combine both weather targeting and content for a powerful user experience.</p>
+</li>
+</ol>
+<h2><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">Audiences with Weather Targeting</span></h2>
+<p>Go to Audiences and drag and drop the Weather condition from the left list to the right area:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6442861109133/mceclip0.png" alt="mceclip0.png"></p>
+<p>The list is populated from <a href="http://www.apixu.com/doc/Apixu_weather_conditions.json">here</a>.</p>
+<h2>Weather Targeting &amp; Geolocation</h2>
+<p>The weather conditions should be combined with the customers geolocation to make sense: 20°C in the north of Italy could encourage users to purchase new T-shirts, but the same temperature in the southern part of Italy could lead them to buy a light sweater or a longsleeve. So when planning weather-related campaigns on your site, considering the geolocation of a visitor is rather important.  </p>

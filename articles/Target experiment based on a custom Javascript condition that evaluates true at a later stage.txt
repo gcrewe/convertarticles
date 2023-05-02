@@ -1,0 +1,27 @@
+Target experiment based on a custom Javascript condition that evaluates true at a later stage
+<p><br>Experiments are evaluated as soon as the Convert Experiences tracking script loads. Sometimes it's needed to fire an experiment based on values of variables that are defined later on the page (below the main tracking code inclusion point). This DMP (Data Management Platform) feature allows it to target, for example, lead score/stage from your Marketing Automation tool (like Marketo, Pardot, Elequou, Hubspot, or Salesforce) without much effort.</p>
+<p>In that case, we can use a <a href="https://support.convert.com/hc/en-us/articles/205159965-Targeting-Experiments-and-Firing-Goals-Based-on-Javascript-Expression" target="_blank" rel="noopener">custom javascript condition targeting</a> rule and an API call to re-check the experiment later.</p>
+<p>Inside the JS condition, the following JS API function can be used: </p>
+<pre class=" language-javascript">convert_recheck_experiment()</pre>
+<p>When that code executes, <strong>a re-check of the experiment's conditions is scheduled for 50 ms later, <span class="wysiwyg-color-red">for approximately the next two minutes,</span> or until the experiment JS condition check is final (whichever comes first).  </strong>Here is an example:</p>
+<pre class=" language-javascript">(function() {<br>   if(typeof(window.my_variable)=="undefined") {<br>       convert_recheck_experiment(); return false;} <br>   else return (window.my_variable == "test_value");<br>})()</pre>
+<p><strong>In the above example, we check if variable <em>window.my_variable</em> is defined at the run time; if not we call the API function to recheck in 50ms;</strong> if it's defined, we check its value against <em>test_value </em>and return <em>true </em>or <em>false, </em>depending on whether they match or not. The <em>window.my_variable </em>can be defined later on the page, after the main Convert tracking script, and the experiment will be checked and fired when that variable is defined. </p>
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>It is important to make sure that you take into account the possibility that a variable may not be defined at the time the code is first run; if that happens and an error is thrown, the rest of the code will not run.</p>
+<p>An example is shown in the code above where we check to see if the variable is undefined, so that an error will not be returned and convert_recheck_experiment() will run.</p>
+</div>
+</div>
+<p>The above type of targeting can be combined with the URL targeting type. If we wanted to fire the experiment like above but only for a page that has path <em>/test_page.html:</em></p>
+<ul>
+<li> we would set the above condition into the Locations JS condition<img src="https://support.convert.com/hc/article_attachments/14270364968845">
+</li>
+<li>and we would add a URL targeting rule like below: URL does not contain <em>/test_page.html.</em> In doing so, we'd include the experiment pages where the JS condition is true but exclude all the pages that do not contain <em>/test_page.html </em> into the URL (therefore just the ones that <strong>contain <em>/test_page.html</em></strong><em> </em> will be included)<img src="https://support.convert.com/hc/article_attachments/14270370392717">
+</li>
+</ul>
+<p>There are multiple use cases of this functionality limited only by the imagination of whoever uses it. It's worth mentioning one other common use case: fire the experiment when an element was added to the page (maybe via Ajax); the JS condition would look something like the below:</p>
+<pre class=" language-javascript">(function() {<br>   if(convert.$("element_selector").length==0) {<br>       convert_recheck_experiment(); return false;} <br>   else return true;<br>})()</pre>
+<p>Note: In the above code, <em>convert.$</em> is the instance of jQuery included by Convert.</p>
+<p>keywords: "DMP", "Data Management Platform" </p>

@@ -1,0 +1,8 @@
+Build Audiences based on Goal completions (Triggered Goal)
+<h2><span style="font-weight: 400;">Introduction</span></h2>
+<p><span style="font-weight: 400;">Using goal completions as audience criteria is now possible! You can take this powerful feature and gain new ways to target audiences.  Creating experiences based on the completion of the "Confirmed Orders" goal can boost conversions for recurring buyers by creating a new experience on their future purchases.</span></p>
+<p>While users who have converted is a broad category, those users are deemed more likely to engage in additional conversions. Businesses that offer products or services that lend themselves to more frequent purchases (e.g., jewelry, clothing, makeup) are finding that users who convert more frequently early in the customer life cycle end up being more valuable over the course of that life cycle. For example, if you can entice a user to convert four or five times during the first month as opposed to four or five times over the course of the first year, then that user becomes more engaged with your business, and has a longer, more valuable life cycle with your business.</p>
+<h2>Audience with Goal Completion condition</h2>
+<p>Go to Audiences and drag and drop the "Triggered goal" condition from the left list to the right area. <span style="font-weight: 400;">Build the audience to identify users who have completed goals:</span></p>
+<p><img src="https://support.convert.com/hc/article_attachments/6442842709517/mceclip0.png" alt="mceclip0.png"></p>
+<p>The list will be populated by the goals you have added.</p>

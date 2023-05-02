@@ -1,0 +1,30 @@
+Live Logs for Projects and Experiments in Convert
+<h2>What are Live Logs?</h2>
+<p>Live Logs in Convert track how end users are interacting with web pages and experiments on them at a project and experiment level in real time. They capture information like timestamp when a goal triggered, the event type that was triggered, variation displayed to the end user and many more details.</p>
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>Live logs are different from the logs that are kept here: logs.convertexperimetns.com. These are used for debugging purposes and are kept only for 7 days.</p>
+</div>
+</div>
+<h2>How do Live Logs work?</h2>
+<p>Live Logs are displayed in Convert at a project as well as experiment level.</p>
+<h3>Live Logs for a project</h3>
+<p>In order to view Live Logs for a specific project you may navigate to Projects &gt; Live Logs on the top panel.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/10562934576141" alt="mceclip0.png"></p>
+<p>Here, you may click anywhere on the row to see more details of the activity like the experiment name, browser and device used to access the experiment, country of the user, goals triggered during this visit and so on and so forth.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/10563004490893" alt="mceclip1.png"></p>
+<p>By clicking on the Experience and Variation number, you can navigate to the respective experiment and variation configuration page.</p>
+<p>If you'd like to see Live Logs only for selected projects, you may filter those projects by clicking the Filters drop down as highlighted below:<img src="https://support.convert.com/hc/article_attachments/10563007331469" alt="mceclip2.png"></p>
+<p>You may also Filter the Logs by event or activity type using the Filter by Events option in the Filter dropdown:<img src="https://support.convert.com/hc/article_attachments/10563011714317" alt="mceclip3.png"></p>
+<h3>Live Logs for an Experiment</h3>
+<p>At an Experiment level, Live Logs do not provide the ability to Filter by Projects but you can still filter them by Event type. You may access Live Logs for a particular experience by navigating to Projects &gt; Click on Project name &gt; Experiments &gt; Click on experiment name &gt; Browse to Live Logs </p>
+<h3>Pausing Live Logs</h3>
+<p>The Refresh Rate range bar allows you to reduce or increase the refresh interval in secs of Live Logs. You may pause the Live Logs by clicking on the Pause button at the extreme right of the speed bar.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/10563103293453" alt="mceclip4.png"></p>
+<h2>Advantages of Live Logs</h2>
+<p>Live Logs allow you to track and monitor how conversions are happening. They also make it easy for you to validate your set up and debug any issues that have been identified with the experiment setup or conversions. You may use Live Logs as a source to track revenue and validate the experiment and goals set up.</p>
+<p><strong>Note</strong> : Please note that Live Logs feature is available only for selected pricing plans. Please check out our pricing page to know more about our pricing plans and their features : <a href="https://www.convert.com/pricing/">https://www.convert.com/pricing</a></p>
+<p> </p>
+<p>   </p>

@@ -1,0 +1,20 @@
+React: Serving different modules based on Variation
+<h2>Overview</h2>
+<p>Convert can work alongside React using different methods. One of them is to serve different modules depending on the variation that Convert randomly selects for the visitors. </p>
+<p>The advantages and disadvantages of this method are:</p>
+<ol>
+<li>You have a lot of flexibility by encapsulating variations in React modules.</li>
+<li>You will need to compile your code every time you create a new test.</li>
+</ol>
+<p>You can find the other method described in this <a href="https://support.convert.com/hc/en-us/articles/360020671451" target="_blank" rel="noopener">article</a>.</p>
+<h2>How to</h2>
+<p>To enable the above we will need to use the <a href="https://support.convert.com/hc/en-us/articles/204506359-Reading-Triggered-Experiment-Data-for-Using-it-in-Third-Party-Systems" target="_blank" rel="noopener">Convert on-page api</a> that will provide us with the ID of the variation randomly selected for your visitor. This selection happens as soon as the Convert script starts running when loaded via the Convert tracking code.</p>
+<p>First, we will provide an example of the React container that will return the Variation that has been selected randomly for your visitor:</p>
+<p class="codepen" data-height="617" data-theme-id="31058" data-slug-hash="zyoxEW" data-default-tab="js" data-user="gcrewe" data-pen-title="ConvertABTestingContainer">See the Pen <a href="https://codepen.io/gcrewe/pen/zyoxEW/">ConvertABTestingContainer</a> by Convert.com (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p> </p>
+<p>Next, we have this code example of how the first React container is called and then the corresponding Variation module served:</p>
+<p class="codepen" data-height="420" data-theme-id="31058" data-slug-hash="oJYgpm" data-default-tab="js" data-user="gcrewe" data-pen-title="ConvertProductPageReact">See the Pen <a href="https://codepen.io/gcrewe/pen/oJYgpm/">ConvertProductPageReact</a> by Convert.com (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p> </p>
+<p>Please read the <a href="https://support.convert.com/hc/en-us/articles/205159975-Running-Experiments-on-Single-Page-Apps" target="_blank" rel="noopener">Single Page Apps article</a> to learn more on how to implement this type of experiment. </p>
+<p>Also, consider the <a href="https://support.convert.com/hc/en-us/articles/360020671451-React-Redux-and-Convert-Experiences" target="_blank" rel="noopener">other method</a> we provide to deploy experiments in React.</p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>

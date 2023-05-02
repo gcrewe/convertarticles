@@ -1,0 +1,85 @@
+Integrate Convert with GA4 via Google Tag Manager
+<h2>Introduction</h2>
+<p><span>You can have your experiments' data and statistics sent from Convert Experiences inside <a href="https://www.google.com/analytics/">Google Analytics</a> (<a href="https://developers.google.com/analytics/devguides/collection/ga4" target="_self" rel="undefined">GA4</a>) and this way you are able to build rich reports that can bring valuable insights about how specific experiments perform on certain segments of users. </span></p>
+<p><span>In <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs" target="_self">Universal Analytics (UA) properties</a>, an event is a special kind of hit (distinct from, for example, a pageview) that has a <span class="wysiwyg-underline">Category, Action, and Label</span>. By contrast, in Google Analytics 4 (GA4) properties, everything (including a pageview) is an event. GA4 events have <span class="wysiwyg-underline">no notion of Category, Action, and Label</span> and, unlike in UA properties, GA4 reports do not display Category, Action, and Label. </span></p>
+<h2 id="what-is-the-difference-between-classic-analytics,-universal-analytics,-global-site-tag-and-ga4?">What is the difference between Classic Analytics, Universal Analytics, Global Site Tag and GA4?</h2>
+<p>Before we start with the integration, let's clarify the different versions of tracking codes in Google Analytics.</p>
+<p>In November 2005 Google launched Google Analytics, known also as 'Classic Analytics'. The tracking code can be found by the name<span> </span><a href="https://developers.google.com/analytics/devguides/collection/gajs" target="_self"><strong>ga.js</strong></a>. From 2016 it is considered Legacy and most of the accounts have been migrated to Universal Analytics.</p>
+<p>In October 2012 another new version of Google Analytics was announced, called 'Universal Analytics'.<sup id="cite_ref-22" class="reference"></sup> The tracking code can found by the name<span> </span><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs" target="_self"><strong>analytics.js</strong></a>. The key differences from the previous version were: cross-platform tracking, flexible tracking code to collect data from any device, and the introduction of custom dimensions and custom metrics. <sup id="cite_ref-23" class="reference"></sup></p>
+<p>In October 2017 another new version of Google Analytics was announced, called 'Global Site Tag'. The tracking code can be found by the name<span> </span><a href="https://developers.google.com/analytics/devguides/collection/gtagjs" target="_self"><strong>gtag.js</strong></a>. Its purpose is to unify the tagging system to simplify implementation. <sup id="cite_ref-24" class="reference"></sup></p>
+<p>Finally in October 2020, Google Announced<span> </span><span>Google Analytics 4 properties <a href="https://developers.google.com/analytics/devguides/collection/ga4" target="_self"><strong>GA4</strong></a> (formerly Google Analytics App+Web) which allows marketers and app product managers to understand their users, site data, and acquisition tracks for apps (tracked through Firebase) and web properties in just one Google Analytics web property.</span></p>
+<h2>Create a GA4 Property</h2>
+<p>Login to admin side of your GA account and create a GA4 property.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360090799432/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Add a Web Data Stream in GA</h2>
+<p>Add a Web data stream to your new GA4 property:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360090799732/mceclip1.png" alt="mceclip1.png"></p>
+<p>Enter your URL and website name as requested. </p>
+<p>After entering the required site information, you will be given a <strong>Measurement ID: G-XXXXXXXX</strong> (example below). </p>
+<p><img src="https://support.convert.com/hc/article_attachments/360090766651/mceclip2.png" alt="mceclip2.png"></p>
+<p>You may be wondering how many data streams are needed for your specific use case. Try going with one web stream initially, you can always add more later.</p>
+<h2 id="add-tracking-codes">Add Tracking Codes</h2>
+<p>Make sure both<span> </span><a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Convert-Tracking-Code-JavaScript-" target="_self">Convert Tracking code</a><span> </span>and<span> </span><a href="https://support.google.com/tagmanager/answer/6103696?hl=en" target="_self">Google Tag Manager code</a><span> </span>are added on your website.</p>
+<h2 id="push-convert-data-to-gtm-data-layer">Convert Data are pushed to GTM Data Layer</h2>
+<div class="user_formatted header_section clearfix">
+<p>Convert Experiments fired on pages are pushed into the Google Tag Manager default dataLayer object for further processing inside GTM. You do not have to do any tasks here.</p>
+<p>Below we just present the 4 keys of the Convert object pushed to GTM dataLayer: </p>
+<ul>
+<li>"<strong>event</strong>" - has as value "convert-trigger-experiment-{experiment_id}" where experiment_id is the ID of the fired experiment inside Convert Experiences app;</li>
+<li>"<strong>experiment_id</strong>" - has as value the experiment id of the fired experiment inside Convert Experiences app;</li>
+<li>"<strong>variation_name</strong>" - has the value variation name of the selected variation, as found inside Convert Experiences app</li>
+<li>
+<strong>"gadimension" </strong>- if the Google Analytics integration has been enabled and a dimension chosen then it has the value for the dimension set in the google analytics integration. </li>
+</ul>
+<p><em>Example: </em></p>
+<pre class=" language-markup"><code class=" language-markup">dataLayer.push({ "event":"convert-trigger-experiment-1234", "experiment_id":"1234", "variation_name":"test variation", "gadimension":"1" });</code></pre>
+<p>If you use Google Chrome Developers Tool console and you have activated the<span> </span><a href="https://support.convert.com/hc/en-us/articles/204506699-Chrome-Debugger-Extension-For-Convert-Experiences" target="_self">Convert Debugger extension</a>, this is how it looks like when Convert pushes data to GTM data layer:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/115003561391/mceclip0.png"></p>
+<p><img src="https://support.convert.com/hc/article_attachments/360090779752/mceclip0.png" alt="mceclip0.png"></p>
+<p>Inside Google Tag Manager, this data can be used and sent forward to other services that are supported. In this case we will send the data to GA4.</p>
+<h2 id="create-the-experiment-id-data-layer-variable-in-gtm">Create the Experiment ID Data Layer variable in GTM</h2>
+<p>The Experiment ID Data layer Variable will store the Convert<span> </span><strong>experiment_id</strong><span> </span>values and we will use it every time we need to call this value.</p>
+<p>Open Google Tag Manager and go to variables:<br><br><img src="https://support.convert.com/hc/article_attachments/115003594472/mceclip1.png"></p>
+<p>Create a new User Defined variable:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/115003568431/mceclip2.png"></p>
+<p>Give it a descriptive name, assign the type Data Layer Variable and fill in experiment_id in the Data Layer Variable name: </p>
+<p><img src="https://support.convert.com/hc/article_attachments/115003594592/mceclip3.png"></p>
+<h2 id="create-the-variation-name-data-layer-variable-in-gtm">Create the Variation Name Data Layer variable in GTM</h2>
+<p>The Variation Name Data layer Variable will store the Convert<span> </span><strong>variation_name</strong> values and we will use it every time we need to call this value.</p>
+<p>Go to variables and create a new User Defined variable:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/115003568431/mceclip2.png"><br><br>Give it a descriptive name and assign as type the Data Layer Variable. Specify its Data Layer Variable name and hit Save:<br><br><img src="https://support.convert.com/hc/article_attachments/115003568751/mceclip6.png"></p>
+</div>
+<h2 id="create-a-new-gtm-tag">Create a new GTM Tag and its Firing Trigger</h2>
+<p>Go to tags and create a new tag:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360090800712/mceclip5.png" alt="mceclip5.png"><br>Give it a descriptive name and select as Tag Type GA4 Event. Select for Configuration Tag: Manually Set ID and fill in the Measurement ID you have from your GA4 property:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360090896331/mceclip0.png" alt="mceclip0.png"><br>Add an event name and as event parameter combine the two data layer variables we created above. It could be something like that or if you prefer you can have two event parameters (one for the experience_id and one for the variation_name):<br><img src="https://support.convert.com/hc/article_attachments/360090920892/mceclip0.png" alt="mceclip0.png"><br>Select the triggering rule to fire the tag. Create a new trigger, give it a descriptive name, select Custom Event and fill in relevant fields as it is shown below:<br><img src="https://support.convert.com/hc/article_attachments/115003594172/mceclip0.png"><br>Please note that this rule will fire the tag every time an experiment will be fired. </p>
+<h2>Register the Custom Definitions in GA4</h2>
+<p>This applies to any custom parameter that you send to Google Analytics 4. If you want to see/use them in things like Funnel reports, Exploration, see their reporting cards in standard reports, etc., you must <strong>register custom parameters</strong> in the GA interface.</p>
+<p>Since we sent 1 custom parameter with the convert event, we must register it here. Custom dimensions in GA4 can be found at Configure &gt; Custom Definitions:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360090800292/mceclip4.png" alt="mceclip4.png"></p>
+<p><img src="https://support.convert.com/hc/article_attachments/360090898371/mceclip0.png" alt="mceclip0.png"></p>
+<p><span>About 24 hours after data has started collecting to this parameter, you will see the changes in the user interface.</span></p>
+<h2>View Convert Data in GA4 Reports</h2>
+<p>Here are some of the reports you can use to view your Convert data inside GA4:</p>
+<ul>
+<li>
+<em>All Events</em><span> </span>reports</li>
+<li>Debugger</li>
+<li><em>Engagement &gt; Events</em></li>
+<li><em>Analysis &gt; Analysis Hub</em></li>
+</ul>
+<p>But that is not all. Since GA4 is an event-based analytics platform, every report is affected by events that you send (in one way or another). The aforementioned reports are just the most notable examples.</p>
+<h3>All Events</h3>
+<p><span>Here you will see a list of all events that are tracked by your Google Analytics 4 property. Click on any event to see a bit more detailed view/reports of that particular event. For custom events in that list you might need to wait for up to 24 hours.</span></p>
+<p><span><img src="https://support.convert.com/hc/article_attachments/360090860211/mceclip1.png" alt="mceclip1.png"></span></p>
+<h3>Viewing the Result in the Debugger</h3>
+<p><span>Use DebugView to monitor the events coming from a device or browser for which you've enabled debugging. First, <a href="https://support.google.com/analytics/answer/7201382?hl=en" target="_self">enable debug mode</a> on a device or browser. Then, click </span><strong>DebugView</strong><span> in the right navigation panel to monitor events from that device or browser.</span></p>
+<h3>
+<a class="anchor" href="https://dev.to/marklchaves/how-to-send-a-custom-event-to-google-analytics-4-using-javascript-2eh#viewing-the-result-in-engagement-gt-events" name="viewing-the-result-in-engagement-gt-events"></a>Viewing the Result in Engagement &gt; Events</h3>
+<p><span>This is an overview of all events that were sent to your property + a couple of charts. Below them, you will see a list of events and if you click on any of them, you will be taken to the very same type of report that was mentioned in the "All Events" report section.</span></p>
+<p><img src="https://support.convert.com/hc/article_attachments/360090923132/mceclip1.png" alt="mceclip1.png"></p>
+<h3>
+<a class="anchor" href="https://dev.to/marklchaves/how-to-send-a-custom-event-to-google-analytics-4-using-javascript-2eh#creating-a-custom-report-in-the-analysis-hub" name="creating-a-custom-report-in-the-analysis-hub"></a>Analysis &gt; Analysis Hub reports</h3>
+<p>This is the place where you will be able to drill-down into your data. In the Analysis Hub, you will be able to use reports such as Exploration, Funnel Analysis, Pathing, etc.</p>
+<p>Here is an example of an Exploration report. Keep in mind that you will need to wait for up to 24 hours for the data to come into your reports. So if you don’t see the data now, be patient.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360091055612/mceclip0.png" alt="mceclip0.png"></p>

@@ -1,0 +1,84 @@
+Integrate Convert with GA4 via Google Tag Manager
+Introduction
+You can have your experiments' data and statistics sent from Convert Experiences inside Google Analytics (GA4) and this way you are able to build rich reports that can bring valuable insights about how specific experiments perform on certain segments of users. 
+In Universal Analytics (UA) properties, an event is a special kind of hit (distinct from, for example, a pageview) that has a Category, Action, and Label. By contrast, in Google Analytics 4 (GA4) properties, everything (including a pageview) is an event. GA4 events have no notion of Category, Action, and Label and, unlike in UA properties, GA4 reports do not display Category, Action, and Label. 
+What is the difference between Classic Analytics, Universal Analytics, Global Site Tag and GA4?
+Before we start with the integration, let's clarify the different versions of tracking codes in Google Analytics.
+In November 2005 Google launched Google Analytics, known also as 'Classic Analytics'. The tracking code can be found by the name ga.js. From 2016 it is considered Legacy and most of the accounts have been migrated to Universal Analytics.
+In October 2012 another new version of Google Analytics was announced, called 'Universal Analytics'. The tracking code can found by the name analytics.js. The key differences from the previous version were: cross-platform tracking, flexible tracking code to collect data from any device, and the introduction of custom dimensions and custom metrics. 
+In October 2017 another new version of Google Analytics was announced, called 'Global Site Tag'. The tracking code can be found by the name gtag.js. Its purpose is to unify the tagging system to simplify implementation. 
+Finally in October 2020, Google Announced Google Analytics 4 properties GA4 (formerly Google Analytics App+Web) which allows marketers and app product managers to understand their users, site data, and acquisition tracks for apps (tracked through Firebase) and web properties in just one Google Analytics web property.
+Create a GA4 Property
+Login to admin side of your GA account and create a GA4 property.
+
+Add a Web Data Stream in GA
+Add a Web data stream to your new GA4 property:
+
+Enter your URL and website name as requested. 
+After entering the required site information, you will be given a Measurement ID: G-XXXXXXXX (example below). 
+
+You may be wondering how many data streams are needed for your specific use case. Try going with one web stream initially, you can always add more later.
+Add Tracking Codes
+Make sure both Convert Tracking code and Google Tag Manager code are added on your website.
+Convert Data are pushed to GTM Data Layer
+
+Convert Experiments fired on pages are pushed into the Google Tag Manager default dataLayer object for further processing inside GTM. You do not have to do any tasks here.
+Below we just present the 4 keys of the Convert object pushed to GTM dataLayer: 
+
+"event" - has as value "convert-trigger-experiment-{experiment_id}" where experiment_id is the ID of the fired experiment inside Convert Experiences app;
+"experiment_id" - has as value the experiment id of the fired experiment inside Convert Experiences app;
+"variation_name" - has the value variation name of the selected variation, as found inside Convert Experiences app
+
+"gadimension" - if the Google Analytics integration has been enabled and a dimension chosen then it has the value for the dimension set in the google analytics integration. 
+
+Example: 
+dataLayer.push({ "event":"convert-trigger-experiment-1234", "experiment_id":"1234", "variation_name":"test variation", "gadimension":"1" });
+If you use Google Chrome Developers Tool console and you have activated the Convert Debugger extension, this is how it looks like when Convert pushes data to GTM data layer:
+
+
+Inside Google Tag Manager, this data can be used and sent forward to other services that are supported. In this case we will send the data to GA4.
+Create the Experiment ID Data Layer variable in GTM
+The Experiment ID Data layer Variable will store the Convert experiment_id values and we will use it every time we need to call this value.
+Open Google Tag Manager and go to variables:
+Create a new User Defined variable:
+
+Give it a descriptive name, assign the type Data Layer Variable and fill in experiment_id in the Data Layer Variable name: 
+
+Create the Variation Name Data Layer variable in GTM
+The Variation Name Data layer Variable will store the Convert variation_name values and we will use it every time we need to call this value.
+Go to variables and create a new User Defined variable:
+Give it a descriptive name and assign as type the Data Layer Variable. Specify its Data Layer Variable name and hit Save:
+
+Create a new GTM Tag and its Firing Trigger
+Go to tags and create a new tag:
+Give it a descriptive name and select as Tag Type GA4 Event. Select for Configuration Tag: Manually Set ID and fill in the Measurement ID you have from your GA4 property:
+Add an event name and as event parameter combine the two data layer variables we created above. It could be something like that or if you prefer you can have two event parameters (one for the experience_id and one for the variation_name):Select the triggering rule to fire the tag. Create a new trigger, give it a descriptive name, select Custom Event and fill in relevant fields as it is shown below:Please note that this rule will fire the tag every time an experiment will be fired. 
+Register the Custom Definitions in GA4
+This applies to any custom parameter that you send to Google Analytics 4. If you want to see/use them in things like Funnel reports, Exploration, see their reporting cards in standard reports, etc., you must register custom parameters in the GA interface.
+Since we sent 1 custom parameter with the convert event, we must register it here. Custom dimensions in GA4 can be found at Configure > Custom Definitions:
+
+
+About 24 hours after data has started collecting to this parameter, you will see the changes in the user interface.
+View Convert Data in GA4 Reports
+Here are some of the reports you can use to view your Convert data inside GA4:
+
+
+All Events reports
+Debugger
+Engagement > Events
+Analysis > Analysis Hub
+
+But that is not all. Since GA4 is an event-based analytics platform, every report is affected by events that you send (in one way or another). The aforementioned reports are just the most notable examples.
+All Events
+Here you will see a list of all events that are tracked by your Google Analytics 4 property. Click on any event to see a bit more detailed view/reports of that particular event. For custom events in that list you might need to wait for up to 24 hours.
+
+Viewing the Result in the Debugger
+Use DebugView to monitor the events coming from a device or browser for which you've enabled debugging. First, enable debug mode on a device or browser. Then, click DebugView in the right navigation panel to monitor events from that device or browser.
+
+Viewing the Result in Engagement > Events
+This is an overview of all events that were sent to your property + a couple of charts. Below them, you will see a list of events and if you click on any of them, you will be taken to the very same type of report that was mentioned in the "All Events" report section.
+
+
+Analysis > Analysis Hub reports
+This is the place where you will be able to drill-down into your data. In the Analysis Hub, you will be able to use reports such as Exploration, Funnel Analysis, Pathing, etc.
+Here is an example of an Exploration report. Keep in mind that you will need to wait for up to 24 hours for the data to come into your reports. So if you don’t see the data now, be patient.

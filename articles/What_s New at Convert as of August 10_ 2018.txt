@@ -1,0 +1,41 @@
+What's New at Convert as of August 10, 2018
+<h2 data-id="block-ember22704" data-generated-at="15278873525240.5969953688921532" data-align="left"><strong data-id="entity-ember22706">Improvements</strong></h2>
+<ul data-id="block-ember2909" data-generated-at="15339501460520.8745846314815404">
+<li data-id="block-ember2914" data-generated-at="15339501460520.4158793151681519">Custom code syntax checking and error highlighting was added to Visual Editor</li>
+</ul>
+<ul data-id="block-ember2916" data-generated-at="15339501460520.11131055361475362">
+<li data-id="block-ember2919" data-generated-at="15339501460520.15463740406091064">Handy "Force Variation" URL links were added to the menu in Visual Editor and also for Variations on the report page. <br><em>Note: This will make QA testing easier! You can force a specific variation to be shown on an Activated experiment (remember - this still needs to be done in a fresh Incognito window and you still need to match the Site Area and Audience conditions)</em>
+</li>
+</ul>
+<ul data-id="block-ember2921" data-generated-at="15339501460530.8944828339463682">
+<li data-id="block-ember2924" data-generated-at="15339501460540.42453566963723954">Added new JavaScript API function which allows goals to be re-checked after page is loaded (useful with SPAs, for example)</li>
+</ul>
+<ul data-id="block-ember2926" data-generated-at="15339501460540.1293833353123124">
+<li data-id="block-ember2929" data-generated-at="15339501460540.7795078656313619">Security improvements to prevent clickjacking</li>
+</ul>
+<ul data-id="block-ember2931" data-generated-at="15339501460550.9236152480711062">
+<li data-id="block-ember2934" data-generated-at="15339501460550.7529389387161063">Automation for "Keep winning variation running" is off by default on newly-created experiences</li>
+</ul>
+<ul data-id="block-ember2936" data-generated-at="15339501460550.8214833733063798">
+<li data-id="block-ember2939" data-generated-at="15339501460550.22662999568243936">Better navigation icons have been added to the far-right column on the Experiences Overview -- with one click you can now move to the Experiment Summary, the Visual Editor or the Report page.</li>
+</ul>
+<h2 data-id="block-ember22737" data-generated-at="15278873525270.8400441581806435" data-align="left"><strong data-id="entity-ember22739">Bug Fixes</strong></h2>
+<ul data-id="block-ember2944" data-generated-at="15339501460560.4960051074807026">
+<li data-id="block-ember2947" data-generated-at="15339501460560.5294795793854019">fixed bug which caused specific .uk domains to be incorrectly saved in an account</li>
+</ul>
+<ul data-id="block-ember2949" data-generated-at="15339501460560.4663727949359806">
+<li data-id="block-ember2952" data-generated-at="15339501460560.4083156239027139">fixed snapshot overlay which was being squished/cut-off on some experiment reports </li>
+</ul>
+<ul data-id="block-ember2954" data-generated-at="15339501460560.8180530505872994">
+<li data-id="block-ember2957" data-generated-at="15339501460560.0581085486583055">fixed issue where only part of a long variation name was visible on the report page</li>
+</ul>
+<h2 data-id="block-ember22765" data-generated-at="15278873525290.3982528152219942" data-align="left"><strong>Other Good Stuff</strong></h2>
+<p data-id="block-ember2883" data-generated-at="15339501460500.04733647890428139" data-align="left">Convert's new <a href="https://support.convert.com/hc/en-us/articles/360004647132-QA-Guide" data-url="https://convert.zendesk.com/hc/en-us/articles/360004647132-QA-Guide" data-id="entity-ember2890"><strong data-id="entity-ember2893">QA Guide</strong></a><strong data-id="entity-ember2893"> -- a must read</strong></p>
+<ul>
+<li data-id="block-ember2894" data-generated-at="15339501460500.6029482169777782" data-align="left">This guide has information that will be helpful to both new and experienced users of our platform.  Following the guide will go a long ways in helping you understand how to launch <em data-id="entity-ember2896">live experiments successfully</em>.</li>
+</ul>
+<p data-id="block-ember2900" data-generated-at="15339501460510.9382910721396458" data-align="left"> Handy Regex formulas for Split Tests -</p>
+<ul>
+<li data-id="block-ember2900" data-generated-at="15339501460510.9382910721396458" data-align="left"><a href="https://support.convert.com/hc/en-us/articles/360004825952-Catch-all-Regex-Recipe-for-Split-URL-Experiments">Catch-All Regex Recipe</a></li>
+<li data-id="block-ember2900" data-generated-at="15339501460510.9382910721396458" data-align="left"><a href="https://support.convert.com/hc/en-us/articles/360000940871-Transfer-Query-Parameters-from-Original-to-a-Variation-that-also-has-Query-Parameters">Transfer Query Parameters from Original to a Variation that already has query parameters</a></li>
+</ul>

@@ -1,0 +1,24 @@
+How to track revenue using GTM
+<h2>Track revenue with GTM</h2>
+<p>You can utilize Google Tag Manager to insert the HTML code to track revenue in Convert. This can be inserted as a GTM tag. With GTM you might not need the help of your webmaster or IT department to track revenue.</p>
+<p>However, you would still need to map your e-commerce revenue variables to the Convert variables. You can read more about it on: <a href="https://support.convert.com/hc/en-us/articles/204495499-Add-Revenue-Tracking-to-Your-Site" target="_blank" rel="noopener">"Add Revenue Tracking to Your Site"</a> article.</p>
+<p>Once you got the variables mapped and your code snippet, you can create your GTM tag.</p>
+<p>If you use an already available e-commerce integration, you might not need to do this. As this is already done for you on many of those integrations. Check your integration to see if it includes revenue tracking.</p>
+<h2>Configure the GTM Tag</h2>
+<p>To configure the GTM Tag follow the steps ahead:</p>
+<ol>
+<li><span style="line-height: 1.5;">Access GTM and initiate a new tag setup by clicking on the tag icon.<br></span></li>
+<li><span style="line-height: 1.5;">Select the tag type as <em>Custom &gt; Custom HTML.</em><br><img src="https://support.convert.com/hc/en-us/article_attachments/115000038111/revenugtm1.png" alt=""><br></span></li>
+<li><span style="line-height: 1.5;">Insert the revenue tracking code and save the code. Please, refer to the previous section. <br><img src="https://support.convert.com/hc/en-us/article_attachments/115000037052/revenugtm2.png" alt=""><br></span></li>
+<li>Select the Trigger type as <em>"Page View"</em>.</li>
+<li>Select <em>"Some Page Views"</em>, on "This trigger fires on".</li>
+<li>Select <em>"Page URL".</em>
+</li>
+<li>Select and enter, a criteria, to match your confirmation purchase URL.<br><img src="https://support.convert.com/hc/en-us/article_attachments/115000037092/revenugtm4.png" alt="">
+</li>
+<li>Rename the Trigger name as "<em>Purchase Confirmation Page" </em>and save it.<br><img src="https://support.convert.com/hc/en-us/article_attachments/115000037112/revenugtm5.png" alt="">
+</li>
+<li>Select the "Advanced Settings". Set the priority to "2" (determines the order in which tag will be fired). Save the tag. <br><img src="https://support.convert.com/hc/en-us/article_attachments/115000038211/revenugtm6.png" alt="">
+</li>
+</ol>
+<p> Now your revenue tracking is ready. You should have revenue tracking on your reports.</p>

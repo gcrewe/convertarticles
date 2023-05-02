@@ -1,0 +1,7 @@
+Disable Body Hiding in Convert Experiences
+<h2>Disable Body Hiding</h2>
+<p>If for some reason you want to disable the automatic body hiding, all you need to do is place the following Javascript snippet before the main Convert Experiences tracking code:</p>
+<pre><code class="language-markup">
+&lt;script type="text/javascript"&gt; 
+var _conv_prevent_bodyhide = true;
+&lt;/script&gt; </code></pre>

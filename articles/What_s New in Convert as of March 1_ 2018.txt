@@ -1,0 +1,16 @@
+What's New in Convert as of March 1, 2018
+<p> </p>
+<p>We have made new optional Privacy changes to help our customers who need to be GDPR compliant:</p>
+<h2>DO NOT TRACK</h2>
+<p>We added configurable support for Browser "Do Not Track" settings by Project. By default, the OFF option is selected when you create a new Project, but you may choose from any of the following settings:</p>
+<ul>
+<li>OFF</li>
+<li>EU Only</li>
+<li>EEA Only</li>
+<li>Worldwide</li>
+</ul>
+<p>Learn more about this new feature <a href="https://support.convert.com/hc/en-us/articles/360001099812-Respect-Browser-Do-Not-Track-Setting">here</a>.</p>
+<h2>CROSS-DOMAIN LINKING</h2>
+<p>When creating a new Project, the configurable option for disallowing Cross Domain Linking is now ON by default.</p>
+<p> </p>
+<p><strong>Click <a href="https://www.convert.com/gdpr/">here</a> to learn more about Convert's commitment to compliance.</strong></p>

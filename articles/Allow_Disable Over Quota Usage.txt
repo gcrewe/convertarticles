@@ -1,0 +1,18 @@
+Allow/Disable Over Quota Usage
+<h2>Over-Quota Charges</h2>
+<div class="user_formatted header_section clearfix">
+<p>As visitors participate in the experiences being run on your website, <a href="https://www.convert.com/pricing/#what-are-tested-users" target="_self">tested users</a> are being used. Each visitor is only counted once during the billing period, even if they may participate in many experiences. </p>
+<p><a href="https://www.convert.com/pricing/" target="_self">Convert plans</a> come with a specific number of tested users. This means that after the included visitors quota is reached, the experiences will be paused by default.</p>
+<p>However, you can still run your experiences by using the Over-Quota charges subscription setting.</p>
+<p>Simply allow or disable the subscription setting per your needs by going to your Account -&gt; Name &amp; Billing -&gt; Subscription settings and select the option you prefer.</p>
+<p><strong>Extra visitors are charged at $199 USD per 100K and this setting can only be modified by the account owner.</strong></p>
+<p>If you want to continue testing but don't want over-quota charges or a paused account, we recommend you upgrade your plan. We don't automatically upgrade plans without your request.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423773516173/mceclip0.png" alt="mceclip0.png"></p>
+<p><strong>Note:</strong> <em>Even with this setting on, if you test on extremely high-traffic sites, it's still possible to get over quota charges. Due to its distributed nature, it takes time to propagate changes through the infrastructure and therefore, projects will be stopped slightly after the quota was reached (up to one hour)</em></p>
+<h2>Winning Variations, Deployments and Over Quota</h2>
+<p>Note that when you have a winning variation in an experience that continues running, visitors to the winning variation will continue to contribute to your quota. In this case, we recommend converting the Winning Variation to a Deploy, which has no limits on visitors.</p>
+<p>Read more about <a href="https://support.convert.com/hc/en-us/articles/207557623#automations" target="_self"><strong>Winning Variations</strong></a> under Automations.</p>
+<p>Read more about <a href="https://support.convert.com/hc/en-us/articles/115000018331#create-a-new-deploy-from-a-variation-or-winning-variation-from-another-experiment" target="_self"><strong>Deployments</strong></a>.</p>
+<p> </p>
+<p>Keywords: extra tested visitors, upgrade, quota, plan, billing, charges</p>
+</div>

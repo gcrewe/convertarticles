@@ -1,0 +1,14 @@
+How to append a Variation ID as a parameter to page links
+<h2>Issue</h2>
+<p>Sometimes we may want to attribute a conversion in a third party system to a specific variation. </p>
+<p>A real world example would be that we need to know which customer received a certain offer or discount that was run in a Convert experiment.</p>
+<p>We might be able to catch that on a third party system such as a CRM, with a link parameter. </p>
+<p>This article will explain how to add the variation id to the links on your experiment page.</p>
+<h2>Solution </h2>
+<p>Add the following code to your "Global Experience JS section". You can find it in the Visual Editor by clicking on the gear icon.</p>
+<p>Make sure that you know the selector of the link you want to change, to replace it in the code. If you want to change all of them, just replace the "selector" to "A". That would change all link selectors.<br><br><span class="wysiwyg-font-size-small">*Split URL experiments do not have this section, so you would need to add it to the Global Project JavaScript section of your Project on those cases.<br></span></p>
+<p class="codepen" data-height="260" data-theme-id="31058" data-slug-hash="rodMjm" data-default-tab="js" data-user="gcrewe" data-pen-title="Append variation id to link"> </p>
+<p><br>If you preview your variation with the preview or force variation links provided in the Visual Editor, you should see the change in your link.</p>
+<p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+</p>

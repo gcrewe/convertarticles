@@ -1,0 +1,34 @@
+Tracking Twitter Interactions in Convert Experiments
+<h2>Introduction</h2>
+<p>One of the things that Convert Experiments allows you to do, is to add social media elements to your pages such as Facebook "Like" buttons, Twitter "Follow" buttons, and Google "+1" buttons. This guide will show you how to (i) add these elements to your website using the Convert Visual Editor and how to (ii) track these social media elements e.g. "Twitter follows" as a goal.</p>
+<p>For sake of simplicity, we will use the "Twitter follows" in the steps described below.</p>
+<h2>Add Official Twitter Plugin in your Website</h2>
+<p>Install the official Twitter plugin, in our case we want the Follow button which is accessible <a href="https://dev.twitter.com/web/follow-button">here</a>.</p>
+<h2>Install Twitter SDK for Javascript in your Website</h2>
+<p>Include the Twitter for Websites JavaScript once in your page template for optimal web page performance and to enable tracking of <a class="reference external" href="https://dev.twitter.com/web/javascript/events">Twitter widget JavaScript events</a>. The widget.js script is available <a href="https://dev.twitter.com/web/javascript/loading">here</a>:</p>
+<pre>&lt;script&gt;window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));&lt;/script&gt;</pre>
+<h2>Add Twitter Interactions Tracking Code in your Website</h2>
+<p>Add following Twitter interactions tracking code just after your Twitter official plugin:</p>
+<pre>&lt;script&gt;<br>//Define Call Back functions<br>function followIntentToAnalytics (intentEvent) {
+  <code>window._conv_q = window._conv_q || []; <br>  _conv_q.push(["triggerConversion", "GOAL_ID"]); </code> }<br>// Wait for the asynchronous resources to load twttr.ready(function (twttr) { // Now bind our custom intent events twttr.events.bind('follow', followIntentToAnalytics); });<br>&lt;/script&gt;</pre>
+<h2>Create Convert JS Goal</h2>
+<p>You need to create a JS goal. Give it a descriptive name e.g. Twitter Follows and get the goal ID (to replaced the code in previous step):</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6449433132429/mceclip0.png" alt="mceclip0.png"></p>
+<h2>View Conversions in Convert Report</h2>
+<p>Once you've added this code to your page and added the goal to your experiment, Convert will begin tracking conversions immediately for running experiments. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423893535245/mceclip1.png" alt="mceclip1.png"></p>

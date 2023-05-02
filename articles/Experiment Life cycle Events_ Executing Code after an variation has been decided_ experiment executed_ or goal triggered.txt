@@ -1,0 +1,71 @@
+Experiment Life cycle Events: Executing Code after an variation has been decided, experiment executed, or goal triggered
+<h2>Issue</h2>
+<p>There are times we may need to execute code after an experiment variation has been decided, an experiment executed or a goal triggered. Executing code after these events occur is helpful to be able to send experiment data to third-party analytics platforms and other situations.</p>
+<h2>Solution</h2>
+<p>We have launched javascript events to address these situations. Here you can have how they can be triggered:<br><br></p>
+<ul>
+<li>
+<strong>experience.variation_decided</strong> - gets called each time a variation is being returned in order to be executed</li>
+<li>
+<strong>experience.activated</strong> - run each time an experience is activated, after the experience changes have been triggered (aka code ran)</li>
+<li>
+<strong>goal.triggered</strong> - executed each time a goal is fired ( a goal is fired only if it needs to be marked as triggered for a running experience)</li>
+<li>
+<strong>snippet.experiences_evaluated</strong> - executed after all the experiences have been evaluated on page in order to decide if they are to be presented or not</li>
+<li>
+<strong>snippet.goals_evaluated</strong> - executed after all the goals have been evaluated</li>
+<li>
+<strong>cookies.saved</strong> - executed each time after convert tracking cookies are saved into browser</li>
+</ul>
+<p>To attach a listener, function to an event, the following is the structure:</p>
+<pre>_conv_q = window._conv_q || [];<br>_conv_q.push({<br>what: 'addListener',<br>params: {<br>event: 'experience.variation_decided',<br>handler: (event) =&gt; console.log(JSON.stringify(event))<br>}<br>})</pre>
+<ul>
+<li>The<strong> params.event</strong> needs to be one of <strong>experience.variation_decided, experience.activated, </strong><strong>goal.triggered, snippet.experiences_evaluated or snippet.goals_evaluated</strong>
+</li>
+<li>
+<strong>The params.handler</strong> needs to be a function that receives as a parameter the event when it's called.</li>
+</ul>
+<p>The parameter received by the handler has the following structure, for each of the possible events:<br><br></p>
+<ol>
+<li>
+<h2><strong>experience.variation_decided</strong></h2>
+<pre>{<br>"data":{<br>"experience_id":"111111",<br>"variation_id":"22222",<br>"experience_name":"name here",<br>"variation_name":"name here"<br>},<br>"event":"experience.variation_decided"<br>}</pre>
+</li>
+<li>
+<h2><strong>experience.activated</strong></h2>
+<pre>{<br>"data":{<br>"experience_id":"111111",<br>"variation_id":"22222",<br>"activated_first_time":false,<br>"experience_name":"name here",<br>"variation_name":"name here"<br>},<br>"event":"experience.activated"<br>}</pre>
+<p><strong>activated_first_time</strong> - is a boolean which is true if that experiment was now activated for the first time for that visitor.</p>
+</li>
+<li>
+<h2><strong>goal.triggered</strong></h2>
+<pre>{<br>"data":{<br>"experience_id":"11111",<br>"variation_id":"222222",<br>"goal_id":"33333",<br>"experience_name":"name",<br>"variation_name":"name"<br>},<br>"event":"goal.triggered"<br>}</pre>
+<p> </p>
+</li>
+<li>
+<h2><strong>snippet.experiences_evaluated</strong></h2>
+<pre>{<br>"data":{<br>},<br>"event":"snippet.experiences_evaluated"<br>}</pre>
+</li>
+<li>
+<h2><strong>snippet.goals_evaluated</strong></h2>
+<pre>{<br>"data":{<br>},<br>"event":"snippet.goals_evaluated"<br>}</pre>
+</li>
+<li>
+<h2><strong>cookies.saved</strong></h2>
+<pre>{<br>"data":{<br>},<br>"event":"cookies.saved"<br>}</pre>
+</li>
+</ol>
+<div class="special-content special-content--important">
+<h2 class="special-content__icon">Sending a Convert Goal conversion to another platform:</h2>
+<div class="special-content__icon">With Convert, you can also send event data based on a Convert Goal conversion. Following is an example of how to this sending an event to a dataLayer with GTM. This code can be added to the Project Configuration of your Project.</div>
+<div class="special-content__icon"></div>
+<pre>function sendGoal(event){<br>// Change the goal id to the goal id you want to track<br>if (event.goal-id == '3333'){<br>// Use the following if you would like to not send anything else but the event<br>dataLayer.push({'event':'name_of_event','conversionValue':25});<br>// Use the following if you wold like to send some additional info attached to the event<br>//dataLayer.push({'event':name_of_event','goalinfo':JSON.stringify(event)});<br>} <br>}<br><br>_conv_q = window._conv_q || [];<br>_conv_q.push({<br>what: 'addListener',<br>params: {<br>event: 'goal.triggered',<br>handler: (event) =&gt; sendGoal(event)<br>}<br>})</pre>
+<div class="special-content__icon"></div>
+<div class="special-content__icon"></div>
+<div class="special-content__icon"></div>
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>You must have the <span><a href="https://support.convert.com/hc/en-us/articles/204506339-Prevent-Experiment-Details-Data-Leak-with-Data-Anonymization" target="_self"><strong>Data Anonymization</strong></a> setting disabled on the <strong>Project Configuration </strong>to be able to read the experiment or variation name from these functions. </span></p>
+</div>
+</div>
+<p>keywords: lifecycle events</p>

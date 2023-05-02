@@ -1,0 +1,19 @@
+Integrate Convert Experiences with Drupal
+<h2>Introduction</h2>
+<p><span style="font-weight: 400;"><span> <a href="https://www.drupal.org/" target="_self">Drupal</a> is a scalable, open platform for web </span><em>content management</em><span> and digital experiences.</span></span></p>
+<p><span style="font-weight: 400;">This integration will allow you to use Convert Experiments A/B Testing on your Drupal powered website.</span></p>
+<h2>Create a new experiment</h2>
+<p>In Experiences screen select "New Experience"</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423903793933/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Copy the Convert Experiments Script</h2>
+<p>Go to your Project Configuration and find the Convert tracking code:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423903807245/mceclip1.png" alt="mceclip1.png"></p>
+<h2>Add Drupal Module</h2>
+<p><span style="font-weight: 400;">Go to your Drupal account and add the module <a href="https://www.drupal.org/project/header_and_footer_scripts" target="_self">Header and Footer Scripts</a>. </span></p>
+<h2>Add Convert script into Drupal Module</h2>
+<p>You can then add the above script into the Drupal Module and then save configurations. This way you will have Convert installed in every page. </p>
+<h2>Add Convert Script only to few Pages</h2>
+<p>If you would like to only install it in few pages <span>This can easily be achieved from a custom module by implementing </span><span class="geshifilter"><code class="php geshifilter-php">hook_page_attachments<span>(</span><span>)</span></code></span><span>, checking the page you are on and adding the JS code to the HTML head. </span></p>
+<p><span>Sample code can be found <a href="https://www.aram.cz/article/drupal-8-add-inline-javascript-page" target="_self">here</a>.</span></p>
+<h2>Test the Integration</h2>
+<p><span style="font-weight: 400;">Now, go to the live site and check to see if your experiments are running. The changes you made to the variations or original should appear.</span></p>

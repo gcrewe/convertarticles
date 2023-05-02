@@ -1,0 +1,29 @@
+Convert's Code Editors explained
+Article Description
+This article is meant to explain each of the different Code Editors within the Convert app and remove any confusion about them. After reading this, you will be able to differentiate between them and be able to decide where your code should go, to be able to show the changes on your experience as you desire.
+Article Content
+There are 5 different editors in the Convert App that we will describe next:
+1) Code Editor
+You can find this within the Visual Editor > Variation n (Variation Menus) > Code Editor. There is one in each of the variations menus.
+
+In this editor, you can add code that takes advantage of our Smart Insert Convert technology (convert._$). You can read about it, in this article.
+If you want to insert plain Javascript without using the Smart Insert Convert technology, please do not insert it here. Insert it on the Custom Javascript section instead. However, that might lead to race conditions, not displaying your changes. Also, this is where the WYSIWYG Visual Editor functions fill and create code according to the changes created by the user. So, here you can access them and modify them if you need to.
+2) Custom CSS Editor
+You can also find this in the Visual Editor > Variation n (Variation Menus) > Custom CSS. 
+This editor is to insert plain CSS that will be appended to the web page when the visitor is assigned that specific variation. CSS is more persistent than changes included in the other editors, as CSS rules are permanent, and are not a victim to race conditions.Should be used when an element is not being changed by code in the Code Editor or Custom Javascript section. Whenever, CSS code is appended, but not working, you can append !important, to supersede all other rules already included in the page.
+3) Custom Javascript Editor
+This editor is to insert any standard javascript you desire to include in the variation assigned to the visitor. This editor is also located in the Visual Editor > Variation n (Variation Menus) > Custom Javascript.
+However, the code inserted in this section needs to consider that this is executed before the elements of the page have loaded. So, you either have to insert a special code to deal with this or execute after document.ready or DOM Loaded, which might bring flashing or blinking. It is easier to just use convert._$ in the Code Editor section as described in that section.
+4) Global Experience JS
+In this section, you can insert standard javascript that will be included in the page of any visitor that is bucketed on the experiment. This can be done to include javascript code that can be shared across variations, but not triggered outside the experiment. This code is also called before any variation code. 
+This can be found on the Visual Editor > Cog/Gear Icon > Global Experience JS section. 
+5) Global Project Javascript
+This code can be found in the Configuration > Global Project Javascript area. The code in this section gets included wherever the Convert tracking code is placed. Also, this code gets called before any of the other codes included in the code sections above. Common usage is to include analytics snippets or any code you want to trigger in every experiment/experience that is included in your project.
+Code Call Order (Priority)
+The javascript call order of the code included in Convert's code editors is the following:
+
+Global Project Javascript
+Global Experience JS
+(Variation) Custom Javascript Editor
+
+There is also a code calling order based on the experiment id for the code within each experiment. Code from experiments with lower experiment's id is called first, later experiment code with higher ones.

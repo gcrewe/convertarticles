@@ -1,0 +1,33 @@
+Deploying the Amazon “Buy with Prime” on Shopify Stores
+Deploying the Amazon Buy with Prime widget quickly without modifying the Shopify theme is now possible with Convert Experiences. These instructions work for all Convert Experience and Convert Deploy customers.
+Step 1
+Install the Convert Experience Shopify custom app by following the instructions here.
+Step 2
+Setting up the product pages you want to target is easy. Amazon Buy with Prime only works on product pages that are added to your Amazon merchant console, but this Deploy Convert Experience will pick up the correct SKUs and only show the Buy with Prime button on those pages.
+Copy the URL of one of the product pages where you want to have the Amazon Buy with Prime widget, and inside the Convert app, create New Experience -> Deploy, and paste that URL. This will lead you to our visual editor.
+In it, choose the button or element below which you want to have the Amazon Buy with Prime widget and click Insert HTML -> After selected element.
+
+In the free field that appears, you can paste the code below while making sure to replace the values for your Amazon merchant site-id and widget-id.
+
+<!-- Beginning of Buy With Prime Widget -->
+<script defer src='https://bootstrap.prod.scoville.dubai.aws.dev/bwp.js'></script>
+<div 
+id="amzn-buy-now" 
+data-site-id="xxxxxxx" 
+data-widget-id="w-xxxxxxx" 
+</div>
+<script>document.getElementById("amzn-buy-now").data-sku=_conv_product_sku;</script>
+<!-- End of Buy With Prime Widget -->
+
+Step 3
+Change the “Locations” of the summary:
+Change it to ”Start with” and the beginning of your Shopify product page URL, the part that is common for all product pages.
+
+Step 4
+Change the status of the experiment to “Active”
+
+
+
+Important
+We will automatically fill the SKU (based on Shopify’s own product.selected_or_first_available_variant.sku value) and automatically target the location of the Amazon Buy with Prime widget to be placed at your chosen place. If you’d like to tweak the location and display further, please modify the Javascript / CSS surrounding the widget. Our visual editor allows you to do that easily.
+

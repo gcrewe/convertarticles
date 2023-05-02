@@ -1,0 +1,24 @@
+Change Account Email Address
+<h2>Change email address of your account </h2>
+<div class="special-content special-content--important" style="width: 100%; margin: -10px auto; border: 2px solid #DB2960;">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>Changing the email address of the Account Owner will not change the subscription details. In order to switch the ownership completely, please contact us to facilitate this process.</p>
+</div>
+</div>
+<p> </p>
+<p>Go to "My Profile" and then select the "Email Address" tab:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4424053007245/mceclip0.png" alt="mceclip0.png"> </p>
+<p>Insert the new email address and click on "Verify":<br><img src="https://support.convert.com/hc/article_attachments/4440994198797/mceclip0.png" alt="mceclip0.png"></p>
+<p> </p>
+<div class="special-content special-content--tips">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-04.png" alt="Tip"></div>
+<div class="special-content__info">
+<h3>Tips</h3>
+<ul>
+<li>The previous email address will receive a notification of the email address change.</li>
+<li>Use your new email address to login on Convert Application. </li>
+</ul>
+</div>
+</div>

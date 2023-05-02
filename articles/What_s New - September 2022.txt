@@ -1,0 +1,11 @@
+What's New - September 2022
+<p>Features:</p>
+<ol>
+<li>We are working on upgrading our CDN infrastructure to improve the speed by 20%. We are currently offering this feature in Beta stage to customers who are interested.</li>
+<li>Release the feature in Convert's custom Shopify app to automatically reintegrate Shopify Plug-in after change of theme</li>
+</ol>
+<p>Bug fixes:</p>
+<ol>
+<li>Fixed an issue where project names were not appearing when adding you collaborators<img src="https://support.convert.com/hc/article_attachments/9705008165645" alt="mceclip0.png">
+</li>
+</ol>

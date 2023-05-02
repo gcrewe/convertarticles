@@ -1,0 +1,12 @@
+What's New - March 2022
+<p>Updates:</p>
+<ul>
+<li>Convert released it's new UI interface this month</li>
+<li>You can now track standard deviation in experiment report</li>
+<li><img src="https://support.convert.com/hc/article_attachments/5357312364941/IMG_1988.PNG" alt="IMG_1988.PNG"></li>
+<li>Change history has been updated to show the user name when the experiment status is changed </li>
+<li><span>Convert Shopify App has been updated to work with the API-key for picking the right projects and goals. <a href="https://support.convert.com/hc/en-us/articles/4407190415373-Integrate-with-Shopify-through-our-Custom-Convert-App" target="_self">Read more</a></span></li>
+<li>
+<span>Released Convert API V2. <a href="https://api.convert.com/doc/v2/" target="_self">Read more</a></span><span></span>
+</li>
+</ul>

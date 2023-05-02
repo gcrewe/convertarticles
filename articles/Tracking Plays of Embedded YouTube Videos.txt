@@ -1,0 +1,27 @@
+Tracking Plays of Embedded YouTube Videos
+<p>As part of an experiment, you may want to test different embedded YouTube videos to find out which one converts better.  You can create a goal that will track whether a video is played, or even a goal that tracks if the video finished playing.  YouTube provides the YouTube Player API through which you can trigger a conversion on the above-mentioned events.</p>
+<p>This can be achieved a couple of different ways, and we provide one example, but it depends on your specific scenario and what your original page contains.  Please see YouTube references at the bottom of this article for further information.</p>
+<p>The YouTube code requires an ID to identify the iframe where the video is.  If there is no iframe already, then it requires a div with an ID; YouTube will replace the div with the iframe and video player.</p>
+<p>If your original page already has an iframe with an embedded video, but no ID, you can add an ID with the Code Editor. Similarly, if it has no iframe but a div where you want to place the embedded video, you must add an ID to the div, and you can do that with the Code Editor.</p>
+<p>Normally the Original is not modified with the Code Editor but in this case you may need to do so to add the ID as this is essential to track clicks on the original as well as the variations.</p>
+<p>You can add the YouTube code on the Global Experience JS where it will apply to the original and all the variations, or else add the code individually to the Original and each variation's Custom JS, instead of the Global Experience JS.</p>
+<h2>Example Configuration:</h2>
+<h3>Variation JS:<img src="https://support.convert.com/hc/article_attachments/14346310888845">
+</h3>
+<p class="codepen" data-height="144" data-theme-id="31058" data-slug-hash="JpGvwR" data-default-tab="js" data-user="gcrewe" data-embed-version="2" data-pen-title="Code Editor / YouTube / Alex">See the Pen <a href="https://codepen.io/gcrewe/pen/JpGvwR/">Code Editor / YouTube / Alex</a> by George Crewe (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</p>
+<p>In the above code, replace 'element', with the element you are targeting, replace width and height as needed, and xxxxxx with the video ID in the source.</p>
+<h3>Global Experience JS:<img src="https://support.convert.com/hc/article_attachments/14346348902413">
+</h3>
+<p><img src="https://support.convert.com/hc/en-us/article_attachments/14346390605837/3b1d67d2bda9abef1a407a63161f27543825f529e42d5378f129eb60e040d609.png"></p>
+<p class="codepen" data-height="725" data-theme-id="31058" data-slug-hash="ddGeLR" data-default-tab="js" data-user="gcrewe" data-embed-version="2" data-pen-title="Global Experience JS / YouTube / Alex">See the Pen <a href="https://codepen.io/gcrewe/pen/ddGeLR/">Global Experience JS / YouTube / Alex</a> by George Crewe (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</p>
+<p>Place the above code in Global Experience JS, and create a JavaScript goal for which event(s) you want to track.  See <a href="https://support.convert.com/hc/en-us/articles/114093992211-Custom-Prebuilt-Goals#create-a-js-goal">https://convert.zendesk.com/hc/en-us/articles/114093992211-Custom-Prebuilt-Goals#create-a-js-goal</a> - once the goal is created you will have a goal ID per the article.  In the code above, where you see _conv_q.push(["triggerConversion", "<strong>xxxxxxxx</strong>"]); replace <strong>xxxxxxxx</strong> with the Goal ID for the goal you created.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6460151370253/mceclip0.png" alt="mceclip0.png"></p>
+<p>As mentioned previously, you could also put this code in Custom JavaScript but in that case you would have to duplicate it in the Original and each Variation, so it is better to add it only once, to the Global Experience JS.</p>
+<h2>References:</h2>
+<p><a href="https://developers.google.com/youtube/iframe_api_reference">https://developers.google.com/youtube/iframe_api_reference</a><br><br><a href="https://developers.google.com/youtube/youtube_player_demo">https://developers.google.com/youtube/youtube_player_demo</a></p>

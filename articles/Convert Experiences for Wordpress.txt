@@ -1,0 +1,24 @@
+Convert Experiences for Wordpress
+<h2>Find WordPress Plugin</h2>
+<div class="user_formatted header_section clearfix">
+<p>You can find the WordPress plugin in Convert's integrations page: <a href="https://www.convert.com/integrations/wordpress/">https://www.convert.com/integrations/wordpress/</a> or in WordPress plugin repository: <a href="https://wordpress.org/plugins/convert-experiments/">https://wordpress.org/plugins/convert-experiments/</a>.</p>
+<h2>Install Plugin through WordPress</h2>
+<p>Go to plugins section of WordPress:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/115003497831/mceclip0.png"></p>
+<p>Search for the "convert-experiments" plugin:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/115003524812/mceclip1.png"></p>
+<p>Press "Install Now":</p>
+<p><img src="https://support.convert.com/hc/article_attachments/115003498031/mceclip2.png"></p>
+<p>Then press "Activate":</p>
+<p><img src="https://support.convert.com/hc/article_attachments/115003524952/mceclip3.png"></p>
+<p>Go to your Settings and then Convert Experiences Configuration page inside WordPress and enter your Convert project ID:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/115003498131/mceclip4.png"></p>
+<p>Then press "Save Changes".</p>
+<h2>Install Plugin Manually</h2>
+<p>Alternatively you can install the plugin manually in your directory /wp-content/themes/&lt;yourtheme&gt;/header.php. Right after &lt;/title&gt; you should paste the code of the project. You can find the project code in the Configuration of your Convert Experiences project.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423905927821/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Verify Integration</h2>
+<p>You can verify that Convert Experiences has been installed correctly by checking the source code of your website and find the Convert Experiments code:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/115003525212/mceclip6.png"></p>
+<p>If the code is not visible in the source code, you might have a Caching Plugin on that needs a refresh to make the code visible.</p>
+</div>

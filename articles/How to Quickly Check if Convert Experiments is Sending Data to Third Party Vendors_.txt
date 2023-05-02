@@ -1,0 +1,10 @@
+How to Quickly Check if Convert Experiments is Sending Data to Third Party Vendors?
+<h2>Check Integrations Settings</h2>
+<p>You might or might not want to send the data from Convert Experiments to Google, Crazy Egg, and other vendors.</p>
+<p>To check this quickly, go into your Experiment Summary and more specifically to Integrations section.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14270648991757"></p>
+<p>Select Add/Edit Integrations and see which integrations are enabled:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423885273101/mceclip1.png" alt="mceclip1.png"></p>
+<h2>Use Convert Chrome Debugger</h2>
+<p>You can also use the <a href="https://support.convert.com/hc/en-us/articles/204506699-Chrome-Debugger-Extension-For-Convert-Experiences">Google Chrome Debugger</a> and search for the rows of your specific integration, e.g.:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/115004233672/mceclip1.png"> </p>

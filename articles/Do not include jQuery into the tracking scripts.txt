@@ -1,0 +1,16 @@
+Do not include jQuery into the tracking scripts
+<h2>Improve the loading time of your website</h2>
+<p>Part of the duties of running a website is to keep an eye on the loading time of your pages, while reducing the amount and size of the files that you are sending to its users.</p>
+<p>Convert serves its code from a blazing fast CDN. Even though, Convert Experiments will only drop your speed by an average 1%, a drop that can be easily outdone by the conversion improvements you will achieve by doing the A/B testing.</p>
+<p>However, we understand that you will try to maximize the speed of your website, as much as possible, even while performing this tests. So, one action that will help you achieve this, is by avoiding sending jQuery code library twice. </p>
+<p>Convert utilizes the jQuery code library to implement the experiments that you run on your website. However, if you are already have included jQuery in the libraries that you send to your users, you might want to configure your project in Convert to stop sending the library. </p>
+<p>The jQuery library holds a size of 28kb. So, in a matter, where every little counts to improve your loading time, you might as well do it.</p>
+<h2>Configuring Convert to Stop Including the jQuery library</h2>
+<p><span class="wysiwyg-color-red">WARNING: However, if you do configure Convert to stop sending the jQuery library and you don't include them within your website files, then the Convert Experiment WILL NOT RUN!</span></p>
+<p>First, you will have to include jQuery <strong>before</strong> Convert Experiments tracking code.</p>
+<p>Then to disable Convert Experiments including the jQuery code, you will have to change the project configuration where your experiment is contained. Follow the method shown next.</p>
+<p>First go to the Projects screen where all your projects are listed.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423785700877/mceclip0.png" alt="mceclip0.png"></p>
+<p>Once in the Project Panel, select the Project you want and then go to the Project Configuration. <span class="wysiwyg-color-black">On the More Settings click on the "Do not include jQuery" option:</span></p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423785728397/mceclip1.png" alt="mceclip1.png"></p>
+<p>You are done. Convert Experiments will stop including the jQuery library.</p>

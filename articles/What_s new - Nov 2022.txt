@@ -1,0 +1,8 @@
+What's new - Nov 2022
+<p>Features:</p>
+<p>1. You can now apply the same sorting to all goals in the report, instead of sorting them one by one.</p>
+<p>2.  We have renamed the traffic allocation feature to Experiment Traffic Allocation and Variation Traffic Distribution</p>
+<p>3. The report reset option has been moved from stats settings to the report options</p>
+<p><img src="https://support.convert.com/hc/article_attachments/11205518308877" alt="mceclip0.png"></p>
+<p>4. We have updated our security measures so that when the session expired the app logs users out. This prevents errors and clearly signals that no changes can be made. </p>
+<p> </p>

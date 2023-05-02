@@ -1,0 +1,56 @@
+Integrate Convert Experiences with Microsoft Power BI
+<h2>Convert-Microsoft Power BI Integration</h2>
+<p>Integration of <a href="https://powerbi.microsoft.com">Microsoft Power BI</a> with Convert Experiences will help you to import Convert data into your central data warehouse (we will use <a href="https://panoply.io">Panoply</a>) with an ETL tool (we will use <a href="https://www.stitchdata.com">Stitch</a>). From there, it's easy to use Power BI to perform the in-depth analysis you need.</p>
+<p>For each experiment, the integration uses track events to pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<p>The general flow will look like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360007564652/mceclip1.png"></p>
+<p>We will need:</p>
+<ol>
+<li>A <a href="https://segment.com/">Segment</a> account to be used as the middleware to send data from Convert Experiences to the powerful ETL tool Stitch.</li>
+<li>A <a href="https://www.stitchdata.com">Stitch</a> account to connect your Segment data with your other data sources in a data warehouse in minutes.</li>
+<li>A <a href="https://panoply.io">Panoply</a> account or any other data warehouse account that Segment supports (see <a href="https://segment.com/catalog#integrations/all">here</a>) list: </li>
+<li>A <a href="https://powerbi.microsoft.com">Microsoft Power BI</a> account to connect to your data warehouse. For Panoply read more instructions <a href="https://panoply.io/docs/connecting-to-panoply/connecting-bi-tools/" target="_self">here</a>.</li>
+</ol>
+<h2>Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the <a href="https://segment.com/">Segment tracking code</a> (analytics.js) are installed on your pages. The Segment tracking code looks like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000014292/mceclip0.png"></p>
+<h2>Activate Convert-Segment Integration </h2>
+<p>Add the code below to your website right after the Convert + Segment tracking codes which will send Convert Experience and Variation names to Segment Debugger/Schema:</p>
+<pre><code>var refObject = window['convert']['data']['experiments']
+	for (var key in window["convert"]["currentData"]["experiments"]) {
+			if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+				continue;
+	}}
+            
+var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+curExperimentName = curExperimentName.replace("Test #", "Test ");
+var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+curVariant = curVariant.replace("Var #", "Variation ");
+		
+analytics.track('Convert Experiences', {
+	Exp_Name: curExperimentName,
+	Var_Name: curVariant
+	});</code></pre>
+<h2>View Convert Data in Segment</h2>
+<p>When you log in to your Segment account, you should go to your Schema. Inside your Schema, you can see all of the track events that you are sending through Segment, and if they are active or inactive.</p>
+<p> <img src="https://support.convert.com/hc/article_attachments/360000075032/mceclip0.png"></p>
+<h2>Add Stitch as Destination in Segment</h2>
+<p>Then you should add an ETL tool (in our case we use Stitch) as your destination in Segment dashboard:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360007615931/mceclip0.png"></p>
+<h2>Add Panoply as Destination in Stitch</h2>
+<p>Then you should add your data warehouse (in our case we use Panoply) in your Stitch account and very quickly you will be able to see the tables/rows that are replicated:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360007616031/mceclip1.png"></p>
+<h2>View Convert Data in Panoply</h2>
+<p>In Panoply account you will be able to see the Convert Experiences data (experience + variation name) that you have sent initially:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360007565212/mceclip2.png"></p>
+<h2>Connect Microsoft Power BI to Panoply</h2>
+<p>To analyze your data, Panoply integrates with Business Intelligence (BI) tools such as Microsoft Power BI, Metabase, Tableau, Data Bricks, Looker, Chartio, Re:dash, Zeppelin, iPython Notebook, Shiny Apps by RStudio, and Sisense.</p>
+<p>To connect Power BI, note the following <a href="https://panoply.io/docs/connecting-to-panoply/connecting-bi-tools/" target="_self">requirements</a>:</p>
+<ul>
+<li>You must use Power BI April 2018 or newer.</li>
+<li>Use the Postgres connector. Panoply does not support the Redshift driver for Power BI. For other BI tools, we recommend that you use the Redshift driver.</li>
+<li>Use port 5432 instead of the default port 5439.</li>
+<li>If you are using <em>Connect with Google</em> to log into Panoply, you must reset your password in Panoply. This creates a password for logging into Panoply via Power BI. You will still be able to log into Panoply via Google after the password reset.</li>
+</ul>
+<p> </p>

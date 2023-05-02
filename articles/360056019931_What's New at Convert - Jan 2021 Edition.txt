@@ -1,0 +1,11 @@
+What's New at Convert - Jan 2021 Edition
+Fixes
+
+
+UI issue with Custom Segments filters in the Experience Report page was fixed.
+
+UI issue with date calendars in the Experiment report page was fixed.
+Issue with validating the regex formula in the regex checker was fixed.
+Issue with automations to schedule experiment's activation was also fixed. 
+UI issues with the Change log history page was also fixed.
+UI issue with project list in the filter pop up was also fixed.

@@ -1,0 +1,26 @@
+Transfer Query Parameters from Original to a Variation that also has Query Parameters
+<p> </p>
+<p>If you want to do a Split Test where your original URL may have query parameters that you want to be passed onto the variation, and your variation already has its own query parameter that you want to retain, you have to set this up a little differently than you normally would. Otherwise, what you would end up with is a variation URL that looks like this:</p>
+<p>http://www.mysite.com?query1=param1<strong>?</strong>query2=param2 (note the second ? which is incorrect)</p>
+<p>The above would be incorrect, as what you really want is this:</p>
+<p>http://www.mysite.com?query1=param1<strong>&amp;</strong>query2=param2 (note the &amp; which appends the second parameter)</p>
+<h2>Example Configuration</h2>
+<h2>Locations</h2>
+<p><strong>Page URL Matches exactly http://www.mysite.com</strong> </p>
+<p>Note that selecting "Page URL" means that it will work whether the URL that should trigger the experiment contains query parameters or not. You only need to use Page URL (w/Query) if you want to match *specific* query parameters. Also, "Matches exactly" may not be right for your situation, this is only an example.</p>
+<p><strong>AND </strong></p>
+<p><strong>Query String does not contain query=param</strong></p>
+<p>Note - this excludes the query parameters that already exist in your variation.  Replace query=param with your specific parameter.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14342441726349"></p>
+<h2>Edit Split Url Variations</h2>
+<h3>Original Url</h3>
+<p><strong>https://www.mysite.com/([^\?]+)?\?{0,1}(.*)$</strong></p>
+<h3>Options</h3>
+<p>Support Regular Expressions - checked on</p>
+<p>Transfer Original URL Variables to the Variation URL - checked on</p>
+<p>Show variation RegEx - checked on</p>
+<h3>Variation URL</h3>
+<p><strong>http://www.mysite.com/VIDEO/?query=param&amp;$2</strong></p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423926515085/mceclip2.png" alt="mceclip2.png"></p>
+<p><strong>keywords: </strong>attribution</p>
+<p> </p>

@@ -1,0 +1,37 @@
+Hotjar Integration
+<h2>Introduction</h2>
+<p>This guide will tell you how to enable <a href="https://www.hotjar.com/">Hotjar</a> recordings of your different experiences. If you are interested in enabling Hotjar heatmaps or polls please read the following <a href="https://support.convert.com/hc/en-us/articles/114094172732-How-to-enable-Hotjar-heatmaps-or-polls-for-a-variation-or-personalization">Guide</a>.</p>
+<p><span>For more use cases regarding this integration, you can read our </span><a href="https://www.convert.com/blog/optimization/hotjar-convert-a-step-by-step-guide-to-full-funnel-optimization/" target="_self" rel="undefined">Hotjar blog article</a><span>.</span></p>
+<h2>Enable Integration</h2>
+<p>To integrate with Hotjar's recordings tool, you just need to enable the Hotjar integration in your Experience Summary screen: </p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423904399757/mceclip1.png" alt="mceclip1.png"></p>
+<h2>Turn Data Anonymization OFF</h2>
+<div class="intercom-interblocks-paragraph no-margin intercom-interblocks-align-left">
+<p>According to <a href="https://help.hotjar.com/hc/en-us/articles/115012439167-How-to-Suppress-Text-Images-and-User-Input-from-Collected-Data" target="_self">Hotjar documentation</a>:</p>
+<p><strong><em>Hotjar will always suppress numbers 9 digits or longer regardless of settings. </em></strong><em>This prevents Hotjar from capturing information such as credit card numbers or telephone numbers. This also includes characters such as hyphens or colons separating numbers.</em></p>
+</div>
+<div class="intercom-interblocks-paragraph no-margin intercom-interblocks-align-left">
+<p>So when we send the Convert experiment tags with 9 digits or more we get this warning while debugging.</p>
+</div>
+<div class="intercom-interblocks-paragraph no-margin intercom-interblocks-align-left">
+<p>A workaround could be to turn <a href="https://support.convert.com/hc/en-us/articles/204506339-Prevent-Experiment-Details-Data-Leak-with-Data-Anonymization" target="_self">Data Anonymization</a> off in your Project Configuration so instead of experience/variation IDs you send experience/variation names and thus not suppressed.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4440893060365/mceclip2.png" alt="mceclip2.png"></p>
+</div>
+<h2>Tags - Events in Hotjar</h2>
+<p>We are using the <a href="https://help.hotjar.com/hc/en-us/articles/115011819488-How-to-Add-Events-to-your-Hotjar-Recordings" target="_self">tags (that are grouped with Events)</a> to send data to your Hotjar account.</p>
+<h2>See Convert tags in Hotjar Recordings</h2>
+<p>After the integration is enabled, every recording in your Hotjar account will be tagged like: "Convert: AAA - BBB" where:</p>
+<ul>
+<li>AAA - the name of the experiment limited to the first 20 characters or the <a href="https://support.convert.com/hc/en-us/articles/204506639-Where-Do-I-Find-the-Experiment-s-Respectively-Variation-s-IDs" target="_blank" rel="noopener">Experiment's ID</a> as found in your Convert account, depending whether you have <a href="https://support.convert.com/hc/en-us/articles/204506339-Prevent-Experiment-Details-Data-Leak-with-Data-Anonymization" target="_blank" rel="noopener">data anonymization</a> enabled or not;</li>
+<li>BBB - the name of the variation limited to the first 20 characters or the <a href="https://support.convert.com/hc/en-us/articles/204506639-Where-Do-I-Find-the-Experiment-s-Respectively-Variation-s-IDs" target="_blank" rel="noopener">Variation's ID</a> as found in your Convert account, depending whether you have <a style="background-color: #ffffff;" href="https://support.convert.com/hc/en-us/articles/204506339-Prevent-Experiment-Details-Data-Leak-with-Data-Anonymization" target="_blank" rel="noopener">data anonymization</a> enabled or not;</li>
+</ul>
+<p>Inside your Hotjar account, you can filter the recordings based on a certain Experiment - Variation pair in order to analyze visitors' behavior while seeing the respective variation.</p>
+<p>You should find the Convert tags under Event.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4440863730573/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Troubleshoot</h2>
+<p>You can enable <a href="https://support.convert.com/hc/en-us/articles/204506699-Chrome-Debugger-Extension-For-Convert-Experiences">Convert Chrome Debugger</a> and see if this integration is enabled. A new line will be added like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4442655202573/mceclip0.png" alt="mceclip0.png"></p>
+<p>You can also use the Hotjar debug mode by visiting your site and appending this query parameter: view=v2&amp;hjDebug=1 and see what you get in console.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4440898526477/mceclip1.png" alt="mceclip1.png"></p>
+<p> </p>
+<p><strong>tags:</strong> hot jar</p>

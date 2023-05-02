@@ -1,0 +1,115 @@
+Define an Advanced Audience
+<h2>The "New Audience" Section</h2>
+<p>The New Audience section allows you to create advanced audience configurations.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6443387876877/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Type of Audiences</h2>
+<p>Now there are several types of audiences in Convert Experiences.</p>
+<p>When creating a new Audience you have to choose from three different types of audiences. Permanent Audience, Segmentation and Transient.</p>
+<h3>Permanent Audiences</h3>
+<p>This type of audience is checked only at visitor bucketing time and not checked again. If the audience conditions are met by the visitor, the experience will run. If the audience conditions are not met anymore by the visitor, it will not cause the experience to be stopped for that visitor.<strong><br></strong></p>
+<h3>Segmentation</h3>
+<p>The visitor enters the S<em>egment</em> when the audience conditions are met and stays there. User is tagged as part of this <em>Audience</em> permanently, even if <em>Audience</em> conditions change. Useful for building user history or to assign a visitor to a segment (user persona) permanently and personalizing the site accordingly.</p>
+<p>When this option is selected, <em>Page URL-related</em> conditions become available in the conditions builder allowing to create segments based on URL since that makes sense: example- segment of user that reaches the /pricing page.</p>
+<p>You can find more information about <em>Segmentation</em> in the following <a style="background-color: #ffffff;" href="https://support.convert.com/hc/en-us/articles/115000995732" target="_blank" rel="noopener noreferrer">article</a>.</p>
+<h3>Transient Audience</h3>
+<p>The <em>Transient Audience</em> works in the following way: Visitor meets the audience, visitor sees the experience. The visitor does not meet the audience, the visitor does not see the experience.</p>
+<p>It basically makes experiences not persistent if the <em>Audience's Conditions </em>are not met.</p>
+<h2>Audience Condition Entities Description and Logical Conditions</h2>
+<p>Convert provides a long list of <em>Audience Condition Entities </em>from which you can build Custom Audiences.<br><br>The <em>Audience Conditions </em>can be joined in an AND or OR fashion to create your desired results on bucketing visitors into your Experiences or Segments.<br><br><img src="https://support.convert.com/hc/article_attachments/6443391099021/mceclip1.png" alt="mceclip1.png"></p>
+<h2>Audience Entities List (Audience Conditions List)</h2>
+<p>Here is a list of all <em>Audience Entities </em>from which <em>Custom Audiences </em>can be built from:</p>
+<h2>Content</h2>
+<p>Conditions based on <strong>Content </strong>are only available when setting an audience type as a <strong>Segment. </strong>Convert allows you to include or exclude visitors in your experience or segment based on the page they visit.</p>
+<h3 id="page_url"><strong>Page URL</strong></h3>
+<p>With this, you can create conditions that match the Page URL portion of a URL without the query parameters.</p>
+<p>So, if you create a condition like:</p>
+<p><strong>Page URL </strong>contains <strong>https://www.domain.com/page1.html</strong></p>
+<p>and the visitor URL is <strong>https://www.domain.com/page1.html?name=value</strong> you would get a match.</p>
+<h3>Page URL (with Query)</h3>
+<p>With this, you can create conditions that match the whole URL including URL query parameters.</p>
+<p>So, if you create a condition like:<br><strong>Page URL </strong>contains <strong>name=value </strong><br>and the visitor URL is <strong>https://www.domain.com/page1.html?name=value</strong> you would get a match. <br>But if the visitor URL would be:<br><strong>https://www.domain.com/page1.html</strong> then there would be no condition match.</p>
+<h3>Query String</h3>
+<p>With this you can create condtions that match on the query paramer section of the URL. </p>
+<p>So if you create a condtion like:</p>
+<p><strong>Query String </strong>contains <strong>name=value</strong></p>
+<p>and the visitor url is:</p>
+<p><strong>https://www.domain.com/page1.html?name=value </strong>there would be a match.<br>But if the visitor url is:<br><strong>https://www.domain.com/page1.html</strong> there would be no match.</p>
+<h2>Traffic Sources</h2>
+<p>Convert allows you to include or exclude visitors in your experience based on the UTM tags listed in the URL with which they entered your site. The tags that we support are:</p>
+<p><strong>UTM Campaign </strong></p>
+<p>-It refers to <span>the value of the </span><strong>utm_campaign</strong><span> query string variable</span></p>
+<p><strong>UTM Keyword </strong></p>
+<p>-It refers to the <span>value of the </span><strong>utm_term</strong><span> query string variable</span></p>
+<p><strong>UTM Medium</strong></p>
+<p>- I<span>f </span><strong>utm_medium</strong><span> query string variable is available, medium gets that value; otherwise, it looks at the referrer value and based on that medium can be: </span><br><span> - organic - if referrer URL seems to be one of the known search engines</span><br><span> - referral - if referrer is a url other than own website URL</span></p>
+<p><strong>UTM Source</strong></p>
+<p>-<strong> </strong>It refers to the <strong><span>utm_source </span></strong><span>value if provided, else it refers to the domain name of referral if a referral exist.</span></p>
+<h2>Visitor Data</h2>
+<p>You can use visitor specific data to include in your experience. You can choose from:</p>
+<h3>Average Time on Page</h3>
+<p dir="auto">This time is calculated when a page-view occurs and it is obtained by subtracting the time when the session began from the current time divided by the number of pages visited.</p>
+<p dir="auto">A session is being kept active for 20 minutes after no further browsing...therefore, if the user does something else and comes back to your site, generating another page view within 20 minutes from the last page view, that duration would be counted.</p>
+<p dir="auto">If they come back after 20 minutes, a new session would be opened, and then the duration time will count from then on.</p>
+<p dir="auto">Please note, that the duration there is counted in seconds, therefore if you need to count 20 minutes you'd need to enter 120.</p>
+<h3 dir="auto">City, Country</h3>
+<p>You can choose the city or country to include or exclude visitors on your experience.</p>
+<p>We get this data handed over from the Akamai Content Delivery Network (CDN), and/or MaxMind geo-ip location databases. You can do very accurate geographical targeting. It is also a world database, so you will find cities and regions anywhere in the world.</p>
+<h4>Using Metro Codes (available for US-only)</h4>
+<p>Although you can't target directly by zip code, you can target by Metro Codes for the any city in the world.  MaxMind has free downloadable IP geolocation databases called GeoLite2. According to MaxMind, they are comparable to, but less accurate than MaxMind’s GeoIP2 databases (which are not free).</p>
+<p>To find metro codes, you can download their GeoLite2 City database and look up the cities that belong to a particular metro code here: <a href="https://dev.maxmind.com/geoip/geoip2/geolite2/">https://dev.maxmind.com/geoip/geoip2/geolite2/</a></p>
+<p>In order to use metro codes for your audience targeting, you would download the city database file as mentioned above, open it on your computer and search for the metro code you are interested in. You should proceed to find all of the city names with that same metro code. Once you have all this information, create a new Audience and look for the category called Visitor Data. Under Visitor Data you will see that you can select City, and you can drag it over to the right to build your Audience conditions. You can do this multiple times, once for each city you found that matches the metro code, separating them with an OR condition.</p>
+<p>Note also in the case where a city name may exist in different States, you can add an AND condition for Region with the State name so that you will only target cities in that particular State.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6443417645197/mceclip2.png" alt="mceclip2.png"></p>
+<h3>Days since last visit</h3>
+<p>You can include or exclude visitors based on the days since the last visit to your site.</p>
+<h3>Pages Visited</h3>
+<p>Here you can include or exclude visitors to your experience, based on the number of pages they have visited before.</p>
+<h3>Region</h3>
+<p>Besides, countries and cities you can also use regions to include or exclude its visitors from your experience. Regions are the equivalent to states in the USA.</p>
+<p>You can use Maxmind region database as a reference for the world regions you can include.</p>
+<p>You can search for Maxmind databases online. There are free and more complete paid versions you can download.</p>
+<h3>Visit Duration</h3>
+<p dir="auto">The duration is calculated when a page-view happens and is obtained by subtracting the time when the session began from the current time.<br><br>A session is being kept active for 20 minutes after no further browsing. If the visitor does something else and comes back to your site, generating another page view within 20 minutes from the last page view, that duration would be counted. If they come back after 20 minutes, a new session would be generated.</p>
+<h3 dir="auto">Visitor Cookie</h3>
+<p>You can include or exclude users by comparing a provided value with the value of the cookie. For this, you would have to provide the cookie name and the value that you are comparing to.</p>
+<p>For Convert to be able to read cookie value, the cookie would have to have been written under the same site domain.</p>
+<h3>Visitor Type</h3>
+<p>You can include or exclude "New Visitors" or "Returning Visitors" to your site. These new visitors have to be fresh visitors, and a "Returning Visitor" would be considered one if they have visited the site since the Convert tracking code was installed. And even before the experience was created.</p>
+<h3>Visits Count</h3>
+<p>You can include or exclude a visitor depending on the number of visits or sessions a visitor has on the site. It is easier to start creating this with a <em>"Template"</em> and then use the <em>"Advanced Audience"</em> to tweak it further to your needs.</p>
+<p dir="auto">A session is being kept active for 20 minutes after no further browsing. If the visitor does something else and comes back to your site, generating another page view within 20 minutes from the last page view, that would be counted as one visit. If they come back after 20 minutes, a new visit would be counted.</p>
+<h3 dir="auto">Bucketed in Experience</h3>
+<p>You can include or exclude visitors that are part of another experiment which is currently running, or visitors which are not included in any other experiment currently. This allows you to run simultaneous tests on the same page, without fearing that they could interfere with one another. This is what is known as "Collision Avoidance" or "Collision Prevention".</p>
+<h2>Visit Time</h2>
+<p>You can include or exclude a visitor if its visit falls within a certain time period. For setting this up, is better to start on the "Templates tab" and then, go to the "Advanced Settings tab" to further tweak to your own needs.</p>
+<h3>Default UTC Time Zone</h3>
+<p>The default visit time reference is based on the UTC time zone.</p>
+<h3>Project Time Zone</h3>
+<p>You can also use as reference the time zone specified in your project settings. All of this settings include "Project tz" at the beginning.</p>
+<h2>Systems</h2>
+<p>You can target your visitors based on the system they are browsing your website from:</p>
+<h3>Browser</h3>
+<p>You can use the browser type to include or exclude visitors on your experience, such as "Chrome", "Mozilla", or "IE".  This audience is based on the User Agent of the visitor's browser.</p>
+<h3>Browser Version</h3>
+<p>You can use the release version of the visitor's browser to include them on an experience. Let's say 11.00, 1.01, etc. <span style="background-color: #f5f6f5;">This audience </span>is based<span style="background-color: #f5f6f5;"> on the User Agent of the visitor's browser.</span></p>
+<h3>Operating System</h3>
+<p>You can use the operating system of the visitor device to include them or exclude them on experience. For example Android, Window Os, Mac OS. This audience is based on the User Agent of the visitor's browser.</p>
+<p>User Agent</p>
+<p>You can also use the User Agent of the visitor browser to include or exclude visitors on your experience.</p>
+<h3>Device is desktop or mobile</h3>
+<p>You can include or exclude visitors based on the type of device he/she is using to visit the site. The device is determined using the User Agent provided by the visitor browser. This is determined by the Akamai CDN network which hands the device type to the Convert tracking script.</p>
+<h2>Page Tags</h2>
+<p>You can use "Page Tag" values to include or exclude visitors, that you had mapped with the Convert tracking code. Please find more info on the following article: <strong><a href="https://support.convert.com/hc/en-us/articles/205152665-Targeting-with-Advanced-Page-Tagging" target="_blank" rel="noopener noreferrer">"Targeting with Advanced Page Tagging"</a>.</strong></p>
+<h3>Customer ID and Custom Tags</h3>
+<p>The Customer ID is a page tag that can be mapped with an advanced tracking code, and you can use it to include or exclude visitors in your experience. Please find more info on the following article: <strong><a href="https://support.convert.com/hc/en-us/articles/205152665-Targeting-with-Advanced-Page-Tagging" target="_blank" rel="noopener noreferrer">"Targeting with Advanced Page Tagging"</a>.</strong></p>
+<h2>JS Condition</h2>
+<p>You can use a Javascript Condition to include or exclude a visitor on your test. This condition should be based on variables that are related to the visitor. The variables should be initialized before the Convert tracking code, or determined by functions included in the Custom JS areas provided at the <em>Project</em>, <em>Experience</em>, and <em>Variation</em> level.</p>
+<p>The condition should return true to run. Anything else it returns, it will cause the experience to not run.</p>
+<p>An example would be:</p>
+<pre><code class="language-javascript">(customer_group == "frequent")
+</code></pre>
+<p>You can find more information in the following article: <a href="https://support.convert.com/hc/en-us/articles/205159965-Targeting-Experiments-and-Firing-Goals-Based-on-a-JS-Condition" target="_blank" rel="noopener noreferrer">"Targeting Experiments and Firing Goals Based on a JS Condition"</a>.</p>
+<h2>Logical Joins for your Audiences</h2>
+<p>By default, separate audiences are joined with OR operator. But all the conditions inside the same audience can logically be joined with AND / OR operators.<em> </em>These operators allow you to create sophisticated audiences.</p>
+<p>To use this, just drag and drop your condition from the left panel, into the right one by placing them in the correct area corresponding to this operators.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6443415466125/mceclip3.png" alt="mceclip3.png"></p>

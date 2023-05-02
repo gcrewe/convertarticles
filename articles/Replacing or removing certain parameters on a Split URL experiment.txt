@@ -1,0 +1,10 @@
+Replacing or removing certain parameters on a Split URL experiment
+<h2>Replacing or removing certain parameters on a Split URL experiment</h2>
+<p>It may be the case that you want to redirect your users, on an experiment to another page while removing certain parameters that might be in a different order.</p>
+<p>So, let say that you have a URL in which you want to remove two parameters:<br> <br> <strong>https://www.domain.comt/order/us/oad/?pid=omabsv4&amp;usfid=oadflow03</strong></p>
+<p>What we want is to replace the <strong>pid=omabsv4</strong> with <strong>pid=sls</strong>, and <strong>usfid=oadflow03 </strong>with <strong>usfid=oadflow04</strong>.<br> <br> So, we would like to get a resulting URL like:<br> <br> <strong>https://www.sveltetraining.net/order/us/oad/?pid=sls&amp;usfid=oadflow04</strong></p>
+<p> One of the advantages of using this over a normal Split URL is that the parameters can be in any order, and that query parameters alternative to the ones replaced will be only transferred to the new URL. <br><br>What we will do for this, will be to create an AB test and then add some redirection code to the <strong>Custom Javascript</strong> on the variation. </p>
+<pre>url = document.location.href;<br>var replace = '';<br>var p1 = /pid=.*?&amp;/;<br>var p2 = /usfid=.*?&amp;/;<br>url = url.replace( p1, 'pid=sls&amp;' );<br>url = url.replace( p2, 'usfid=oadflow04&amp;' );<br>convert.redirect(url);</pre>
+<p>What we will do for this, will be to create an AB test and then add some redirection code to the Custom Javascript on the variation. <br><br>If you notice, even though we are using javascript, we are also using regex. So, this an example of how you can create more advanced redirection logic with regex and additional javascript.<br><br><br></p>
+<p> </p>
+<p> </p>

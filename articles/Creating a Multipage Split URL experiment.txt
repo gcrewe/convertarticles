@@ -1,0 +1,27 @@
+Creating a Multipage Split URL experiment
+<h2>Issue</h2>
+<p>In Convert Experiments you can create from Simple to complex Split URL Experiments (Javascript redirected).<br><br>However, creating experiments in which you have multiple URLs, which should redirect to corresponding URLs within the same experiment, might be too complex to code with regex or to configure within a Convert Split URL Experiment.</p>
+<h2>Solution</h2>
+<p>For this cases, we have created the following recipe. However, first we will provide a graphic example of what the experiment entails:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360018920491/Multipage_Split_URL_Experiment.png" alt="Multipage_Split_URL_Experiment.png" width="636" height="477"></p>
+<p><br>The configuration of the experiment will use the Convert convert.redirect() javascript explained in a simpler experiment <a href="https://support.convert.com/hc/en-us/articles/205160335-How-Do-I-Create-a-Variation-that-Redirects-to-Another-Page-Based-on-Certain-Logic-">article</a>.<br><br>Follow the steps to configure this type of experiment.<br><br></p>
+<ol>
+<li>Create a normal Convert AB Experiment. Do not create a Convert Split URL Experiment. Use any of the initial URLs to start the configuration of the experiment. Let's say: <a href="https://domain.com/page1.html">https://domain.com/page1.html</a>.<br><br>
+</li>
+<li>While you configure this experiment, it will open the visual editor. Open the <em>"Variation 1 &gt; Custom Javascript"</em> editor:<br><br><img src="https://support.convert.com/hc/article_attachments/360036277272/mceclip0.png" alt="mceclip0.png">
+</li>
+<li>Add the following code to the Editor and configure it according to your experiment requirements and save your test and exit the editor.<br><br>
+<p class="codepen" style="height: 381px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-height="381" data-theme-id="31058" data-default-tab="js" data-user="gcrewe" data-slug-hash="gZJJdO" data-pen-title="Multipage Split URL Experiment">See the Pen <a href="https://codepen.io/gcrewe/pen/gZJJdO/"> Multipage Split URL Experiment</a> by Convert.com (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<br><br>
+</li>
+<li>Configure your Site Area by adding the Visitor Requested URLs that will bucket them into the experiment:<br><br><img src="https://support.convert.com/hc/article_attachments/4423920399757/mceclip0.png" alt="mceclip0.png"><br><br>Now test your experiment in a fresh incognito session or utilize Convert's well documented <a href="https://support.convert.com/hc/en-us/articles/360004647132-QA-Guide">QA process</a>. </li>
+</ol>
+<p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+</p>
+<h2>Pass Parameters from Original to Variation URLs</h2>
+<p>If you want to pass parameters from original to variation URLs you can extend the above code with this:</p>
+<pre>var parameters = (new URL(document.location)).searchParams;
+if (document.location.href.includes("convert")) {
+convert.redirect("https://www.convert.com" + "?" + parameters);
+}</pre>

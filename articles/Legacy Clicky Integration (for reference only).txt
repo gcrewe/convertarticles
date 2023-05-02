@@ -1,0 +1,37 @@
+Legacy Clicky Integration (for reference only)
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>This article has been superseded by this <a href="https://support.convert.com/hc/en-us/articles/115003147352-Integrate-Convert-Experiences-with-Clicky">linked article</a>. This is only here for reference example on how to send data to a third party application. Do not use to integrate with Clicky. The linked article is an easier way to integrate Clicky.</p>
+</div>
+</div>
+<h2>Introduction</h2>
+<p>Integrating <a href="https://www.convert.com/integrations/clicky-integration/" target="_self">Clicky</a> with Convert Experiments allows you to view reports of your Convert experiments in the Clicky Analytics Dashboard. </p>
+<p>For each experiment, the integration will pass along the experiment name and variation name that the Visitor is currently bucketed into (if any) using <a href="https://clicky.com/help/faq/features/split-tests">Clicky Split Tests</a>. You will have to install an additional script to your website, along with the Convert Experiments and Clicky tracking codes. This will only need to be done once, on the pages where you want to track, in order for this to work for all current and future experiments.</p>
+<p>If you do not want to add this additional integration code, there is also an <a href="https://support.convert.com/hc/en-us/articles/205463513-Clicky-Integration">article</a> that describes the <strong>internal</strong> integration with <a href="https://clicky.com/help/custom#clicky_custom">clicky_custom properties</a>.</p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the Convert tracking code and the Clicky tracking code are installed on your page. Convert Tracking Code can be found on Project Settings:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360050440151/mceclip0.png" alt="mceclip0.png"></p>
+<p>Clicky Tracking Code can be found under Dashboard &gt; Tracking Code:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/115004148952/mceclip0.png"></p>
+<h2><span style="font-weight: 400;">Add the Integration Code</span></h2>
+<p><span style="font-weight: 400;">Copy this code, and paste it <strong>after</strong> the Convert Experiments script tags in the &lt;head&gt; of your page and </span><strong>before</strong><span style="font-weight: 400;"> the Clicky script tags. The order is important to make this work.</span></p>
+<p class="codepen" data-height="444" data-theme-id="31058" data-slug-hash="jaXaOr" data-default-tab="js" data-user="gcrewe" data-embed-version="2" data-pen-title="Clicky Integration">See the Pen <a href="https://codepen.io/gcrewe/pen/jaXaOr/">Clicky Integration</a> by George Crewe (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<p>If you do not want to use Split Tests, you can instead use clicky_custom.visitor.</p>
+<h2><span style="font-weight: 400;">Turn Off Data Anonymization</span></h2>
+<p>In order for the script to access human readable experiment data, you will need to turn off Data Anonymization in your Project Settings.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360053567612/blobid0.png" alt="blobid0.png"></p>
+<h2><span style="font-weight: 400;">Verify Installation</span></h2>
+<p><span style="font-weight: 400;">The easiest way to verify that your integration code is correctly installed is to:</span></p>
+<ol>
+<li><span style="font-weight: 400;">Go to the page you are running these tests on.</span></li>
+<li>
+<span style="font-weight: 400;">Go to Clicky &gt; Goals &gt; Split Tests to see if the experiment/variation you visited shows up.</span><em><img src="https://support.convert.com/hc/article_attachments/115004209571/mceclip0.png"></em>
+</li>
+<li>Go to Clicky &gt; Custom if you used the clicky_custom.visitor in the integration code above:<img src="https://support.convert.com/hc/article_attachments/115004246392/mceclip0.png">
+</li>
+</ol>
+<p><em><span style="font-weight: 400;"><strong> </strong>(Note: It may take up to 10 minutes for the experiment to show up. If you don’t see it at first, give it a little time.)</span></em></p>
+<p> </p>

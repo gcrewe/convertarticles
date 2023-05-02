@@ -1,0 +1,13 @@
+What's new at Convert - April 2021 Edition
+Features
+The following new integrations were added to the app:
+Smartlook integration
+RudderStack integration
+GA V4 (Google Analytics 4) Integration
+ 
+Bugs
+1. An issue with character encoding for Project name was resolved
+2. A rate limit for only 5 forgot password request within a 24hour period has been added
+ 
+ 
+ 

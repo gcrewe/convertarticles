@@ -1,0 +1,25 @@
+Using Basic and Advanced Post segmentation
+What is the Post-Segmentation feature?
+The Post Segment feature allows you to analyze experiment reports and results on basis of segments like browser used, device used, new v/s old visitors and so on. 
+Basic v/s Advanced Post-Segmentation
+The key different between Basic and Advanced Post-segmentation feature is the segments included in them. 
+The Basic Post-Segmentation feature includes limited segments like
+
+browser used,
+device used,
+new v/s old visitors and
+user country.
+
+Whereas, the Advanced Post-segmentation feature includes all basic post-segmentation segments, plus segmentation by 
+
+traffic source, 
+continent, and 
+10 custom segments.
+
+The Basic Segmentation feature is included in the Kickstart plan. The Advanced Segmentation feature is included in all plans except the Kickstart plan. For more details, please visit our pricing page.
+How to use the Post-Segmentation feature?
+After your experiment starts receiving traffic, you can analyze the experiment reports by clicking on the Segment option.
+
+You can choose to either filter and analyze the results by a single segment or you can choose multiple filters to analyze results with a combination of segments.
+ 
+Liked the Post-segmentation feature and want to include it in your plan? Get in touch with us to discuss more.

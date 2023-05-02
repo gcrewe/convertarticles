@@ -1,0 +1,22 @@
+Single Page Application (SPA) Troubleshooting Guide
+Overview
+Several issues are common when trying to launch Convert experiences on Sigle Page Application (SPA) frameworks. SPA frameworks examples are React, Angular, and Vue. There are many others. However, their main common characteristic is that they do not reload when a new page or view is displayed on the browser. These frameworks only redraw the component or module that changes in the new view.
+Test changes appearing on the first-page view but not on subsequent ones.
+You will find that if the change that you are aiming to display only shows in the first page that you load on your browser, but not on subsequent views, then it is because the part of the Convert script that evaluates the experiments and activates them, does not run when accessing a new view or "page" of the site.
+For this, you will need to fire the polling each time a new 'view' is displayed on the page. The polling is the part of the Convert script that evaluates the experience conditions, goals, segments and deploys experience code when the visitor matches them. 
+For this, we recommend that you install the javascript code contained in the SPA article.
+Changes appearing on Visual Editor do not appear when previewing them outside it.
+You create the changes on the Visual Editor, and then when you try to preview them outside the editor, these do not appear. 
+Must SPA frameworks do not use as Convert the DOM API to deploy changes because of performance reasons. Most of them use their own methods to deploy the changes on the page. This causes that the DOM gets out of sync when updated by the SPA. This is common in React and Angular. This causes the CSS selectors found on the Jquery code not to work. The solution is to replace the selectors created automatically by Convert with manually created ones that are as short as possible. Maybe creating these selectors to depend on a unique id or classes that identify the element targeted without a long document path. Example: #id, .class1.class2.class3.
+Changes keep appearing on subsequent 'views'.
+An experiment change displays in the correct (page) view. However, when visiting new (pages) views, the change remains and does not go away. 
+This is caused because the changes are removed when reloading a new page on a normal site, but in a SPA site, changes are not removed. 
+The Convert script removes code added when the experiment conditions do not match the subsequent view where the changes were deployed when the polling is called. However, this is not sufficient as jquery changes will not disappear even if removing the experiment code of the page. You will need to execute code that undoes the changes brought by the experiment. You could use the following code in your Project Configuration > Global Javascript section, targeting all the pages of the site.
+
+// Condition makes code to not execute on the experience view
+// or on other pages after visited afterwards.
+if ((!convert.historicalData.experiments[100124225]) || convert.historicalData.experiments[100124225]) {
+// undo css jquery code
+// This is an example of the experiment undo code
+convert.$('#Hello').css('display','block');
+}

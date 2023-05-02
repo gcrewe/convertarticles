@@ -1,0 +1,62 @@
+Integrate Convert Experiences with Active Campaign
+<h2>Introduction</h2>
+<p>Integrating <a href="https://www.convert.com/integrations/active-campaign/" target="_blank" rel="noopener">Active Campaign</a> with Convert Experiences allows you to send Convert data in the Active Campaign and segment your contacts based on Convert values.</p>
+<p>For each experiment, the integration will pass along the experiment name and variation name that the Visitor is currently bucketed into (if any). </p>
+<p><span>For more use cases regarding this integration you can read our </span><a href="https://www.convert.com/blog/optimization/activecampaign-convert-follow-ups-that-increase-conversions/" target="_self" rel="undefined">Active Campaign blog article</a><span>.</span></p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the Convert tracking code and the Active Campaign tracking code are installed on your page. Convert Tracking Code can be found in Project Configuration:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423896262797/mceclip0.png" alt="mceclip0.png"></p>
+<p>You should find your Active Campaign tracking code by logging into your Active Campaign account and go to Tracking. Find <a href="https://help.activecampaign.com/hc/en-us/articles/221493708-How-to-set-up-Site-Tracking">here</a> instructions on how to enable Active Campaign Site Tracking.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360003998772/mceclip1.png"></p>
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>If you are using Active Campaign Site Tracking feature to track visits made to your website by contacts in the EU, then you may want to make changes to how you have implemented site tracking in order to be GDPR compliant. Read more <a href="https://help.activecampaign.com/hc/en-us/articles/360000872064">here</a>.</p>
+</div>
+</div>
+<h2>Enable Active Campaign Event Tracking</h2>
+<p>Next, you should enable your Active Campaign Event Tracking by following these <a href="https://www.activecampaign.com/blog/how-to-setup-activecampaign-event-tracking/">instructions</a>. </p>
+<h2>Add the Integration Code</h2>
+<p>Copy this code, <strong>after</strong> the two tracking codes, to activate the integration:</p>
+<pre><code>var refObject = window['convert']['data']['experiments']
+	for (var key in window["convert"]["currentData"]["experiments"]) {
+			if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+				continue;
+	}}
+            
+    var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+    var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+    curExperimentName = curExperimentName.replace("Test #", "Test ");
+    var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+    curVariant = curVariant.replace("Var #", "Variation ");
+    
+    
+    // your ActiveCampaign id. You can get this from your AC settings 
+    var actid = "1000077108"; 
+
+    // your event key, also in AC settings
+    var eventKey = "93f120c55fa6caf9dabc1430d8b4232efead5dfe"; 
+    
+    // Name for event you want to track.
+    var event = "Convert Experiences Variation Name";
+    
+    var eventData = curVariant;
+    
+    
+    // build the eventString based on the variables you just edited above ☝
+    var eventString = "actid=" + actid 
+                    + "&amp;key=" + eventKey 
+                    + "&amp;event=" + event 
+                    + "&amp;eventdata" + eventData;
+
+  // send the event to the ActiveCampaign API with our event values
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("POST", "https://trackcmp.net/event", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send(eventString);</code></pre>
+<h2>Verify Installation</h2>
+<p>The easiest way to verify that your integration code is correctly installed is to go to <strong>Tracking</strong> and then <strong>Event Tracking</strong> and see your new event in the list:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360004010651/mceclip2.png"></p>
+<p>You can use then these events as described <a href="https://help.activecampaign.com/hc/en-us/articles/224653688-Using-Event-Tracking-to-trigger-automations">here</a>.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360004003352/mceclip3.png"></p>

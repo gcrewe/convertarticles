@@ -1,0 +1,21 @@
+Page loaded through proxy inside the Visual Editor - tracking code installed
+<h2>Visual Editor not loading Websites</h2>
+<p>Normally, when using the Visual Editor, if you have the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript" target="_blank" rel="noopener">Convert Tracking Code</a> installed, you should see the same browsing session that you see in another tab of your browser. There are occasions when certain functionality of the website is not available, even though the tracking code is correctly installed. </p>
+<p>For example, maybe a shopping cart is not working as expected (showing as empty), or login into a secured area of your website does not work.</p>
+<p>Most of the time this is due to the fact that your website restricts the ability to load it in an iframe hosted under a different domain (app.convert.com in this case) through the use of certain HTTP headers.</p>
+<p>This problem is usually there when the following blue warning is shown, even if you have the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> installed on your page:</p>
+<p>"We loaded your site through Convert Experiment's proxy - you'll still be able to edit the page but some functions might be missing. <a href="https://support.convert.com/hc/en-us/articles/205160415-Why-are-Some-Functions-Not-Working-on-My-Site-When-Loaded-in-Convert-Experiment-s-Visual-Editor-" target="_blank" rel="noopener">Read more about</a>". </p>
+<p><img src="https://support.convert.com/hc/article_attachments/14557346590093"></p>
+<p>To overcome this issue you can use Google Chrome browser and install the <strong>Convert Experiences Debugger Extension </strong>from the following link:</p>
+<p><a href="https://chrome.google.com/webstore/detail/convert-experiences-tools/mcjjomjpjfaaaiieieaecenabgidlhid">https://chrome.google.com/webstore/detail/convert-experiences-tools/mcjjomjpjfaaaiieieaecenabgidlhid</a></p>
+<p>Once installed, please click on the extension, add the domains you are using with the experience and turn on the Extension:<br><img src="https://support.convert.com/hc/article_attachments/14557416484877"></p>
+<p>This should remove the problematic headers and allow your page to be loaded inside the Visual Editor; you should be able to create your experiments without any issues.</p>
+<h2>Mobile View</h2>
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>In the case of using the Mobile View in the Visual Editor, you may see the blue proxy message regardless - this is because currently the mobile editor always uses a proxy to view your site.</p>
+<p> </p>
+</div>
+</div>

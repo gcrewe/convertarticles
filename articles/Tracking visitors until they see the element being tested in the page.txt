@@ -1,0 +1,19 @@
+Tracking visitors until they see the element being tested in the page
+<h2>Description</h2>
+<p>Sometimes an optimizer might be concerned with only measuring visitors that see the element being changed in the test, as bucketing all visitors that land on the page, might cause a degree of noise in the sample of visitors bucketed and measured in the test.</p>
+<h2>Solution</h2>
+<p>To aid in excluding the visitors that do not see the elements changed on the page, the following solution has been put together. This configuration will only bucket visitors in the experiment that see an element on the page, which should be the one that is being tested.</p>
+<ol>
+<li>First, find the selector for the element that you are changing. You might find it on the variation code for the experiment you are carrying on, or you might find that manually using the process described in this <a href="https://support.convert.com/hc/en-us/articles/360024399211" target="_blank" rel="noopener">article</a>.<br><br>
+</li>
+<li>Add the following code to your Project Configuration&gt; <a href="https://support.convert.com/hc/en-us/articles/204506349-Project-Settings" target="_blank" rel="noopener">Global Javascript.</a>
+<pre>// This extends jquery to return true when an element is viewed on the page:<br>convert.$.fn.isInViewport = function() {<br> var elementTop = convert.$(this).offset().top;<br> var elementBottom = elementTop + convert.$(this).outerHeight();<br> var viewportTop = convert.$(window).scrollTop();<br> var viewportBottom = viewportTop + convert.$(window).height();<br> return elementBottom &gt; viewportTop &amp;&amp; elementTop &lt; viewportBottom;<br> };<br>// This queries the last function every time there is a window scroll and resize, checking<br>// if the element is on view.<br> convert.$(window).on('resize scroll', function() {<br>// MODIFY THE H2 WITH YOUR OWN SELECTOR<br> if (convert.$('H2').isInViewport()){<br> // If in view run the experiment<br>// MODIFY THE FOLLOWING LINE WITH THE ID OF YOUR EXPERIMENT:<br> window.runExperiment123456789 = 1;<br> window._conv_q = window._conv_q || [];<br> window._conv_q.push(["executeExperiment","100123828"]) <br> } <br> });</pre>
+</li>
+<li>Modify the code above with the selector and the runExperiment123456789 variable, modified with your experiment id.<br><br>
+</li>
+<li>Add a JS Condition in the Audience as a Custom Audience that evaluates the variable that you just modified with your own experiment id, like:<br>
+<pre>window.runExperiment123456789 == 1</pre>
+</li>
+<li>Congratulation. You are done. Your experiment will only bucket the visitors of the page that see the element changed on the page. </li>
+</ol>
+<p><br><strong>keywords: on view, increase accuracy</strong></p>

@@ -1,0 +1,17 @@
+How to exclude Google Shopping traffic into your experiment
+<h2>Issue:</h2>
+<p>There exists some concern that bucketing Google Shopping traffic while testing in Convert might lead to receiving penalties from Google, as the visitor might see a different price point, than the one displayed on the Google Shopping ad placements. So, avoiding to bucket these visitors onto the test </p>
+<h2>Solution</h2>
+<p>To prevent Google Shopping traffic to be bucketed into an experiment, we need to identify the traffic that is coming into the site via the Audience targeting in Convert.</p>
+<p>We can do this by using several methods:</p>
+<ol>
+<li>
+<strong>Identify Google Traffic Source and Exclude it. We can also do this in two ways:</strong><br><br>
+<ol>
+<li>
+<strong>Add UTM tags to the product links</strong> that you add to your Google Shopping placements and identify them in Convert through a Convert Custom Audience.<br><br>You could add a parameter like <strong>utm_source=google_shopping</strong>. So your links you end up looking like <strong>https://www.domain.com/category/productname.html?utm_source=google_shopping</strong>.<br><br>Then add the condition to your <strong>Convert</strong> <strong>Custom Audience</strong>. <br><br><img src="https://support.convert.com/hc/article_attachments/6459986237965/mceclip0.png" alt="mceclip0.png"><br><br>That should exclude any traffic with that utm_source=google_shopping parameter.<br><br>
+</li>
+<li>If you are unable to modify the URL parameters, you can configure the audience as part of a segment and exclude them based on the referrer URL. For that, you will need to create a JS Condition within your Custom Audience and exclude that traffic.<br><br>The JS Condition can be something like:<br><br><strong>!(document.referrer.includes('google.com'))<br><br></strong>And can be configured like:<br><br><img src="https://support.convert.com/hc/article_attachments/6459973177613/mceclip1.png" alt="mceclip1.png"><br><br>The only caveats with this solution is that it will exclude all the traffic that comes from Google, so the first one is a better one.</li>
+</ol>
+</li>
+</ol>

@@ -1,0 +1,13 @@
+What's new at Convert - April 2021 Edition
+<h2 id="features">Features</h2>
+<p data-pm-slice="1 1 []">The following new integrations were added to the app:</p>
+<p data-pm-slice="1 1 []"><a class="ProsemirrorEditor-link" href="https://support.convert.com/hc/en-us/articles/360058323412-Integrate-Convert-Experiences-with-Smartlook">Smartlook integration</a></p>
+<p><a class="ProsemirrorEditor-link" href="https://support.convert.com/hc/en-us/articles/360058296372-Integrate-Convert-Experiences-with-RudderStack">RudderStack integration</a></p>
+<p><a class="ProsemirrorEditor-link" href="https://support.convert.com/hc/en-us/articles/360058788431">GA V4 (Google Analytics 4) Integration</a></p>
+<p> </p>
+<h2 id="bugs">Bugs</h2>
+<p data-pm-slice="1 1 []">1. An issue with <span>character encoding for Project name was resolved</span></p>
+<p data-pm-slice="1 1 []"><span>2. A rate limit for only 5 forgot password request within a 24hour period has been added</span></p>
+<p data-pm-slice="1 1 []"> </p>
+<p data-pm-slice="1 1 []"> </p>
+<p data-pm-slice="1 1 []"> </p>

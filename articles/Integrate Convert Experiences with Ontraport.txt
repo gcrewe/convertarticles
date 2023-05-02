@@ -1,0 +1,41 @@
+Integrate Convert Experiences with Ontraport
+<h2 id="convert-eulerian-integration">Convert-Ontraport Integration</h2>
+<p><a href="https://ontraport.com">Ontraport</a> is a business automation software for entrepreneurs, solopreneurs and small businesses that incorporates tools like CRM, marketing automation, ECommerce and reporting.</p>
+<p>This article will walk you through how to push custom Convert data to Ontraport.</p>
+<p>For each experiment, the integration will pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the Ontraport tracking code are installed on your page. Ontraport tracking code can be found under Administration &gt; Developer Preferences and Resources &gt; Get Tracking Code:</p>
+<p><img src="https://s3-us-west-1.amazonaws.com/ontraport-support/Template+Images/Administration/Administration+-+Developer+Section+-+Get+Tracking+Code.png"></p>
+<p>The default tracking code looks like:</p>
+<pre><code>src='https://optassets.ontraport.com/tracking.js' 
+  type='text/javascript' async='true' 
+  onload='_mri="999999",
+  _mr_domain="XXXXXXX.ontraport.com",
+  mrtracking();'&gt;
+</code> </pre>
+<p>Note that the <strong>999999 </strong>is used to represent your account number and <strong>XXXXXXX </strong>is your account's subdomain. Make sure you use the real values you find in <strong>Administration &gt; Get Tracking Code</strong>. </p>
+<h2>Activate Integration Manually</h2>
+<p>You should add this extra code to your website to track custom data:</p>
+<pre><code>var refObject = window['convert']['data']['experiments']
+for (var key in window["convert"]["currentData"]["experiments"]) {
+if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+					continue;
+		}}
+            
+var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+curExperimentName = curExperimentName.replace("Test #", "Test ");
+var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+curVariant = curVariant.replace("Var #", "Variation ");
+
+    /* ONTRAPORT tracking */
+    _mri="99999";
+    _mr_domain="xxxxx.ontraport.net";
+    window.mrtracking &amp;&amp; window.mrtracking();
+
+    window.ONTRAPORT || ( window.ONTRAPORT = {} );	
+   ONTRAPORT.track( 'Variation Name', 'curVariant' );</code></pre>
+<h2 id="view-convert-data-in-heap-analytics">View Convert Data in Ontraport</h2>
+<p>You will be able to view all of your Convert Experiences data as they associate to the values that you pass in these properties.</p>
+<p>Once logged in, go to Dashboard and search for the custom event you created.</p>
+<p> </p>

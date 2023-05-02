@@ -1,0 +1,22 @@
+Tracking Hubspot Forms
+Description
+Hubspot forms are special forms that can be tracked in Convert by adding some JavaScript code to the app interface with which you can track them.
+ 
+Configuration
+
+ Create a Custom Js Goal.First, create a goal using the Javascript Triggered Goal template:Reopen it and copy the goal id.
+
+Then add the following code to the following Project > Configuration > Global Javascript Section. First, replace the URL in the code (https://www.convert.com/pricing/) with the URL of where the form you want to track exists. Then Replace the 12345678 with the goal id for your new goal.
+if (location.href.startsWith('https://www.convert.com/pricing/')) {
+ window.addEventListener("message", function(event) {   if(event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {     window._conv_q = window._conv_q || [];
+    _conv_q.push(["triggerConversion","12345678"]);   }   });
+}
+
+Please test your goal while being bucketed on a test. Verify that is tracking correctly.
+
+
+Tracking Multiple Hubspot Forms on the Site.
+
+Create a Javascript Triggered goal for each form you want to track. Write their goal id down. 
+Add the code shown in the step before repeatedly for each goal you want to track and change the corresponding URL where each form is located. 
+Test your goals. 

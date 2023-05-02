@@ -1,0 +1,23 @@
+How to Integrate with Decibel Insights
+<h2>Convert Experiments - Decibel Insights Integration</h2>
+<p><span style="font-weight: 400;">Integrating <a href="https://decibel.com/" target="_self">Decibel Insights</a> with Convert Experiences allows you to analyze behavior derived from the variations in your A/B test experiments. </span></p>
+<p>You will have to install an additional script to your website, along with the Convert Experiments and Decibel Insights tracking codes.</p>
+<p>In order for this to work for all current and future campaigns, this will only need to be done once on the pages that you want to track.</p>
+<h2>Ensure you have installed the Convert Experiences tracking code and it is working properly</h2>
+<p><a href="https://support.convert.com/hc/en-us/articles/204506819-Check-if-Convert-Experiences-Is-Installed-Correctly">https://convert.zendesk.com/hc/en-us/articles/204506819-Check-if-Convert-Experiences-Is-Installed-Correctly</a></p>
+<h2>Install the Decibel Insights tracking code on your site</h2>
+<p><a href="https://knowledgebase.decibelinsight.com/articles/710-decibel-insight-tracking-code">https://knowledgebase.decibelinsight.com/articles/710-decibel-insight-tracking-code</a><br><br>Make sure the Decibal Insights tracking code comes <span class="wysiwyg-underline">before</span> the Convert Experiences Tracking code on your page(s).</p>
+<h2>Enable "Generic AB Testing" in Decibel Insights</h2>
+<p><a href="https://knowledgebase.decibelinsight.com/articles/640-generic-ab-testing">https://knowledgebase.decibelinsight.com/articles/640-generic-ab-testing</a></p>
+<h2>Install the integration code</h2>
+<p>Add the following code to the Global Project JavaScript section found on your Convert Project Configuration page:</p>
+<p class="codepen" data-height="465" data-theme-id="31058" data-slug-hash="GXjRgQ" data-default-tab="js" data-user="gcrewe" data-pen-title="Decibel Insights Integration">
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+</p>
+<h2>Turn Off Data Anonymization</h2>
+<p>In order for the script to access human readable experiment data, you’ll need to turn off Data Anonymization in your Project Configuration.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423874904077/mceclip0.png" alt="mceclip0.png"></p>
+<p><span style="font-weight: 400;">Make sure Data Anonymization is </span><strong>un-checked</strong><span style="font-weight: 400;">.</span></p>
+<h2>After the Installation</h2>
+<p>Upon collecting Generic A/B Testing Variations, you can begin to use these by creating <a href="https://knowledgebase.decibelinsight.com/categories/214-segments" data-di-id="di-id-bf508152-9f7c9b79">Segments</a> based on them:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360011944872/mceclip0.png"></p>

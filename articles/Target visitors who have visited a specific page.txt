@@ -1,0 +1,13 @@
+Target visitors who have visited a specific page
+<h2>Introduction</h2>
+<p>If you want to target visitors who have visited a specific page of your webpage, you can only do that (at the moment) by writing a cookie when they visit that page, and then setting up and audience to target the visitors with that value.</p>
+<p>Let's see the various steps involved.</p>
+<h2>Create a Deploy</h2>
+<p>You should create a Deploy for the page you are interested in:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14270289828621"></p>
+<h2>Add Cookie in Custom JS Area</h2>
+<p>Once the experiment is created, add the cookie code to the Custom JS area. The code would be as simple as this:</p>
+<p>document.cookie = "visited_mainpage=true";</p>
+<h2>Create an A/B Experience</h2>
+<p>Then create a separate A/B experience with the audience that matches that cookie value:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6442908900109/mceclip0.png" alt="mceclip0.png"></p>

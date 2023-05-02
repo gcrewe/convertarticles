@@ -1,0 +1,26 @@
+Experience Report Smart Recommendations
+<h2>Introduction</h2>
+<p><span>Deriving meaningful insights from your experiences and applying them to improve your website conversion rate is your ultimate objective. The experience reports help you validate the hypothesis you test and derive a better understanding of your website's visitor behavior.</span><span> </span></p>
+<p><span>We introduced some smart recommendations on the <a href="https://support.convert.com/hc/en-us/articles/204490289-Experiment-Report" target="_self">experience report</a> that are described below.</span></p>
+<h2>Enable Smart Recommendations</h2>
+<p>You can go to your Project Configuration and enable the Smart Recommendations from here:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4442659558157/mceclip0.png" alt="mceclip0.png"></p>
+<h2>View Smart Recommendations</h2>
+<p>There are two places where you can view these smart recommendations.</p>
+<p>First, you can see some additional messages displayed on the summary part of the report:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4442670499341/mceclip1.png" alt="mceclip1.png"></p>
+<p>Possible messages you can see depending on your results are:</p>
+<ol>
+<li><span><strong>Significant &amp; lift negative</strong>: We are observing that variant ${variant_name} is the best performing one with a negative lift of ${lift}%. The experiment for the goal ${primary_goal_name} is significant. We suggest to extract learnings and design a new hypothesis.</span></li>
+<li><span><strong>Significant &amp; positive lift</strong>: Congratulations! For ${primary_goal_name}, ${variant_name} is currently winning with an improvement of ${lift}%. The experiment is significant.”</span></li>
+<li><span><strong>Insignificant, positive lift</strong>: More visitors are needed to draw a valid conclusion for ${primary_goal_name}. We only see that ${variant_name} is the best performing one with a lift of ${lift}%, but needs more visitors before a definitive conclusion can be given.</span></li>
+<li><span><strong>Insignificant, negative lift</strong>: More visitors are needed to draw a valid conclusion for ${primary_goal_name}. Please keep the test running before a conclusion can be drawn.</span></li>
+</ol>
+<p><span>Second, you can view some additional recommendations in the goal/variation expanded box:</span></p>
+<p><span><img src="https://support.convert.com/hc/article_attachments/4442691922317/mceclip2.png" alt="mceclip2.png"></span></p>
+<ol>
+<li><span>Congratulations {variation.name} is a winner, we are sure with 00% statistical confidence.</span></li>
+<li><span>Unfortunately, {variation.name} performed worse than the {baselineText}, we are sure with 00% statistical confidence.</span></li>
+<li><span>{variation.name} seems to be performing better than the {baselineText}, but we can't be sure yet</span></li>
+<li><span>It's too early to judge for {variation.name}</span></li>
+</ol>

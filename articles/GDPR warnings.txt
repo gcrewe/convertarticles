@@ -1,0 +1,35 @@
+GDPR warnings
+<h2>Introduction</h2>
+<p>You might notice some GDPR-related warnings in the Convert app in several places. </p>
+<h2>What is GDPR?</h2>
+<p>If you need additional information related to GDPR, please read the article <a href="https://support.convert.com/hc/en-us/articles/360001030172-GDPR-and-ePrivacy">GDPR and ePrivacy</a>. </p>
+<h2>Enable/Disable GDPR Warnings</h2>
+<p>We added a project setting "Show Privacy Warnings" under Project Configuration:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4432894664205/mceclip0.png" alt="mceclip0.png"></p>
+<p>This is enabled by default to follow the <a href="https://www.convert.com/eu-gdpr/article-25-gdpr/">GDPR Article 25 "Data Protection by design and by default"</a>. When enabled you will be able to see the GDPR warning messages. If it is disabled, you will not be able to see them. You can change its value if you check/uncheck the Show Privacy Warnings under More Settings.</p>
+<h2>Audiences with Segmentation Feature ON</h2>
+<p>Segmentation feature is described in detail in the article <a href="https://support.convert.com/hc/en-us/articles/115001132271-Create-Custom-Segments">Create Custom Segments</a>. If Segmentation feature is enabled, this could be interpreted by Privacy Authorities in Europe that data subjects might be identified. Therefore a warning was added to inform users when segmentation is enabled for at least one audience.</p>
+<p>You can find below the screens where this warning appears. Enable Segmentation for one of your audiences:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6460016686221/mceclip0.png" alt="mceclip0.png"></p>
+<p>Then you will notice this GDPR warning message in the Saved Audiences page:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423926168589/mceclip2.png" alt="mceclip2.png"></p>
+<p>In addition, if you add an audience which has Segmentation feature ON to an experiment, you will also see this warning to the Experience Summary page.</p>
+<h2>Audiences built with Personal Data</h2>
+<div>A GDPR Warning exists in Saved Audiences and Experience Summary pages when Audiences are built with cookies or JavaScript conditions, or targets Time Zone, City, Region, Customer ID, or <a href="https://support.convert.com/hc/en-us/articles/205152665-Targeting-with-Advanced-Page-Tagging">Customer Tag</a>:
+<div> </div>
+</div>
+<div><img src="https://support.convert.com/hc/article_attachments/6460089441933/mceclip1.png" alt="mceclip1.png"></div>
+<div>The warning looks like this:</div>
+<div><img src="https://support.convert.com/hc/article_attachments/4487266252301/mceclip0.png" alt="mceclip0.png"></div>
+<h2>Audiences with Segmentation AND Personal Data</h2>
+<p>If segmentation AND Personal Data are ON:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6460145262349/mceclip2.png" alt="mceclip2.png"></p>
+<p>a GDPR warning exists in Saved Audiences and Experience Summary pages and looks like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4487267120013/mceclip1.png" alt="mceclip1.png"></p>
+<h2>Cross Domain Tracking</h2>
+<p>Cross Domain Tracking is explained in detail in this article: <a href="https://support.convert.com/hc/en-us/articles/205159995-Cookies-and-Cross-Domain-Testing">Cookies and Cross Domain Testing</a>. The cross domain cookie will be by default turned off for all projects in Convert Experiences. Activating this will create a warning:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4445764651533/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Deployments</h2>
+<p><a href="https://support.convert.com/hc/en-us/articles/115000018331-What-about-Personalizations-" target="_self" rel="undefined">Deployments</a> have the potential to contain small segments (under 100 unique visitors) and this could be interpreted by Privacy Authorities in Europe as identification of data subjects. For that reason, we added a warning to the summary of any Deploy.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6460032538253/mceclip3.png" alt="mceclip3.png"></p>
+<p> </p>

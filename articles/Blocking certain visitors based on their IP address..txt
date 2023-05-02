@@ -1,0 +1,17 @@
+Blocking certain visitors based on their IP address.
+<h2>Issue</h2>
+<p>Sometimes, you might want to block or bucket only visitors with a certain IP or within certain IP ranges.</p>
+<h2>Solution</h2>
+<p>For this solution you will need a third party service to provide you with the IP address of your visitors.</p>
+<p>There are plenty of solutions for this in the market. We do not recommend any specific one, but for this article we are going to use the service provided by <a href="https://ipapi.co/">https://ipapi.co/</a> for sample purposes.</p>
+<p>1) First you need to add the following code to your <a href="https://support.convert.com/hc/en-us/articles/115000006251-Project-Experience-Experiment-or-Personalization-Variation-Javascript" target="_self">Project Global Javascript</a> section and configure it according to the comments to fit your needs:</p>
+<p class="codepen" style="height: 596px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-height="596" data-theme-id="31058" data-default-tab="js" data-user="gcrewe" data-slug-hash="wObGjV" data-pen-title="Blocking IP Ranges Global JS">See the Pen <a href="https://codepen.io/gcrewe/pen/wObGjV/"> Blocking IP Ranges Global JS</a> by Convert.com (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p>2) You need to add the following <a href="https://support.convert.com/hc/en-us/articles/205159965-Targeting-Experiments-and-Firing-Goals-Based-on-a-JavaScript-Condition" target="_self">JS Condition</a> to your experiences audience conditions that you want this IP block to be enforced. You will need to AND it with any other audience conditions you may have</p>
+<p class="codepen" style="height: 202px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-height="202" data-theme-id="31058" data-default-tab="js" data-user="gcrewe" data-slug-hash="zbQBBW" data-pen-title="IP Block JS Condition">See the Pen <a href="https://codepen.io/gcrewe/pen/zbQBBW/"> IP Block JS Condition</a> by Convert.com (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p>The JS condition needs to be configure in the following way:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6460071772301/mceclip0.png" alt="mceclip0.png"></p>
+<p>From here you experience will be blocked for users within the IP or range that you configured on the javascript code.</p>
+<p>If you want to debug, you can type the show_experiences variable, on your browser console, to see if the script determined if you matched the IP or IP range you configured.</p>
+<p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+</p>

@@ -1,0 +1,7 @@
+Update: Not to worry!  Regarding Console Warning: SSL Certificates Distrusted in Chrome M70
+<h2>Update April 20, 2018:</h2>
+<p>Certificates have been updated and the warnings should no longer appear.</p>
+<p> </p>
+<p>Some of our customers may have noticed a warning in Chrome Developer Console for many websites, and also when experimenting on their own site with Convert, related to SSL Certificates.  If the warning is read closely, it is merely a warning, and in our case, it relates to M70, which is due for release in October 2018.</p>
+<p>We are aware of this, and our CDN-provider, Akamai, already has a plan and schedule in place for updating certificates on time and well before it would affect us or our customers.  Rest assured that there is no need to worry and you can safely ignore this warning as it relates to Convert.</p>
+<p> </p>

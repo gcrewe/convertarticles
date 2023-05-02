@@ -1,0 +1,45 @@
+Integrate Convert Experiences with Zuko
+Convert-Zuko Integration
+Zuko Form Analytics is a platform that enables you to see when, where and why users are abandoning your web form or checkout. The integration with Convert allows you to dig even deeper to analyse the effect that different form variants have on user behaviour.
+If you’re using Convert Experiences to run A/B tests on your form, you can track the performance of each version in Zuko by following these steps and setting a Custom Attribute for the Variants and Original.
+For more use cases regarding this integration you can read our Zuko blog article.
+Build your Form
+In order to use Zuko you need to have already built your form with whatever form builder you want. For this specific article and in order to showcase the integration we are going to use Jotform.
+Follow the instructions as described here in order to initially integrate Zuko with Jotform. 
+We followed the instructions above and our form looks like this and has been added on our site:
+
+Check that under the main part of the form we added a Zuko Analytics widget where we populated its slug from our Zuko account.
+
+Add the form to Zuko
+Go to your Zuko account and add a form. You should populate all its properties with the relevant information. You should pay attention that each Zuko form has its own unique slug (that we used on the previous step).
+
+Add Tracking Code Snippets
+Make sure the Convert tracking code is installed on your site.
+On every page that you want to install Zuko, paste the tracking code that is generated once you add a Zuko form. 
+
+Integrate Zuko with Convert Manually
+The example code below will send Convert Experience and Variation names to Zuko form analytics once your visitors will submit the form:
+
+var refObject = window['convert']['data']['experiments']
+	for (var key in window["convert"]["currentData"]["experiments"]) {
+			if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+				continue;
+	}}
+            
+var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+var curExperimentName = refObject[key] && refObject[key].n ? refObject[key].n : "unknown experiment name";
+curExperimentName = curExperimentName.replace("Test #", "Test ");
+var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+curVariant = curVariant.replace("Var #", "Variation ");
+
+Zuko
+.trackForm({slug:'33f23c7f14739e4e'})
+  .setAttribute('experiment_name', curExperimentName)
+    .setAttribute('experiment__variant', curVariant)
+.trackEvent(Zuko.COMPLETION_EVENT);
+
+
+
+View Convert data in Zuko
+Now, whenever a user submits the form on your site, additional Convert data will be sent to your Zuko account.
+You can repeat the above for any form and any number of variants that you have set up in Convert, and will therefore be able to filter your Zuko data to examine how the form-fill behavior differs across different versions of your form.

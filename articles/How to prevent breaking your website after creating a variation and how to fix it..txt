@@ -1,0 +1,18 @@
+How to prevent breaking your website after creating a variation and how to fix it.
+<h2><span style="font-weight: 400;">Visual Editor for small changes</span></h2>
+<p><span style="font-weight: 400;">Convert provides the Visual Editor to edit changes on simple A/B Experiments within its platform. The Visual Editor is a WYSIWYG type interface to make it easy for non-technical people to create changes in your variation to include in your A/B Test. </span></p>
+<p>However, sometimes when we make changes within the Visual Editor some of the page functionality stops working.</p>
+<p>Commonly, what happens is that the person who is editing the changes uses the WYSIWYG editor within the Visual Editor menu and changes a complex element within the page.</p>
+<p>Even though Convert provides this easy to use Visual Editor, pages are still written in HyperText Markup Language, HTML.</p>
+<p>When the editor changes an element from within the page, its HTML is replaced by a new one, that might break the functionality of the page or element that you are editing.<br><br>This is also true when using the HTML Editor.</p>
+<p>So, in conclusion, it is not wise to use the WYSIWYG editor to change complex elements within your page, as it might break them. And you should select the smallest element possible to edit your changes.</p>
+<p><strong>We recommend using the WYSIWYG editor to only change simple Text Elements, such as text paragraphs, titles, hero text, call to action texts and only select the smallest element possible when making a change.</strong></p>
+<h2>What to do if my website is broken</h2>
+<p>If you already have broken the functionality of your page on the new variation, don't worry. We recommend that you delete your whole variation and start again.</p>
+<p>If you have made many changes, and only the last changes have broken your page functionality, you can remove the last changes and the page will be complete.</p>
+<p>To do this, just hover over the name of your variation and the variation menu will appear. Select the "Code Editor" item.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360035833251/mceclip0.png" alt="mceclip0.png"></p>
+<p>The "Code Editor" panel with appear with the code that implements your changes in your variation.<br><br><img src="https://support.convert.com/hc/en-us/article_attachments/114094051252/CodeEditor.png" alt=""></p>
+<p>(FYI: The code is written in jQuery language on a wrapper library provided by Convert. <a href="https://support.convert.com/hc/en-us/articles/205152825-Advanced-Writing-Custom-Variation-Code-Inside-Variation-Code-Area">More info</a>).</p>
+<p>Each line represents one of the changes in your experiment, and the first lines represent the first changes that you created, and the last, the last changes.</p>
+<p><strong><span style="font-weight: 400;">So, if you remove the last lines, you will be removing the latest changes. You now have a good chance of recovering the functionality of your page.</span></strong></p>

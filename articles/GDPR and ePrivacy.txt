@@ -1,0 +1,24 @@
+GDPR and ePrivacy
+<h2>Introduction</h2>
+<p>Convert was committed to assisting its customers in their journey to compliance starting late May 2018 for the GDPR (General Data Protection Regulation) and the upcoming ePrivacy Regulations.</p>
+<p>At Convert, we are not only dedicated to adhering fully with GDPR (as you can read <a href="https://www.convert.com/gdpr/">here</a>) but also adjusting the analytics application of Convert Experiences to assist in compliance for our customers with GDPR and the upcoming ePrivacy Regulations (see current draft <a href="https://www.convert.com/gdpr/ab-testing-application-compliance/">here</a>).</p>
+<h2>GDPR</h2>
+<p>General Data Protection Regulation (GDPR) was passed by the EU Parliament in April of 2016. Replacing the Data Protection Directive from the 90s, it’s the biggest overarching legislative change in data privacy regulation to take place the last 20 years.</p>
+<p>The GDPR regulates the processing of personal data about individuals in the EU including its collection, storage, transfer or use. Importantly, under the GDPR, the concept of "personal data" is very broad and covers any information relating to an identified or identifiable individual, also called a "data subject".</p>
+<div class="special-content special-content--tips">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-04.png" alt="Tip"></div>
+<div class="special-content__info">
+<h3>Tips</h3>
+<p>We have set up a dedicated resource for GDPR and the steps we took to achieve compliance that can be found <a href="https://www.convert.com/gdpr/">here</a>.</p>
+</div>
+</div>
+<h2>ePrivacy Regulation</h2>
+<p>Privacy and Electronic Communications Directive 2002/58/EC on Privacy and Electronic Communications, otherwise known as ePrivacy Directive passed as complementary law by the EU Parliament in 2002 and amended by Directive 2009/136 (in 2009). This complementary law to the GDPR is currently being updated and although not in effect the last drafts of October 26, 2017 by Member of the European Parliament Marju Lauristin. The current law is in draft under item 15333/17) but involves important changes to the way cookies and traffic data should be treated.</p>
+<p>In a gist, ePrivacy Regulation was created to standardize data privacy &amp; communication laws throughout Europe and for example remove the cookie walls, people in Europe are familiar with, and replace it with clear guidelines that can be adopted in national EU laws.</p>
+<div class="special-content special-content--tips">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-04.png" alt="Tip"></div>
+<div class="special-content__info">
+<h3>Tips</h3>
+<p>We have set up a dedicated resource for GDPR and ePrivacy and the steps we took to achieve compliance that can be found <a href="https://www.convert.com/gdpr/ab-testing-application-compliance/">here</a>.</p>
+</div>
+</div>

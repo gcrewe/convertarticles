@@ -1,0 +1,17 @@
+How do I Import Goals from Google Analytics?
+<h2>Import Goals from GA</h2>
+<p>Convert Experiments allows you to get started fast by letting you  import existing goals from Google Analytics. This import helps you get started but since it's not an api integration you do need to check the imported goals before you assume that they work well. Here is a checklist to import and set up Google Analytics goals.</p>
+<h2>Select the right Google Analytics Goals</h2>
+<p>Go to your goals overview in the tab menu on top.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14270125904397"></p>
+<p>On the right top you find the green icon with "<strong>New Goal" </strong>and select the Import from your GA:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/5987908775565/mceclip0.png" alt="mceclip0.png"></p>
+<p>You have to give Convert the authorization to look into your Google Analytics account and select the goals. If it is prompted to you accept the offline access.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/9526764706957/mceclip2.png" alt="mceclip2.png"></p>
+<p>Select the correct project on the left and select the Page URL, Time on page, Number of pages visited goals (event based goals cannot be imported at this moment).</p>
+<p><img src="https://support.convert.com/hc/article_attachments/5987896657549/mceclip1.png" alt="mceclip1.png"></p>
+<p>To verify if the import was successful, please open the imported goals by editing them.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14270188959117"></p>
+<p>You see in this example the import went well, but this goal will not work. We are monitoring a full URL, but the import only took part of the URL. We need to change "Matches Exactly" to "Contains".</p>
+<p><img src="https://support.convert.com/hc/article_attachments/5987902143117/mceclip2.png" alt="mceclip2.png"></p>
+<p>When you change and save this, the goal is ready to be tracked (please make sure the project code is installed).</p>

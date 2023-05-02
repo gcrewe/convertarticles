@@ -1,0 +1,42 @@
+Integrate Convert Experiences with Oracle BlueKai
+<h2 id="convert-amplitude-integration">Convert-Oracle BlueKai Integration</h2>
+<p>Integration of <a href="https://docs.oracle.com/en/cloud/saas/data-cloud/dsmkt/oracle-bluekai-platform.html">Oracle BlueKai</a> with Convert Experiences will help you to import Convert data into your BlueKai platform. </p>
+<p>For each experiment, the integration can pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the <a href="https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCDA/IntegratingBlueKaiPlatform/DataIngest/coretag_implementation.html">BlueKai Core Tag (bk-coretag.js)</a> are installed on your page/site.</p>
+<h2 id="send-events">Send Convert Data</h2>
+<p>You need to identify the data you want to extract from your site and pass into your container. Typically, you will extract the following technical elements from your page to represent human readable user attributes to be mapped into categories in your taxonomy:</p>
+<ol>
+<li>Convert Experiment Name or ID</li>
+<li>Convert Variation Name or ID</li>
+</ol>
+<p>Example code for sending Experiment Name and Variation Name to BlueKai:</p>
+<pre><code>window.bk_async = function() { 
+ 
+// BlueKai Variables (phints) used to tell BlueKai what is happening on the page
+var refObject = window['convert']['data']['experiments']
+    for (var key in window["convert"]["currentData"]["experiments"]) {
+        if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+            continue;
+        }}
+            
+var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+curExperimentName = curExperimentName.replace("Test #", "Test ");
+var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+curVariant = curVariant.replace("Var #", "Variation ");
+
+bk_addPageCtx('Experiment Name', curExperimentName);
+bk_addPageCtx('Variable Name', curVariant);
+
+// Your BlueKai client ID
+BKTAG.doTag(123456, 1); };  // replace '123456' with your BlueKai Container ID (will be supplied)
+(function() { 
+var scripts = document.getElementsByTagName('script')[0]; 
+var s = document.createElement('script'); 
+s.async = true; 
+s.src = "http://tags.bkrtx.com/js/bk-coretag.js"; 
+scripts.parentNode.insertBefore(s, scripts); 
+}()); </code></pre>
+<h2 id="view-convert-data-in-amplitude">View Convert Data in BlueKai</h2>
+<p>In order to see the data sent, you must log in to your Oracle BlueKai platform and create your own report based on the events you sent. then you will be able to monitor, analyze, and debug the ingest and delivery of your data on the BlueKai platform.</p>

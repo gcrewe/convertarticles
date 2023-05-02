@@ -1,0 +1,13 @@
+Using Pingdom for Basic Monitoring
+<p><a href="https://www.pingdom.com/">Pingdom</a> essentially performs basic health checks of public-facing endpoints. At Convert, we have started using Pingdom for several reasons:</p>
+<ol>
+<li>Gives us an independent set of "eyes".</li>
+<li>Tests of our scripts (SSL and not SSL) from many locations across the globe.</li>
+<li>Objectively measures our uptime and response time (even by country).a</li>
+<li>Provides a status page, <a href="https://www.convert.com/status/">https://www.convert.com/status/</a>, completely independent of any of Convert’s infrastructure.</li>
+</ol>
+<p>This independent set of eyes (#1) from multiple locations (#2) is helpful in detecting general connectivity problems customers might be experiencing due to Internet problems that are outside Convert’s infrastructure. </p>
+<p>In fact, you don’t have to take our word for our reliability, we publish it historically back to December 2017 and updated in real-time at <a href="https://www.convert.com/status/">https://www.convert.com/status/</a> .</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000692731/mceclip0.png"></p>
+<p>You can always go and take a look at yourself to see if there are any serious problems with Convert’s infrastructure. In the event of an unlikely major failure, this would allow you to check for yourself instead of making a support request. </p>
+<p>To summarize, Pingdom is a tool to help ensure the Convert system is up and running normally.</p>

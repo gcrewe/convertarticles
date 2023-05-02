@@ -1,0 +1,63 @@
+Add Revenue Tracking to Your Site
+<h2>Track Revenue with Google Analytics</h2>
+<div class="user_formatted header_section clearfix">
+<p>If you paste the Convert Experiments code right after the &lt;/title&gt; tag and you use the <strong>latest standard <a href="https://support.google.com/analytics/answer/1009612?hl=en">Google Analytics e-commerce tracking</a></strong>, we will automatically connect e-commerce revenue tracking of Google Analytics to all your tests.  There is no need to install anything; this works out of the box for all clients.</p>
+<h3>Create a Revenue Goal with Google Analytics</h3>
+<p>Go to your Experience Summary, then the Goals section, and click Edit:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14270090775437"></p>
+<p>Create a Revenue goal from the Goal templates in your experiment.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6449770264461/mceclip1.png" alt="mceclip1.png"></p>
+<p>Fill in the Goal name and page URL to match the confirmation page of your purchases:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6449815137677/mceclip7.png" alt="mceclip7.png"></p>
+<p>Save it and you are done. </p>
+<h2>Track Revenue without Google Analytics (manual revenue tracking)</h2>
+<p>If you don’t want to use Google Analytics e-commerce tracking or you cannot use it as it's not implemented through the standard tracking code, we have another way you can send a conversion, revenue and the amount of products ordered by the client.</p>
+<h3>Create a Revenue Goal</h3>
+<p>First, create a Revenue goal. You can do this from the "Experience Summary" of your experiment:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6449756012941/mceclip2.png" alt="mceclip2.png"></p>
+<p>Select Manual Revenue Tracking:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6449803470605/mceclip3.png" alt="mceclip3.png"></p>
+<h3>Copy JS code into your website</h3>
+<p>After you have saved the goal, go edit it and you will find the JavaScript code below. You will need to copy and paste this script anywhere on the page (after the main Convert tracking code) of your website to send revenue and ordered products count to our system with the appropriate fields mapped to variables on your e-commerce system. </p>
+<pre><code class="language-markup">
+&lt;script&gt;
+    window._conv_q = window._conv_q || [];
+    window._conv_q.push(["pushRevenue",revenue,products_cnt,goal_id]);
+&lt;/script&gt;
+</code></pre>
+<p>In the above code you need to replace the following fields with the actual values:</p>
+<ul>
+<li><span data-mce-mark="1">Revenue: <strong>revenue </strong>using 123.45 (dot as cent divider)</span></li>
+<li><span data-mce-mark="1">Product Count (number of products in the cart): <strong>products_cnt</strong></span></li>
+<li><span data-mce-mark="1">Parameter <strong>goal_id</strong> is automatically filled in with the ID of the goal <em>once you have saved the goal</em>.*</span></li>
+</ul>
+<p><span data-mce-mark="1"><span class="wysiwyg-color-red">*</span> Please be sure you copy the script <span class="wysiwyg-underline">after</span> saving the goal, and ensure that this parameter contains the actual goal ID before you add the script to your page. You can use the revenue tracking code above together with any goal ID from your project; the revenue data will be stored connected to that goal and a conversion will be recorded for that goal.</span></p>
+</div>
+<p><em>Note: In February/March 2018, we made a change to the above revenue code, changing "sendRevenue" to "pushRevenue" and removing the transaction ID in the new pushRevenue code.  Don't worry, this won't have any negative effect on your previous experiments that used sendRevenue -- they will continue to work.   </em></p>
+<p>Allow Multiple Transactions </p>
+<div class="user_formatted header_section clearfix">By default we only allow one transaction per visitor/experiment/goal to go through. If you want to allow multiple transactions for the same visitor/experiment/goal to go through you can use one more parameter in the above code as shown below:</div>
+<div class="user_formatted header_section clearfix">
+<pre><code class="language-markup">
+&lt;script&gt;
+  window._conv_q = window._conv_q || [];
+  window._conv_q.push(["pushRevenue",revenue,products_cnt,goal_id,"force_multiple"]);
+&lt;/script&gt;
+</code></pre>
+</div>
+<h3 class="user_formatted header_section clearfix">One page forms or Ajax</h3>
+<div class="user_formatted header_section clearfix">This is useful specifically if you do not have a specific URL where you can trigger the goal, like one page forms or ajax submitted forms where you want to track the form submissions together with the revenue generated. To do that, first you need to create a "Javascript triggered goal":<br><img src="https://support.convert.com/hc/article_attachments/6449791999757/mceclip4.png" alt="mceclip4.png">
+</div>
+<div class="user_formatted header_section clearfix">
+<p>Then, after saving it, if you edit it again you will get a triggering code:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6449793664781/mceclip5.png" alt="mceclip5.png"></p>
+<p>Locate the goal ID that you want to use together with the revenue tracking code.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6449779970573/mceclip6.png" alt="mceclip6.png"></p>
+<p>This will attach the right revenue (two decimal value of the transaction) and amount of products to the variations you were testing and when the goal-page is the same as the one where the revenue is tracked you will even get two extra tabs in the test results main goal besides the conversion rate (see below the conversion rate, revenue and order items).</p>
+<h2>Conversion Rate Report</h2>
+<p><img src="https://support.convert.com/hc/article_attachments/4423894161677/mceclip8.png" alt="mceclip8.png"></p>
+<h2>Revenue per Visitor Report</h2>
+<p><img src="https://support.convert.com/hc/article_attachments/4423894142989/mceclip7.png" alt="mceclip7.png"></p>
+<h2>Average Product per Visitor Report</h2>
+<p><img src="https://support.convert.com/hc/article_attachments/4423894168589/mceclip9.png" alt="mceclip9.png"></p>
+<p><strong>Note</strong>: If the checkout is on a third party domain, add the Convert Project JavaScript code to that site first and then this revenue tracker. Convert Experiments works <a href="https://support.convert.com/hc/en-us/articles/205159995-Cookies-and-Cross-Domain-Testing">cross domain</a> in most cases, but you may have to check that Cross-Domain linking is allowed in your Project Configuration. Starting in March/April 2018, Cross-Domain linking is off by default in newly-created Projects because of <a href="https://support.convert.com/hc/en-us/articles/360001361312-GDPR-warnings#cross-domain-tracking">GDPR</a>. Also, you will have to add the extra domain to your Project Configuration - Active Websites. </p>
+</div>

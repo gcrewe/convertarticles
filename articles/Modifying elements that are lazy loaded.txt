@@ -1,0 +1,11 @@
+Modifying elements that are lazy loaded
+<h2>Issue</h2>
+<p>There are times in sites where the parts of the web page that is not in view, does not load when the initial page loads. They will load until the visitor scrolls to that part of the page. Convert Experiments will deploy variation changes when the page loads, however it will not deploy those changes afterwards by default.</p>
+<h2>Solution</h2>
+<p>To fix this, we need to trigger the variation changes again every time the user scrolls the page. So, first you can create your changes with the visual editor or code them on the Code Editor.</p>
+<p>In the example provided we are going to assume the following code has been added to the experiment, and found in the Variation Code Editor:</p>
+<p><strong>convert._$('.grid-product__tag').parent().parent().remove();</strong><br><br>We will have to wrap the code around a scroll event so it is triggered every time the page is scrolled by the visitor and placed in the Variation Custom JS Editor.<br><br>You will also need to modify the code lines to use the <a href="https://support.convert.com/hc/en-us/articles/210581203-convert-vs-convert-" target="_blank" rel="noopener">convert.$()</a> library instead of the <a href="https://support.convert.com/hc/en-us/articles/210581203-convert-vs-convert-" target="_blank" rel="noopener">convert._$()</a>, since we do not need the Convert SmartInsert technology that is required when the page loads.<br><br> Here is the code:</p>
+<p class="codepen" style="height: 196px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-height="196" data-theme-id="31058" data-default-tab="js" data-user="gcrewe" data-slug-hash="aPrMwr" data-pen-title="Lazy Load Custom JS">See the Pen <a href="https://codepen.io/gcrewe/pen/aPrMwr/"> Lazy Load Custom JS</a> by Convert.com (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p>Now, the code will be triggered every time a visitor scrolls the page, and the newly shown elements will be changed according to what you have edited in the Visual Editor or by hand in the Code Editor.</p>
+<p>keyword: "lazy load", "appear when scrolling"</p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>

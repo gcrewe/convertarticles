@@ -1,0 +1,26 @@
+Integrate Convert Experiences with Jumplead
+<h2>Convert-Jumplead Integration</h2>
+<p><span><a href="https://jumplead.com/" target="_self">Jumplead</a> is a marketing automation service that identifies website visitors and allows you to connect with them using lead capture forms, automation events, email marketing, live chat and social media. </span></p>
+<p><span>Using Jumplead with Convert will allow you to send f</span>or each experiment, the experiment name and variation name that the visitor is currently bucketed into.</p>
+<h2>Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the <a href="https://help.jumplead.com/articles/106792-installing-jumplead-on-your-website" target="_self">Jumplead tracking code</a> are installed on your page.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360030818172/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Activate Integration Manually</h2>
+<p>Use the example code below to send Convert Experience and Variation names to Jumplead by using event tracking and triggering an automation as explained <a href="https://help.jumplead.com/articles/102772-existing-web-form-automations" target="_self">here</a>:</p>
+<pre><code>var refObject = window['convert']['data']['experiments']
+	for (var key in window["convert"]["currentData"]["experiments"]) {
+			if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+				continue;
+	}}
+            
+var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+curExperimentName = curExperimentName.replace("Test #", "Test ");
+var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+curVariant = curVariant.replace("Var #", "Variation ");
+		
+jump('send', 'automation', 'trigger', '123abc123456a12a1a123456', curVariant);  </code></pre>
+<h2>View Convert Data in Jumplead</h2>
+<p>Using the above JS event in Jumplead, you will be able to view all of your Convert Experiences data as they associate to the values that you pass in the event.</p>
+<p>When you log in to your Jumplead account, you should go to your Lead Activity and then Visitors:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360030789451/mceclip1.png" alt="mceclip1.png"></p>

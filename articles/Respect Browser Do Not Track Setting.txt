@@ -1,0 +1,39 @@
+Respect Browser Do Not Track Setting
+<h2 class="intercom-align-left">Introduction</h2>
+<p>Jonathan Mayer and Arvind Narayanan are the two principal researchers at Stanford University who have been working on the <a href="http://donottrack.us/">Do Not Track</a> (DNT) technology that uses information in the HTTP header to universally opt out of all online tracking.</p>
+<h2 class="intercom-align-left">Convert supports DNT</h2>
+<p class="intercom-align-left">Convert supports Do Not Track because we think it’s really important that you have a simple way to control how end-user information gets used. We honor DNT as a signal for how you and your end-users want us to use data.</p>
+<p class="intercom-align-left">The technical implementation on how Convert Experiences will support this field can be explained with DNT’s three possible values:</p>
+<ol>
+<li>Do Not Track (Opt out of tracking)</li>
+<li>Track (Opt into tracking)</li>
+<li>Null – No preference</li>
+</ol>
+<p class="intercom-align-left">By default, web browsers use the null value (no preference), indicating that the end-user hasn’t expressed a desire of whether they want to be tracked or not. From February 23rd 2018, Convert Experiences will not load the scripts/experiments when option one, the Do Not Track (Opt out of tracking) in the browser is set and will load with the other two options.</p>
+<h2 class="intercom-align-left">Enable Do Not Track in Convert Experiences</h2>
+<p>In your Project Configuration you can find one row which says: "Respect Do Not Track Browser Settings". It is OFF by default.</p>
+<p>In case you want to change it, select from the dropdown the value that is covering your needs:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423926438925/mceclip0.png" alt="mceclip0.png"></p>
+<div class="special-content special-content--tips">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-04.png" alt="Tip"></div>
+<div class="special-content__info">
+<h3>Tips</h3>
+<p>For the EEA country list, please visit <a href="https://en.wikipedia.org/wiki/European_Economic_Area">this page.</a></p>
+</div>
+</div>
+<h2 class="intercom-align-left">Enable Do Not Track in Browsers </h2>
+<p>In case you do not know how to enable the Do Not Track setting in your browser, below we present some steps:</p>
+<ul>
+<li>
+<strong>Google Chrome</strong>: Head into the Settings page and click "Advanced Settings". Scroll down to the Privacy and Security section and select "Send a "Do Not Track" request with your browsing traffic".<img src="https://support.convert.com/hc/article_attachments/360001367372/mceclip1.png">
+</li>
+<li>
+<strong>Mozilla Firefox</strong>: Select Preferences &gt; Privacy and check the box marked, "Always apply Do Not Track."<img src="https://support.convert.com/hc/article_attachments/360001383711/mceclip0.png">
+</li>
+<li>
+<strong>Internet Explorer</strong>: Click the Tools button and then Internet Options &gt; Advanced. Select "Always send Do Not Track Header".</li>
+<li>
+<strong>Safari</strong>: Head into Preferences &gt; Privacy and check the box marked "Ask website not to track me."</li>
+<li>
+<strong>Opera</strong>: Click Preferences &gt; Advanced &gt; Security and select "Ask websites not to track me."</li>
+</ul>

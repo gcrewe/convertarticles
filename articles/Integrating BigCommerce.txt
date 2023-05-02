@@ -1,0 +1,42 @@
+Integrating BigCommerce
+<h2 class="c0 c4">Introduction</h2>
+<p class="c0">This integration helps you run Convert experiences in your <a href="https://www.bigcommerce.com/">BigCommerce</a> store.</p>
+<p class="c0"><span>This article assumes that you already have your store on BigCommerce and want to create and run A/B test tests for the store using Convert. You can also track or push revenue data to your BigCommerce account.</span></p>
+<h2 class="c0 c4">Set up an New Experience in Convert </h2>
+<p class="c0">Create a new experience using your store URL and start creating variations of elements you want to test.</p>
+<p class="c0"><img src="https://support.convert.com/hc/article_attachments/360088772632/mceclip0.png" alt="mceclip0.png"></p>
+<h2 class="c0 c4">Install the Convert Tracking Code</h2>
+<p class="c0">Copy the Convert tracking code of the project where your experience belongs:</p>
+<p class="c0"><img src="https://support.convert.com/hc/article_attachments/4423905946253/mceclip0.png" alt="mceclip0.png"></p>
+<p class="c0">After that, you will go to BigCommerce Storefront &gt; <a href="https://support.bigcommerce.com/s/article/Using-Script-Manager" target="_self">Script Manager</a> and paste the Convert code.</p>
+<p class="c0"><span>On the Create Script page, do the following:</span></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li dir="ltr">In the "Name of Script" field, enter CONVERT.</li>
+<li dir="ltr">
+<span>For the "Location on Page" setting choose Head</span><span class="wysiwyg-color-cyan110"><strong><span> </span></strong></span>
+</li>
+<li dir="ltr">
+<span></span><span>For the "Select pages where script will be added" setting choose All Pages.</span>
+</li>
+</ul>
+</li>
+</ul>
+<p class="c0"><img src="https://support.convert.com/hc/article_attachments/6153797324813/mceclip0.png" alt="mceclip0.png"></p>
+<p class="c0">You can also add/populate the variable <a href="https://support.convert.com/hc/en-us/articles/205152665-Targeting-with-Advanced-Page-Tagging">_conv_page_type</a> with the type of the page in your BigCommerce store if you want to target visitors based on the specific page type:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/115003786971/mceclip1.png"></p>
+<h2 class="c0 c4">Add Manual Revenue Tracking</h2>
+<p><span>To add revenue goal code in BigCommerce, perform these steps.</span></p>
+<p><span>From the left panel, go to Advanced Settings &gt; <a href="https://support.bigcommerce.com/s/article/Data-Solutions" target="_self">Data Solutions</a> </span></p>
+<p><span><img src="https://support.convert.com/hc/article_attachments/6153937313677/mceclip1.png" alt="mceclip1.png"></span></p>
+<p><span>Choose the Affiliate Conversion Tracking data solution and click Connect. In the Conversion Tracking Code field, enter your <a href="https://support.convert.com/hc/en-us/articles/204495499-Add-Revenue-Tracking-to-Your-Site#track-revenue-without-google-analytics-(manual-revenue-tracking)" target="_self">manual revenue tracking code</a>.</span></p>
+<p><span><strong>Scripts added to Affiliate Conversion Tracking only affect the order confirmation page.</strong> If you need a script to work on other store pages, add it to the <a href="https://support.bigcommerce.com/s/article/Using-Script-Manager" target="_self">Script Manager</a>, or to one of the other Web Analytics tools in <a href="https://support.bigcommerce.com/s/article/Data-Solutions" target="_self">Data Solutions</a>.</span></p>
+<p><span>You can use these <a href="https://support.bigcommerce.com/s/article/Passing-Order-Data-to-Affiliate-Programs" target="_self">BigCommerce conversion tracking variables</a> to map your data.</span></p>
+<p><img src="https://support.convert.com/hc/article_attachments/6176364849037/mceclip0.png" alt="mceclip0.png"></p>
+<h2 class="c0 c4">Test The Installation</h2>
+<p class="c0">To test that the experiment is working, go to your store experiment in Convert Experiments and preview one of the variations or see the statistics coming in.</p>
+<p class="c0"><img src="https://support.convert.com/hc/article_attachments/6158861105549/mceclip1.png" alt="mceclip1.png"></p>
+<p class="c0"><img src="https://support.convert.com/hc/article_attachments/6176331967245/mceclip1.png" alt="mceclip1.png"></p>
+<p class="c0"><img src="https://support.convert.com/hc/article_attachments/6176332978317/mceclip2.png" alt="mceclip2.png"></p>
+<p class="c0"><img src="https://support.convert.com/hc/article_attachments/6176319925005/mceclip3.png" alt="mceclip3.png"></p>

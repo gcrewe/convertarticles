@@ -1,0 +1,6 @@
+How do I add my CSS to a variation?
+<h2>Find "Custom CSS" in the Variation Menu</h2>
+<p>To add your own CSS to a variation so that certain elements on page look different, all you need to do is go under the <strong>Snippet Editors &gt; Variation CSS</strong></p>
+<p><img src="https://support.convert.com/hc/article_attachments/14342504520461"></p>
+<p>This CSS is inserted on page in the same location where the main Convert Experiments tracking code is placed. That being said, sometimes, in order to overwrite an existing CSS rule you might need to add <em><strong>!important</strong></em> to your newly added rule:</p>
+<pre><code class="language-markup">button.addCart {color:#ff0000 <strong>!important</strong>}</code></pre>

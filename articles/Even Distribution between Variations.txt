@@ -1,0 +1,14 @@
+Even Distribution between Variations
+<h2>Introduction</h2>
+<p>Convert A/B experiments will evenly distribute traffic between the original and variations of an experiment. However, sometimes you may notice that this is not the case. Below you will find some reasons for this.</p>
+<h2>Low Number of Visitors</h2>
+<p>When Convert buckets a visitor into an experiment that has a 50/50 traffic distribution, it "flips a coin" for each visitor. That is, each visitor has a 50% chance of being bucketed into one of the variations. Because of this, sometimes distributions will look a little lopsided while there isn't a lot of traffic. Statistically, it should even out as you get more visitors. </p>
+<h2>Check Location and Audiences Conditions</h2>
+<p>The next thing that you should double-check is your Locations and Audiences conditions. You may have incorrectly defined these conditions.</p>
+<h2>Bots</h2>
+<p>The vast majority of bots that can be identified by the user agent (Google, Bing, Yahoo) will be excluded from experiment results. However, there are some bots that are difficult to detect and these can cause an uneven distribution.</p>
+<h2>Paused Variations</h2>
+<p>Check if any of the variations were paused or if there is anything on the page which might interfere with the Convert tracking script.</p>
+<h2>Conclusions</h2>
+<p>The good news is that it does not matter if you have a minor uneven distribution. In fact, the allocation is done with a random function and the statistical model we use can accommodate uneven splits. So even if the experiment is uneven your experiment results will be valid. </p>
+<p>The reason results will be valid is because Convert calculates the results based on the conversion rates between variations (or original and variation), and not based on the number of visitors each variation receives. Rest assured that your Convert experiment results are valid and reliable even with a minor difference between the traffic numbers.</p>

@@ -1,0 +1,20 @@
+Record Conversions when Element is Hovered
+Target / Approach
+On this article, we are going to cover how can we trigger conversion(s) when an element is hovered. To achieve this we will create a JS Custom Goal and a piece of code to trigger the conversion on the experience.
+Create a Javascript Triggered Goal
+Navigate to Projects > Your Project > Goals > Add Goal > JavaScript triggered goal
+
+Name your goal
+
+Take note of the Goal ID:
+
+Add code to trigger conversions
+
+From the Visual Editor, open the Global Experience JS and paste the code below on Global Experience JS:
+
+convert.$(document).ready(function() {//Reset Hover Status and Conversion Count var hoverTrue; hoverTrue = "Not Hovered";console.log(hoverTrue);var triggerHoverGoal; triggerHoverGoal = 0;console.log(triggerHoverGoal);//Add Hover function on the element//Replace "yourElement" (use #elementId or .elementClass)convert.$("yourElement").on("mouseenter",function() {if (triggerHoverGoal == 0){hoverTrue = "mousein";console.log(hoverTrue);//Push conversion on hover//Replace "1003654" with your goal ID.window._conv_q = window._conv_q || [];_conv_q.push(["triggerConversion","1003654"]);console.log("Hover Goal Triggered");goalTriggered = 1;}});});
+
+Activate goal on your experience
+From the Experience Summary page, click on the icon below highlighted on the side of the Goals section:
+
+Activate the goal by checking its checkbox:

@@ -1,0 +1,17 @@
+Triggering a click goal on an element that its not part of the DOM when the page loads
+<p>Sometimes, we might want to monitor clicks on an element (button, link, or any), that might not be part of the DOM when the page initially loads.</p>
+<p>This occurrence would usually be reflected in causing that a standard "Click Goal" is not triggered with the normal setup.</p>
+<p>Many applications, especially third party applications, load form elements, buttons and others after the page has completely loaded.</p>
+<p>However, there is a way to overcome this issue. The secret is to create a click event on the element that we are going to track with a piece of code.</p>
+<p>The following code can be added on the <a href="https://support.convert.com/hc/en-us/articles/115000006251" target="_blank" rel="noopener">Experience Custom JS or Global Project JS</a> sections, depending where you want to track it.</p>
+<p>Here is the sample of the code</p>
+<pre><code class="language-javascript">
+convert.$(document).ready(function() {
+   convert.$("#co-billing-form").on("click","#opc-review .continue_button",function() {
+   window._conv_q = window._conv_q || [];
+// please modify the following code to include the number of the JS Goal or click goal you have already created
+   _conv_q.push(["triggerConversion","123456789"]);
+  }
+
+})
+</code></pre>

@@ -1,0 +1,5 @@
+How Do I Stop or Start Variations During an Active Test?
+<h2>Manage Variations During Testing</h2>
+<p>You can stop variations during the experiment at any time.</p>
+<p>To do this, you go to the Report and you stop a variation by clicking its status. This will pause the variation and will take this change into consideration on experiment results.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423892734093/mceclip0.png" alt="mceclip0.png"></p>

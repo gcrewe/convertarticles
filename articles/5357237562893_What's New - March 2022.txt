@@ -1,0 +1,11 @@
+What's New - March 2022
+Updates:
+
+Convert released it's new UI interface this month
+You can now track standard deviation in experiment report
+
+Change history has been updated to show the user name when the experiment status is changed 
+Convert Shopify App has been updated to work with the API-key for picking the right projects and goals. Read more
+
+Released Convert API V2. Read more
+

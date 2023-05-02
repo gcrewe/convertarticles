@@ -1,0 +1,14 @@
+Previewing Your Variations in Any URL
+<h2>How to test multi-page Experiments</h2>
+<p><span style="font-weight: 400;">With multi-page experiments, you can create a variation that can be applied to a set of pages with a similar HTML structure. </span></p>
+<p>Before putting live a multi-page experiment you may want to test your variations, not just on the web page that you included when creating the experiment, but on other pages included on it.</p>
+<p>You can preview any variation of an experiment on any web page of that experiment. The only requirement is that the URL of that web page be included in the "Site Area" of the experiment that you are testing.</p>
+<p>To perform the preview, you would have to add some parameters to the URL of the web page that you want to test the variation on.</p>
+<p><span style="font-weight: 400;">The parameters would be: "?convert_action=convert_vpreview&amp;convert_e=</span><strong>experiment_id</strong><span style="font-weight: 400;">&amp;convert_v=</span><strong>variation_id"</strong></p>
+<p><span style="font-weight: 400;">Where we need to replace the experiment_id with our experiment id, and variation_id with our actual variation id. You can find out how to find that id in this </span><a href="https://support.convert.com/hc/en-us/articles/204506639-Where-Do-I-Find-the-Experiment-s-Respectively-Variation-s-IDs"><span style="font-weight: 400;">other article</span></a><span style="font-weight: 400;">.</span></p>
+<p>For example, We may want to create an experiment in which we change the same menu that is shared by the whole site. This is possible with Convert Experiments.</p>
+<p><span style="font-weight: 400;">Let’s say, that we want to preview the variation on the URL </span><em><span style="font-weight: 400;">http://mydomain.com/webpage.html</span></em><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">So if our experiment id was </span><strong>XXXXX</strong><span style="font-weight: 400;"> and our variation id was </span><strong>YYYYY</strong><span style="font-weight: 400;">, then the URL we would need to load to preview the experiment, would be:</span></p>
+<p><img src="https://support.convert.com/hc/en-us/article_attachments/203411855/previewbrowserbar.png" alt=""></p>
+<p>http://mydomain.com/webpage.html<span style="font-weight: 400;">?convert_action=convert_vpreview&amp;convert_e=</span><strong>XXXXX</strong><span style="font-weight: 400;">&amp;convert_v=</span><strong>YYYYY</strong></p>
+<p> </p>

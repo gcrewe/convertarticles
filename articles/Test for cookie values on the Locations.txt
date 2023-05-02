@@ -1,0 +1,9 @@
+Test for cookie values on the Locations
+<h2>Example Use Case</h2>
+<p>Sometimes we may need to check for a specific condition to occur on every page visit, but that condition might be related to the options offered in the Locations.<br><br>A common need is to verify a cookie value for a user to be bucketed into the test, but if this cookie value changes the experience should no longer be shown to the visitor. For example, we might want to show a coupon only one time; or, the opposite.<br><br>What we would need is a <a href="https://support.convert.com/hc/en-us/articles/205159965-Targeting-Experiments-and-Firing-Goals-Based-on-a-JavaScript-Condition">JavaScript Condition</a> that checks for the cookie value and the URL value at the same time.</p>
+<h2>Code</h2>
+<p>Place the following code in the Locations as a JavaScript condition. Make sure you modify the code with the correct values to check the cookie and the cookie name as specified in the cookie comments.</p>
+<p class="codepen" style="height: 464px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-height="464" data-theme-id="31058" data-default-tab="js" data-user="gcrewe" data-slug-hash="RewbdQ" data-pen-title="Check For Cookie on Site Area">See the Pen <a href="https://codepen.io/gcrewe/pen/RewbdQ/"> Check For Cookie on Site Area</a> by Convert.com (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+</p>

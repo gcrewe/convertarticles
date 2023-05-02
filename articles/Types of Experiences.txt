@@ -1,0 +1,17 @@
+Types of Experiences
+<p>In Convert Experiences you can create 6 type of different experiences:</p>
+<ol>
+<li>
+<strong><a href="https://support.convert.com/hc/en-us/articles/205107815-Create-a-New-Experiment" target="_self" rel="undefined">A/B Experiences</a>: </strong>This type allows you to deploy different versions of a web page while hosting the changes on Convert servers. This type is usually used for small web page changes to be tested such as image, text, or menu arrangements. These are created with a visual editor or developer editors. </li>
+<li>
+<strong><a href="https://support.convert.com/hc/en-us/articles/204490279-Set-Up-Your-First-Split-URL-Experiment">Split URL Experiments:</a> </strong>This allows for testing different pages hosted on your own site. In this type of test, you enter the Original URL and the alternative (variation) URLs. Convert redirects with a JavaScript redirect an equal portion of the traffic to the new pages, and monitors the conversion goals to determine the best-converting page.</li>
+<li>
+<strong><a href="https://support.convert.com/hc/en-us/articles/205208075-Creating-a-Multivariate-Experiment">Multivariate Experiments (MVT)</a>: </strong>These experiments allow you, with the help of a visual editor or developer editors, to create different versions of page elements. For example, you could test different versions of the logo, different versions or your CTA (Call to action), or different background images in the same test. This allows you to determine which element changes have a bigger inference on your conversions. However, these experiments need a lot of traffic to determine a winner within a short period of time. </li>
+<li>
+<strong><a href="https://support.convert.com/hc/en-us/articles/115000018331-What-about-Personalizations-" target="_self" rel="undefined">Deployments:</a> </strong>Convert allows you to create deployments, which can be created with a visual editor or developer editors. These are meant to deliver the right experience to the right audience at the right moment. You can create these changes with a Visual Editor or with the developer editors. </li>
+<li>
+<a href="https://support.convert.com/hc/en-us/articles/115000007112-A-A-Experiments"><strong>A/A Experiments: </strong></a>This type of experiment allow you to test your experiment setup before launching a full-scale test. It is a test in which the original version of the page is launched against itself. They are of a default duration of 8 days, and at the end of the test the conversions should not show any significant conversion changes. </li>
+<li>
+<a href="https://support.convert.com/hc/en-us/articles/360017966372-Create-Multipage-Experiences"><strong>Multipage Experiments</strong></a>: Multi-page experiences allow you to link together variations of different pages. For example, visitors who saw the original version of Page 1 will also see the original version of Page 2, visitors who saw Variation 1 of Page 1 will also see Variation 1 of Page 2, and so on. This is particularly helpful for funnel testing.</li>
+</ol>
+<p> </p>

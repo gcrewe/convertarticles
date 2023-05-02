@@ -1,0 +1,121 @@
+Reading Triggered Experiment Data for Using it in Third Party Systems
+<h2>Understand Triggered Experiment Data</h2>
+<p dir="ltr">You might want to access the running experiment’s data or the data of all experiments that were triggered for a specific visitor in order to push them in external tracking systems. For that we make available two Javascript objects:</p>
+<h2 dir="ltr">convert.currentData</h2>
+<p dir="ltr">This holds all the items that were triggered on the specific page where the object is read: experiments, goals. The structure of this object is the following:</p>
+<ul>
+<li>
+<em><strong>experiments</strong> </em>- this holds all the experiments that are currently running on the current page. The keys of this objects are the experiments IDs and the values are objects containing the following data:
+<ul>
+<li>
+<strong>variation_id</strong> - the ID of the variation picked and presented for the specific experiment;</li>
+<li>
+<strong>variation_name</strong> - the name of the variation presented, as found in the convert experiments app report for that specific experiment; If the data anonymization feature is enabled, this name will look something like <strong>"Var #variation_ID"</strong> where <strong>variation_ID</strong> is the ID corresponding to the variation, as found inside Convert Experiments App;</li>
+<li>
+<strong>first_time</strong> - Boolean value indicating whether the experiment is triggered for the first time (for this visitor) on this page or it was triggered also before this hit.</li>
+<li>
+<strong>variation_name_parts</strong> - object that contains parts of the variation name, only useful in the case of a Multivariate test. For an A/B or Split URL test this object contains the same data as the “<strong>variation_name</strong>” field. This is a two elements object that contains the following keys:
+<ul>
+<li dir="ltr">
+<p dir="ltr"><strong>sections</strong> : array of names of sections as defined inside the Convert Experiments app visual editor. For A/B and Split URL tests,<strong>“sections”</strong> has only one element with a value of empty string <strong>“”</strong>; If the Data Anonymization feature is enabled, this names will not be filled in, but contain just empty strings.</p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><strong>changes</strong> : array of names of all the changes as defined inside the Convert Experiments app visual editor; If the Data Anonymization feature is enabled, this name will not be filled in, but contain just empty strings;</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li dir="ltr">
+<p dir="ltr"><strong>goals -</strong> object that contains all the goals triggered on the current page. <strong>The keys are goals IDs as found inside convert experiments application </strong>and the value is always 1. This object can change after page loads since more goals could be triggered afterwards - example goals that track clicks.</p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><strong>experiments_goals -</strong> mainly it has same content as the "goals" but in a different structure.</p>
+</li>
+</ul>
+<p dir="ltr">Here is an example of how this object would look like:</p>
+<pre><code class="language-css">
+{
+    "goals": {
+        "10001841": 1
+    },
+    "experiments": {
+        "10001236": {
+            "variation_id": 10008683,
+            "variation_name_parts": {
+                "sections": [""],
+                "changes": ["Original Page"]
+            },
+            "variation_name": "Original",
+            "first_time": false
+        },
+        "10001237": {
+            "variation_id": "10008687",
+            "variation_name_parts": {
+                "sections": [""],
+                "changes": ["Original page"]
+            },
+            "variation_name": "Original",
+            "first_time": true
+        }
+    },
+    "experiments_goals": {
+        "10001237": {
+            "10001841": 1
+        }
+    }
+}</code></pre>
+<p>And this is how it looks like in Google Chrome Console:</p>
+<p><strong><img src="https://support.convert.com/hc/article_attachments/115003819571/mceclip0.png"></strong></p>
+<h2 dir="ltr">convert.historicalData</h2>
+<p dir="ltr">This object contains data gathered across all past visitor session. Currently it only has one key:</p>
+<ul>
+<li>
+<strong>experiments</strong> - holds all experiments triggered for the visitor; the keys are experiments ID’s and the values are objects with the following structure:
+<ul>
+<li dir="ltr">
+<strong>variation_id  </strong>- ID of the variation selected for the experiment;</li>
+<li dir="ltr">
+<strong>variation_name</strong> - name of the variation; If the <a href="https://support.convert.com/hc/en-us/articles/204506339" target="_blank" rel="noopener">Data Anonymization</a> feature is enabled, this name will look something like <strong>"Var #variation_ID"</strong> where <strong>variation_ID</strong> is the ID corresponding to the variation, as found inside Convert Experiments App;</li>
+<li dir="ltr">
+<strong>goals -</strong> object that holds goals triggered for the current experiment; keys represent goal ID’s and values are always 1;</li>
+</ul>
+</li>
+</ul>
+<p dir="ltr">Example of this object would look like :</p>
+<pre><code class="language-css">
+{
+    "experiments": {
+        "10001236": {
+            "variation_name": "Original",
+            "variation_id": 10008683,
+            "goals" {
+                "10001841": 1
+            }
+        },
+        "10001237": {
+            "variation_name": "Original",
+            "variation_id": "10008687",
+            "goals": {
+                "10001841": 1
+            }
+        }
+    }
+}
+</code></pre>
+<p>This is how it looks like in Google Chrome Console:</p>
+<p><strong><img src="https://support.convert.com/hc/article_attachments/115003819671/mceclip1.png"></strong></p>
+<h2>_conv_q variable</h2>
+<p dir="ltr">Due to the fact that some parts of the tracking script can be async (for example an experiment that uses geo location data for targeting will be triggered in a async way), we advise reading any of this data inside functions that are executed through the use of the Convert queue variable: _conv_q</p>
+<p dir="ltr">Example:</p>
+<p dir="ltr"><code class="language-css">_conv_q = _conv_q || []; </code></p>
+<p dir="ltr"><code class="language-css">_conv_q.push([function(){</code></p>
+<p dir="ltr"><code class="language-css"><em>//your script that handles the data here</em>  </code></p>
+<p dir="ltr"><code class="language-css"><em>}]);</em></code></p>
+<p dir="ltr">Like this, you can place the script anywhere on page and the function will be executed right after all experiments and goals were triggered so that all the data is available.<br><br></p>
+<h2 dir="ltr">Example</h2>
+<p dir="ltr">You can use the example located in this <a href="https://support.convert.com/hc/en-us/articles/205463513" target="_self">article</a> to create your own integration.</p>
+<p dir="ltr"> </p>
+<p dir="ltr"><strong>keywords: </strong>"send data"</p>

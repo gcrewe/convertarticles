@@ -1,0 +1,3 @@
+Split URL Visual Flow (Diagram)
+<p>A visual representation of how our app Convert Experiences serves URLs to visitors bucketed<br>in a split URL test. Split URL testing is one of the most frequently used testing methods.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360017438091/Split_URL_Experience_Diagram.jpg" alt="Split_URL_Experience_Diagram.jpg"></p>

@@ -1,0 +1,29 @@
+What's new - Aug 2022
+<p><strong>Features:</strong></p>
+<p>1. We now have a new experience creation screen, which makes it easy for the users to enter all the information needed to create the experiment through a single step:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/8894229265549/IMG_2860.PNG" alt="IMG_2860.PNG" width="495" height="302"> </p>
+<p>2. You can now search for collaborators on your account, by entering their name or email address in the Search field</p>
+<p><img src="https://support.convert.com/hc/article_attachments/9143002829965/mceclip0.png" alt="mceclip0.png"></p>
+<p>3. We have now added a markup option on the Hypothesis Text Area. You can use markups bar like:</p>
+<ol class="ProsemirrorEditor-list">
+<li class="ProsemirrorEditor-listItem" data-list-indent="1" data-list-type="bulleted">
+<p>numbers</p>
+</li>
+<li class="ProsemirrorEditor-listItem" data-list-indent="1" data-list-type="bulleted">
+<p>Bullets</p>
+</li>
+<li class="ProsemirrorEditor-listItem" data-list-indent="1" data-list-type="bulleted">
+<p>Bold</p>
+</li>
+<li class="ProsemirrorEditor-listItem" data-list-indent="1" data-list-type="bulleted">
+<p>Italic</p>
+</li>
+<li class="ProsemirrorEditor-listItem" data-list-indent="1" data-list-type="bulleted">
+<p>Underline</p>
+</li>
+<li class="ProsemirrorEditor-listItem" data-list-indent="1" data-list-type="bulleted">
+<p>Intend and reduce indented<img src="https://support.convert.com/hc/article_attachments/9143009936141/mceclip1.png" alt="mceclip1.png"></p>
+</li>
+</ol>
+<p> </p>
+<p> </p>

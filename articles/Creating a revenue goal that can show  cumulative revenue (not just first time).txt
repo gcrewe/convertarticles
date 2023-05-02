@@ -1,0 +1,12 @@
+Creating a revenue goal that can show  cumulative revenue (not just first time)
+<h2>Introduction</h2>
+<p>The below applies to revenue amount only and the number of goal conversions won't be counted multiple times, but revenue from additional purchases will be added to revenue shown on your report.  All other goals are conversions which are unique (only counted the first time per experiment).</p>
+<h2>Create a Revenue Goal</h2>
+<p>Create a revenue goal through Goal templates menu:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6449675054733/mceclip0.png" alt="mceclip0.png"></p>
+<p>Select Manual Revenue Tracking:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6449663910285/mceclip1.png" alt="mceclip1.png"></p>
+<p>Note the Goal id after saving the goal.  That ID should be filled in where you see "goal_id" in the code.</p>
+<h2>Add Force Multiple</h2>
+<p>Modify the code shown above to add "force_multiple" to the end, eg something like the below but with the correct variables and goal ID, and place this on the page where revenue is generated (typically the thank_you or confirmation page):<br><br></p>
+<pre>_conv_q.push(["pushRevenue","revenue","products_cnt","goal_id","<strong>force_multiple</strong>"]);</pre>

@@ -1,0 +1,11 @@
+Issues while editing websites on Bootstrap
+<h2>Issue</h2>
+<p>While editing sites on Bootstrap, sometimes the changes created on the visual editor are not reflected on the live previews or the editor, even though the code has been saved.</p>
+<h2>Solution</h2>
+<p>The problem arises with bootstrap formatting classes. This classes change dynamically as the screen size changes are not good for creating the selectors needed by Convert to deploy experiments across all type of devices.</p>
+<p>The solution is to configure the visual editor to ignore this classes, and create them based on the more semantic part of the document.</p>
+<p>Doing this is simple. Just access the "Element Selection Settings" on the visual editor. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/14349764513677"></p>
+<p>So copy the following words below and paste them on the "Element Selection Settings" modal.</p>
+<p>alert<br>badges<br>breadcrumb<br>btn<br>active<br>disabled<br>checkbox<br>radio<br>card<br>carousel<br>collapse<br>accordion<br>dropdown<br>dropup<br>dropright<br>dropleft<br>form<br>input<br>segmented<br>custom<br>container<br>row<br>col<br>no-gutters<br>offset<br>order<br>nested<br>img<br>jumbotron<br>list<br>media<br>d-flex<br>aligned<br>right<br>modal<br>ul<br>nav<br>navbar<br>pagination<br>page<br>popover<br>progress<br>multiple<br>data<br>spinner<br>table<br>thead<br>toast<br>lead<br>display<br>blockquote<br>list<br>dl<br>border<br>rounded<br>bg-<br>text-<br>flex-<br>justify-<br>align<br>close<br>embed<br>shadow<br>invisible<br>visible<br>sticky<br>w-<br>h-<br>mw-<br>mh-<br>m-<br>mt-<br>mr-<br>ml-<br>mx-<br>my-<br>p-<br>pt-<br>pr-<br>pb-<br>pl-<br>px-<br>py-<br>font-<br>text-<br><br><img src="https://support.convert.com/hc/en-us/article_attachments/14349774146445/73399d70e644fe1ed6b67d5ac049500a04e3eff234ee0c2ea1c30cc0838e6926.png"><br><br>Save it, and now you can create the changes on the visual editor, and the changes should be reflected on the live previews and force variation url's.<br><br></p>
+<p> </p>

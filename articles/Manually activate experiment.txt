@@ -1,0 +1,14 @@
+Manually activate experiment
+<p>Sometimes you may need to manually fire an experiment using JavaScript in order to make sure it runs just after certain flows are followed on the page. </p>
+<p>In order to do that, please follow the steps below:</p>
+<ol>
+<li>Create the experiment, as usual, except in the <strong>Experiment Locations</strong>, instead of doing a match based on the URL, you would do a match based <a href="https://support.convert.com/hc/en-us/articles/205159965" target="_blank" rel="noopener">on a JS condition</a>. <br><br>Inside the JS condition, the simplest condition you could use would be like this: <br><em><br>(window.runExperiment ==1) <br><br></em>If you were to add this initially to a Location, the experiment will not automatically fire because the condition would be false by default; you would make it true in step 2.<br><br>
+</li>
+<li>Whenever needed to run the experiment on the page, you need to make sure that:<br><br>
+</li>
+</ol><ul>
+<li>the experiment condition becomes true; for the above condition you could just add code like the following on your source page: <br><em><br>window.runExperiment = 1;<br><br></em>
+</li>
+<li>trigger the experiment by adding the following code (<em>this should be placed after the code setting window.runExperiment = 1</em>): <br><br><em>window._conv_q = window._conv_q || [];<br></em><em>window._conv_q.push(["executeExperiment","<strong>{{experiment_id_here}}</strong>"])</em> <br><br><strong>*<em>in the bold area you'd have to place the experiment ID found inside the application as explained here: <a style="background-color: #ffffff;" href="https://support.convert.com/hc/en-us/articles/204506639" target="_blank" rel="noopener">http://support.convert.com/hc/en-us/articles/204506639</a></em></strong>
+</li>
+</ul>

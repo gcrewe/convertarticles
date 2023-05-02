@@ -1,0 +1,10 @@
+Integrate Convert Experiences with PrestaShop
+Introduction
+Integrating PrestaShop with Convert allows you to create and run Convert Experiences with your PrestaShop website. The end-to-end process of integrating PrestaShop with Convert involves the following steps
+Set up an New Experiment in Convert Experiments
+Create a new experiment using your store URL and start creating variations of elements you want to test.
+
+Install the Convert Tracking Code
+Copy the Convert tracking code for the current project:
+
+Go to /themes/classic/templates/_partials/head.tpl and add the above code. The head.tpl file is parsed by the Smarty template engine and attempts to interpret all instances of { and }. The way to resolve this is to wrap the inserted javascript code in {literal}{/literal} tags. 

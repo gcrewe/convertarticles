@@ -1,0 +1,15 @@
+What's New in Convert as of April 20, 2018
+<h2><strong>Bug Fixes</strong></h2>
+<ul>
+<li>Fixed a bug in Date Picker in Experiment Report</li>
+<li>Fixed a bug in Visual Editor that caused duplicate creation of experiences on slow connections</li>
+</ul>
+<h2><strong>Improvements and Additions</strong></h2>
+<ul>
+<li>Back-end performance improvements</li>
+<li>Improved privacy by removing visitor IDs from our tracking</li>
+<li>New: Onboarding introductory flow</li>
+<li>New: Added warnings to inform our customers of GDPR-related settings or options used in their Projects or Experiments. If you don't need the warnings, you can turn them off. You can read more <a href="https://support.convert.com/hc/en-us/articles/360001361312">here</a>.</li>
+</ul>
+<p> </p>
+<p><strong>Click <a href="https://www.convert.com/gdpr/">here</a> to learn more about Convert's commitment to compliance.</strong></p>

@@ -1,0 +1,23 @@
+Integrate Convert Experiences with AT Internet
+<h2>Convert-AT Internet Integration</h2>
+<p>Convert uses AT Internet's <a class="external" href="http://help.atinternet-solutions.com/en/implementation/specific_tags/tg_abtesting_en.htm" target="_blank" rel="external noopener">MV Testing Tags</a> to tag your visitors with the experiments and variations to which they've been added. </p>
+<p>For each experiment, the integration passes along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>This integration is still in beta status. Use with caution the steps described below.</p>
+</div>
+</div>
+<h2>Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the <a href="https://developers.atinternet-solutions.com/javascript-en/getting-started-javascript-en/tracker-initialisation-javascript-en/">AT Internet Javascript tracker code</a> are installed/initialized on your page. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000040891/mceclip0.png"></p>
+<h2>Install AT Internet MV Testing</h2>
+<p>Follow the instructions here: https://developers.atinternet-solutions.com/javascript-en/content-javascript-en/mv-testing-javascript-en/.</p>
+<p>Under variables, add these to track Convert experiences:</p>
+<ol>
+<li>Convert Experiment ID: convert.data['experiments'][experimentId].id</li>
+<li>Convert Variation ID: convert.currentData.experiments[experimentId].variation_id</li>
+</ol>
+<h2>View Convert Data in AT Internet</h2>
+<p>Once the integration is enabled, you will be able to access the Multivariate Testing report in your Digital Workspace and click on any test name to see the visitors to the test broken out by variation. </p>

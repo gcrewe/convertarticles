@@ -1,0 +1,14 @@
+How to create a CSS Selector for use in the Convert Experiences platform
+<h2>How to create a CSS Selector</h2>
+<p>CSS selectors can be used across the Convert platform for tracking clicks, inserting them on the variation code, and in general to create your experiments and personalizations. It is always good to know how to create them if you are creating experiments or personalizations on Convert.</p>
+<p>You can think of selectors, like street addresses that point to the specific element that you want to change or reference.</p>
+<p><br>To create a selector:</p>
+<ol>
+<li>Go to your page, then select any element that you want to create the selector for. Enable mobile emulation on Chrome if you want to create a selector to match on mobile devices. <br><br>
+</li>
+<li>Then right-click on the element and select <strong>Inspect</strong>. This will open the Elements tab of Chrome Developers tools and select the HTML element you are inspecting. <br><br>
+</li>
+<li>Then right-click again on the actual HTML element, and select <strong>Copy Selector</strong>. Make sure you had selected the right element you need to point to.<br><br>
+</li>
+<li>You can verify if the selector you copy is pointing to the element you intended by searching for the element on the Elements tab of Chrome Developer Tools. Just click <strong>Ctrl + F</strong> and pasting the selector on the search text box, and clicking enter. You will see your element highlighted.</li>
+</ol>

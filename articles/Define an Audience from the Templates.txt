@@ -1,0 +1,8 @@
+Define an Audience from the Templates
+<h2>Templates in Audiences</h2>
+<p>The "Templates" tab purpose is to help you start configuring your audience faster. In this section, you select a pre-configured audience that fits your needs.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6460338760205/mceclip0.png" alt="mceclip0.png"></p>
+<p>If you can not find a preconfigured audience that fits your needs, you can select one of the templates as the starting point and adjust it according to your needs.</p>
+<p> </p>
+<p> </p>
+<p> </p>

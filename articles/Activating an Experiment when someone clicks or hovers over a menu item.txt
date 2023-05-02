@@ -1,0 +1,23 @@
+Activating an Experiment when someone clicks or hovers over a menu item
+<h2>Issue</h2>
+<p>There may be times that bucketing a visitor in an experiment by landing on a page may not be sufficient. This might be because we may need to change a menu that is only seen when they hover or click on an element like a menu item. We might only want to sample the visitors that see the menu and perform this action, so the experiment is free of the noise of people that actually did not see the change.</p>
+<h2>Solution</h2>
+<p>To solve this we need to activate the experiment when they perform this action. To do this, we need to add some code in the Project Configuration that will trigger the code when the visitor hovers or clicks on an element. </p>
+<p>1) Add the following code to the <strong>Project &gt; Project Configuration &gt; Global JavaScript </strong>area. This code will trigger the experiment anywhere where the element is hovered over on any page. Here targeted by the <strong><em>menu_item_selector</em></strong>, which you should replace by your own element selector. If you want to monitor clicks replace<strong> ".hover"</strong> by <strong>".click"</strong>.</p>
+<pre><code class="language-markup">
+convert.$(document).ready(function() {
+  // replace the next URL with the one for the page where you want to monitor the clicks or hovers
+  if (location.href == 'https://www.website.com/index.html') {
+    convert.$("menu_item_selector").hover(function() {
+      window.runExperiment = 1;
+      window._conv_q = window._conv_q || [];
+      // Replace the number with the id of your experiment.
+      window._conv_q.push(["executeExperiment","123456789"]);
+    });
+  }
+});
+</code></pre>
+<p>2) Add the following JS Condition to the Locations of your experiment:</p>
+<pre><span>(window.runExperiment == 1)
+</span></pre>
+<p>With this code, the experiment should only bucket the right visitors and avoid adding any noise in the visitor sample.</p>

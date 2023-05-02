@@ -1,0 +1,16 @@
+Integrate Convert Experiences with ContentSquare
+<h2>Convert-ContentSquare Integration</h2>
+<p>Integration of <a href="https://www.contentsquare.com/">ContentSquare</a> with Convert Experiences will help you to import Convert data into your ContentSquare account. </p>
+<p>For each experiment, the integration can pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<p><span>For more use cases regarding this integration you can read our <a href="https://www.convert.com/blog/optimization/contentsquare-convert-new-behavioral-insights-ab-experiences/" target="_self" rel="undefined">ContentSquare blog article</a>.</span></p>
+<h2>Add Tracking Code Snippets</h2>
+<p>Make sure the Convert Tracking Code is <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">installed</a> on your page.</p>
+<p>You should also add the <a href="https://docs.contentsquare.com/uxa-en/#setting-up-the-main-tag">ContentSquare main tag (UXA)</a> on your website, just add the following lines of code on every page you want to analyse, either at the end of the body marker, or via a TMS.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000041511/mceclip0.png"></p>
+<h2>Send Custom Variables</h2>
+<p>Then you should set your <a href="https://docs.contentsquare.com/uxa-en/#sending-custom-vars">custom variables</a> and through them send your Convert data (e.g. Experience id, Variation id) to your ContentSquare account. </p>
+<p>Code for sending Experiment and Variation names can be found here: https://docs.contentsquare.com/thirdparties/#convert</p>
+<h2>View Convert Data in ContentSquare</h2>
+<p>In order to see the data sent, you must login into your ContentSquare account.</p>
+<h2>Troubleshoot</h2>
+<p>To check whether the ContentSquare code was installed and set up correctly, use the <a href="https://tools.contentsquare.com/chrome/" target="_self" rel="undefined">ContentSquare UXA Assistant</a>.</p>

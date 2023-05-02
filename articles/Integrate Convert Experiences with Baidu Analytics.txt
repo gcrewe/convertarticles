@@ -1,0 +1,21 @@
+Integrate Convert Experiences with Baidu Analytics
+<h2>Convert-Baidu Analytics Integration</h2>
+<p>Integration of <a href="http://tongji.baidu.com">Baidu Tongji</a> (or Baidu Analytics) with Convert Experiences will help you to import Convert data into your Baidu Analytics account. </p>
+<p>For each experiment, the integration uses a unique Custom Dimension to pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>This integration is still in beta status. Use with caution the steps described below.</p>
+</div>
+</div>
+<h2>Create a Custom Dimension in Baidu Analytics</h2>
+<p>Sign in to your Baidu Analytics account and create a Custom Dimension as your optimization tracking variable. Keep the index value as you will need it when you will activate the integration through the Convert settings.</p>
+<h2>Add Tracking Code Snippets</h2>
+<p>Make sure the Convert tracking code and the Baidu Analytics (Standard/Legacy or Asynchronous Javascript) code are installed on your page. </p>
+<h2>Activate Integration in Convert</h2>
+<p>Go to your Convert experience settings and under Integrations select the Baidu Analytics. Assign the Conversion Dimension slot number to match the slot number created in Baidu. Then click Save and Continue:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423908835597/mceclip0.png" alt="mceclip0.png"></p>
+<h2>View Convert Data in Baidu Analytics</h2>
+<p>Using a Custom Report in Baidu Analytics, you will be able to view all of your Convert Experiences data as they associate to the values that you pass in the Custom Dimension.</p>
+<p>When you log in to your Baidu Analytics account, you should create a Custom Report that includes this Custom Dimension that you have defined in the previous section. </p>

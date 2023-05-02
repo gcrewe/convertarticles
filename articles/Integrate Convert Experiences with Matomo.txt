@@ -1,0 +1,49 @@
+Integrate Convert Experiences with Matomo
+<h2>Introduction</h2>
+<p><a href="https://matomo.org/">Matomo</a> (formerly Piwik) is a free and open source Web analytics application.</p>
+<p>With the Convert-Matomo integration, unique visitors to your experiments’ variations will be passed into Matomo using custom variables.</p>
+<p>Read more about how you can <a href="https://www.convert.com/blog/privacy/google-analytics-illegal-austria/" target="_self">use Matomo as an alternative to GA</a>.</p>
+<h2>Add Tracking Codes</h2>
+<p>To set up the integration, you should install the Matomo tracking code according to Matomo’s instructions. It looks like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000013271/mceclip0.png"></p>
+<p>You should also install the Convert tracking code (instructions can be found <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">here</a>).</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423908709645/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Custom Variables</h2>
+<p>Create a Matomo Custom Variable and note its index. If you are already using Custom Variables for the same pages you intend to pass Convert data into, you should determine which indexes are in use so that you can choose a unique index number for Convert data.</p>
+<p><strong>Example of the data we send to Matomo</strong>:<br>dimension(or index) , current Experiment Name<strong>*</strong>, current Variation<strong>*</strong>, scope: "visit" (this means the custom variable applies to the current visit)</p>
+<p>*<em> Depends on whether you have chosen data anonymization or not</em> (more information on this can be found <a href="https://support.convert.com/hc/en-us/articles/204506339-Prevent-Experiment-Details-Data-Leak-with-Data-Anonymization">here</a>)</p>
+<h2>Enable the Integration in Convert</h2>
+<p>To enable the integration for your experiment, go to the <strong>Experience Summary</strong>, and you should see a link to <strong>Add/Edit Integrations. </strong><strong><span style="font-weight: 400;">Under here you will find the option to enable Matomo/Piwik integration and set the Dimension/Index you will use:</span></strong></p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423908729869/mceclip2.png" alt="mceclip2.png"></p>
+<h2><strong><span style="font-weight: 400;">Enable the Integration Manually</span></strong></h2>
+<p><strong><span style="font-weight: 400;">Instead of using the internal integration that Convert Experiences supports, you can also add this code and activate it manually:</span></strong></p>
+<pre><code>var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  // you can set up to 5 custom variables for each visitor
+        var refObject = window['convert']['data']['experiments']
+			for (var key in window["convert"]["currentData"]["experiments"]) {
+				if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+					continue;
+				}}
+            
+		var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+		var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+		curExperimentName = curExperimentName.replace("Test #", "Test ");
+		var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+		curVariant = curVariant.replace("Var #", "Variation ");
+  
+  
+  _paq.push(["setCustomVariable", 1, "Exp_Name", curExperimentName, "visit"]);
+  _paq.push(["setCustomVariable", 2, "Value Name", curVariant, "visit"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//con.innocraft.cloud/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();</code></pre>
+<h2><strong><span style="font-weight: 400;">View Convert Data in Matomo</span></strong></h2>
+<p>Once you enable the integration (either through Convert interface or manually) you can view Experiment ID, Variation ID in Matomo dashboard:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000067431/mceclip0.png"></p>

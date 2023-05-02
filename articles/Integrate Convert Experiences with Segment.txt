@@ -1,0 +1,36 @@
+Integrate Convert Experiences with Segment
+<h2>Convert-Segment Integration</h2>
+<p>Integration of <a href="https://segment.com/">Segment</a> with Convert Experiences will help you to import Convert data into your Segment warehouse. </p>
+<p>For each experiment, the integration uses semantic track events to pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<p><span>For more use cases regarding this integration you can read our </span><a href="https://www.convert.com/blog/a-b-testing/segment-convert-share-test-insights-in-one-click-with-your-entire-stack/" target="_self" rel="undefined">Segment blog article</a><span>.</span></p>
+<h2>Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the Segment tracking code (analytics.js) are installed on your page. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000014292/mceclip0.png"></p>
+<h2>Activate Integration in Convert</h2>
+<p>Go to your Convert experience settings and under Integrations select the Segment.Io. Then click Save and Continue. Once activated, Segment will automatically capture all active experiments and exposed variation as a <a href="https://segment.com/docs/spec/ab-testing/">semantic event</a> for a given page.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423904177293/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Activate Integration Manually</h2>
+<p>If you do not want to activate the integration through Convert interface, you can do it manually by adding to your website events. The example code below will send Convert Experience and Variation names to Segment Debugger/Schema:</p>
+<pre><code>var refObject = window['convert']['data']['experiments']
+	for (var key in window["convert"]["currentData"]["experiments"]) {
+			if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+				continue;
+	}}
+            
+var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+curExperimentName = curExperimentName.replace("Test #", "Test ");
+var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+curVariant = curVariant.replace("Var #", "Variation ");
+		
+analytics.track('Convert Experiences', {
+	Exp_Name: curExperimentName,
+	Var_Name: curVariant
+	});</code></pre>
+<h2>View Convert Data in Segment</h2>
+<p>Using a semantic event in Segment, you will be able to view all of your Convert Experiences data as they associate to the values that you pass in the event.</p>
+<p>When you log in to your Segment account, you should go to your Schema. Inside your Schema, you can see all of the track events that you are sending through Segment, and if they are active or inactive.</p>
+<p>If you used the checkbox method from above you should see the event like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360095405032/mceclip0.png" alt="mceclip0.png"></p>
+<p>If you used the manual integration code you should see the event like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360095329731/mceclip1.png" alt="mceclip1.png"></p>

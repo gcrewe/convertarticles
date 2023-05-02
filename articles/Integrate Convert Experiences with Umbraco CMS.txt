@@ -1,0 +1,15 @@
+Integrate Convert Experiences with Umbraco CMS
+<p><span style="font-weight: 400;">This integration will allow you to use Convert Experiments A/B Testing on your <a href="https://umbraco.com/" target="_self">Umbraco</a> powered website.</span></p>
+<h2>Create a new experiment</h2>
+<p>In Experiences screen select "New Experience"</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423903890317/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Copy the Convert Experiments Script</h2>
+<p>Go to your Project Configuration and find the Convert tracking code:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423896181901/mceclip1.png" alt="mceclip1.png"></p>
+<h2>Go to Your Umbraco account</h2>
+<p><span style="font-weight: 400;">Once you have logged into Umbraco (go to </span><strong>Settings &gt; Scripts)</strong><span style="font-weight: 400;">.</span></p>
+<p><img src="https://support.convert.com/hc/article_attachments/360023817172/mceclip0.png"></p>
+<h2>Add the script into the Master template</h2>
+<p>Then create a master page/template with all your HTML markup in it - and in the head section just add the usual &lt;script calls to include your js files, which in umbraco start from /scripts/, so if you created a script called 'myscript', then the path would be /scripts/Convert.js - assuming you're not using virtual paths.</p>
+<h2>Test the Integration</h2>
+<p><span style="font-weight: 400;">Now, go to the live site and check to see if your experiments are running. The changes you made to the variations or original should appear.</span></p>

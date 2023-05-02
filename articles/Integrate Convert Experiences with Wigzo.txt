@@ -1,0 +1,26 @@
+Integrate Convert Experiences with Wigzo
+<h2>Convert-Wigzo Integration</h2>
+<p>Integration of <a href="https://www.wigzo.com/" target="_self">Wigzo</a> with Convert Experiences will help you to import Convert data into your Wigzo account. Wigzo is a Contextual Marketing Platform that helps marketers send Smarter Communication in Email or In-App. Which means changing content dynamically based on User behaviour on Website and App. Using Wigzo’s predictive technologies companies can produce Dynamic content blocks which automatically populates in emails based on User behaviour and Context.</p>
+<p>For each experiment, the integration uses <a href="https://app.wigzo.com/integration/apicodeintegration" target="_self">JS events</a> to pass along the experiment name and variation name that the visitor is currently bucketed into.</p>
+<h2>Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the Wigzo tracking code  are installed on your page.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360030798212/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Activate Integration Manually</h2>
+<p>Use the example code below to send Convert Experience and Variation names to Wigzo API:</p>
+<pre><code>var refObject = window['convert']['data']['experiments']
+	for (var key in window["convert"]["currentData"]["experiments"]) {
+			if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+				continue;
+	}}
+            
+var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+curExperimentName = curExperimentName.replace("Test #", "Test ");
+var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+curVariant = curVariant.replace("Var #", "Variation ");
+		
+wigzo ("track", "Variation Name", curVariant);  </code></pre>
+<h2>View Convert Data in Wigzo</h2>
+<p>Using a JS event in Wigzo, you will be able to view all of your Convert Experiences data as they associate to the values that you pass in the event.</p>
+<p>When you log in to your Wigzo account, you should go to your Live Activities. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/360030770791/mceclip1.png" alt="mceclip1.png"></p>

@@ -1,0 +1,19 @@
+Check in which Convert Experiences you are part of
+<p><span style="font-weight: 400;">In order to see if you are part of a Convert experience in any website, you need to add this code snippet in your website:</span></p>
+<pre><code>(function () {
+ var head = document.getElementsByTagName('head')[0];
+ var s = document.getElementsByTagName('script')[0];
+
+ var ccejs = document.createElement('script');
+ ccejs.type = 'text/javascript';
+ ccejs.async = true;
+ ccejs.src = 'https://www.convert.com/current-convert-experiences-script/dist/bundle.js';
+ s.parentNode.insertBefore(ccejs, s);
+
+ var ccecss = document.createElement('link');
+ ccecss.rel = 'stylesheet';
+ ccecss.href = 'https://www.convert.com/current-convert-experiences-script/dist/bundle.css';
+ head.appendChild(ccecss);
+})();</code></pre>
+<p>This code snippet shows a popup with the current experiences. In order to show this popup you need to press the key ? in your keyboard.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360045954552/mceclip0.png" alt="mceclip0.png"></p>

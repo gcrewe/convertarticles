@@ -1,0 +1,34 @@
+Integrate Convert Experiences with Plausible
+<h2>Introduction</h2>
+<p><span><a href="https://plausible.io/" target="_self" rel="undefined">Plausible.io</a> is a </span>privacy-friendly<span> analytics service that is an attractive alternative to Google Analytics. It only stores data that enables a </span>simple analysis of visits<span> to your website. In doing so, Plausible does not track the user across multiple websites (does </span>not<span> store cross-site cookies).</span></p>
+<p>With the Convert-Plausible integration, unique visitors to your experiments’ variations will be passed into Plausible using custom event goals.</p>
+<p>Read more about how you can <a href="https://www.convert.com/blog/privacy/google-analytics-illegal-austria/" target="_self" rel="undefined">use Plausible as an alternative to GA</a>.</p>
+<h2>Add Tracking Codes</h2>
+<p>To set up the integration, you should install the Plausible tracking code according to their <a href="https://plausible.io/docs/plausible-script" target="_self">instructions</a>. It looks like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4422834004493/mceclip0.png" alt="mceclip0.png"></p>
+<p>You should also install the Convert tracking code (instructions can be found <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">here</a>).</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423874208781/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Custom Event Goals</h2>
+<p>Create a Plausible <a href="https://plausible.io/docs/custom-event-goals" target="_self">custom event goal</a>. </p>
+<p><strong>Example of the data we send to Plausible</strong>:<br>current Experiment Name<strong>*</strong>, current Variation<strong>*</strong></p>
+<p>*<em> Depends on whether you have chosen data anonymization or not</em> (more information on this can be found <a href="https://support.convert.com/hc/en-us/articles/204506339-Prevent-Experiment-Details-Data-Leak-with-Data-Anonymization">here</a>)</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4422855592205/mceclip1.png" alt="mceclip1.png"></p>
+<h2><strong><span style="font-weight: 400;">Enable the Integration Manually</span></strong></h2>
+<p><strong><span style="font-weight: 400;">This example code can send Experiment and Variation names to your Plausible goal:</span></strong></p>
+<pre><code>var refObject = window['convert']['data']['experiments']
+			for (var key in window["convert"]["currentData"]["experiments"]) {
+				if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+					continue;
+				}}
+            
+		var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+		var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+		curExperimentName = curExperimentName.replace("Test #", "Test ");
+		var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+		curVariant = curVariant.replace("Var #", "Variation ");
+		
+	plausible('Convert', {props: {Experiment: curExperimentName}});
+	plausible('Convert', {props: {Variation: curVariant}});</code></pre>
+<h2><strong><span style="font-weight: 400;">View Convert Data in Plausible</span></strong></h2>
+<p>Once you enable the integration you can view Experiment ID, Variation ID in Plausible dashboard:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4422834420237/mceclip2.png" alt="mceclip2.png"></p>

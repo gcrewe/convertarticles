@@ -1,0 +1,18 @@
+Assigning a Segment Programmatically
+<h2>Overview</h2>
+<p>You might want to assign a visitor to a segment programmatically instead of using the Convert interface options to add it.</p>
+<h2>Steps</h2>
+<ol>
+<li>
+<strong>Find out the segment id.</strong> This is a bit tricky as you have to add the audience (that you have designated as a segment) to an experience to be able to find it. <br><br>You can find this on the Audience card under the Experience Summary. Please see the image below for an example:<br><br><img src="https://support.convert.com/hc/article_attachments/360011595632/blobid0.png" alt="save image">
+</li>
+<li>
+<strong>Code it.</strong> Adapt the following example to programmatically add a visitor to a segment:<br><br>
+<p class="codepen" data-height="120" data-theme-id="31058" data-slug-hash="LJXveq" data-default-tab="js" data-user="gcrewe" data-pen-title="LJXveq">See the Pen <a href="https://codepen.io/gcrewe/pen/LJXveq/">LJXveq</a> by Convert.com (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.<br><br><br></p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+<br><br>
+</li>
+<li>
+<strong>Test your code as a normal visitor</strong> in an incognito browser window and verify that the cookie <strong>_conv_v</strong> has the segment id recorded on the <strong>seg key</strong>. You can find more information about the cookie structure in the following <a href="https://support.convert.com/hc/en-us/articles/204495429-Convert-Experiences-Tracking-Cookies-Structure">article</a>.</li>
+</ol>
+<p><strong>keyword:</strong> placeVisitorIntoSegment</p>

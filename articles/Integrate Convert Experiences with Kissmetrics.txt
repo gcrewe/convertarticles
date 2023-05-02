@@ -1,0 +1,31 @@
+Integrate Convert Experiences with Kissmetrics
+<h2>Convert-Kissmetrics Integration</h2>
+<p>We offer an integration with <a href="https://www.kissmetricshq.com" target="_self">Kissmetrics</a>. Having a solid integration and giving you access to experiences and variation data in the preferred analytics platform is important.</p>
+<p>We send over two property names that have values the experience &amp; variation name the user currently sees. This will allow you to continue tracking the effect of a variation in the funnels as well as every other reporting option offered in Kissmetrics.</p>
+<p>This article will walk you through how to send data from Convert experiences/variations to your Kissmetrics account. For each experiment, the integration will pass along the experiment name and variation name that the visitor is currently bucketed into (if any) as a snapshot.</p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the Kissmetrics code are installed on your page. Kissmetrics tracking code looks like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360048241572/mceclip1.png" alt="mceclip1.png"></p>
+<div class="user_formatted header_section clearfix">
+<h2>Activate Integration Manually</h2>
+<p>Once you have the two tracking codes in your website, then you should add this extra code to track <a href="http://support.kissmetrics.com/article/show/23937-common-methods" target="_self">events and properties</a> (one for experiment name and one for variation name). <em>You can add this to the <a href="https://support.convert.com/hc/en-us/articles/115000006251-Project-Experience-Experiment-or-Personalization-Variation-Javascript" target="_blank" rel="noopener">Project Global Javascript</a> section or directly on your pages, after the Kissmetrics and Convert tracking codes.</em></p>
+<pre><code>   
+    var refObject = window['convert']['data']['experiments']
+	for (var key in window["convert"]["currentData"]["experiments"]) {
+		if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+			continue;
+		}		
+            
+	var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+	var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+	curExperimentName = curExperimentName.replace("Test #", "Test ");
+	var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+	curVariant = curVariant.replace("Var #", "Variation ");
+
+_kmq.push(['set', {'Experiment Name':curExperimentName}]);
+_kmq.push(['set', {'Variation Name':curVariant}]);
+}</code></pre>
+<h2>View Convert data in Kissmetrics</h2>
+<p>After integration is enabled and your experiment is activated, you will be able to find in your Kissmetrics account the custom user data that you sent. Go to Settings-&gt;Live to search for what you want. In each visitor session two extra properties will be added, one for experiment name and one for variation name:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360048368091/mceclip0.png" alt="mceclip0.png"></p>
+</div>

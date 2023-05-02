@@ -1,0 +1,28 @@
+Integrate Convert Experiences with Econda
+<h2 id="convert-eulerian-integration">Convert-Econda Integration</h2>
+<p>The integration combines the capability of A/B Testing and Multivariate Testing by Convert Experiences with the complete <a href="http://www.econda.com">Econda web analytics suite</a>. This will help users of both products go deeper into their data and make better data-driven decisions. Econda users will be able to see the results of Convert variations in their dashboards, segment this data and run detailed E-Commerce analyses in Econda.</p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the <a href="https://support.econda.de/display/INDE/Umstieg+auf+Tracking-Variante+3">Econda tracking code</a> (emos2.js or emos3.js) are installed on your page.</p>
+<h2 id="activate-integration-in-convert">Activate Integration in Convert</h2>
+<p>Go to your Convert experience settings and under Integrations select the Econda. Then click Save and Continue. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423896345101/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Activate Integration Manually</h2>
+<p>If you do not want to activate the integration through Convert Experiences interface, you can do it manually by adding this code, where you send to emos3, Convert Experiment and Variation IDs:</p>
+<pre><code>var refObject = window['convert']['data']['experiments']
+	for (var key in window["convert"]["currentData"]["experiments"]) {
+			if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+				continue;
+	}}
+            
+var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+curExperimentName = curExperimentName.replace("Test #", "Test ");
+var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+curVariant = curVariant.replace("Var #", "Variation ");
+		
+window.emos3.send({
+	Exp_Name: curExperimentName,
+	Var_Name: curVariant
+	});</code></pre>
+<h2 id="view-convert-data-in-heap-analytics">View Convert Data in Econda</h2>
+<p>Using emo3.send or emosPropertiesEvent in Econda, you will be able to view all of your Convert Experiences data as they associate to the values that you pass in these properties.</p>

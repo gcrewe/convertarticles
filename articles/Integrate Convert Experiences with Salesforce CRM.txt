@@ -1,0 +1,44 @@
+Integrate Convert Experiences with Salesforce CRM
+<h2>Convert-Salesforce CRM Integration</h2>
+<p>Integration of <a href="https://www.salesforce.com/crm/">Salesforce CRM</a> with Convert Experiences is possible through the <a href="https://www.bizible.com/">Bizible</a> Marketing Analytics app/package that is available on Salesforce AppExchange. Bizible helps companies track their marketing activities back to individual customers in Salesforce. This integration will help you to do two things:</p>
+<ol>
+<li>see the experiment associated with a lead and a contact in Salesforce. This information updates dynamically as the lead or contact visits the website and is exposed to more experiments.</li>
+<li>run reports on this information. Sales teams can now answer<strong> </strong>questions like, does pricing page variation A, B, or C lead to more revenue?</li>
+</ol>
+<p>For each experiment, the integration can pass along the experiment name/id and variation name/id that the visitor is currently bucketed into.</p>
+<h2>Add Bizible on Salesforce AppExchange</h2>
+<p>First thing you need to do is to install the Bizible Marketing Analytics package to your Salesforce account. Go to the Setup side of Salesforce:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360036759571/mceclip0.png" alt="mceclip0.png"></p>
+<p>Then select Installed Packages under Apps</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360036767232/mceclip1.png" alt="mceclip1.png"></p>
+<p>You can then see on Bizible side if the connection is active:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360021787051/mceclip1.png"></p>
+<h2>Add Tracking Code Snippets</h2>
+<p>Then make sure the Convert tracking code is <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">installed</a> on your page.</p>
+<p>On every page that you want to install Bizible, paste the code snippet that is found on Bizible Account Configuration.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360021785011/mceclip1.png"></p>
+<h2>Send Custom Events</h2>
+<p>You should then create the <a href="https://support.bizible.com/hc/en-us/articles/115005058248-Tracking-Custom-Website-Events">custom events</a> you want to send (e.g. Convert Experiment Name and Convert Variation Name that the website visitor is bucketed into). You can send a custom event from anywhere in the page where Convert experiences are running.</p>
+<p>Example code for sending Experiment Name and Variation Name:</p>
+<pre><code>var refObject = window['convert']['data']['experiments']
+        for (var key in window["convert"]["currentData"]["experiments"]) {
+            if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+                continue;
+            }}
+            
+var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+    var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+    curExperimentName = curExperimentName.replace("Test #", "Test ");
+    var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+    curVariant = curVariant.replace("Var #", "Variation ");
+
+window['Bizible'] = window['Bizible'] || { _queue: [], Push: function (o, p) { this._queue.push({ type: o, data: p }); } }; 
+    var reportData = {};
+    reportData['Experiment_ID'] = curExperimentName;
+    reportData['Variation_ID'] = curVariant;
+    Bizible.Push('Event', reportData); </code></pre>
+<p>You might need to contact your Bizible Success Manager or email support@bizible.com to enable the Custom Event tracking feature if this is not enabled:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360021787231/mceclip2.png"></p>
+<h2>View Convert Data in Bizible/Salesforce</h2>
+<p>The Custom Events will now be included in every Bizible visit. From Bizible you can read the data into your Salesforce CRM dashboards and reports. This is how the event is populated with Convert values:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360021786631/mceclip0.png"></p>

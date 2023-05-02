@@ -1,0 +1,6 @@
+Can I Target Visitors/Users by Language?
+<h2>Target Visitors</h2>
+<p>We can detect the language used by the visitors based on the browser settings (picked from<span> browser navigator[‘language’] or navigator[‘userLanguage’]).</span></p>
+<p>This is one way to define a segment. We also have city, country and region to segment on. You can find the Language entity on the "<strong>Visitor Data</strong>" section of Convert Experiments - Experiment Summary - Audience.</p>
+<p>We currently detect: Albanian, Arabic, Armenian, Bulgarian, Chinese, Croatian, Czech, Danish, Dutch, English, Estonian, French, Georgian, German, Greek, Hebrew, Hungarian, Indonesian, Italian, Japanese, Latvian, Lithuanian, Luxembourgish, Macedonian, Malayalam, Norwegian, Polish, Portuguese, Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Sudanese, Swedish, Tahitian, Turkish, Ukrainian, Uzbek, Venda, Vietnamese.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6444323475469/mceclip0.png" alt="mceclip0.png"></p>

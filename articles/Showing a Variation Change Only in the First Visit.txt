@@ -1,0 +1,66 @@
+Showing a Variation Change Only in the First Visit
+<h2>Purpose</h2>
+<p>Sometimes we would like to run a variation change just on the first visit. This article allows to only show a change created on the Visual Editor only for the first visit.</p>
+<h2>Steps</h2>
+<p>Create your experience and changes:</p>
+<div class="step-instructions screensteps-textblock ">
+<p>Once you created your experience, open the visual editor.</p>
+</div>
+<h3>Create your Changes in the Visual Editor</h3>
+<h3>Insert the JS libraries on your variation.</h3>
+<p>Hover over the variation name where you want to execute your changes only once.  Select the "Custom JS" menu item. Enter the following code and assign the right number to the variable <em>numberOfViews</em>.</p>
+<pre><code class="language-javascript">
+/* Added for Overview Test to show changes one time.
+   Insert on the Customer Javascript Section        */
+
+numberOfViews = "1";
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i &lt; ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+// Get the old visit count, or 0 if this is his first time
+var visits = getCookie("visits") || 0;
+// Add 1 to it
+visits++;
+// Save the updated cookie
+setCookie("visits", visits);
+
+function shouldDisplayChanges(){
+  return (getCookie("visits") == numberOfViews || getCookie("visits") === null);
+}
+</code></pre>
+<h3>Modify your variation code in the "Code Editor "area.</h3>
+<p>Access your "Code Editor", by selecting the corresponding menu item of your variation menu. </p>
+<h3>Edit your variation code</h3>
+<p>Edit your variation code integrating with the following code:</p>
+<pre><code class="language-javascript"> 
+if (shouldDisplayChanges()) {
+/* Wrap all your code in the Code Editor after your changes
+   have been completed around this if clause */
+}
+</code></pre>
+<p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+</p>
+<p>Activate your experience</p>
+<h3>Check that is running</h3>
+<p>You are done!</p>

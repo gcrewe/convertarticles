@@ -1,0 +1,7 @@
+Prevent Experiment Details Data Leak with Data Anonymization
+<h2>Data Anonymization</h2>
+<p>The names of variations and goals can be sent to third party tools like Google Analytics but that also means they are available in the public JavaScript. Data Anonymization is a feature you will find in your Project Configuration that allows you to hide experiment specifics.</p>
+<p>Data Anonymization is a recommended feature for all Convert.com’s users that will be turned on for all newly-created projects. The feature improves privacy by removing naming of all projects, variations, segments and goals for the JavaScript stored on Convert.com’s secure CDN infrastructure. They will be replaced by IDs.</p>
+<p>Here is a screenshot of this feature.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423785339917/mceclip0.png" alt="mceclip0.png"></p>
+<p><strong>Note</strong>: The above data is not sent for archived or draft experiments, or variations of running or completed tests that have been stopped or paused.</p>

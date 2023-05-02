@@ -1,0 +1,19 @@
+Lander (LanderApp) Landing-Pages & Convert Experiences
+<h2>Integrate LanderApp</h2>
+<p><a href="https://landerapp.com/">Lander</a> is a landing-page creation platform, a performance marketing web app, enabling even those without IT or design knowledge to produce and manage effective PPC, social media and email marketing campaigns. </p>
+<p>If you like the ability of multivariate testing on your landing pages using Convert Experiments, this is possible, read more below.</p>
+<h2><span data-mce-mark="1">Convert Experiences Project Code</span></h2>
+<p>In Convert Experiences you need to take the project code from Project Configuration as you see in the image below. This code is a small Javascript that you need to paste on the pages of Lander.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423917587085/mceclip0.png" alt="mceclip0.png"></p>
+<p>Copy the code from the Basic Snippet.</p>
+<h2>Paste the Project Code in Lander</h2>
+<p><span>Once</span> you have got the Convert Experiences code, access the editor of your Landing Page and look on the right-hand-side for a section called Properties. Once you find it, scroll down to the bottom,<span> </span><strong>and there’s where you will find the script section.</strong></p>
+<p>You will then see three different options: one called “Head”, another called “Before Body” and the last one called “After Body”.</p>
+<p>Now it’s time to copy the script that you already have and then<span> </span><strong>paste it in the “Head” Section of your landing page.</strong><span> </span>Once you successfully paste the script in that section, it’s then time to save your changes and remember, you will need to publish or republish your Landing Page to finish out.</p>
+<p><img src="https://support.convert.com/hc/en-us/article_attachments/203660893/205160275_c.png" alt=""></p>
+<h2>Multivariate Testing on Lander (LanderApp) Landing Pages.</h2>
+<ol>
+<li><span data-mce-mark="1">Add the subdomain of your Lander (for example: landing.mydomain.com) to your Project Configuration in Convert Experiences.</span></li>
+<li><span data-mce-mark="1">Load a Lander page inside Convert Experiences Visual Editor and start an MVT (multivariate test)</span></li>
+<li>Goals can be different landing pages, or a tag on your confirmation page or even a sale or lead form submission on your main site (if both the main site domain and Lander domain are in the same Convert Experiences Project.</li>
+</ol>

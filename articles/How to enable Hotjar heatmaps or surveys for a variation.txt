@@ -1,0 +1,38 @@
+How to enable Hotjar heatmaps or surveys for a variation
+<h2 id="introduction">Introduction</h2>
+<p>This guide will tell you how to enable<span> </span><a href="https://www.hotjar.com/">Hotjar</a><span> </span>heatmaps or surveys of your different experiences. If you are interested in enabling Hotjar recordings please read the following<span> </span><a href="https://support.convert.com/hc/en-us/articles/206479336-Hotjar-Integration" target="_self" rel="undefined">Guide</a>.</p>
+<p><span>For more use cases regarding this integration, you can read our </span><a href="https://www.convert.com/blog/optimization/hotjar-convert-a-step-by-step-guide-to-full-funnel-optimization/" target="_self" rel="undefined">Hotjar blog article</a><span>.</span></p>
+<h2 id="enable-integration">Enable Integration</h2>
+<p>To integrate with <a href="https://help.hotjar.com/hc/en-us/articles/115011867948-How-to-Use-Events-for-Manual-Heatmap-Targeting" target="_self">Hotjar's manual heatmaps</a>, you need first to enable the Hotjar integration in your Experience Summary screen: </p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423904399757/mceclip1.png" alt="mceclip1.png"></p>
+<h2>Create a Javascript Event in Hotjar</h2>
+<p>To enable Hotjar surveys or manual heatmaps on a specific variation you need to create a Javascript event. With the event, you will be able to trigger the survey or heatmap with a javascript code inside your variation in your experience.</p>
+<h3>Surveys</h3>
+<p>For the Surveys, create a new Survey and under "Targeting" select "Specific Pages" and then add your event:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4443181687565/mceclip4.png" alt="mceclip4.png"></p>
+<p>Give it a name e.g. convert_survey.</p>
+<p>Finish the rest of the survey setup: Question, Appearance and Behavior, and let’s head to Convert to add the custom JavaScript code that will show the survey on the specific event we want.</p>
+<h3>Heatmaps</h3>
+<p>For the Heatmaps, create a new manual Heatmap and under "Page Targeting" select "Users who trigger a custom event":</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4443141749901/mceclip0.png" alt="mceclip0.png"></p>
+<p>Give it a name e.g. convert_heatmap and finish the rest of the heatmap setup.</p>
+<p>Let’s head to Convert to add the custom JavaScript code that will show the heatmap on the specific event we want.</p>
+<h2>Add Custom Javascript in Convert</h2>
+<p>Then after you create your event, go into your Convert experiment variation and add Custom Javascript to the variation you want to enable the heatmap for.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360036277412/mceclip0.png" alt="mceclip0.png"></p>
+<p>Then add the following code, replacing "convert_heatmap" with the name of the event that you have added to Hotjar:</p>
+<pre><code class="language-javascript">
+convert.$( document ).ready(function() {    
+       hj('event', 'convert_heatmap');
+       console.log('Triggering hotjar manual heatmap');
+});
+</code></pre>
+<h2>View Heatmaps or Surveys</h2>
+<p>Once the variation is shown to a visitor, it will add the interaction to the heatmap.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4443156061453/mceclip2.png" alt="mceclip2.png"></p>
+<p><img src="https://support.convert.com/hc/article_attachments/4443155133453/mceclip1.png" alt="mceclip1.png"></p>
+<p>Or the survey will popup</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4443185232397/mceclip5.png" alt="mceclip5.png"></p>
+<h2>Troubleshoot</h2>
+<p>You can enable <a href="https://support.convert.com/hc/en-us/articles/204506699-Chrome-Debugger-Extension-For-Convert-Experiences">Convert Chrome Debugger</a> and see if this integration (Convert-Hotjar) is enabled. A new line will be added like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4443156803085/mceclip3.png" alt="mceclip3.png"></p>

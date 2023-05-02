@@ -1,0 +1,13 @@
+Track when a visitor clicks on an element, nth amount of times
+Issue
+There may be times when you want to track the nth time they click on a button, instead of tracking only the first click as the default click goals work in Convert. This might be needed to track overtime use, by tracking the clicks on a button multiple times.
+Solution
+Add a Convert Custom Javascript goal in the app. Name it as you wish and write down its id:
+Add a piece of Javascript code in your Project Configuration> Global Javascript section that would look like the following:
+if (location.href=='https://www.domain.com/page.html'){  if (localStorage && 'saveButtonClickCount' in localStorage) { var count = localStorage.saveButtonClickCount; }   else { var count = 0; }  convert$('#action-save').click(function () {    count += 1;     if (count == 10) {      window._conv_q = window._conv_q || [];      _conv_q.push(["triggerConversion", "100131304"]);    }    localStorage.saveButtonClickCount = count;    console.log(localStorage.saveButtonClickCount);   }); }
+
+Make sure you replace the goal id with your own Custom Javascript goal id.
+Replace the 10, with the number of times that you would like to count the button clicks.
+Replace the #action-save selector with your own button selector.
+
+With this, you should be able to track button clicks even in distinct sessions as long as the visitor data is kept on the local storage of the browser. 

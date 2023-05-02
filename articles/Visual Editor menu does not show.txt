@@ -1,0 +1,14 @@
+Visual Editor menu does not show
+<h2>Issue</h2>
+<p>When using the Visual Editor, the editing (contextual) menu does not show when clicking on the selected element and seems to do nothing.</p>
+<h2>Solution</h2>
+<p>This is caused because the <strong>Block all third-party cookies</strong> setting on the browser is enabled. You should either disable this setting or whitelist the convert domains from third-party cookie blocking.</p>
+<p>The following instructions are for Chrome:</p>
+<ol>
+<li>Go to <strong>Settings</strong> on your Chrome browser.</li>
+<li>Go to <strong>Cookies and other site data</strong>:<br><br><img src="https://support.convert.com/hc/article_attachments/360084856951/blobid0.png" alt="blobid0.png">
+</li>
+<li>Go to the section <strong>Site that always can use cookies</strong>, and click on the <strong>Add</strong> button:<br><br><img src="https://support.convert.com/hc/article_attachments/360088620271/mceclip0.png" alt="mceclip0.png">
+</li>
+<li><span>Paste<strong> [*].convert.com</strong>. And select <strong>Including third-party cookies on this site</strong>.<br><img src="https://support.convert.com/hc/article_attachments/4410620333965/mceclip0.png" alt="mceclip0.png"><br></span></li>
+</ol>

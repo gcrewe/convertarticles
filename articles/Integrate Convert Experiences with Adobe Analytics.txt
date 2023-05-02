@@ -1,0 +1,66 @@
+Integrate Convert Experiences with Adobe Analytics
+<h2>Convert-Adobe Analytics Integration</h2>
+<p>Integration of <a href="http://www.adobe.com/data-analytics-cloud/analytics.html">Adobe Analytics</a> (formerly Omniture SiteCatalyst) with Convert Experiences will help you to import Convert data into your Adobe Analytics account.</p>
+<p>For each experiment, the integration uses a unique Custom Conversion Variable (eVar) to pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<h2>Create a Custom Conversion Variable (eVar) in Adobe Analytics</h2>
+<p>Sign in to your Adobe Analytics account and create a <a href="https://marketing.adobe.com/resources/help/en_US/reference/conversion_var_admin.html">Custom Conversion variable</a> (eVar) as your optimization tracking variable. eVars are persistent variables that are tied to events.</p>
+<ol>
+<li>Go to <strong>Admin Tools</strong> in your Adobe Analytics account.</li>
+<li>Select the desired <strong>Report Suite</strong> to be used with the integration.</li>
+<li>Under <strong>Edit Settings,</strong> go to <strong>Conversion</strong> and select <strong>Conversion Variables </strong>in the drop down.</li>
+<li>Add a new Conversion Variable (eVar) and ensure you use the following settings:
+<ol>
+<li>Expiration = Visit</li>
+<li>Allocation = Most Recent</li>
+<li>Type = Text String</li>
+<li>Status: Basic Subrelations</li>
+</ol>
+</li>
+</ol>
+<p><em>* Allocation is used to determine which eVar value should be associated with a given visitor. If the visitor happens to trigger multiple events, you might want to attribute this to the last value they were assigned so that the revenue and participation metrics are attributed to this last value. More information on this is available <a href="https://blogs.adobe.com/digitalmarketing/analytics/participation-inside-omniture-sitecatalyst/">here</a>. </em></p>
+<h2>Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the<a href="https://marketing.adobe.com/resources/help/en_US/sc/implement/js_implementation.html"> Adobe Analytics s_code.js (or AppMeasurement.js</a> which is a new library that provides the same core functionality of <span class="ph filepath">s_code.js</span>, but is lighter and faster for use on both mobile and desktop sites) are installed on your page.</p>
+<h2>Activate Integration in Convert</h2>
+<p>Go to your Convert experience settings and under Integrations select the Adobe Analytics (SiteCatalyst). Assign the Conversion Variable slot number to match the slot number created in Adobe. Then click Save and Continue:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423908945037/mceclip0.png" alt="mceclip0.png"></p>
+<div class="special-content special-content--important">
+<p class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></p>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>If you are not using the window.s variable from Adobe Analytics you need to add to the Global Javascript some custom code to define which variable you are using. Two examples follow, one for sync and one for async method.</p>
+</div>
+</div>
+<p>This is the code for <strong>sync</strong> method:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423904371981/mceclip1.png" alt="mceclip1.png"></p>
+<pre><code>
+  //Adobe Analytics Integration
+convert.$(document).ready(function() { 
+  try {
+      window._conv_q = window._conv_q || [];
+    window._conv_q.push(["integration_setting", "sitecatalyst", "s_var", window.s_om]);
+  } catch(e) {}
+
+});</code></pre>
+<p>Use this custom code in global project JS area in case you want the code to work in an <strong>async</strong> method:</p>
+<pre><code>
+  //Adobe Analytics Integration
+convert.$(document).ready(function() { 
+  try {
+      window._conv_q = window._conv_q || [];
+    window._conv_q.push(["integration_setting", "sitecatalyst", "s_var", function() { return window.s_om; }]);
+  } catch(e) {}
+
+});</code></pre>
+<h2>View Convert Data in Adobe Analytics</h2>
+<p>Using a Custom Conversion report in Adobe Analytics, you will be able to view all of your Convert Experiences data as they associate to the values that you pass in the Custom Conversion variable.</p>
+<p>When you log in to your Adobe Analytics account, you should search for the Reports &amp; Analytics dashboard. To get to the Convert Custom Variable, click <em>Custom Conversion &gt; Custom Conversion XX-XX &gt; Convert Test xx</em>.</p>
+<h2>Troubleshooting</h2>
+<p>Here are some tools to help debug an Adobe Analytics integration:</p>
+<ul>
+<li>
+<p>A <a class="link-https" href="https://chrome.google.com/webstore/detail/omniture-sitecat-debugger/olkcipmnccchnnikelenphfdeigajlcl?hl=en" target="_blank" rel="noopener">Chrome Browser extension</a> that displays your Adobe Analytics tags directly on the page.</p>
+</li>
+<li>
+<p>A <a href="https://chrome.google.com/webstore/detail/debugger-for-adobe-analyt/bdingoflfadhnjohjaplginnpjeclmof">Chrome Browser extension</a> that prints to JavaScript console what data is sent to Adobe Analytics.</p>
+</li>
+</ul>

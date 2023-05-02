@@ -1,0 +1,108 @@
+JavaScript Conditions Use Cases
+JavaScript is the most widely used scripting language on earth. Javascript can be used with Convert in a diversity of cases. This article is all about JS conditions examples that can be used targeting URLs, cookies, variables, and others. The codes are from real use case scenarios.
+Where Javascript can be implemented?
+Basically everywhere, Goals, Audiences, Locations, Experience, Variation, and Project.
+Comparison Operators
+Case: x = 5 and y = 3
+
+
+
+Operator
+Description
+Comparing
+Returns
+
+
+==
+equal to
+x == 8
+false
+
+
+x == 5
+true
+
+
+===
+equal value and equal type
+x === "5"
+false
+
+
+x === 5
+true
+
+
+!=
+not equal
+x != 8
+true
+
+
+!==
+not equal value or not equal type
+x !== "5"
+true
+
+
+x !== 5
+false
+
+
+>
+greater than
+x > 8
+false
+
+
+<
+less than
+x < 8
+true
+
+
+>=
+greater than or equal to
+x >= 8
+false
+
+
+<=
+less than or equal to
+x <= 8
+true
+
+
+&&
+and
+(x < 10 && y > 1) 
+is true
+
+
+||
+or
+(x === 5 || y === 5)
+is false
+
+
+
+source: https://www.w3schools.com/
+Examples:
+Referral URL
+// Equaldocument.referrer == "YourURL.com"// Not Equaldocument.referrer != "YourURL.com"// Containsdocument.referrer.includes('somethingtocheck') == true/false
+URL/Parameter/Query String :: Contains
+window.location.href.includes('yourstring') == truewindow.location.href.includes('\?yourstring') || window.location.href.includes('\&yourstring')  == truewindow.location.href.includes('yourstring') && window.location.href.includes('yourstring2')  == true
+URL using Regex
+//Starts withwindow.location.href.match(/https?:\/\/(www.yourdomain.com\//).length > 0//Using wildcards (same as contains)window.location.href.match(/(.*)\/(child\/child1\/child2)(|\/)(.*)/).length > 0
+Cookies
+//Cookie is presentdocument.cookie.indexOf('cookieName') > -1 //Cookie is not presentdocument.cookie.indexOf('cookieValue') > -1 == false// Cookie is present and containsdocument.cookie.indexOf('cookieName') > -1 && document.cookie.indexOf('cookieValue') > -1
+Variables
+//Variable is presenttypeof yourvariable != 'undefined'//Variable is not presenttypeof yourvariable == 'undefined'//Variable contains/not containsyourvariable.includes('valuetocheck') == true/false
+Elements
+//Element is presentdocument.getElementById("intro") != nulldocument.getElementsByClassName("intro") != nullconvert.$('.selector').length != 0//Element is not presentdocument.getElementById("intro") == nulldocument.getElementsByClassName("intro") == nullconvert.$('.selector').length == 0
+Screen Size
+screen.width == 1920screen.height == 1080
+Min/Max Screen Size 
+
+window.matchMedia("(min-width: 768px)").matcheswindow.matchMedia("(max-width: 1024px)").matches
+

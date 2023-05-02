@@ -1,0 +1,26 @@
+Disable AB testing
+<h2>Disable Single Experiment</h2>
+<p>If for some reason you would like to disable AB testing when you request a page of your website, you can do so by adding the following parameter:</p>
+<p><em><strong>_conv_eignore=experiment_id</strong></em></p>
+<p>You would replace the <em>experiment_id</em> with your experiment id. </p>
+<p>For example, <em><strong>http://www.convert.com/page1.html?_conv_eignore=XXXXXXXX</strong></em></p>
+<p>This would disable any variations showing and collecting any experiment data.</p>
+<h2>Disable Multiple Experiments</h2>
+<p>If you would like to disable variations from multiple experiments, you can separate the experiment ids with a comma; for example:</p>
+<p><em><strong>http://www.convert.com/page1.html?_conv_eignore=XXXXXXXX,YYYYYYYY</strong></em></p>
+<h2>Disable All Tracking</h2>
+<p>You can disable all Convert tracking by including ?convert_optout=1 on the end of the URL.</p>
+<p>For example:</p>
+<pre>http://www.domain.com<strong>?convert_optout=1</strong> - opt out query string
+http://www.domain.com<strong>?convert_canceloptout=1</strong> - opt in again</pre>
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">Use with caution.  If you use the opt-out method, a cookie is set in your browser and you will have to cancel the opt-out if you want to see experiments running on the specified URL domain again!</div>
+<div class="special-content__info">
+<br>Methods of cancelling could be clearing your browser's cookies, running ?convert_canceloptout=1 on the end of the same URL you used it on, or specifically deleting the cookie named convert_optout from your browser for the domain it has been saved on. </div>
+</div>
+<p>More information can be found here: https://www.convert.com/opt-out/</p>
+<h2>Find Experiment ID</h2>
+<p>If you would like to know where to find the experiment id of your experiment, please refer to the following article: <strong><a href="https://support.convert.com/hc/en-us/articles/204506639-Where-Do-I-Find-the-Experiment-s-Respectively-Variation-s-IDs" target="_blank" rel="noopener">Where Do I Find my Experiment and Variation IDs</a></strong>.</p>
+<p>keywords: override avoid skip block disable ignore</p>
+<p> </p>

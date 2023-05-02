@@ -1,0 +1,34 @@
+Comparing Page Views Per Session Across Variations in Convert
+<p>Sometimes is required to track how many page sessions a variation registers. And using the goals provided on Convert Experiences are not ideal for this task. This is the reason that we recommend the method for tracking them.</p>
+<p>Tracking page views might helpful for publishers, who want to know if changes produce more page views.</p>
+<p>To do this, we are going to use Google Analytics to help us do it. Also, this method can be used to track any dimension set up in Google Analytics.</p>
+<p>The only thing to note is that this page view tracking will be per session in GA and not per Convert visitor, which can be acceptable.</p>
+<p>First, open the Administration section of your Google Analytics Account:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000706232/blobid0.png" alt="save image" width="213" height="344"></p>
+<p>Then on the <strong>Property </strong>panel select <strong>Custom Definitions</strong>:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000706292/blobid2.png" alt="save image"></p>
+<p>Create a new <strong>Custom Dimension</strong>:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000707972/blobid3.png" alt="save image"></p>
+<p>Call it <strong>Pages Views per Session</strong> or whatever you want to call it and make it of <strong>Scope Session</strong>, and create it.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000715771/blobid5.png" alt="save image"><br><br>You can at this point enable your <a href="https://support.convert.com/hc/en-us/articles/205160075-Integrate-Convert-Experiences-with-Google-Analytics">Google Analytics integration</a> for which you need to generate a new dimension.</p>
+<p class="codepen" data-height="906" data-theme-id="31058" data-slug-hash="vdLaqL" data-default-tab="js" data-user="gcrewe" data-embed-version="2" data-pen-title="Page View per Session Code">Next you will have to setup a bit of code on the <a href="https://support.convert.com/hc/en-us/articles/115000006251-Project-Experiment-Variation-Javascript#global-experience-js">Global Project JS area</a>. <br><br><br></p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+<p>This code will count the number of page views per user on your site and will set the Page Views per Session on GA to this number for each user. <br><br></p>
+<p>*** IMPORTANT CHANGE THIS ****</p>
+<p>Once the experiment is tracking you need create a custom report in GA </p>
+<p id="5029" class="graf--p graf-after--h4">Now that your experiment is tracking in Google Analytics, you can run an analysis of the data by creating a custom report and using the <a class="markup--anchor markup--p-anchor" href="http://mean-calculator.s3-website-us-east-1.amazonaws.com/index.html" rel="nofollow" data-href="http://mean-calculator.s3-website-us-east-1.amazonaws.com/index.html">FunnelEnvy pages per session t-test calculator</a>. The Google Analytics report will provide us with the number of sessions for each page per session bucket for each variation. This is important because it allows us to get a distribution of pages per session rather than just an average. In order to do a statistical analysis of both variations, you will need to calculate this distribution. Our calculator takes a lot of the work out of this by calculating everything and placing it into the <a href="http://www.evanmiller.org/ab-testing/t-test.html">t-test calculator on evanmller.org</a>.</p>
+<p class="graf--p graf-after--h4">In GA, go to the “Customization” tab in the navigation and click the “+ New Custom Report” button.<br><br>*********<br><img src="https://support.convert.com/hc/article_attachments/360012990052/blobid0.png" alt="save image"></p>
+<p class="graf--p graf-after--h4"> </p>
+<p class="graf--p graf-after--h4"> </p>
+<p class="graf--p graf-after--h4"><img src="https://support.convert.com/hc/article_attachments/360012995971/blobid1.png" alt="save image"></p>
+<p class="graf--p graf-after--h4">Select "Metric Group" &gt; "Sessions" and under "Dimension Drilldowns" section add in our Custom Dimension which you have created and chosen to send data from your Convert Experiment.<br><br><img src="https://support.convert.com/hc/article_attachments/360020898332/blobid3.png" alt="save image"></p>
+<p class="graf--p graf-after--h4">After saving it, you will be taken to the report.</p>
+<p class="graf--p graf-after--h4"><span>Then click on "Secondary dimension" and select the “Pages Per Session” dimension.<br><br><img src="https://support.convert.com/hc/article_attachments/360049237971/blobid0.png" alt="blobid0.png"><br></span></p>
+<p class="graf--p graf-after--h4"> </p>
+<p class="graf--p graf-after--h4"><span>Then select to show all the rows in the lower right part of the report. And make sure all rows are selected.<br><br></span></p>
+<p class="graf--p graf-after--h4"><span><img src="https://support.convert.com/hc/article_attachments/360049238151/blobid1.png" alt="blobid1.png"><br></span></p>
+<p class="graf--p graf-after--h4"> </p>
+<p class="graf--p graf-after--h4"><span>Then <strong>Export</strong> all your records by selecting the Export option on the upper left superior part of the report and select <strong>CSV</strong>.<br><br><img src="https://support.convert.com/hc/article_attachments/360049238371/blobid2.png" alt="blobid2.png"><br></span></p>
+<p class="graf--p graf-after--h4"><span>Now you can upload the data to this <a href="http://means-calculator.funnelenvy.com/" target="_self">calculator</a>.<br></span></p>
+<p class="graf--p graf-after--h4"><span><img src="https://support.convert.com/hc/article_attachments/360049112892/blobid3.png" alt="blobid3.png"></span></p>
+<p class="graf--p graf-after--h4"><span>After uploading the calculator will let you know which of the variations of your experiment is the <em><strong>Winner</strong> </em>relating to <strong>Page View per Session</strong>. </span></p>

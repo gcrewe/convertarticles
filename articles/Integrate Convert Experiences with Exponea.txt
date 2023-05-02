@@ -1,0 +1,12 @@
+Integrate Convert Experiences with Exponea
+<h2>Convert-Exponea Integration</h2>
+<p>Convert can integrate with the <a href="https://exponea.com/">Exponea</a> so, that an experience created on Convert Experiences can be targeted to Web visitors that are targeted by an Exponea campaign. </p>
+<p>This will allow you to use all the power of creating experiences through Convert visual / developer editors, and also be able to AB test visitors, while utilizing the profile system of Exponea.<br><br>All results of the experiment will be shown on the Convert experiment report for your analysis.</p>
+<h2>Add Tracking Code snippets</h2>
+<p>Make sure the Convert tracking code is <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">installed</a> before the <a href="https://docs.exponea.com/docs/tracking">Exponea tracking code</a> on your page. That will allow us to call the Convert library within the Exponea flow.</p>
+<h2>Create an Experience in Convert</h2>
+<p>To do this, you can create an experience with Convert in the normal way. <br><br>Setup your goals for the experience.<br><br>Once you are done with the creation of your experience within Convert, replace your Site Area conditions with a JS Condition with the following code.<br><strong><em><br>(window.runExperiment == 1) <br><br></em></strong>Also, remove any audience conditions, unless you want to segment further the audience from the Exponea configured Campaign segment. And you can start your experience now.<br><br>Then find out the <a href="https://support.convert.com/hc/en-us/articles/204506639-Where-Do-I-Find-my-Experiment-and-Variation-IDs">experience id</a> and write it down.</p>
+<h2>Create a Campaign and Web Layer with Exponea</h2>
+<p>Create a <a href="https://docs.exponea.com/docs/campaigns">Campaign and Web layer</a> with Exponea and edit the HTML and insert the following code:<br><br><strong><em>window.runExperiment = 1;</em></strong><br><strong><em>window._conv_q = window._conv_q || [];<br></em><em>window._conv_q.push(["executeExperiment","</em></strong><em>{{experiment_id_here}}</em><strong><em>"])<br><br></em></strong><em>{{experiment_id_here}} with the one you wrote down.<br><br></em>Also make sure the page targeting is the right one, on your Campaign configuration.</p>
+<h2>See Convert data in Exponea</h2>
+<p>Test your campaign, and the experience should show and a visit recorded on the Convert experiment report.<br><br>You can launch your campaign after you verify it works correctly.</p>

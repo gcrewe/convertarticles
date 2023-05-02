@@ -1,0 +1,28 @@
+Integrate Convert Experiences with Usabilla
+<h2>Convert-Usabilla Integration</h2>
+<p>Integration of <a href="https://usabilla.com/">Usabilla</a> with Convert Experiences will help you to import Convert data into your Usabilla feedback forms and buttons. </p>
+<p>For each experiment, the integration can pass along the experiment name and variation name that the visitor is currently bucketed into.</p>
+<h2>Add Tracking Code Snippets</h2>
+<p>Make sure the Convert tracking code is <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">installed</a> on your page.</p>
+<p>Then, create a Usabilla account. If you have not already done so, go to <a href="https://usabilla.com/">https://usabilla.com/</a> and register for an account. On every page that you want to install Usabilla, paste the code snippet just before the &lt;/body&gt; tag. You can find instructions <a href="https://support.usabilla.com/hc/en-us/articles/208015589-Implementing-Usabilla-through-Google-Tag-Manager">here</a>.</p>
+<h2>Send Custom Variables</h2>
+<p>You can send a <a href="https://support.usabilla.com/hc/en-us/articles/208794745-How-to-use-Custom-Variables-in-Usabilla-for-Websites">custom variable</a> from anywhere in the page where Convert experiences are running:</p>
+<p>Example code for sending Experiment Name and Variation Name:</p>
+<pre><code>var refObject = window['convert']['data']['experiments']
+        for (var key in window["convert"]["currentData"]["experiments"]) {
+            if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+                continue;
+            }}
+            
+var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+    var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+    curExperimentName = curExperimentName.replace("Test #", "Test ");
+    var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+    curVariant = curVariant.replace("Var #", "Variation ");
+
+window.usabilla_live('data', {
+'custom':{'Experiment_Name': curExperimentName, 'Variation_Name': curVariant} } );
+
+</code></pre>
+<h2>View Convert Data in Usabilla</h2>
+<p>The Custom Variables will now be included in every feedback item and campaign result. Also, you will be able to <a href="https://support.usabilla.com/hc/en-us/articles/208019389" target="_blank" rel="noopener noreferrer">target campaigns</a> to users that have certain Custom Variables.  </p>

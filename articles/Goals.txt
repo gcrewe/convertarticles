@@ -1,0 +1,125 @@
+Goals
+<h2>What are Goals? </h2>
+<p><span>To measure the success or failure of your Convert experiences, certain criteria must be met. These criteria are typically termed as Goals. Setting up goals for your Convert experiences is the most integral part as it enables you to collect and analyze the data to evaluate the conversions on your website.</span></p>
+<p><span>Each visitor on your website has some specific purpose, be it gathering information, checking out pricing, subscribing to a newsletter, purchasing, submitting their contact details to get further information, or something similar. All these actions constitute a goal that you can track and identify ways to improve your website conversions.</span></p>
+<p><span>All the visitor actions on your website generate value in terms of revenue, user signups, lead generation, and so on. Goals typically help in measuring the health of your website by ascertaining the health of your goals.</span></p>
+<h2>Create Goals</h2>
+<p><span>Goals can be reached by clicking on the "Goals" tab of your Project in the top menu.</span></p>
+<p><img src="https://support.convert.com/hc/en-us/article_attachments/14270121850637/5e761850af1192c888e4b177229dd3df0e86532a8cf8626dff1804628e22c4f1.png"></p>
+<p>The<span> </span><strong>"Goals"</strong><span> </span>screen consists of several columns:</p>
+<ol>
+<li><strong>Name of the Goal.</strong></li>
+<li><strong>ID.</strong></li>
+<li><strong>Type.</strong></li>
+<li>
+<strong>Usage:</strong> This shows the number of experiments the goal is included in. </li>
+<li>
+<strong>Tracking: </strong>Can be of value "Not tracking" or "Tracking". When set to "Tracking", it means that the goal has registered conversion in the last 48 hours. This is the right place to look if your goal is set up correctly and is triggering conversions. </li>
+<li>
+<strong>Status</strong>: Status can be active or archived.</li>
+<li>
+<strong>Actions. </strong>Here you can perform actions on the goal itself. You can <strong>Edit, Pin as Default</strong> or <strong>Archive </strong>your Goal. If you pin a goal as default then every new experience that will be created will have this goal by default.</li>
+</ol>
+<div class="user_formatted header_section clearfix">
+<p>Adding a goal to your experiment can be done in four main ways:</p>
+<ul>
+<li>Add an existing goal</li>
+<li>Use a goal template to create a new goal</li>
+<li>Import an existing Google Analytics goal</li>
+<li>Define an Advanced Goal (using the goal builder)</li>
+</ul>
+<p>Note: The primary goal will be the first goal in your <a href="https://support.convert.com/hc/en-us/articles/204490289-Experiment-Report" target="_self">report</a> and features like "automatically stop losing variations" and "keep winner running" will look at the winners and losers of this primary goal.</p>
+<h2>Add an existing goal</h2>
+<p>We have two default goals in the system called <a href="https://support.convert.com/hc/en-us/articles/205160365-What-is-Increase-Engagement-and-Decrease-Bouncerate-" target="_self">Decrease Bounce Rate and Increase Engagement</a>. If you add more goals, you will then be able to reuse them in other experiences as existing.</p>
+<h2>Use a goal template to create a new goal</h2>
+<p>There are available <strong>7</strong><span style="font-weight: bolder;"> </span><strong>goal templates</strong> that you can configure to track, plus you can create additional advanced goals.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/5987884086669/mceclip0.png" alt="mceclip0.png"></p>
+<ol>
+<li>
+<strong>Visit a specific page</strong><br>This allows you to create a new goal that is triggered when the visitor goes to a certain page.</li>
+</ol>
+<ul>
+<li>
+<p>Goal Name (give the goal a recognizable name)</p>
+</li>
+<li>
+<p>Page URL (match exactly, starts with, contains, or exact match with regular expression)</p>
+</li>
+<li>
+<p>Url (paste the URL, URL part, or URL with regular expression)</p>
+</li>
+<li>
+<strong>Revenue goal</strong><br>This allows you to create a new goal that is triggered on a page where visitor generates revenue. This needs to include the revenue tracking code on the page where revenue is made. If you have Google Analytics Ecommerce Revenue Tracker, you can use the first goal (Visit a specific page) and we automatically connect the revenue and ordered items.</li>
+</ul>
+<ul>
+<li>
+<p>Goal Name (give the goal a recognizable name)</p>
+</li>
+<li>
+<p>Revenue page (same as Page URL) that has 4 options (match exactly, starts with, contains or exact match with regular expression)</p>
+</li>
+<li>
+<p>Url (paste the URL, URL part, or URL with regular expression)</p>
+</li>
+<li>
+<strong>Click on a link</strong><br>This allows you to create a new goal that triggers when a visitor clicks on a link, whether site-wide or on pages you define.</li>
+</ul>
+<ul>
+<li>
+<p>Goal Name (give the goal a recognizable name)</p>
+</li>
+<li>
+<p>Link Url, what URL you would like to track (full URL's only)</p>
+</li>
+<li>
+<p>Link Found On-Page, would you like to track the link clicks on the entire site or on one particular page? </p>
+</li>
+<li>
+<strong>Submit a form</strong><br>This allows you to create a new goal that triggers when a visitor submits a form, whether site-wide or on pages you define.</li>
+</ul>
+<ul>
+<li>Goal Name (give the goal a recognizable name)</li>
+<li>
+<p>Submit Form To. This is the URL your form posts to, you would have to check the form code on your site (view source) it could be something like this: &lt;form action="<strong><a href="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" rel="nofollow noreferrer">https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8</a></strong>" method="post"&gt; where the part bold you have to pass in the "Submit Form To" field,</p>
+</li>
+<li>
+<p>Form Found On, would you like to track the link clicks on the entire site or on one particular page? </p>
+</li>
+<li>
+<strong>Clicks something on a page</strong><br>This allows you to create a new goal that triggers when a visitor clicks on something, whether site-wide or on the page(s) you define. This goal opens a browser screen and shows your website. You can click on one element (like a button or link) to monitor. This goal is less accurate than "Visit specific page goals" but can be very useful if the goal is on a third-party domain that you cannot access.<br><br><img src="https://support.convert.com/hc/article_attachments/360020341091/mceclip1.png"><br><br>
+</li>
+<li>
+<strong>Scroll Percentage Goal</strong><br>The scroll percentage goal allows you to set up a goal based on how far your visitors scroll down the page ("scroll depth"). You can configure this goal to be triggered based on 25 percent, 50 percent, 75 percent, or more of the page read.</li>
+<li>
+<strong>Javascript triggered goal</strong><br>This allows you to create a new goal that can only be triggered using Javascript code. This goal only needs a name and it would create some code like the one below. This code can be pasted on your website codebase or Project Javascript or Variation Custom Javascript sections to track conversions.</li>
+</ul>
+<pre><code class="language-markup">
+&lt;script type="text/javascript"&gt;
+</code> <code class="language-javascript">
+ var _conv_q = _conv_q ||;
+ _conv_q.push(["triggerConversion","10007732"<em>,"1000123"</em>]);
+</code> <code class='"language-markup'>
+&lt;/script&gt;
+</code></pre>
+<p><strong>NOTE: </strong>The last parameter (in this case it's 1000123) is optional and when that is provided, it's the experiment ID for which to trigger the goal. This is only used on custom implementations;</p>
+<h2>Import an existing Google Analytics goal</h2>
+<p>You can import every (non event based) Google Analytics goal.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/5987876413965/mceclip2.png" alt="mceclip2.png"></p>
+<p>Please verify the goals manually after import, on occasions, the import is slightly off in "contains, start with or exact match due to some limitation in the API). To import goals you need to have Google Analytics access rights.</p>
+<h2>Define an Advanced Goal (using the goal builder)</h2>
+<p>Sometimes you want to measure something more advanced. Your imagination is the limit with the advanced goal builder. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/5987891239181/mceclip1.png" alt="mceclip1.png"></p>
+<h2>Archive/Unarchive Goals</h2>
+<p>You can archive your goals when you have finished with them but they will still be visible to your existing reports where you used these. You also have the option to un-archive them in case you want to add them to new experiences.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14270134120077"></p>
+<h2>Recommended number of goals</h2>
+<p>As a best practice Convert recommends the following guidelines regarding the number of goals in your project and experiments.</p>
+<p>We recommend that you have a main KPI / goal against what you are trying to optimize in your experiment. This might be 'Leads Signups", "Purchases", etc. </p>
+<p>You can utilize other 5 goals to expand your view on how the visitor behavior is being affected by the change you are testing. This might be "Reached Form", "Clicked on Form Submit", "Clicked on Add to Cart Button", "Reached Product Page".</p>
+<p>You can also use other 5 supporting goals to verify the data you gather with the first six goals we mentioned.</p>
+<p>These recommendations numbers are included as a flexible baseline to suit your experiment data collection.</p>
+<p>However, we recommend against using Convert as an analytics tool in which hundreds of events are tracked. This is because Convert was not designed with this purpose, but rather to track a few goals for your experiment.</p>
+<h2>Do not track unused goals</h2>
+<p>By default, unused goals will stop being tracked after 15 days and this is a setting in your Project Configuration. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/4424744454285/mceclip0.png" alt="mceclip0.png"></p>
+</div>

@@ -1,0 +1,62 @@
+Integrate Convert Experiences with Yandex
+<h2>Convert-Yandex Metrica Integration</h2>
+<p>Integration of <a href="https://yandex.com/support/metrica/quick-start.xml">Yandex Metrica</a> with Convert Experiences will help you to import Convert data into your Yandex Metrica account. </p>
+<p>For each experiment, the integration can pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<h2>Create Yandex Metrica Counter for your Site</h2>
+<p>Create your own <a href="https://yandex.com/support/metrica/quick-start.html">Yandex Metrica counter</a> for your page. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/115004652511/mceclip1.png"></p>
+<h2>Add Tracking Code Snippets</h2>
+<p>Make sure the Convert tracking code is <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">installed</a> on your page.</p>
+<p>You should also add the Yandex counter code to the HTML code of all site pages. It is preferable to insert the code closer to the top of the page, as it will load faster. If you have already inserted counter code on a site, and then changed the counter settings, then you must renew the counter code on all site pages. Yandex counter code look like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/115004652991/mceclip2.png"></p>
+<h2>Send User/Session Parameters</h2>
+<p>Then modify the counter code above and send your Convert data (e.g. Experiment and Variation names) to your Yandex counter number through user or session parameters, e.g.</p>
+<pre><code>(function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                
+                var refObject = window['convert']['data']['experiments']
+					for (var key in window["convert"]["currentData"]["experiments"]) {
+						if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+						continue;
+				}}
+            
+				var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+				var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+				curExperimentName = curExperimentName.replace("Test #", "Test ");
+				var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+				curVariant = curVariant.replace("Var #", "Variation ");
+                                
+                
+                  w.yaCounter47282985 = new Ya.Metrika({
+                    id:47282985,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    params: {
+                        x: 12,
+                        y: "user2"},
+                    userParams: {
+                        exp_name: curExperimentName,
+                        var_name: curVariant}
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");<noscript><div><img src="https://mc.yandex.ru/watch/47282985" style="position:absolute;left:-9999px" alt=""></div></noscript></code></pre>
+<h2>View Convert Data in Yandex Metrica Reports</h2>
+<p>In order to see the data sent, you must login into your Yandex Metrica account and go to <strong>Reports</strong> &gt;<strong> Standard reports</strong> &gt; <strong>Content</strong> &gt; <strong>User or</strong> <strong>Session parameters</strong></p>
+<p><strong><img src="https://support.convert.com/hc/article_attachments/360000066491/mceclip0.png"></strong></p>
+<h2>Troubleshoot</h2>
+<p>To check whether the counter code was installed and set up correctly, use the <span class="keyword parmname doc-c-monospace">_ym_debug=1 </span>parameter. For more information, see <a class="xref doc-c-link" href="https://yandex.com/support/metrica/general/creating-counter.html">Creating and installing a counter</a>.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000007651/mceclip1.png"></p>

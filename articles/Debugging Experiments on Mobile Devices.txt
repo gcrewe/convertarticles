@@ -1,0 +1,13 @@
+Debugging Experiments on Mobile Devices
+<p><br>It is possible to debug with Chrome on a mobile device. Sometimes, we need to debug an experience on a mobile device in order to discover why an experiment is not being triggered or to debug a goal that we have created.</p>
+<h2>Debugging on Android Devices</h2>
+<p><strong>Prior to debugging on Chrome for Android, you will need to read the following Chrome remote debugging documentation:</strong><a href="https://developers.google.com/web/tools/chrome-devtools/remote-debugging/"><strong><br>https://developers.google.com/web/tools/chrome-devtools/remote-debugging/</strong></a><strong> <br><br>You will need to be able to connect to the phone and open a webpage on the device through the computer (therefore you have access to Console in Dev Tools).</strong></p>
+<p><span style="font-weight: 400;">In order to get the same output in the Console (when "Inspecting" the page on mobile) as the one presented when the Convert Debugger extension is ON in a Desktop install, some steps have to be taken:</span></p>
+<ol>
+<li style="font-weight: 400;">
+<span style="font-weight: 400;">Create a cookie -- _conv_debug = 1 -- on the mobile browser for the domain .convertexperiments.com. That can be done most easily by using the Console while opening </span><a href="https://cdn-3.convertexperiments.com" target="_blank" rel="noopener">https://cdn-3.convertexperiments.com</a><span style="font-weight: 400;"> and pasting following JS code in there:<br></span><em><br></em><em>document.cookie = '_conv_debug' + '=1; expires=Thu, 01-Jan-25 00:00:01 GMT; domain=.convertexperiments.com; Samesite=None; Secure';<br><br></em>
+</li>
+<li style="font-weight: 400;">Open the needed page on the mobile browser: at this time the console should show the needed debugging output</li>
+</ol>
+<h2>Debugging on other mobile browsers</h2>
+<p><span style="font-weight: 400;">Setting the _conv_debug cookie should make it possible to debug in browsers other than Chrome (the Convert Debugger extension is available only on Chrome).</span></p>

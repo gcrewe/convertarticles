@@ -1,0 +1,12 @@
+What's New at Convert - Feb 2021 Edition
+<h2>Features</h2>
+<p data-pm-slice="1 1 []">1. Feature to handle multiple currency code when manually tracking revenue in Shopify was added. Read <a href="https://support.convert.com/hc/en-us/articles/204506429#step-7:-manual-revenue-tracking-for-multicurrency-shops" target="_self">here</a> to know more.</p>
+<p>2. Revenue tracking for Shopify via webhook integration is now possible. Click <a href="https://support.convert.com/hc/en-us/articles/204506429-Shopify-A-B-Testing-Integration-Convert-Experiences" target="_self">here</a> to learn more.</p>
+<p>3. A trigger to execute code after a variation has been decided for an experiment was released. Click <a href="https://support.convert.com/hc/en-us/articles/360056121112" target="_self">here</a> to read more.</p>
+<p>4. The feature of Live logs has been added to all plans for better experiment testing.</p>
+<p>5. The GoodUI Annual Solo Plan ($399) is now offered as a training add-on by Convert.</p>
+<p>6. Feature to set the confidence level once per project in Convert was released</p>
+<p> </p>
+<h2>Bugs</h2>
+<p data-pm-slice="1 1 []">1. Bug with goal of type "Click Something on a Page" was not loading URLs through Live Select was resolved.</p>
+<p>2. A bug with incorrect image imported to experiment report was resolved.</p>

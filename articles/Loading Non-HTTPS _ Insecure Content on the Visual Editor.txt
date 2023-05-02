@@ -1,0 +1,28 @@
+Loading Non-HTTPS / Insecure Content on the Visual Editor
+<h2>Insecure Content: Non-HTTPS / "Mixed Content"</h2>
+<p>At the date, any web page delivering content<span> over an unencrypted <strong>HTTP</strong> connection instead of a </span>secure and encrypted <strong>HTTPS</strong> connection is considered as a web page with Insecure Content. </p>
+<p><span>Some web pages are delivered over a secure HTTPS connection, but they <strong>pull in images, scripts, or other resources via an unencrypted HTTP connection</strong>. Such web pages have “mixed content” because they’re not fully secure and are also considered as a web page with Insecure Content.</span></p>
+<h2>Visual Editor Warning</h2>
+<p><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">When we try to load a web identified as insecure by the browser on the Visual Editor, the following warning is presented:<br></span></p>
+<p><img style="border: 2px solid #FF495F;" src="https://support.convert.com/hc/article_attachments/360061009971/mceclip0.png" alt="mceclip0.png" width="812" height="120"></p>
+<p>Some browsers allow bypassing this warning using small adjustments, detailed instructions below:</p>
+<h2>Google Chrome: Allow Insecure Content</h2>
+<ol>
+<li>From a new browser window, navigate to: <br> <strong><em>chrome://settings/content/insecureContent </em></strong><strong><em><br></em></strong><span class="wysiwyg-font-size-large"><strong><em><br></em></strong></span>
+</li>
+<li>Under the section "<strong>Allow</strong>", click on "<strong>Add</strong>":<br> <img style="border: 2px solid #ccc;" src="https://support.convert.com/hc/article_attachments/360061010211/mceclip2.png" alt="mceclip2.png">
+</li>
+<li>Fill the field Site with  <strong><em>[*.]app.convert.com</em></strong><em> </em>and click on "<strong>Add</strong>".<img style="border: 2px solid #ccc;" src="https://support.convert.com/hc/article_attachments/360061010291/mceclip3.png" alt="mceclip3.png"><br> <img style="border: 2px solid #ccc;" src="https://support.convert.com/hc/article_attachments/360061010371/mceclip4.png" alt="mceclip4.png" width="498" height="241">
+</li>
+<li>Please close all browser windows and open a fresh one, test loading the web in the Visual Editor.</li>
+</ol>
+<h2>Mozilla Firefox: Allow Insecure Content</h2>
+<ol>
+<li> From a new browser window, navigate to <strong><em>about:config </em></strong>and click on "<em><strong>Accept the Risk and Continue</strong></em>"<img style="border: 2px solid #ccc;" src="https://support.convert.com/hc/article_attachments/360061010591/mceclip5.png" alt="mceclip5.png">
+</li>
+<li>On the search bar type " <strong> security. <wbr></wbr> mixed_content. <wbr></wbr> block_active_content </strong> " and click on the button at the left side of the screen highlighted below:<br> <img style="border: 2px solid #ccc;" src="https://support.convert.com/hc/article_attachments/360060852912/mceclip7.png" alt="mceclip7.png">
+</li>
+<li>The value will change from "<strong>false</strong>" to "<strong>true</strong>":<br> <img style="border: 2px solid #ccc;" src="https://support.convert.com/hc/article_attachments/360060853052/mceclip8.png" alt="mceclip8.png">
+</li>
+<li>Please close all browser windows and open a fresh one, test loading the web in the Visual Editor.</li>
+</ol>

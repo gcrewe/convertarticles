@@ -1,0 +1,8 @@
+What's new - Nov 2022
+Features:
+1. You can now apply the same sorting to all goals in the report, instead of sorting them one by one.
+2.  We have renamed the traffic allocation feature to Experiment Traffic Allocation and Variation Traffic Distribution
+3. The report reset option has been moved from stats settings to the report options
+
+4. We have updated our security measures so that when the session expired the app logs users out. This prevents errors and clearly signals that no changes can be made. 
+ 

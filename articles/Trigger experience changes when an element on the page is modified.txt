@@ -1,0 +1,46 @@
+Trigger experience changes when an element on the page is modified
+<h2>Issue</h2>
+<p>There can be the case that we need to trigger the experience changes when an element on the page is modified, instead of displaying the changes when the page loads. This is very relevant when on Single Page Applications (SPAs). However, with the current default is not possible.</p>
+<h2>Solution</h2>
+<p>Here is a solution in which with javascript code we will be able to monitor the desired element and trigger the change when this happens.</p>
+<p>The solution is based on the <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver" target="_blank" rel="noopener">MutationObserver</a> javascript interface.</p>
+<p>Please use the following code for it:</p>
+<p>Insert the following code in the <a href="https://support.convert.com/hc/en-us/articles/115000006251-Project-Experience-Experiment-or-Personalization-Variation-Javascript#global-project-javascript" target="_self">Global Project Javascript</a> section and set the targetNode <a href="https://support.convert.com/hc/en-us/articles/360024399211-How-to-create-a-CSS-Selector-for-use-in-the-Convert-Experiences-platform" target="_self">selector</a> to the one corresponding to the element you are going to monitor. In this case the selector is 'some-id'.</p>
+<pre><code class="language-javascript">
+// Select the node that will be observed for mutations
+const targetNode = document.getElementById('some-id');
+
+// Options for the observer (which mutations to observe)
+const config = { attributes: true, childList: true, subtree: true };
+
+// Callback function to execute when mutations are observed
+const callback = function(mutationsList, observer) {
+    // Use traditional 'for loops' for IE 11
+    for(let mutation of mutationsList) {
+    // Use the commmented lines if needed, otherwise remove
+        // if (mutation.type === 'childList') {
+        //     console.log('A child node has been added or removed.');
+        // }
+        // else if (mutation.type === 'attributes') {
+        //     console.log('The ' + mutation.attributeName + ' attribute was modified.');
+        // }
+        // Next line sets the variable so the experiment
+        // condition returns true, and triggers the Convert polling
+        run_experiment = true;
+        window._conv_q = _conv_q || []; 
+ 				window._conv_q.push(["run","true"]);
+    }
+};
+
+// Create an observer instance linked to the callback function
+const observer = new MutationObserver(callback);
+
+// Start observing the target node for configured mutations
+observer.observe(targetNode, config);
+
+// Later, you can stop observing
+observer.disconnect();
+</code></pre>
+<p>Add a Site Area condition to your experiment to the following:</p>
+<p><strong><em>run_experiment == true</em></strong><br><br><img src="https://support.convert.com/hc/article_attachments/4423919924877/mceclip0.png" alt="mceclip0.png"></p>
+<p>Please ask our support channels if you have any questions about configuring this. </p>

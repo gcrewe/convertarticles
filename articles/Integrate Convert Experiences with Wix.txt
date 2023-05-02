@@ -1,0 +1,48 @@
+Integrate Convert Experiences with Wix
+<h2 id="convert-justuno-integration">Convert - Wix Integration</h2>
+<p><a href="https://wix.com/" target="_blank" rel="noopener">Wix.com</a> is a web site builder platform, integrating Convert Experiences with your Wix website allows you to A/B test the website by simply adding the Convert tracking code through Wix Control Panel;</p>
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>This feature is only available for sites with a connected domain on Wix and users with a Wix Premium Subscription.</p>
+</div>
+</div>
+<h2 id="add-tracking-code-snippets">Add Convert Tracking Code Snippet</h2>
+<p>To add the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> to your Wix Website, go to<span> </span><a href="https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Settings&amp;title=Select%20a%20Site&amp;autoSelectOnSingleSite=true&amp;actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/manage-website" target="_blank" rel="noopener">Settings in your site's dashboard</a>.</p>
+<p>Click the<span> </span><strong>Tracking &amp; Analytics</strong><span> </span>tab under<span> </span><strong>Advanced Settings</strong>.</p>
+<div>
+<div><img src="https://d2x3xhvgiqkx42.cloudfront.net/12345678-1234-1234-1234-1234567890ab/07611794-742f-4d53-8c5b-24ba712a6934/2018/10/03/8dfc7250-bdb9-43ab-808e-65f2280b40c7.png" alt=""></div>
+</div>
+<div>
+<p>Click<span> </span><strong>+ New Tool<span> </span></strong>and select<span> </span><strong>Custom</strong><span> </span>from the dropdown. <br><br><img src="https://support.convert.com/hc/article_attachments/360058764731/mceclip0.png" alt="mceclip0.png"></p>
+<p>Set up your custom code:</p>
+<ol>
+<li style="list-style-type: none;">
+<ol>
+<li>Enter your custom code.</li>
+<li>Select the relevant domain.<br><strong>Note:</strong><span> </span>This option will appear only if you have multiple domains.</li>
+<li>Enter a name for your custom code. </li>
+<li>
+<strong>Add Code to Pages:</strong> 
+<ul>
+<li>Select <strong>All Pages:<span> </span></strong>Click the dropdown to select an option:<br>
+<ul>
+<li>Select <strong>Load code on each new page</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<strong>Place Code in:</strong><span> </span>Select <strong>Head</strong>
+</li>
+</ol>
+</li>
+</ol>
+<p>Click<span> </span><strong>Apply</strong>. <br><img src="https://support.convert.com/hc/article_attachments/360058764951/mceclip1.png" alt="mceclip1.png"> </p>
+</div>
+<h2>Add Wix website in Active Websites</h2>
+<p>Go to Project Configuration to add your Wix Site URL to the active websites (in this case we added the URL: http://magento2.demo.ubertheme.com/)</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423874854029/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Create your A/B Experience</h2>
+<p>Create an A/B experience as described <a href="https://support.convert.com/hc/en-us/articles/205107815-Create-a-New-Experiment">here</a>.</p>

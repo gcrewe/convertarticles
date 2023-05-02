@@ -1,0 +1,29 @@
+What about Deployments? 
+<h2>What is a Deploy?</h2>
+<p>A <a href="https://www.convert.com/deploy/" target="_self">Deploy</a> in the app is a series of changes on the page or pages geared towards a specific audience. </p>
+<h2>Deployments vs Experiences</h2>
+<p>Experiences have an Original and one or more Variations or versions of the page. A Deploy does not have an original and variations. It only has one version of a page and has a defined audience. There is no Reporting Dashboard for Deployments.</p>
+<h2>Use Case Example</h2>
+<p>My client sells products across the US-Canadian border on his web site. However, he wants to use different promotions for these different markets. He wants to push these promotions through banner ads on the main page of his e-commerce site.</p>
+<p>I can use Convert Experiences to quickly and easily create promotions geared towards different segments, in this case USA or Canadian visitors, using Convert's Visual Editor.</p>
+<h2>Create a Deploy</h2>
+<ol>
+<li>Click on the "Experiences" menu on the left menu.</li>
+<li>Click on the "New Experience" on the upper right and select Deploy.<br><br><img src="https://support.convert.com/hc/article_attachments/4423935288589/mceclip0.png" alt="mceclip0.png">
+</li>
+<li>Fill in the <strong>name</strong> field and the <strong>URL</strong> of the page where you are going to create the Deploy.<br><img src="https://support.convert.com/hc/article_attachments/10298026926861" alt="mceclip0.png">
+</li>
+<li>Create the deploy changes with the Visual Editor and save them.<br><img src="https://support.convert.com/hc/article_attachments/360088264872/mceclip0.png" alt="mceclip0.png">
+</li>
+<li>After you finish and save your changes, click on <strong>"Save &amp; Continue"</strong> to exit the Visual Editor.<br><img src="https://support.convert.com/hc/article_attachments/360088265012/mceclip1.png" alt="mceclip1.png">
+</li>
+<li>Edit your <strong>"Audience"</strong>, by clicking on the pencil icon of the <strong>Audience </strong>section<strong>. <br><img src="https://support.convert.com/hc/article_attachments/6460106104077/mceclip0.png" alt="mceclip0.png"><br></strong>
+</li>
+<li>Select a desired Audience from templates or create an advanced Audience and save it. </li>
+<li>After Activating the Deploy, it should appear as <strong>Active</strong> in the Experience list in the <strong>Experiences. </strong>That's all there is to it. Your Deploy is created. </li>
+</ol>
+<h2>Create a new Deploy from a Variation or Winning Variation from another Experiment</h2>
+<p>You can create a Deploy from a Variation in one of your other Experiments; for instance, if you have a Winning Variation in an A/B test and want to stop that test but still keep the Winning Variation running. You can do this on the Report Page:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4674143295629/mceclip0.png" alt="mceclip0.png"></p>
+<h2>GDPR Warning Message</h2>
+<p>Deployments have the potential to contain small segments (under 100 unique visitors) and this could be interpreted by Privacy Authorities in Europe as identification of data subjects. For that reason, we added a <a href="https://support.convert.com/hc/en-us/articles/360001361312">GDPR warning message</a> to the summary of any Deploy.</p>

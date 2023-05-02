@@ -1,0 +1,40 @@
+Project, Experience, Variation Javascript
+<h2>Overview</h2>
+<p>Convert enables you to include JavaScript snippets as part of your Project, Experiment or even Variation.</p>
+<h2>Global Project JavaScript</h2>
+<p>Convert allows you to include a JS snippet in your Project. This means that all the pages that have the Convert tracking code installed will have the snippet included. </p>
+<p>The snippet would be included just like any other library that you include in your web page. </p>
+<p>You can edit the snippet by going to your Project Configuration. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423773939853/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Global Experience JavaScript</h2>
+<p>Convert Experiences allows you to insert a JavaScript snippet into a page when an experience is triggered. The snippet would be included just like any other library that you include in your web page. This only applies to experience types that include the Visual Editor (ie, you cannot do this with a Split URL Experiment).</p>
+<p>To add JavaScript to your experience. </p>
+<ol>
+<li><span style="line-height: 1.5;">Open the Visual Editor from the Experience Summary</span></li>
+<li>Click on the Snippet Editor icon.</li>
+<li><span style="line-height: 1.5;">Select Global Experience JavaScript.</span></li>
+<li><span style="line-height: 1.5;">Add the JavaScript snippet.</span></li>
+<li><span style="line-height: 1.5;">Save your Experience.</span></li>
+</ol>
+<p><img src="https://support.convert.com/hc/article_attachments/14349663520013"></p>
+<p>The way the code is added to the page you are testing or personalizing would be equivalent to adding it to the head section inside a script tag. </p>
+<p>Additionally, you could add JS events such as click or hover events for your code to trigger.</p>
+<h2>Variation JavaScript</h2>
+<p>Convert Experiences enables you to add a JavaScript snippet in the variation of your choice. This can only be done in experience types where the Visual Editor is available (ie, this is not possible in Split URL Experiences).</p>
+<p>With this feature, you can test if certain functionality added by the snippet improves your conversion.</p>
+<p>For example, you could A/B test customer support chat by adding the chat code to the Variation.</p>
+<p>To add it:</p>
+<ol>
+<li><span style="line-height: 1.5;">Open the Visual Editor from the Experience Summary</span></li>
+<li>Click on the Snippet Editor icon.</li>
+<li>Select Variation JavaScript</li>
+<li>Add your code in the editor.</li>
+</ol>
+<p><img src="https://support.convert.com/hc/article_attachments/14349668662157"></p>
+<p>The code added here will not run automatically. You would need an event to run it just as you would with any included JS library. </p>
+<h2>Calling Functions Declared There</h2>
+<p>To call a function declared in the <strong>Global Project JavaScript </strong>or the <strong>Global Experience JavaScript </strong>sections, just declare it in the following way:</p>
+<p class="codepen" data-height="320" data-theme-id="31058" data-slug-hash="EGjKmE" data-default-tab="js" data-user="gcrewe" data-pen-title="Global JS Function Declaration">See the Pen <a href="https://codepen.io/gcrewe/pen/EGjKmE/">Global JS Function Declaration</a> by Convert.com (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.<br><br>keywords: experience js</p>
+<p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+</p>

@@ -1,0 +1,158 @@
+Experiment Report
+<h2>Understand Experience Report</h2>
+<p><span>Deriving meaningful insights from your experiences and applying them to improve your website conversion rate is your experiences' ultimate objective. The experience reports help you validate the hypothesis you test and derive a better understanding of your website's visitor behavior.</span> </p>
+<p><span>To access your test report, select the experience for which you want to view the report, and go to the <strong>REPORT</strong> tab.</span></p>
+<p><span>You will be able to see 4 different sections</span></p>
+<ul>
+<li>Top Menu</li>
+<li>Summary</li>
+<li>Variations</li>
+<li>Goals</li>
+</ul>
+<p><span><img src="https://support.convert.com/hc/article_attachments/4424032783757/mceclip1.png" alt="mceclip1.png"></span></p>
+<h2>Top Menu</h2>
+<p>On the top menu you can quickly see this information:</p>
+<ul>
+<li>Start Date: the date when the experience started</li>
+<li>Days Running: how many days the experience is running</li>
+<li>Report Range: d<span>ate filter enables you to filter data for a specified date range</span>
+</li>
+<li><span>Segment: filter the report by visitor <a href="https://support.convert.com/hc/en-us/articles/360056333451-Using-Basic-and-Advanced-Post-segmentation" target="_self">segments</a></span></li>
+<li><span>All Tested Users: <a href="https://support.convert.com/hc/en-us/articles/360044228451-What-are-Unique-Tested-Users-" target="_self">number of users participating in the test</a></span></li>
+<li><span>Total Conversions: total number of goal conversions</span></li>
+<li><span>Goals: number of goals the experience has</span></li>
+</ul>
+<p><img src="https://support.convert.com/hc/article_attachments/4424040438925/mceclip2.png" alt="mceclip2.png"></p>
+<p>You can also use the three-dot menu and apply some further actions:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14269235606413"></p>
+<h3>Export &amp; Download</h3>
+<p>By clicking the first option, Export &amp; Download, a popup appears where you can download the experience data in various formats:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14269236448013"></p>
+<p>There you can find options for PDF Export, CSV Daily Report, CSV Aggregated. If you select the last option you will be able to download experience raw data (depending on the plan you use).</p>
+<h3>Install site snippet</h3>
+<p>If you click the second option, Install site snippet, you will be able to access your tracking script:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4424034242701/mceclip5.png" alt="mceclip5.png"></p>
+<h3>Stats Settings</h3>
+<p>From the third option, Stats Settings, you can configure these:</p>
+<ul>
+<li>Confidence level (statistical significance) is described<span> </span><a href="https://support.convert.com/hc/en-us/articles/205160375-What-is-Statistical-Confidence-" target="_self">here</a>
+</li>
+<li>Transaction Outliers are described<span> </span><a href="https://support.convert.com/hc/en-us/articles/115000005552-Setting-limits-for-Order-Outliers" target="_self">here</a>
+</li>
+<li>Automations are described<span> </span><a href="https://support.convert.com/hc/en-us/articles/205160325-My-Experiments-Stopped-What-Happened-" target="_self">here</a>
+</li>
+<li>Statistical methods are described <a href="https://support.convert.com/hc/en-us/articles/205160375-Statistical-Methods-Used" target="_self">here</a>
+</li>
+</ul>
+<p><img src="https://support.convert.com/hc/en-us/article_attachments/14269287109133/c90ae8ab9f23e6a55511de7ba1553c531f0f1d5907fcf5ec42df9d889090a0fe.png"></p>
+<h3>Start/Pause Experience</h3>
+<p>This option lets you start/pause your experience.</p>
+<h3>Reset Experience</h3>
+<p>The Reset Stats button can <a href="https://support.convert.com/hc/en-us/articles/204506409-Reset-Experiment-Data" target="_self">reset the experience data</a>.</p>
+<h2>Summary</h2>
+<p>Summary part of the report summarizes the <a href="https://support.convert.com/hc/en-us/articles/204494069-Site-Area" target="_self" rel="undefined">Locations</a> and <a href="https://support.convert.com/hc/en-us/articles/115000009891-Defining-Audiences-for-your-Experience" target="_self">Audience</a> conditions that apply to this experience. Additionally, it provides some <a href="https://support.convert.com/hc/en-us/articles/4442683563149-Experience-Report-Smart-Recommendations" target="_self">smart recommendations</a>:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14269315310861"></p>
+<p>If you hover over the baseline screenshot, you will see some additional options:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14269366308621"></p>
+<p>The Preview Variation will open a popup and you will be able to get the <a href="https://support.convert.com/hc/en-us/articles/204506649-How-Do-I-Preview-Variations-" target="_self">Live Preview</a> and <a href="https://support.convert.com/hc/en-us/articles/204506629-How-Do-I-Force-a-Specific-Variation-for-an-Experiment-Based-on-Query-Strings-" target="_self">Force Variation</a> URLs.</p>
+<h2>Variations section</h2>
+<p>From the Variations section of the report, you can quickly view the variations of your experience and some extra information:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4424040806925/mceclip10.png" alt="mceclip10.png"></p>
+<p>If you click the three-dot menu you can enable/disable columns that you would like to be visible or even re-arrange their order:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4424042926093/mceclip11.png" alt="mceclip11.png"></p>
+<p>If you click on the status you will be able to <a href="https://support.convert.com/hc/en-us/articles/205160565-How-Do-I-Stop-or-Start-Variations-During-an-Active-Test-" target="_self" rel="undefined">pause variations</a>.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14269368122125"></p>
+<p>If you click the three-dot menu on one of the variations row you have some extra options:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/7011418479501/mceclip2.png" alt="mceclip2.png"></p>
+<h2>Goals section</h2>
+<p>In the goals section, you can see all the goals of the experience and some interesting stats and graphs that we are going to analyze below. Before that, we need to explain a few tags/terms that you might see and not recognize.</p>
+<ul>
+<li>
+<strong>Default Goal</strong>: If you see the term Default Goal next to one of your goals that means it is one of the <a href="https://support.convert.com/hc/en-us/articles/205160365-What-is-Increase-Engagement-and-Decrease-Bouncerate-" target="_self">2 default goals</a> we add to every experience</li>
+<li>
+<strong>Primary Goal</strong>: This can only be one and is decided by you. It is the most important goal for your experience. This will be shown first on the goals list and <a href="https://support.convert.com/hc/en-us/articles/205160485-What-Status-Options-do-an-Experiment-or-Test-Have-" target="_self">experience status</a> will be changed based on this.</li>
+<li>
+<strong>SRM</strong>: <a href="https://support.convert.com/hc/en-us/articles/4412567998221-What-is-SRM-" target="_self">Potential Sample Ratio Mismatch</a> detected on your test and you need to contact <a href="mailto:support@convert.com">support@convert.com</a> or check the experience setup.</li>
+<li>
+<strong>Baseline</strong>: By default, is your <a href="https://support.convert.com/hc/en-us/articles/205160445-What-is-a-Baseline-" target="_self">experience baseline</a>.</li>
+</ul>
+<h3>Columns</h3>
+<p><img src="https://support.convert.com/hc/article_attachments/7011465825165/mceclip3.png" alt="mceclip3.png"></p>
+<ul>
+<li>
+<strong>Variation Name</strong>: name of your variation. Next to it, there is a checkbox that you can enable/disable to show or hide the variation stats on the graph</li>
+<li>
+<strong>Improvement</strong>: <span>this column reports the percentage change of the variation compared to the Original. </span>When computed confidence is greater than the confidence set in the stats settings the color changes
+<ul>
+<li>Red for -</li>
+<li>Green for +</li>
+<li>Gray for other </li>
+</ul>
+</li>
+<li>
+<strong>Visitors</strong>: t<span>he amount of total bucketed visitors in the experience. These are unique visitors.</span>
+</li>
+<li>
+<strong>Conversions</strong>: t<span>his represents the total conversions for each goal/variation</span>
+</li>
+<li>
+<strong>Conversion Rate</strong>: <span>this column shows the percentage of visitors that turned into conversions</span>
+</li>
+<li>
+<strong>Confidence Level (statistical significance)</strong>: this column reports the significance, or how different the confidence interval for the conversion rate for the experiment variation is when compared to the original. If the confidence is not showing any number, this is because (by default) there is a minimum of 5 conversions needed<span> </span><span class="wysiwyg-underline">for each variation</span><span> </span>in order to calculate it. It also must meet the minimum visitors set<span> </span><span class="wysiwyg-underline">for each variation</span>. If you have changed the minimum conversions then the minimum you chose would have to be met. The gray/green dots in that column indicate: 
+<ul>
+<li>1 green dot for 75%-85% confidence</li>
+<li>2 green dots for 85%-95% confidence</li>
+<li>3 green dots for 95%-96% confidence</li>
+<li>4 green dots for 96%-97% confidence</li>
+<li>5 green dots for 97% and above</li>
+</ul>
+</li>
+<li>
+<strong>Box Plot/Confidence Interval</strong>: <a href="https://support.convert.com/hc/en-us/articles/205160375-What-is-Statistical-Confidence-" target="_self">range of values where the true conversion rate falls</a>.</li>
+<li>
+<strong>Status</strong>: <a href="https://support.convert.com/hc/en-us/articles/205160485-What-Status-Options-do-an-Experiment-or-Test-Have-" target="_self">status</a> of the variation</li>
+</ul>
+<h3>Graphs</h3>
+<p>There are three available groups of graphs that are explained below:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4424061383053/mceclip0.png" alt="mceclip0.png"></p>
+<h4>Conversions</h4>
+<p><img src="https://support.convert.com/hc/article_attachments/4424530254349/mceclip2.png" alt="mceclip2.png"></p>
+<ul>
+<li><span style="font-weight: 400;"><strong>Conversion Rate Over Time</strong>: Y axis shows conversion rate , X axis shows time, the lines are one for each variation (cumulative conversion rate) + one for conversion rate of the whole experiment (average of all variations) + a second axis Y at the right which represent the cumulative number of visitors inside the whole experiment</span></li>
+<li><span style="font-weight: 400;"><strong>Conversions Over Time</strong>: Y axis shows conversions, X axis shows time, the lines are one for each variation (conversions) + one for conversions of the whole experiment (average conversions of all variations) + a second axis Y at the right which represent the cumulative number of conversions inside the whole experiment. </span></li>
+<li>
+<strong>Daily Conversion Rate Over Time</strong><span style="font-weight: 400;">: non cumulative conversion rate - same as graph <strong>Conversion Rate Over Time</strong>, only that we do not show a second Y axis with cumulative visitors and the non cumulative is used for the API</span>
+</li>
+<li>
+<strong>Improvement Over Time</strong><span style="font-weight: 400;">: improvement in conversion rate by day on the X axis and lines each variation (but not original). </span>
+</li>
+<li><span style="font-weight: 400;"><strong>Daily Visitors over Time</strong></span></li>
+</ul>
+<h4>Products</h4>
+<p><img src="https://support.convert.com/hc/article_attachments/4424530239373/mceclip1.png" alt="mceclip1.png"></p>
+<ul>
+<li>
+<strong>Products Per Visitor</strong>: cumulative average ordered products per visitor - Y axis shows average ordered products per visitor, X axis shows time, the lines are one for each variation (cumulative average ordered products per visitor) + one for average ordered products per visitor of the whole experiment (average of all variations) + a second axis Y at the right which represent the cumulative number of visitors inside the whole experiment</li>
+<li>
+<span style="font-weight: 400;"><strong>Daily Products Per Visitor</strong>: </span>non cumulative average ordered products per visitor</li>
+<li><span style="font-weight: 400;"><strong>Improvement over Time</strong>: improvement in products by day on the X axis and lines each variation (but not original)</span></li>
+<li>
+<span style="font-weight: 400;"><strong>Daily Visitors over Time</strong></span><span style="font-weight: 400;"></span>
+</li>
+</ul>
+<h4>Revenue</h4>
+<p><img src="https://support.convert.com/hc/article_attachments/4424518382605/mceclip0.png" alt="mceclip0.png"></p>
+<ul>
+<li>
+<strong>Revenue over Time</strong>: <span style="font-weight: 400;">cumulative average revenue per visitor - Y axis shows average revenue per visitor, X axis shows time, the lines are one for each variation (average revenue per visitor) + one for average revenue per visitor of the whole experiment (average of all variations) + a second axis Y at the right which represent the cumulative number of visitors inside the whole experiment</span>
+</li>
+<li>
+<span style="font-weight: 400;"><span style="font-weight: 400;"><strong>Daily Revenue Per Visitor</strong>: </span></span>non cumulative average revenue per visitor</li>
+<li><span style="font-weight: 400;"><strong>Improvement over Time</strong>: improvement in revenue by day on the X axis and lines each variation (but not original)</span></li>
+<li><span style="font-weight: 400;"><strong>Visitors over Time</strong></span></li>
+</ul>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>

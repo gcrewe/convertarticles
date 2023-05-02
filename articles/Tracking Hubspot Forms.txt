@@ -1,0 +1,23 @@
+Tracking Hubspot Forms
+<h2>Description</h2>
+<p>Hubspot forms are special forms that can be tracked in Convert by adding some JavaScript code to the app interface with which you can track them.</p>
+<p> </p>
+<h2>Configuration</h2>
+<ol>
+<li> Create a Custom Js Goal.<br><br>First, create a goal using the <strong>Javascript Triggered Goal </strong>template:<br><br><img src="https://support.convert.com/hc/article_attachments/6449066352653/mceclip0.png" alt="mceclip0.png"><br><br>Reopen it and copy the goal id.<br><br>
+</li>
+<li>Then add the following code to the following<strong> Project &gt; Configuration &gt; Global Javascript</strong> Section. First, replace the URL in the code (<code class="language-javascript" style="font-size: 15px;"><a href="https://www.convert.com/pricing/)">https://www.convert.com/pricing/)</a> </code>with the URL of where the form you want to track exists. Then Replace the <strong>12345678 </strong>with the goal id for your new goal.
+<pre><code class="language-javascript">if (location.href.startsWith('https://www.convert.com/pricing/')) {
+<span> </span><span class="hljs-built_in">window</span><span>.addEventListener(</span><span class="hljs-string">"message"</span><span>, </span><span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span><span>{ <br></span><span class="hljs-keyword">  if</span><span>(event.data.type === </span><span class="hljs-string">'hsFormCallback'</span><span> &amp;&amp; event.data.eventName === </span><span class="hljs-string">'onFormSubmitted'</span><span>) { </span><br>    window._conv_q = window._conv_q || [];
+    _conv_q.push(["triggerConversion","12345678"]);<br><span>   } <br>  });</span>
+}
+</code></pre>
+<p>Please test your goal while being bucketed on a test. Verify that is tracking correctly.</p>
+</li>
+</ol>
+<h2>Tracking Multiple Hubspot Forms on the Site.</h2>
+<ol>
+<li>Create a Javascript Triggered goal for each form you want to track. Write their goal id down. </li>
+<li>Add the code shown in the step before repeatedly for each goal you want to track and change the corresponding URL where each form is located. </li>
+<li>Test your goals. </li>
+</ol>

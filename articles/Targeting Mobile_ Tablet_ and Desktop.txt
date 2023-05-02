@@ -1,0 +1,12 @@
+Targeting Mobile, Tablet, and Desktop
+<h2>Target Different Devices</h2>
+<p>In addition to target by <strong>browser</strong> and <strong>user agen</strong>t that gives you great freedom to target very specific user-types, it is hard to keep these audience profiles up to date.</p>
+<p>Convert Experiment supports device detection where we monitor devices based on Akamai CDN device lists and give you the option. The Advanced Rule Builder has three elements to test on:</p>
+<ul>
+<li>Device is Mobile</li>
+<li>Device is Tablet</li>
+<li>Device is Desktop</li>
+</ul>
+<p>These device targeting will be more accurate and kept up to date with the new browsers that appear on the market. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/6444306021645/mceclip0.png" alt="mceclip0.png"></p>
+<p><strong>Important:</strong> Some tablet devices are also marked as mobile so it could be happening that one device falls into more than one categories. If one would want to target only mobile phones and exclude tablets he would have to create the audience like: <strong>Device is Mobile -&gt;Yes AND Device is Tablet -&gt; No</strong></p>

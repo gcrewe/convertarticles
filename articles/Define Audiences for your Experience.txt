@@ -1,0 +1,12 @@
+Define Audiences for your Experience
+<h2>What is an Audience?</h2>
+<p>An <strong>"Audience"</strong> is a group of visitors that you want to be included in your experience, being an experiment or personalization.</p>
+<h2>Audience Dialog Sections</h2>
+<p>You can create an audience for your experiment by going to your Experience Summary and locating the Audience section.  From within the Audience section, you can add a previously saved audience or create a new audience. </p>
+<p>Clicking on the Add Audience dropdown will give you the following options: 1) Templates or 2) Advanced</p>
+<p><strong>Important: Note that the audiences listed in the Audience Dialog section are joined in an OR fashion and not AND.</strong><br><br><img src="https://support.convert.com/hc/article_attachments/6460370092173/mceclip0.png" alt="mceclip0.png"></p>
+<h3>Templates Section</h3>
+<p>The <a href="https://support.convert.com/hc/en-us/articles/115000021231-Defining-an-Audience-with-the-Presets-Tab" target="_self" rel="undefined">Templates section</a> allows you to choose from pre-built audiences. This will help you speed up the configuration of your experiment audiences.</p>
+<h3>Advanced Section</h3>
+<p>This section is where you can create your own advanced audiences if none of the templates fit your requirements. More documentation is available <a href="https://support.convert.com/hc/en-us/articles/115000021251-Defining-an-Audience-with-the-Create-Audience-section">here</a>.<strong><a href="https://support.convert.com/hc/en-us/articles/115000021251"><br></a></strong></p>
+<p> </p>

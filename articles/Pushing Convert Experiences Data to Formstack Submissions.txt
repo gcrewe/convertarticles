@@ -1,0 +1,39 @@
+Pushing Convert Experiences Data to Formstack Submissions
+<h2>Introduction</h2>
+<p><a href="https://www.formstack.com/">Formstack</a> is an advanced form builder service that enables you to create and embed custom forms on your website with little or no technical experience.</p>
+<p>This quick guide will walk you through how to send Convert Experiences Project and Variation data along with visitor submissions using hidden fields and more.</p>
+<h2>Create your Form Fields in Formstack</h2>
+<p><span style="font-weight: 400;">Create a new form in Formstack under Build tab: Create the field(s) you want to use to send the Convert Experiences data, and set it as hidden. This could be project data, variation, goal or experiment data.<br></span></p>
+<p><strong><strong><img src="https://support.convert.com/hc/article_attachments/115004135992/mceclip0.png"></strong></strong><span style="font-weight: 400;">Setting these fields hidden, allows you to pass data through the form submission, without the visitor seeing or being confused by it.<br></span></p>
+<h2>Embed the Form in your Website</h2>
+<p><span style="font-weight: 400;">Then go to Publish tab in Formstack. This integration only works with the "</span><strong>Embed Form" </strong><span style="font-weight: 400;">option. Convert Experiences can’t be embedded into "URL Links" pages so we will avoid using that for now. For more advanced users, any embed method that parses the HTML form in the same page that has the </span><strong>Convert Experiences tracking code </strong><span style="font-weight: 400;">can be made to work as well.</span></p>
+<p><span style="font-weight: 400;">For simplicity sake, we will stick with the embed form for this guide.</span></p>
+<p><img src="https://support.convert.com/hc/article_attachments/115004116211/mceclip1.png"></p>
+<p><span style="font-weight: 400;">Copy and paste that code into the HTML of the page on your website where you want the form to show. It will look like this:</span></p>
+<p><span style="font-weight: 400;"><img src="https://support.convert.com/hc/article_attachments/115004137172/mceclip2.png"></span></p>
+<h2>Embed the Integration Script in your Website</h2>
+<p><span style="font-weight: 400;">In order to populate the form fields we will need to </span><strong>add this integration script to the bottom of the page before &lt;/body&gt;, after all other scripts:</strong></p>
+<p class="codepen" data-height="411" data-theme-id="31058" data-slug-hash="RjELgJ" data-default-tab="js,result" data-user="gcrewe" data-embed-version="2" data-pen-title="Formstack">See the Pen <a href="https://codepen.io/gcrewe/pen/RjELgJ/">Formstack</a> by George Crewe (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</p>
+<p><span style="font-weight: 400;">Basically you need to change only the first rows to the labels you have added for your hidden fields. </span><span style="font-weight: 400;">It should look like this:</span></p>
+<pre><code>var formstackSetFields = {
+	“My Label”: “Custom Value”
+};</code></pre>
+<p> </p>
+<p><span style="font-weight: 400;">So now the form field labelled "Experience ID" will have the Convert variation ID which, when submitted, will show up in the Formstack submissions.</span></p>
+<h2><span style="font-weight: 400;">Submit the Form</span></h2>
+<p><span style="font-weight: 400;">Submit the form to test it out:</span></p>
+<p><strong><strong><img src="https://support.convert.com/hc/en-us/article_attachments/203123166/image04.png" alt=""><br></strong></strong></p>
+<h2><span style="font-weight: 400;">View Convert data in Formstack</span></h2>
+<p><span style="font-weight: 400;">After submitting your form, go to submissions in Formstack:</span><strong><strong><img src="https://support.convert.com/hc/en-us/article_attachments/203266333/image00.png" alt=""><br></strong></strong></p>
+<p><span style="font-weight: 400;">And make sure your hidden variable is not empty:</span></p>
+<h2>
+<strong><strong><img src="https://support.convert.com/hc/en-us/article_attachments/203266343/image03.png" alt=""><br></strong></strong>Debugging</h2>
+<h3>Fields not being populated</h3>
+<p><span style="font-weight: 400;">To make sure the labels you specified in the </span><em><span style="font-weight: 400;">formstackSetFields</span></em><span style="font-weight: 400;"> were typed correctly and found by the Javascript, open up your browser console. If there was an error, you will see something like this:</span></p>
+<p><span style="font-weight: 400;">I added “x” as a field label but since it doesn’t exist in my form, it gave me this error.</span></p>
+<h3>Project settings required to make the integration work</h3>
+<p><span style="font-weight: 400;">If you get an error that JQuery is not found or you can’t get variation, goal or experiment names, it’s most likely that you need to turn off "Data Anonymization" and "Do Not Include JQuery" switches in your project configuration.</span></p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423904384141/mceclip0.png" alt="mceclip0.png"></p>

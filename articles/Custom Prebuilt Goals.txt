@@ -1,0 +1,42 @@
+Custom Prebuilt Goals
+<h2>Introduction</h2>
+<p>It is possible within Convert to create a custom goal and make it available to you and your collaborators for use in your experiments.</p>
+<p>In this article, we will create a goal that is triggered when somebody scrolls to the bottom of the page.</p>
+<p>Below is the process of how to do it:</p>
+<h2>Create a JavaScript Goal</h2>
+<p><span style="line-height: 1.5;">First, create a JavaScript Goal. Name it "Scroll to Bottom” and save it.</span></p>
+<p><img src="https://support.convert.com/hc/article_attachments/5987905586573/mceclip0.png" alt="mceclip0.png"></p>
+<p><span style="font-weight: 400;">Re-edit the goal, and you will find the code to trigger it has been created within the goal. </span><span style="line-height: 1.5;">For example:</span><br style="line-height: 1.5;"><img src="https://support.convert.com/hc/article_attachments/6449681724045/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Sample JavaScript Code for an Action</h2>
+<p>Following is the code that issues an alert when the user scrolls down a web page.</p>
+<pre><code>
+var scrollgoal_triggered;
+window.onscroll = function(ev) {
+   if ((window.innerHeight + window.scrollY) &gt;= document.body).offsetHeight)  {
+       alert("you're at the bottom of the page");
+     }
+};
+</code></pre>
+<h2>Integrate JavaScript Code</h2>
+<p>Let's integrate the JavaScript goal code into our scroll to bottom alert code.</p>
+<pre><code>
+var scrollgoal_triggered;
+window.onscroll = function(ev) {
+  if ((window.innerHeight + window.scrollY) &gt;= document.body).offsetHeight) &amp;&amp; (scrollgoal_triggered = false) {
+        window._conv_q = window._conv_q || [];
+       _conv_q.push(["triggerConversion","100122012"]);
+       scrollgoal_triggered = true;
+   }
+};
+</code></pre>
+<h2>Add Code in Global Project/Global Experience JavaScript</h2>
+<p>Include code on your website pages by adding it to the "Global Project JavaScript" area in your "Project Configuration" (you can also use the Global Experience JavaScript section accessible from the Visual Editor):</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423893854221/mceclip2.png" alt="mceclip2.png"></p>
+<p><span style="font-weight: 400;">Your "Scroll to Bottom" goal will then be available for all your experiments.</span></p>
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<p>Make sure you include the tracking code on the page where you want to trigger a goal with JavaScript. Otherwise, the code won't run.</p>
+</div>
+</div>
+<p>keywords: JavaScript goal custom</p>

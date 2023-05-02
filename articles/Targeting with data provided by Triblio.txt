@@ -1,0 +1,19 @@
+Targeting with data provided by Triblio
+<h2>Introduction</h2>
+<p>Convert Experiences targeting can be integrated with <a href="https://triblio.com/" target="_self">Triblio</a>, with the purpose of allowing you to target experiences using Triblio profile data. This will allow you to personalize by data fields such as Company name, such as region, and industry. Intent data such as intent score, buying state. </p>
+<h2>Add Tracking Codes</h2>
+<p>For this to work, it would require that you install the Triblio snippet on your site that will provide this information.</p>
+<p>Test that Triblio is properly installed on your site. Go to your browser console and paste the following code:</p>
+<pre>Triblio.getAccountIdentification();</pre>
+<p>It should return all the data available for you to target like this:</p>
+<pre>city: "N/A"<br>country: "N/A"<br>domain: "N/A"<br>employees: "N/A"<br>employeesCode: "N/A"<br>industry: "Telecommunications"<br>isIsp: "N/A"<br>naicCode: "517311"<br>name: "Total Play Telecomunicaciones Sa De Cv"<br>region: "N/A"<br>revenue: "N/A"<br>revenueCode: "N/A"<br>sicCode: "J6110"<br>subIndustry: null</pre>
+<h2>Create an Audience</h2>
+<p>So, let's say that we want to target an experiment that targets all visitors that are on the "Telecommunications" industry.</p>
+<p>Let's create an audience in Convert called "Telecommunications Industry". We are going to do it by adding a JS Condition with the following code:</p>
+<pre>(function() {<br>var visitorData = Triblio.getAccountIdentification();<br>if(typeof(visitorData)=="undefined") {<br>convert_recheck_experiment(); return false;} <br>else return (visitorData.industry == "Telecommunications");<br>})()</pre>
+<p>The Audience should be configured like this:<br><br><img src="https://support.convert.com/hc/article_attachments/6448163090061/mceclip0.png" alt="mceclip0.png"><br>We might need to set the Audience Type to<strong> Transient </strong>instead of <strong>Permanent</strong> if the data field would change over time and we would want the visitor to no longer experience the same as he moves through different stages.</p>
+<p>If we want to use the audience for <a href="https://support.convert.com/hc/en-us/articles/360056333451-Using-Basic-and-Advanced-Post-segmentation" target="_self">Post-Test Segmentation</a> make sure you see the Audience type to "Segment".</p>
+<h2>Add the Audience to your Experience</h2>
+<p>Next, just add the audience to the experience you will like to target to this audience.</p>
+<p>If you have any questions on how to use this, let us know in support, and we will gladly help you. </p>
+<p> </p>

@@ -1,0 +1,30 @@
+Integrate Convert Experiences with Microsoft Clarity
+<h2 id="convert-sap-hybris-integration">Convert-Microsoft Clarity Integration</h2>
+<p>Convert Experiences can integrate with <a href="https://clarity.microsoft.com/" target="_self" rel="undefined">Microsoft Clarity</a> and this integration offers session replays and heatmaps per experience. Replaying sessions per variation is important for any agency and conversion rate optimization expert.</p>
+<p>For each experiment, the integration uses custom instrumentation events to pass along the experiment name and variation name that the visitor is currently bucketed into.</p>
+<h2>Sign Up at the Clarity Website</h2>
+<p>Sign up at the <a href="https://clarity.microsoft.com/" target="_self" rel="undefined">Clarity website</a> using your Microsoft or Facebook or Google account. </p>
+<p>When you create a new Clarity project you will be able to retrieve the uniquely generated JavaScript code for your project. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/13285987532941" alt="mceclip0.png"></p>
+<p>Clarity works on any HTML webpage (desktop or mobile) after adding this small piece of JavaScript to the website. As soon as the script is added, Clarity receives your site’s data and you can start using Clarity.</p>
+<p>The JavaScript code listens to browser events and instruments layout changes, network requests and user interactions. That data is then uploaded and stored in the Clarity server running on Microsoft Azure. </p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the <a href="https://docs.microsoft.com/en-us/clarity/clarity-setup" target="_self">Clarity JS code</a> are installed on your page. Once you have added the codes to your website, you will be able to use the Clarity dashboard to start replaying user sessions and gain insights.  </p>
+<h2 id="activate-convert-segment-integration ">Activate Convert-Clarity Integration </h2>
+<p>Add the code below to your website right after the Convert + Clarity tracking codes which will send Convert Experience and Variation names to Clarity Dashboard. We are using <a href="https://docs.microsoft.com/en-us/clarity/clarity-filters" target="_self">custom tags</a>:</p>
+<pre><code>&lt;script&gt;<br>var refObject = window['convert']['data']['experiments'];
+<br>for (var key in window["convert"]["currentData"]["experiments"]) {
+		if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+			continue;
+}}
+
+var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+curExperimentName = curExperimentName.replace("Test #", "Test ");
+var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+curVariant = curVariant.replace("Var #", "Variation ");
+
+clarity("set", 'Exp_Name', curExperimentName);<br>clarity("set", 'Var_Name', curVariant);<br>&lt;/script&gt;</code></pre>
+<h2 id="view-convert-data-in-segment">View Convert Data in Clarity Dashboard</h2>
+<p>Using a custom tag in Clarity, you will be able to view all of your Convert Experiences data as they associate to the values that you pass in the tag. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/13286426595341" alt="mceclip1.png"></p>

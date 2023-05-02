@@ -1,0 +1,29 @@
+Segmenting in Convert Using the dataLayer
+<h2>Data Layer Definition</h2>
+<p>A Data Layer is a data structure which ideally holds all data that you want to process and pass from your website to other applications that you have linked to.</p>
+<p>A very common example is web analytics tracking. You might have a Data Layer which feeds data into your analytics tool about the visitor. Often, this data isn’t available in the presentational layer, or in the markup at all. This data might be, for example, details about the visitor (login status, user ID, geolocation), metadata about the page (optimal resolution, image copyrights), or even information that’s already in the markup, but that you want to access in a more robust way.</p>
+<p>Therefore, you can use this Data Layer to store session visitor data and present later a specific experience to a specific visitor group.</p>
+<h2>Data Layer Structure</h2>
+<p>A classic Data Layer would look like the following and would be embedded in your page:</p>
+<pre><code class="language-javascript">
+dataLayer = [{
+        isLoggedIn: 0,
+        userEmail: 'any@test.com',
+        industry: 'medical'
+    }];
+</code></pre>
+<p><br>Let's assume that the industry field can have different values and we want to target with our experience only users in the medical industry.</p>
+<h2>Steps</h2>
+<p><span style="line-height: 1.5;">First, we need to create the experience that we want to show to this audience group. </span><span style="line-height: 1.5;">We need to configure an Advanced Audience for this experience. </span></p>
+<p>Select Goals:<img src="https://support.convert.com/hc/article_attachments/14270335919245"><br>Then select the "Create an advanced goal" and under Page Tags select JS condition:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6444050132365/mceclip0.png" alt="mceclip0.png">Enter the following JS code:</p>
+<pre><code class="language-javascript">
+"medical" == dataLayer[0].industry;<br></code></pre>
+<p>Then the experience will only run for those visitors whose industry value of the Data Layer equals medical.</p>
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>The <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript" target="_blank" rel="noopener">Convert tracking code </a>needs to be placed after the Data Layer code in your page for Convert to be able to read this data and trigger the experience.</p>
+</div>
+</div>

@@ -1,0 +1,7 @@
+What's new at Convert - March 2021 Edition
+<h2 id="features">Features</h2>
+<p data-pm-slice="1 1 []">1. Continued to release minor upgrades and fine-tune the app.</p>
+<p> </p>
+<h2 id="bugs">Bugs</h2>
+<p data-pm-slice="1 1 []">1. An issue with goal of type Click Something on a Page not loading URLs content through Live Select was fixed</p>
+<p data-pm-slice="1 1 []">2. An issue with exported reports not containing graphs was fixed</p>

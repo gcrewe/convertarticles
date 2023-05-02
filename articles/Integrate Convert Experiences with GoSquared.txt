@@ -1,0 +1,35 @@
+Integrate Convert Experiences with GoSquared
+<h2>Convert-GoSquared Integration</h2>
+<p>Integration of <a href="https://www.gosquared.com/">GoSquared</a> with Convert Experiences will help you to import Convert data into your GoSquared Analytics dashboard. </p>
+<p>For each experiment, the integration uses events to pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<h2>Add Tracking Code Snippets</h2>
+<p>Make sure the Convert tracking code and the GoSquared Analytics tracking code (tracker.js) are installed on your page. </p>
+<p>Convert Tracking Code can be found on Project Configuration:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4572953137165/mceclip0.png" alt="mceclip0.png"></p>
+<p>GoSquared Tracking Code can be found under Installation Options:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/115004210331/mceclip0.png"></p>
+<h2>Activate Integration in Convert</h2>
+<p>Go to your Convert experience settings and under Integrations select the GoSquared. Then click Save and Continue. Once this is activated, all your visitor traits will be translated and passed through to the GoSquared Analytics and live chats without any mapping or configuration. The same goes for eCommerce events. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/4572931339917/mceclip1.png" alt="mceclip1.png"></p>
+<h2>Activate Integration Manually</h2>
+<p>If you do not want to activate the integration through Convert Experiences, you can activate it manually by sending your custom events to Gosquared with the code below:</p>
+<pre><code>var refObject = window['convert']['data']['experiments']
+	for (var key in window["convert"]["currentData"]["experiments"]) {
+			if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+				continue;
+	}}
+            
+var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+curExperimentName = curExperimentName.replace("Test #", "Test ");
+var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+curVariant = curVariant.replace("Var #", "Variation ");
+		
+_gs('event', 'Convert Experiences', {
+	Exp_Name: curExperimentName,
+	Var_Name: curVariant
+	});</code></pre>
+<h2>View Convert Data in GoSquared</h2>
+<p>Using an event in GoSquared, you will be able to view all of your Convert Experiences data as they associate to the values that you pass in the event.</p>
+<p>When you log in to your GoSquared account, you should go to Analytics &gt; "Now" to see a minute by minute timeline of the web traffic or go to "People" to know what experiments/variations your visitors are bucketed into.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000085131/mceclip0.png"></p>

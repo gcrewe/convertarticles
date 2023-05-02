@@ -1,0 +1,14 @@
+Integrate Convert Experiences with Tealium
+<h2 id="convert-kissmetrics-integration">Convert-Tealium Integration</h2>
+<p class="wysiwyg-text-align-justify"><span><a href="https://tealium.com/" target="_self">Tealium IQ</a> is a universal Javascript library that creates a Universal Data Object (UDO) for all the elements on the page. From there this data is sent to the Data Layer in Tealium and can be sent to all the different vendors (to Convert for example) via the tag.</span></p>
+<p class="wysiwyg-text-align-justify">There are two ways you can integrate Tealium iQ with your website: you can use Tealium's tag manager or their JavaScript library. This section discusses using Tealium iQ (JS library <span>utag.sync.js</span>) to serve Convert experiences.</p>
+<p><span>It will be completely flicker-free and work correctly. For more insights into how to leverage the utag.sync.js template, please reference implementing synchronous code within TiQ </span><a href="https://community.tealiumiq.com/t5/iQ-Tag-Management/Using-the-utag-sync-js-Script/ta-p/19175" target="_self">using utag.sync.js.</a></p>
+<h2 id="add-tracking-code-snippets">Grab your Convert tracking code</h2>
+<p>Make sure you have the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a>.</p>
+<h2 id="toc-hId--1816418082">Ensure utag.sync.js is enabled</h2>
+<p>See the article on<span> </span><a href="https://community.tealiumiq.com/t5/Tealium-iQ/Publish-Configurations/ta-p/13632" target="_blank" rel="noopener">Publish Configuration</a><span> </span>and<span> </span><em>Generate utag.sync.js.</em><span class="redactor-invisible-space"><span> </span>It is just a simple case of enabling this and then saving your latest version.</span></p>
+<h2 id="toc-hId--1787788931"><span class="redactor-invisible-space">Open the utag.sync template and add your code</span></h2>
+<p>You will now be able to access the utag.sync.js template in the templates drop-down (see this<span> </span><a href="https://community.tealiumiq.com/t5/uTag/How-do-I-upgrade-to-the-latest-utag-js/ta-p/5042" target="_blank" rel="noopener">article</a><span> </span>for how to access the templates) and paste in the Convert tracking code at the bottom.</p>
+<p><em><strong>Note:</strong><span> </span>You can easily add JavaScript above here to add conditional logic to determine which pages Convert experiences should run on.</em></p>
+<h2>Save and Publish</h2>
+<p><span>Go ahead and 'Save Profile Template' and then publish the version! You are now live.</span></p>

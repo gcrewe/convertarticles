@@ -1,0 +1,2016 @@
+Collaborators - Share With Multiple Users / Accounts
+<h2>Share With Collaborators</h2>
+<p>There can only by one Account Owner per account, but account owners can invite collaborators to projects and choose to give them varying privileges.</p>
+<p dir="ltr">Inviting co-workers or clients to a project is possible by selecting Account Settings &gt; Collaborators and inviting a new Collaborator. Each collaborator can have one of five access levels to a project:</p>
+<ul>
+<li dir="ltr" style="font-weight: bold;">Browse</li>
+<li dir="ltr" style="font-weight: bold;">Editor</li>
+<li dir="ltr" style="font-weight: bold;">Reviewer</li>
+<li dir="ltr" style="font-weight: bold;">Publish</li>
+<li dir="ltr" style="font-weight: bold;">Administrator</li>
+</ul>
+<p>The matrix below explains the access levels:</p>
+<table dir="ltr" style="height: 2228px;
+width: 1200px;" border="5" cellspacing="0" cellpadding="0">
+<colgroup>
+<col width="100">
+<col width="100">
+<col width="100">
+<col width="100">
+<col width="100">
+<col width="100">
+<col width="100">
+<col width="100">
+</colgroup>
+<tbody>
+<tr style="height: 44px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Top Level"}'><strong>Top Level</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Authorization JSON"}'><strong>Authorization JSON</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Browse"}'><strong>Browse</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Editor"}'><strong>Editor</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Reviewer"}'><strong>Reviewer</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Publish"}'><strong>Publish</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Administrator"}'><strong>Administrator</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Account Owner"}'><strong>Account Owner</strong></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Project"}'><strong>Project</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"View"}'>View</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Add"}'>Add</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Edit"}'>Edit</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Delete"}'>Delete</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Domain"}'><strong>Domain</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"View"}'>View</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Add"}'>Add</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Edit"}'>Edit</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Delete"}'>Delete</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Tag"}'><strong>Tag</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"View"}'>View</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Add"}'>Add</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Edit"}'>Edit</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Delete"}'>Delete</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Goal"}'><strong>Goal</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"View"}'>View</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Add"}'>Add</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Edit"}'>Edit</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Delete"}'>Delete</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"CDN Image"}'><strong>CDN Image</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"View"}'>View</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Add"}'>Add</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Edit"}'>Edit</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Delete"}'>Delete</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Experience"}'><strong>Experience</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"View"}'>View</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Add"}'>Add</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Edit"}'>Edit</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Delete"}'>Delete</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Edit Running"}'>Edit Running</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Clone"}'>Clone</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Pause/Play"}'>Pause/Play</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Variation"}'><strong>Variation</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Pause/Play"}'>Pause/Play</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Change Baseline"}'>Change Baseline</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Audience"}'><strong>Audience</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"View"}'>View</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Add"}'>Add</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Edit"}'>Edit</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Edit Running"}'>Edit Running</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Delete"}'>Delete</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Location"}'><strong>Location</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"View"}'>View</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Add"}'>Add</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Edit"}'>Edit</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Edit Running"}'>Edit Running</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Delete"}'>Delete</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Report"}'><strong>Report</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"View"}'>View</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Full Edit"}'>Full Edit</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"No Change Edit (Report Reset)"}'>
+<div>
+<div>No Change Edit (Report Reset)</div>
+</div>
+</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Hypothesis"}'><strong>Hypothesis</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"View"}'>View</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Add"}'>Add</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Edit"}'>Edit</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Delete"}'>Delete</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Live Data"}'><strong>Live Data</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"View Account Live Data"}'>View Account Live Data</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"View Project Live Data"}'>View Project Live Data</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 67px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"View Experience Live Data"}'>View Experience Live Data</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"History"}'><strong>History</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"View Account History"}'>
+<div>
+<div>View Account History</div>
+</div>
+</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"View Project History"}'>
+<div>
+<div>View Project History</div>
+</div>
+</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 67px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"View Experience History"}'>
+<div>
+<div>View Experience History</div>
+</div>
+</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Collaborator"}'><strong>Collaborator</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"View Collaborators"}'>View Collaborators</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":" "}'> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Edit/Add/Delete Collaborators"}'>
+<div>
+<div>Edit/Add/Delete Collaborators</div>
+</div>
+</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Billing"}'><strong>Billing</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Manage Plan"}'>Manage Plan</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Manage Billing"}'>Manage Billing</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Manage Payment"}'>
+<div>
+<div>Manage Payment</div>
+</div>
+</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Account"}'><strong>Account</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"View"}'>View</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Manage Addons"}'>Manage Addons</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Manage SSO"}'>Manage SSO</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Manage API keys"}'>
+<div>
+<div>Manage API keys</div>
+</div>
+</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Manage Blocked IPs"}'>
+<div>
+<div>Manage Blocked IPs</div>
+</div>
+</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"API Feature"}'><strong>API Feature</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"View"}'>View</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Add"}'>Add</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Edit"}'>Edit</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Delete"}'>Delete</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"New"}'><strong>New</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Billing"}'><strong>Billing</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"View Plan"}'>View Plan</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Account"}'><strong>Account</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Quota warnings email"}'>
+<div>
+<div>Quota warnings email</div>
+</div>
+</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;"> </td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 44px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Account"}'><strong>Account</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Quota warning header"}'>Quota warning header</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 89px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Account"}'><strong>Account</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Quote warning (see number over overquota users bar)"}'>Quote warning (see number over overquota users bar)</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 67px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Billing"}'><strong>Billing</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Overdue warnings header"}'>Overdue warnings header</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+<tr style="height: 90px;">
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Billing"}'><strong>Billing</strong></td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"See account was paused (due overquota)"}'>See account was paused (due overquota)</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+<td style="width: 81.7188px;
+height: 90px;
+border-color: black;" data-sheets-value='{"1":2,"2":"Yes"}'>Yes</td>
+</tr>
+</tbody>
+</table>
+<div></div>
+<p><img src="https://support.convert.com/hc/article_attachments/4423884919949/mceclip0.png" alt="mceclip0.png"></p>
+<p><strong>Keywords:</strong> user rights, assigning rights, roles, privileges, permissions, security</p>

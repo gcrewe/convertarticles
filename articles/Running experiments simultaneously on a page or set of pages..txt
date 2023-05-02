@@ -1,0 +1,15 @@
+Running experiments simultaneously on a page or set of pages.
+<h2>Simultaneous Experiments</h2>
+<p>You can run simultaneous Convert experiments on the same page or set of pages. However, you should be aware that changes in one experiment can invalidate the data of the other experiment you are running simultaneously. Ideally, you should run separate experiments. If you cannot, then you need to think about it slowly and decide to run the experiment simultaneously, if you have enough traffic for that. Below, are described several techniques to help you run simultaneous experiments using separate audiences. </p>
+<h2>General Collision Prevention</h2>
+<p>For setting this up, first, you have to understand the order in which experiments are executed. Experiments conditions get tested sequentially on a page, taking into account their experiment ID. </p>
+<h3>Set Traffic Distribution to 50% for the first experiment</h3>
+<p>So, to achieve this you need to set the experiment with the lowest ID number, to only use 50% of the traffic. You can do this in the Traffic Distribution section of the Experience Summary.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14272699817741"></p>
+<h3>Set Audience Condition of "Bucketed in Experience is No"</h3>
+<p>Then in the second experiment, set an audience condition of "Bucketed in Experience is No". You can find this if you add a new Audience (under Visitor Data). This condition means that the visitor will be tested only if they have not been tested before. This will prevent from testing twice the same visitors.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6460169534733/mceclip1.png" alt="mceclip1.png"></p>
+<h2>Exclude Visitors of other Experiments</h2>
+<p>If you have more tests running on your site, you can set the second experiment to specifically prevent the tested visitors of the other test to be bucketed on the second, instead of the general collision prevention, mentioned above.</p>
+<p>The following article describes how to do that:<br><br><a href="https://support.convert.com/hc/en-us/articles/115000028552-Excluding-visitors-that-have-been-included-in-another-experiment">https://convert.zendesk.com/hc/en-us/articles/115000028552-Excluding-visitors-that-have-been-included-in-another-experiment</a></p>
+<p><strong>keyword: </strong>exclusion</p>

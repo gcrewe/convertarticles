@@ -1,0 +1,6 @@
+Adding a parameter to a Split URL variation while transferring the query parameters.
+<p>To add a parameter to a Split URL variation you should configure the Split URL parameters in the following way:</p>
+<p><strong>Original URL</strong></p>
+<p>http://www.domain.com/([^\?]+)?\?{0,1}(.*)$</p>
+<p><strong>Variation 1 URL </strong><br>http://www.domain.com/$1?name=value&amp;$2</p>
+<p>Make sure you exclude URLs in the Site Area with name=value parameter. </p>

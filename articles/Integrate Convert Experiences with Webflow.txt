@@ -1,0 +1,15 @@
+Integrate Convert Experiences with Webflow
+<p><a href="https://webflow.com/" target="_self">Webflow</a> is <span>a SaaS application that allows designers to build responsive websites with browser based visual editing software. </span></p>
+<p>This article will guide you on how to set up Convert A/B testing with<span> your Webflow designed websites</span>. You can run simple A/B experiments on any Webflow site, and it does most of the technical work (like splitting traffic) for you.</p>
+<p>Here are some simple steps to get started with this integration:</p>
+<ol role="list">
+<li>Sign up for a Convert.com plan</li>
+<li>
+<a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript" target="_blank" rel="noopener">Find your Convert tracking script</a><span> </span>and copy it to your clipboard</li>
+<li>Go to your Webflow project's<span> </span><strong>project settings → custom code</strong><span> </span>tab. Paste the code you copied in the<span> </span><strong>head code</strong><span> </span>section. Make sure to include the opening and closing &lt;script&gt; tags! To be able to use the custom code you need to have a paid Webflow account.</li>
+<li>
+<strong>Save the changes</strong><span> </span>and<span> </span><strong>publish</strong><span> </span>your Webflow project.</li>
+<li>Go back to the Convert dashboard and<span> </span><a href="https://support.convert.com/hc/en-us/articles/205107815-Create-a-New-Experiment" target="_blank" rel="noopener">create your first A/B test</a>!</li>
+</ol>
+<p><img src="https://support.convert.com/hc/article_attachments/360065523071/mceclip0.png" alt="mceclip0.png"></p>
+<p>Your Convert dashboard will monitor performance and let you know how each variant does.</p>

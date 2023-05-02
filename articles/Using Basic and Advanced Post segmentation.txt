@@ -1,0 +1,25 @@
+Using Basic and Advanced Post segmentation
+<h2>What is the Post-Segmentation feature?</h2>
+<p>The Post Segment feature allows you to analyze experiment reports and results on basis of segments like browser used, device used, new v/s old visitors and so on. </p>
+<h2>Basic v/s Advanced Post-Segmentation</h2>
+<p>The key different between Basic and Advanced Post-segmentation feature is the segments included in them. </p>
+<p>The Basic Post-Segmentation feature includes limited segments like</p>
+<ul>
+<li>browser used,</li>
+<li>device used,</li>
+<li>new v/s old visitors and</li>
+<li>user country.</li>
+</ul>
+<p>Whereas, the Advanced Post-segmentation feature includes all <span>basic post-segmentation segments, plus segmentation by </span></p>
+<ul>
+<li><span>traffic source, </span></li>
+<li><span>continent, and </span></li>
+<li><span>10 custom segments.</span></li>
+</ul>
+<p><span>The Basic Segmentation feature is included in the Kickstart plan. The Advanced Segmentation feature is included in all plans except the Kickstart plan. For more details, please visit our <a href="https://www.convert.com/pricing/" target="_blank" rel="noopener">pricing page.</a></span></p>
+<h2>How to use the Post-Segmentation feature?</h2>
+<p>After your experiment starts receiving traffic, you can analyze the experiment reports by clicking on the Segment option.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423885183245/mceclip0.png" alt="mceclip0.png"></p>
+<p>You can choose to either filter and analyze the results by a single segment or you can choose multiple filters to analyze results with a combination of segments.</p>
+<p> </p>
+<p>Liked the Post-segmentation feature and want to include it in your plan? <a href="https://www.convert.com/contact-us/" target="_blank" rel="noopener">Get in touch</a> with us to discuss more.</p>

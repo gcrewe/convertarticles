@@ -1,0 +1,34 @@
+React / Redux and Convert Experiences
+<p> </p>
+<h2>Alternative solutions for integrating React and Convert</h2>
+<p>React is a Single Page Framework (SPA) that works differently than a traditional website. React does not reload the page, each time the screen changes.<br><br>Experiments on React usually need to be handled differently than other experiments.  Because the Convert script usually cannot read the URL that a website visitor is navigating, it cannot trigger experiments with standard methods.<br><br>Firstly, you need to install the Convert tracking code as described in this <a href="https://support.convert.com/hc/en-us/articles/205151015" target="_blank" rel="noopener">article</a>. </p>
+<p>However, Convert provides other methods for triggering experiments within single-page frameworks:</p>
+<p><strong>1) Polling: </strong>Is the process that the convert script enables when loading a page. In this process, it identifies the experiments, segments, and variations that the user is bucketed. Evaluates the experiences' conditions and if they are evaluated as true, it runs the experience.</p>
+<p>This process can be triggered manually by executing the following code:</p>
+<pre><code class=" language-js">_conv_q = _conv_q || [];
+_conv_q.push(["run","true"]);</code></pre>
+<p>You should determine what the best event on your SPA would be to trigger the above code. For example, in any SPA framework, you can utilize the<strong> onpopstate</strong> event. This will trigger the code every time your framework triggers this event when changing state.</p>
+<pre><code class=" language-js">window.onpopstate = function(event){
+  _conv_q = _conv_q || []; 
+  _conv_q.push(["run","true"]);
+ };</code></pre>
+<p>The beauty of this method is that you will not need to insert any code on the framework's code, and it would work with any framework that will trigger this event when changing app states. You can just add it to the <a href="https://support.convert.com/hc/en-us/articles/115000006251" target="_blank" rel="noopener">Project Global Javascript</a> section on your convert <a href="https://support.convert.com/hc/en-us/articles/115000006251" target="_blank" rel="noopener">Project Settings</a>. For this to work you would need for the tracking code to be inserted on your app, in the same way, you would insert the Google Analytics tracking code.<strong><br></strong><br>Additionally, from inserting the Convert tracking code in your website pages you will need to insert some code in the <strong>componentDidMount() </strong>and<strong> componentDidUpdate() </strong>events on your<strong> App class</strong> in your React files.</p>
+<p>This code will trigger the Convert polling, which is the function that runs all experiment conditions and monitors all page loading goals.<br><br>Here is an example of how this function needs to be called within your React app, in this case in the App.js file:</p>
+<p class="codepen" data-height="474" data-theme-id="31058" data-slug-hash="OaKogV" data-default-tab="js" data-user="gcrewe" data-pen-title="React convertHook() call">See the Pen <a href="https://codepen.io/gcrewe/pen/OaKogV/">React convertHook() call</a> by Convert.com (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+</p>
+<p> </p>
+<p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+</p>
+<p><strong>2) Use JavaScript Conditions in the Locations</strong></p>
+<p>Because the Convert script cannot read URL changes in a SPA, you should use a JavaScript condition instead of a URL match condition to trigger an experiment. You can find a more thorough explanation of how to do this in the following <a href="https://support.convert.com/hc/en-us/articles/205159965-Targeting-Experiments-and-Firing-Goals-Based-on-a-JS-Condition" target="_blank" rel="noopener">article</a>.<br><br><strong>3) Manually Activate an Experiment</strong></p>
+<p>You can trigger experiments manually after you determine that a certain flow has happened. In this method, Locations and Audience conditions will still be tested after triggering the polling with code. Please read the following <a href="https://support.convert.com/hc/en-us/articles/208831326-Manually-activate-experiment">article</a> about how this can be done.</p>
+<p><br>With the above 3 methods, you should be able to trigger experiments at the right moment in a React app.<br><br><em>** Be aware that changes triggered by the experiment will not be reset as they would be with a normal web page. For example, if you change a page element after a menu element has been clicked, clicking on the home page menu element will not reset that change. You will have to undo the element with code. You may want to do this by (for example) adding code to the Custom JavaScript area within the Visual Editor. </em></p>
+<p><strong>4) Goals checked through polling</strong></p>
+<p>The majority of goals are checked by Convert throughout the polling process. This polling process occurs when a page is initially loaded or called on item 1. However, with SPAs such as React, page loading does not occur when navigating through the application. For these types of scenarios, Convert has a specific function to call to activate the polling for monitoring goal conditions. The code for calling it is the following:</p>
+<pre><code class="language-javascript">window._conv_q = window._conv_q || [];
+_conv_q.push(['recheck_goals']);
+</code></pre>
+<p>Please don't hesitate to have a chat with us via any of the Support channels if you have any further questions about configuring these types of applications with Convert.<br><br>keywords: react spa</p>

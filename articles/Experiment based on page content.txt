@@ -1,0 +1,8 @@
+Experiment based on page content
+<h2>Issue</h2>
+<p>Sometimes, we would like to implement an experiment based on the page content, instead of URL or Page Tag conditions.</p>
+<h2>Solution</h2>
+<p>For this we will implement a JS Condition to look for the content on the page using JQuery and if found it will bucket the visitor on the experiment if he/she visits any page with such content.<br> <br> For this solution to work, you will need to create the CSS selector for the element that needs to be present on the page, to enable the experiment.</p>
+<p>Here is the code:</p>
+<pre>(function() {<br> if(document.readyState === 'complete'){<br>   return(false)}<br> else if(convert.$('.selector').length == 0) {<br>   convert_recheck_experiment();<br> }<br> else return (true);<br>})()</pre>
+<p>This code is based in this <a href="https://support.convert.com/hc/en-us/articles/206631623-Target-experiment-based-on-a-custom-Javascript-condition-that-evaluates-true-at-a-later-stage" target="_blank" rel="noopener">article</a>. And to learn how to create CSS selectors, you can see the video in this <a href="https://support.convert.com/hc/en-us/articles/360024399211">article</a>.</p>

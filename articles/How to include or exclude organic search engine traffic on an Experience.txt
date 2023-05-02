@@ -1,0 +1,14 @@
+How to include or exclude organic search engine traffic on an Experience
+<h2>Issue</h2>
+<p>You may want to include or exclude organic traffic originating from a search engine. This is possible within Convert.</p>
+<h2>Configuration</h2>
+<p>You can configure this by creating a <strong>New Audience </strong>and adding it to your experience. While editing the audience select the <strong>Medium </strong>condition that is located under Traffic Sources:<br><br><img src="https://support.convert.com/hc/article_attachments/6460086640653/mceclip0.png" alt="mceclip0.png"></p>
+<p> </p>
+<p>Drag the <strong>Medium</strong> condition to the right audience conditions and configure it as you please. Note that there are <strong>OR</strong> and <strong>AND</strong> operators you can use to join with other conditions.</p>
+<p>If you want to exclude organic traffic, then change the comparison operator from the default <strong>Matches Exactly</strong> to <strong>Does not Match Exactly</strong>.</p>
+<p>The utm medium values to match organic traffic for the different search engines are the following:</p>
+<p><strong>Google: </strong>organic</p>
+<p><strong>Bing: </strong>referral</p>
+<p><strong>Yahoo Search: </strong>organic</p>
+<p> </p>
+<p> </p>

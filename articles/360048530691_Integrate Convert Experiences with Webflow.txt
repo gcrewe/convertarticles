@@ -1,0 +1,15 @@
+Integrate Convert Experiences with Webflow
+Webflow is a SaaS application that allows designers to build responsive websites with browser based visual editing software. 
+This article will guide you on how to set up Convert A/B testing with your Webflow designed websites. You can run simple A/B experiments on any Webflow site, and it does most of the technical work (like splitting traffic) for you.
+Here are some simple steps to get started with this integration:
+
+Sign up for a Convert.com plan
+
+Find your Convert tracking script and copy it to your clipboard
+Go to your Webflow project's project settings → custom code tab. Paste the code you copied in the head code section. Make sure to include the opening and closing <script> tags! To be able to use the custom code you need to have a paid Webflow account.
+
+Save the changes and publish your Webflow project.
+Go back to the Convert dashboard and create your first A/B test!
+
+
+Your Convert dashboard will monitor performance and let you know how each variant does.

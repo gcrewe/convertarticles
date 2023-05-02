@@ -1,0 +1,21 @@
+Targeting Experiments and Firing Goals Based on a JavaScript Condition
+<h2>Target Based on JavaScript Condition</h2>
+<div class="user_formatted header_section clearfix">
+<p>You might want to fire a conversion or run an experiment when some sort of JavaScript expression evaluates to <strong>"true". </strong></p>
+<p><strong>This DMP (Data Management Platform) feature allows it to target for example lead score/stage from your Marketing Automation tool (like Marketo, Pardot, Elequou, Hubspot or Salesforce) without too much effort.<br></strong></p>
+<p><em><strong>Important Note: </strong>Any JavaScript used inside the expression has to be defined <strong>before</strong> the main Convert Experiments tracking code. If they are defined later on the page, their values cannot be used at the time of evaluation and the condition might not be matched. Convert also provides a <strong>convert.recheck()</strong> function to evaluate the condition every 50ms for 2 minutes, as the variable might not be declared when the convert script executes. You can find more information about it in this <a href="https://support.convert.com/hc/en-us/articles/206631623" target="_blank" rel="noopener">article</a>.</em></p>
+<p><em>Note: The javascript expression will be evaluated into the global "<strong>window</strong>" context.</em></p>
+<p>Currently, it is possible to use the JavaScript expression targeting in three locations:</p>
+<ol>
+<li>
+<strong>Advanced Goal Setup</strong> - a goal can be fired if the JavaScript condition used evaluates to <strong>true:<img src="https://support.convert.com/hc/article_attachments/6449906614157/mceclip0.png" alt="mceclip0.png"></strong>
+</li>
+<li>
+<strong>Experiment Locations</strong> - you can run an experiment on pages where a certain Javascript condition evaluates <strong><strong>true:<img src="https://support.convert.com/hc/article_attachments/14270095335693"></strong></strong>
+</li>
+<li>
+<strong>Experiment Audience</strong> - You can run an experiment for a certain group of visitors. For example, if one has a certain JavaScript variable holding the visitor status (client or anonymous), then it would be possible to run an experiment only for clients:<img src="https://support.convert.com/hc/article_attachments/6449899181837/mceclip1.png" alt="mceclip1.png">
+</li>
+</ol>
+<p>Keywords: trigger goal, trigger conversion</p>
+</div>

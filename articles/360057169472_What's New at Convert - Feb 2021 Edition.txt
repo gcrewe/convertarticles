@@ -1,0 +1,12 @@
+What's New at Convert - Feb 2021 Edition
+Features
+1. Feature to handle multiple currency code when manually tracking revenue in Shopify was added. Read here to know more.
+2. Revenue tracking for Shopify via webhook integration is now possible. Click here to learn more.
+3. A trigger to execute code after a variation has been decided for an experiment was released. Click here to read more.
+4. The feature of Live logs has been added to all plans for better experiment testing.
+5. The GoodUI Annual Solo Plan ($399) is now offered as a training add-on by Convert.
+6. Feature to set the confidence level once per project in Convert was released
+ 
+Bugs
+1. Bug with goal of type "Click Something on a Page" was not loading URLs through Live Select was resolved.
+2. A bug with incorrect image imported to experiment report was resolved.

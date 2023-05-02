@@ -1,0 +1,20 @@
+Where Do I Find My Billing Details?
+<h2>Find Billing Details</h2>
+<div class="user_formatted header_section clearfix">
+<p dir="ltr">To change plans, your credit card or billing information this is the location to manage it. Under Account Settings select <strong>Name &amp; Billing </strong>tab where you can:</p>
+<ul>
+<li dir="ltr">
+<p dir="ltr">Change the details of your invoice details. We send an HTML invoice every month that contains these details for your administration</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">change the credit card details and number here</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">change plan levels or</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">cancel your account completely.</p>
+</li>
+</ul>
+<p><img src="https://support.convert.com/hc/article_attachments/4423870785421/mceclip0.png" alt="mceclip0.png"></p>
+</div>

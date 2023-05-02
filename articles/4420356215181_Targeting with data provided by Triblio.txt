@@ -1,0 +1,19 @@
+Targeting with data provided by Triblio
+Introduction
+Convert Experiences targeting can be integrated with Triblio, with the purpose of allowing you to target experiences using Triblio profile data. This will allow you to personalize by data fields such as Company name, such as region, and industry. Intent data such as intent score, buying state. 
+Add Tracking Codes
+For this to work, it would require that you install the Triblio snippet on your site that will provide this information.
+Test that Triblio is properly installed on your site. Go to your browser console and paste the following code:
+Triblio.getAccountIdentification();
+It should return all the data available for you to target like this:
+city: "N/A"country: "N/A"domain: "N/A"employees: "N/A"employeesCode: "N/A"industry: "Telecommunications"isIsp: "N/A"naicCode: "517311"name: "Total Play Telecomunicaciones Sa De Cv"region: "N/A"revenue: "N/A"revenueCode: "N/A"sicCode: "J6110"subIndustry: null
+Create an Audience
+So, let's say that we want to target an experiment that targets all visitors that are on the "Telecommunications" industry.
+Let's create an audience in Convert called "Telecommunications Industry". We are going to do it by adding a JS Condition with the following code:
+(function() {var visitorData = Triblio.getAccountIdentification();if(typeof(visitorData)=="undefined") {convert_recheck_experiment(); return false;} else return (visitorData.industry == "Telecommunications");})()
+The Audience should be configured like this:We might need to set the Audience Type to Transient instead of Permanent if the data field would change over time and we would want the visitor to no longer experience the same as he moves through different stages.
+If we want to use the audience for Post-Test Segmentation make sure you see the Audience type to "Segment".
+Add the Audience to your Experience
+Next, just add the audience to the experience you will like to target to this audience.
+If you have any questions on how to use this, let us know in support, and we will gladly help you. 
+ 

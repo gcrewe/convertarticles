@@ -1,0 +1,36 @@
+Integrate Convert Experiences with SessionCam
+<h2 id="convert-woopra-integration">Convert-SessionCam Integration</h2>
+<p><a href="https://www.glassbox.com/sessioncam/" target="_self" rel="undefined">SessionCam</a> (part of Glassbox) is an analytics tool that allows you to watch recordings of your website visitors. Using the Convert integration, you can see the impact of your Convert experiences through the actions your customers take on your website. Convert will set properties in SessionCam so that you can segment metrics for each experiment and variation. </p>
+<p>This article will walk you through how to set and push these properties to SessionCam. For each experiment, the integration will pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Convert-Tracking-Code-Javascript">Convert tracking code</a> and the <a href="https://help.sessioncam.com/hc/en-gb/articles/360001023833-How-to-add-SessionCam-to-your-website" target="_blank" rel="noopener">SessionCam javascript code</a> are installed on your page. </p>
+<h2>Set Up Custom Variables</h2>
+<p><a href="https://help.sessioncam.com/hc/en-gb/articles/360001041714-How-to-set-up-a-Custom-Variable" target="_blank" rel="noopener">Custom Variables</a> are the mechanism for pushing data from your website/system into SessionCam. You can push as many data items as you wish, and then within the SessionCam console, you can search for any sessions containing the specific data (for example a reference number).  </p>
+<p>Add the below code to your website to send your Convert Experiment and Variation names:</p>
+<pre><code>
+	if (!window.sessioncamConfiguration)
+		window.sessioncamConfiguration = new Object();
+	if (!window.sessioncamConfiguration.customDataObjects)
+		window.sessioncamConfiguration.customDataObjects = [];
+	/** You can edit the values below for key and value to send the data you want**/
+        var refObject = window['convert']['data']['experiments']
+			for (var key in window["convert"]["currentData"]["experiments"]) {
+				if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+					continue;
+				}}
+            
+		var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+		var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+		curExperimentName = curExperimentName.replace("Test #", "Test ");
+		var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+		curVariant = curVariant.replace("Var #", "Variation ");
+
+	    var item1 = {key: "Experiment Name",value: curExperimentName}; 
+        var item2 = {key: "Variation Name",value: curVariant}; 
+
+    window.sessioncamConfiguration.customDataObjects.push(item1, item2);
+</code></pre>
+<p>Additional variables can be sent by duplicating the lines with itemx.</p>
+<h2 class="prettyprint prettyprinted"><span class="tag">View Convert Data in SessionCam Console</span></h2>
+<p><span class="tag">Turn recording on for your site and view Convert data to SessionCam console which is accessible <a href="https://console.sessioncam.com/Console/Authentication">here</a>. </span></p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000070352/mceclip0.png"></p>

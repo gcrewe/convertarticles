@@ -1,0 +1,48 @@
+Safari and iOS ITP 2.1. Its effects on testing and what you can do about them.
+<h2>Issue Description</h2>
+<p>As of March 25th, Apple released iOS 12.2 and Safari 12.1 on macOS High Sierra and Mojave. This includes ITP 2.1 (Intelligent Tracking Prevention), which enforces new rules that prevent certain tracking functions in the above-mentioned browsers.</p>
+<p>In relation to Convert Experiences, it means that browser-issued cookies now have an enforced duration of seven days. Convert cookies are written exclusively by the browser, so current Convert cookies will be deleted after this seven day period.</p>
+<p>In experiment terms, it means that visitors that have been previously bucketed into an experiment will be counted again if they return after seven days. Also, if they convert again after the 7 day period, the new conversion will be counted in the experiment. The default behavior is that Convert counts only the first conversion.</p>
+<p>This could affect your experiment results substantially, as the usage of the affected browsers can be large in certain markets like the United States.</p>
+<div class="special-content special-content--tips">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-04.png" alt="Tip"></div>
+<div class="special-content__info">
+<h3>Tips</h3>
+<p>New users who install Firefox for the first time after 5th June 2019 will have Enhanced Tracking Protection (ETP) set on by default. This change will speed up the browser and keep users’ web habits more private, while nudging advertisers toward less invasive practices. Same solution that is described below can also be applied for ETP.</p>
+</div>
+</div>
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>The solutions below require technical expertise to implement.</p>
+</div>
+</div>
+<h2>Solution</h2>
+<p>As mentioned above, the new cookie duration restrictions are on browser-created cookies and not server-issued cookies. Convert's solution is to issue the cookie that tracks experience data directly from the customer's web server. In this way, the convert script won't have the restrictions imposed by ITP 2.1 on the browser-side.</p>
+<p>To facilitate this, we are making available some code snippets to integrate on our customers' web server infrastructure. These code snippets are available for the following platforms:<em> PHP, Node JS HTTP Module, Node JS Express, Ruby</em> and<em> Python.<br></em></p>
+<h2>PHP Code</h2>
+<pre><em style="font-size: 1em;">&lt;?php<br><br>$currentTime = time();<br>
+<em>$convertCookieName = "_conv_v";</em><br><br><em>$yourTopDomain = ".example.com";</em><br><br><em>$defaultCookieData = "vi:1*sc:0*cs:$currentTime*fs:$currentTime*pv:0";</em><br><br><em>if(isset($_COOKIE[$convertCookieName])) $cookieData = $_COOKIE[$convertCookieName];</em><br><br><em>else $cookieData = $defaultCookieData;</em><br><br><em>//set the cookie</em><br><br><em>setcookie($convertCookieName,$cookieData, $currentTime + 15768000, "/", $yourTopDomain);<br><br>?&gt;</em></em></pre>
+<h2>Node JS HTTP Module Code</h2>
+<p>Requires <em>cookie</em> module.</p>
+<pre>  var currentTime = Math.floor(Date.now()/1000);<br>    var convertCookieName = "_conv_v";<br>    var yourTopDomain = "<em style="font-size: 1em;"><em>.example.com</em></em>";<br>    var defaultCookieData = "vi:1*sc:0*cs:"+currentTime+"*fs:"+currentTime+"*pv:0";<br><br>    var cookieData = defaultCookieData;<br>    if(request.headers.cookie) {<br>      var cookies = cookie.parse(request.headers.cookie);<br>      if(cookies[convertCookieName]) {<br>        cookieData = cookies[convertCookieName];<br>      }<br>    }<br><br>    response.setHeader('Set-Cookie', cookie.serialize(convertCookieName, cookieData, {<br>      maxAge: 15768000,<br>      path: '/',<br>      domain: yourTopDomain<br>    }));</pre>
+<h2>Node JS Express Code</h2>
+<p>Requires <em>cookie-parser</em> module required as <em>cookieParser</em> is no longer bundled with Express and must be installed separately.</p>
+<pre>    var currentTime = Math.floor(Date.now()/1000);<br>    var convertCookieName = "_conv_v";<br>    var yourTopDomain = "<em style="font-size: 1em;"><em>.example.com</em></em>";<br>    var defaultCookieData = "vi:1*sc:0*cs:"+currentTime+"*fs:"+currentTime+"*pv:0";<br><br>    var cookieData = defaultCookieData;<br>    if(request.cookies[convertCookieName]) {<br>      cookieData = request.cookies[convertCookieName];<br>    }<br><br>    response.cookie(convertCookieName, cookieData, { <br>      maxAge: 15768000 * 1000,<br>      path: '/',<br>      domain: yourTopDomain<br>    });</pre>
+<h2>Ruby Code</h2>
+<pre>currentTime = Time.now.to_i<br>convertCookieName = "_conv_v"<br>yourTopDomain = ".<em>example.com</em>"<br>defaultCookieData = "vi:1*sc:0*cs:#{currentTime}*fs:#{currentTime}*pv:0"<br><br>cookieData = defaultCookieData<br>if request.cookies[convertCookieName]<br>    cookieData = request.cookies[convertCookieName]<br>end<br><br>response.set_cookie(convertCookieName, <br>    :value =&gt; cookieData,<br>    :domain =&gt; yourTopDomain,<br>    :path =&gt; "/",<br>    :expires =&gt; Time.at(currentTime + 15768000)<br>)</pre>
+<p>Note:<br><em>request </em>is instance of<em> Rack::Request</em><br><em>response</em> is instance of<em> Rack::Response</em></p>
+<h2>Python Code</h2>
+<pre><em>import Cookie</em><br><em>import datetime</em><br><em>import os</em><br><br><em>currentTime = datetime.datetime.now().strftime('%s')</em><br><em>convertCookieName = '_conv_v'</em><br><em>yourTopDomain = '.example.com'</em><br><em>defaultCookieData = 'vi:1*sc:0*cs:'+currentTime+'fs:'+currentTime+'*pv:0'</em><br><em>cookieData = Cookie.SimpleCookie()</em><br><em>if 'HTTP_COOKIE' in os.environ:</em><br><em>    cookieData.load(os.environ["HTTP_COOKIE"])</em><br><em>if (convertCookieName not in cookieData) or (not cooieData[convertCookieName].value.strip()):</em><br><em>    cookieData[convertCookieName] = defaultCookieData</em><br><em># Set the cookie</em><br><em>cookieData[convertCookieName]['domain'] = yourTopDomain</em><br><em>cookieData[convertCookieName]['path'] = '/'</em><br><em>cookieData[convertCookieName]['max-age'] = 15768000</em><br><em>print cookieData[convertCookieName].output()</em></pre>
+<p> </p>
+<h2>Shopify (or any similar platform where you are prevented from adding any of the above code)</h2>
+<p>In the case that you are unable to add the required code (such as on Shopify's platform), the solution will be such as the following:</p>
+<ol>
+<li>Create a subdomain of your main domain and host it somewhere.</li>
+<li>Upload one of the scripts mentioned above to the host of the new subdomain. That host would need to support the language the script used, from the ones mentioned in this article. You will need to verify the script is running on the server correctly when called.</li>
+<li>Call the script in Shopify (eg templates, additional scripts, etc.). Tip: You can do it this way: <strong>&lt;img src="cookiescript.php" width<span class="attributevaluecolor">="0"</span> height<span class="attributevaluecolor">="0"</span>&gt;</strong>. <br>You will have to store it in the <strong>theme.liquid</strong>, <strong>cart-template.liquid (if possible in your Shopify install). </strong>
+</li>
+</ol>
+<p> </p>
+<p>Contact us through the <a href="https://support.convert.com/hc/en-us/articles/360025897372-Support-options" target="_self">support channels</a> if you have any questions about the above.</p>

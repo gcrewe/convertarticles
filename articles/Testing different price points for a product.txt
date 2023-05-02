@@ -1,0 +1,27 @@
+Testing different price points for a product
+<h2>Summary</h2>
+<p>Convert Experiences allows you to test different product price levels in e-commerce platforms.</p>
+<h2>General Method Description</h2>
+<p>The way that this is done is as follows:</p>
+<ol>
+<li>Clone the product in your e-commerce catalog, for which you want to AB test its price. Modify its price or alternatively, anything you want to test against. In the process of cloning the product, configure it so the new one does not show in your product list and remains hidden for search. <em>This method is recommended, as Convert cannot modify the prices on your e-commerce platform throughout the checkout process. </em>
+</li>
+<li>Create a <a href="https://support.convert.com/hc/en-us/articles/204490279-Set-Up-Your-First-Split-URL-Experiment" target="_blank" rel="noopener">Convert Split URL experiment</a> with the original product URL and the cloned product URL.</li>
+<li>Add revenue goals or any others that are appropriate.</li>
+<li>Start the experiment.</li>
+<li>At the end, you will see which product gathered more conversions.</li>
+</ol>
+<p>The checkout will be the same for the alternative product as the same product.</p>
+<h2>Testing sets of products</h2>
+<p>To do this you will need to do a similar type of setup, but when creating the AB test, you will need to add the different original product URLs to the experiment, and its corresponding cloned products URLs.</p>
+<p>This can be done in two ways:</p>
+<ol>
+<li>Create a <a href="https://support.convert.com/hc/en-us/articles/204490279-Set-Up-Your-First-Split-URL-Experiment" target="_blank" rel="noopener">Convert Split URL experiment</a>, and configure with a regex expression to transform the original products URLs to the new ones.<br>This has to be created as one <a href="https://support.convert.com/hc/en-us/articles/205160575-Do-You-Support-Regex-Regular-Expressions-" target="_blank" rel="noopener">regex expression</a> in the Site Area and Variation Menu to include all URLs. <br>You will need to be familiar with regular expressions to be able to use this option.</li>
+<li>Create a normal <a href="https://support.convert.com/hc/en-us/articles/205107815-Create-a-New-Experiment" target="_blank" rel="noopener">Convert AB experiment</a>, and code the redirection on the <a href="https://support.convert.com/hc/en-us/articles/115000006251" target="_blank" rel="noopener">Variation Custom JS</a> as described in the following <a href="https://support.convert.com/hc/en-us/articles/205160335-How-Do-I-Create-a-Variation-that-Redirects-to-Another-Page-Based-on-Certain-Logic-">article</a>.<br>You will need to be familiar with JavaScript to be able to configure something like this. <br>The JS Code that you would need to insert in the Custom JS area would look something like this:<br>
+<p class="codepen" data-height="223" data-theme-id="31058" data-slug-hash="xPedqx" data-default-tab="js" data-user="gcrewe" data-embed-version="2" data-pen-title="TestDifferentPricePoints">See the Pen <a href="https://codepen.io/gcrewe/pen/xPedqx/">TestDifferentPricePoints</a> by George Crewe (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+The convert.redirect() function will issue a redirect to the new variation and will enable the Convert platform to do tracking on the resulting page. <br>Convert will redirect half of the users that reach the product pages to alternate products, and will do it every time they try to visit the product pages, by remembering what group of products they visited the first time they went through the experiment.</li>
+</ol>
+<p>If a customer searches for a product you don't need to worry, as if they have already been included on a variation, Convert will send them to the corresponding variation product.</p>
+<h2>Hide duplicate product from searches and listings</h2>
+<p>Additionally you will need to hide the duplicate product from searches and collection listings. Shopify App Store provides several Apps that provide such functionality, although we do not recommend any one in particular. </p>

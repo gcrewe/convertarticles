@@ -1,0 +1,38 @@
+Add Revenue Tracking to Shopify via our new Tracking Method
+<h2 id="shopify-webhooks">Shopify combined with our new Tracking Method</h2>
+<p>Instead of using the<span> </span><a href="https://support.convert.com/hc/en-us/articles/204506429-Shopify-A-B-Testing-Integration-Convert-Experiences#step-6:-google-analytics-revenue-tracking" target="_self">Google Analytics Ecommerce code</a><span> </span>or the<span> </span><a href="https://support.convert.com/hc/en-us/articles/204506429-Shopify-A-B-Testing-Integration-Convert-Experiences#step-7:-manual-revenue-tracking" target="_self">Manual Revenue Tracking code</a><span> or the <a href="https://support.convert.com/hc/en-us/articles/360054379512-Add-Revenue-Tracking-to-Shopify-via-Webhook" target="_self">webhook solution</a> </span>to capture revenue on your store, you can use our <a href="https://support.convert.com/hc/en-us/articles/360042473452-New-Tracking-Structure-Advanced-Integrations" target="_self" rel="undefined">new tracking method</a> and combine it with your Shopify store.</p>
+<p>This method of tracking revenue conversions is more robust than the manual revenue tracking method of creating a Revenue Goal that tracks the "Thank you" page. The reason is that is actually triggered when an order is created, rather than when a visitor visits the thank you page. </p>
+<p><span>It also solves the current problem we have with the <a href="https://support.convert.com/hc/en-us/articles/360054379512-Add-Revenue-Tracking-to-Shopify-via-Webhook" target="_self">webhook solution</a> that does not track conversions that happen through the dynamic checkouts button like the Buy Now button, Amazon Pay, Paypal... etc. </span></p>
+<h2 id="step-2:-add-the-convert-experiences-script-to-your-shopify-theme">Add the Convert Script to your Shopify Theme</h2>
+<p>To integrate the two platforms, please go to<span> </span><strong>Sales Channels &gt;</strong> <strong>Online Store &gt; Themes &gt; More Actions &gt; Edit Code</strong></p>
+<p><img src="https://support.convert.com/hc/article_attachments/4415260935565/mceclip3.png" alt="mceclip3.png"></p>
+<p>Select the <strong><a href="https://shopify.dev/docs/themes/theme-templates/theme-liquid" target="_self">theme.liquid</a> </strong>file and paste the Convert tracking script just before the first "{% if %}" section, as shown in the screenshot below:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4415273779085/mceclip4.png" alt="mceclip4.png"></p>
+<p>Don't forget to save your changes in Shopify.</p>
+<h2 id="create-a-revenue-goal-in-your-convert-account">Create a Revenue Goal in your Convert account</h2>
+<p>Go to goals and select the template Revenue Goal:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6449070677261/mceclip0.png" alt="mceclip0.png"></p>
+<p>Add your Goal name and select either Manual Revenue Tracking or GA since it does not matter. Write down the Goal ID since you will use it in the next step:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6449088869133/mceclip1.png" alt="mceclip1.png"></p>
+<h2 id="add-code-to-your-global-project-javascript">Add code to your Global Project Javascript</h2>
+<p>Add this JS code to the "<a href="https://support.convert.com/hc/en-us/articles/115000006251-Project-Experience-Experiment-or-Personalization-Variation-Javascript#global-project-javascript" target="_self">Global Project Javascript</a>".<span> </span><strong>Be sure to update the revenue_goal_id in the code below with your own which you created in the previous step:</strong></p>
+<p class="codepen" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-height="300" data-theme-id="31058" data-default-tab="js" data-slug-hash="ExwaQap" data-user="gcrewe"><span>See the Pen <a href="https://codepen.io/gcrewe/pen/ExwaQap"> Revenue via advanced Tracking method</a> by Convert.com (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</span></p>
+<p>
+<script async="" src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+</p>
+<h2>Add code on the checkout Shopify section</h2>
+<p>Then you need to add this code on the checkout section (/admin/settings/checkout) of your Shopify:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4415243733389/mceclip0.png" alt="mceclip0.png"></p>
+<p class="codepen" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-height="300" data-theme-id="31058" data-default-tab="js" data-slug-hash="xxXbYOm" data-user="gcrewe"><span>See the Pen <a href="https://codepen.io/gcrewe/pen/xxXbYOm"> Revenue Checkout Shopify via Tracking method</a> by Convert.com (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</span></p>
+<p>
+<script async="" src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+</p>
+<h2 id="access-your-convert-report">Access your Convert Report</h2>
+<p>Once you complete your first purchase on your Shopify store:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4415273653005/mceclip0.png" alt="mceclip0.png"></p>
+<p>You will start receiving revenue data in your report:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423871381901/mceclip2.png" alt="mceclip2.png"></p>
+<p><a href="https://support.convert.com/hc/en-us/articles/360044171991-Live-Logs-for-Projects-and-Experiments-in-Convert" target="_self">Live logs</a> can also be used to verify the data:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423893039373/mceclip3.png" alt="mceclip3.png"></p>
+<h2 id="compatibility-with-other-upsell-and-subscription-shopify-plugins">Compatibility with other Upsell and Subscription Shopify Plugins</h2>
+<p>This integration is not currently compatible with other upsell and subscription plugins that use the Shopify API to create orders within Shopify. </p>

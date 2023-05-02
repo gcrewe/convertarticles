@@ -1,0 +1,38 @@
+Integrate Convert Experiences with Mouseflow
+<h2>Convert-Mouseflow Integration</h2>
+<p>Integration of <a href="https://mouseflow.com/">Mouseflow</a> with Convert Experiences will help you to import Convert data into your Mouseflow account. </p>
+<p>For each experiment, the integration uses a unique variable to pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<h2>Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the <a href="https://help.mouseflow.com/en/articles/4264201-how-to-install-mouseflow" target="_self">Mouseflow tracking code</a> are installed on your page. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000018192/mceclip0.png"></p>
+<h2>Activate Integration in Convert</h2>
+<p>Go to your Convert experience settings and under Integrations select the Mouseflow. Automatically code will set a Mouseflow custom variable so you can filter the list of results by experiment name and variation name. Then click Save and Continue:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423904212621/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Activate Integration Manually</h2>
+<p>If you do not want to activate the integration through Convert Experiences, you can create your own custom variables and push them to Mouseflow as described <a href="http://help.mouseflow.com/knowledge_base/topics/custom-variables-slash-tagging">here</a>.</p>
+<p>Example code to send the Variation Name:</p>
+<pre><code>window._mfq = window._mfq || [];
+  (function() {
+    var mf = document.createElement("script");
+    mf.type = "text/javascript"; mf.async = true;
+    mf.src = "//cdn.mouseflow.com/projects/f78eaa82-c86f-4689-8bac-5ed02bf00715.js";
+    document.getElementsByTagName("head")[0].appendChild(mf);
+  })();
+  
+    var refObject = window['convert']['data']['experiments']
+	for (var key in window["convert"]["currentData"]["experiments"]) {
+			if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+				continue;
+	}}
+            
+    var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+    var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+    curExperimentName = curExperimentName.replace("Test #", "Test ");
+    var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+    curVariant = curVariant.replace("Var #", "Variation ");
+  
+  window._mfq.push(["setVariable", "Variation Name", curVariant]); </code></pre>
+<h2>View Convert Data in Mouseflow</h2>
+<p>Login to your Mouseflow account, got to Recordings and access the filter options. Click the filter (funnel) icon in the top-right (blue bar) and then, under Variables, select the appropriate experiment and value (either a variation name, <code>*</code> (for all variations to be combined), or <code>^</code> (for all variations to be removed).</p>
+<p>This lets you filter for a page (with all variants combined into one), exclude all variants from a page (to view traffic not bucketed into tests), or view a specific variation for a page. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000075132/mceclip0.png"></p>

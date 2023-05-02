@@ -1,0 +1,35 @@
+Integrate Convert Experiences with Smartlook
+Convert-Smartlook Integration
+Smartlook is a qualitative analytics solution that enables complete user journey & engagement analysis for websites and mobile apps. On websites, Smartlook achieves this by collecting user data via simple Javascript snippet. The script collects core browser telemetry data and user client data. Smartlook then processes the data and enables user evaluation within the unique feature set; including, full customer journey recordings, events, funnels and heatmaps. Additionally, Smartlook allows for advanced data collection via Smartlook API, like: custom events, custom click props and user identification.
+For each experiment, the integration uses custom track events to pass along the experiment name and variation name that the visitor is currently bucketed into (if any).
+Enable Smartlook API 
+You need to enable the API in non EU and EU visitors to be able to send custom events:
+
+Add Tracking Code Snippets
+Make sure the Convert tracking code and the Smartlook tracking code are installed on your page. 
+
+Send Events to Smartlook
+The example code below is using the track API call and will send Convert Experience and Variation names to Smartlook:
+var refObject = window['convert']['data']['experiments']
+	for (var key in window["convert"]["currentData"]["experiments"]) {
+			if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+				continue;
+	}}
+            
+var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+var curExperimentName = refObject[key] && refObject[key].n ? refObject[key].n : "unknown experiment name";
+curExperimentName = curExperimentName.replace("Test #", "Test ");
+var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+curVariant = curVariant.replace("Var #", "Variation ");
+
+var eventName = 'Convert Experiences';
+var properties = {
+    Exp_Name: curExperimentName,
+    Var_Name: curVariant
+  };
+smartlook('track', eventName, properties);
+
+View Convert Data in Smartlook
+Using a custom event in Smartlook, you will be able to view all of your Convert Experiences data as they associate to the values that you pass in the event.
+When you log in to your Smartlook account, you should go to your Events. There, you can see all of the track events that you are sending through Smartlook.
+ 

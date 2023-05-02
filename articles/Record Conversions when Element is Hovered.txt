@@ -1,0 +1,21 @@
+Record Conversions when Element is Hovered
+<h2>Target / Approach</h2>
+<p>On this article, we are going to cover how can we trigger conversion(s) when an element is hovered. To achieve this we will create a JS Custom Goal and a piece of code to trigger the conversion on the experience.</p>
+<h2>Create a Javascript Triggered Goal</h2>
+<p>Navigate to <strong>Projects &gt; Your Project &gt; Goals &gt; Add Goal &gt; JavaScript triggered goal</strong></p>
+<p><img src="https://support.convert.com/hc/article_attachments/6442712056461/mceclip0.png" alt="mceclip0.png"></p>
+<p style="padding-left: 20px;">Name your goal</p>
+<p style="padding-left: 20px;"><img src="https://support.convert.com/hc/article_attachments/4423895099021/mceclip1.png" alt="mceclip1.png"></p>
+<p style="padding-left: 20px;">Take note of the Goal ID:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423902409485/mceclip3.png" alt="mceclip3.png"></p>
+<h2>Add code to trigger conversions</h2>
+<h2>
+<span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 15px;">From the Visual Editor, open the Global Experience JS and p</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 15px;">aste the code below on Global Experience JS:</span>
+</h2>
+<pre>convert.$(document).ready(function() {<br><br>//Reset Hover Status and Conversion Count <br>var hoverTrue; hoverTrue = "Not Hovered";<br>console.log(hoverTrue);<br><br>var triggerHoverGoal; triggerHoverGoal = 0;<br>console.log(triggerHoverGoal);<br><br>//Add Hover function on the element<br>//Replace "<strong>yourElement</strong>" (use <strong>#elementId</strong> or <strong>.elementClass</strong>)<br><br>convert.$("<strong>yourElement</strong>").on("mouseenter",function() {<br>if (triggerHoverGoal == 0){<br>hoverTrue = "mousein";<br>console.log(hoverTrue);<br><br>//Push conversion on hover<br>//Replace "<strong>1003654</strong>" with <strong>your goal ID</strong>.<br><br>window._conv_q = window._conv_q || [];<br>_conv_q.push(["triggerConversion","<strong>1003654</strong>"]);<br>console.log("Hover Goal Triggered");<br>goalTriggered = 1;<br>}<br>});<br>});</pre>
+<p><img src="https://support.convert.com/hc/article_attachments/360069685891/mceclip8.png" alt="mceclip8.png"></p>
+<h2>Activate goal on your experience</h2>
+<p>From the <strong>Experience Summary page</strong>, click on the icon below highlighted on the side of the <strong>Goals section</strong>:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14270230386829"></p>
+<p style="padding-left: 20px;">Activate the goal by checking its checkbox:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6442741616141/mceclip2.png" alt="mceclip2.png"></p>

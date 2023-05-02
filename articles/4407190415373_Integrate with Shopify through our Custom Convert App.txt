@@ -1,0 +1,65 @@
+Integrate with Shopify through our Custom Convert App
+Introduction
+Our Convert custom app automates the installation process. It is, by far, the easiest way for Shopify stores to get started on Convert, and there is almost no learning curve.
+Additionally, this app allows you to track revenue on all Shopify plans, not just Plus plans (which have custom checkout domains). 
+Requirements
+Do I need a particular plan or contract with the partner to use the integration?
+You will need a Shopify store. The app is 100% free.
+Do I need to have the partner’s technology installed already?
+Yes, you will only need this app if you have a Shopify store.
+Is there any other special configuration needed?
+You will need to have your own Convert API Keys and a Revenue goal created inside your Convert account. Other than that, the app allows you to install Convert on your Shopify store very easily. It’s by far the fastest, easiest way to get Convert up and running on Shopify. If your plan, does not have the API feature, ask the support team for a set of API keys to install the app.
+Do I need to be the Shopify Shop Owner to complete the installation?
+When the Shopify partner's account where the app is created does not belong to the owner, it needs to be at least a "collaborator" with collaborator permissions, as mentioned here. In short words, Convert Custom App does not need to be created by the Shop Owner, as it can be created by a collaborator. The app installation still needs to be performed by the Shop Owner.
+Create your own Convert API Keys
+You need to be the account owner and create your own Convert API Keys. Go to Account Settings:
+
+Select the API-Keys tab menu from the top and then hit on the New API-Key button to generate your own:
+
+You will need this pair of keys to connect the custom Shopify app that you are going to create in the next sections with your Convert account.
+Create a Revenue Goal
+You now need to create a simple revenue goal and add it to an experiment you run on your Shopify Store.
+
+
+Create a Shopify Custom App and Configured it.
+Follow the instruction in the following video and use this URL for the helper tool to get the Shopify App values: https://helper.convertapps.net/custom-app-info
+
+
+
+
+Recharge or Carthook
+If you are using third-party checkout solutions like Recharge or Carthook, you need to select the "Use Webhook method" checkbox:
+
+When the webhook method is used, we listen to the order's paid event from Shopify, this will get triggered for any cart solution that is used, including Recharge and Carthook.
+The only thing that the webhook does not track is dynamic checkout buttons, like "Buy Now".
+Multi-currency support
+You can select the "Multi-currency support" checkbox if you want to automatically convert to the currency of your choice to be used in Convert reports.
+We use a client-side Shopify lib to do the currency exchange calculation, so if you select the webhook method above the multi-currency support is not available.
+
+Revenue Conversions in Convert Reporting Dashboard
+Once you have the first purchase on your Shopify store where you run the Convert experiment with the attached revenue goal you should see the first goal conversion
+
+
+
+
+Advanced Page Tagging
+You may use the advanced page tags to target your Shopify visitors and pages. The values are populated with Shopify objects, as we show below. Use them in Site Area and Audiences to make your experience targeting even more specific:
+See the Pen Shopify Integration - Step 2 - Shopify Tracking Code by George Crewe (@gcrewe) on CodePen.
+
+
+
+Delete Convert App from Shopify
+In order to delete the custom app you created, you need to go to/admin/apps and click the About this app option:
+
+and then click the Delete app:
+
+This message is a default Shopify message for all custom apps. You will still be able to re-install the app if you wish without our help.
+
+ 
+
+
+Important
+Note that if a previous installation is deleted from the App instead of being deleted from the Shop, then a request to clear the DB cache must be raised with the Support team in order to ensure a fresh installation.
+
+Keyword: 'shopify app'
+ 

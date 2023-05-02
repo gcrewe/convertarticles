@@ -1,0 +1,14 @@
+What's New - July 2022
+<p>Updates:</p>
+<ol>
+<li>Increased the hypothesis/objective field text limit to allow long texts to be pasted (in summary and Compass hypothesis)</li>
+<li>Added tags in experience overviews</li>
+<li>Improved summary screen display on screens with large resolutions</li>
+<li>Updated the screenshot system to allow more accurate screenshots after URLs were changed</li>
+<li>Improve password strength indicators to give better indications on how to improve the password security. <img src="https://support.convert.com/hc/article_attachments/8696623058829/ss.PNG" alt="ss.PNG">
+</li>
+<li>Allow variation traffic allocation if traffic is less then a 100 visitors (or after reset). Protecting the test integrity but with enough flexibility for QA.</li>
+<li>API keys now have an easy copy button for convenience</li>
+<li>Expanded the type of domains accepted in the settings page</li>
+<li>Added ID’s to goal screens making them easier to find and QA</li>
+</ol>

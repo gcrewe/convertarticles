@@ -1,0 +1,10 @@
+How to Make Sure My Results are Statistically Significant
+<h2>Change Your Statistical Confidence</h2>
+<p>In any experiment, the larger your <a href="http://convert.com/calculator/" target="_self">sample size</a>, the more accurate (and valuable) the results of the data will be.</p>
+<p>Depending on your particular needs, you can adjust the minimum or maximum length that an experiment should run.</p>
+<p>You can also ensure that your winning test starts running by itself after a certain percentage of statistical significance, as well as sitting a minimum number of visitors and conversions to trigger this change.</p>
+<p>To do this, go to your Experiment Summary and select Stats Settings:</p>
+<p><img src="https://support.convert.com/hc/en-us/article_attachments/14270699241101/f25c83301f9dc7320fc0c017b62a555d452ba15eca860416b86aa62c23f8bcbf.png"></p>
+<p>Find and click on the setting that manages the Confidence Level. With this setting, you can set an experiment-wide significance level at which you'd like Convert to declare significant results (winners and losers) on the Report page. You should be aware of certain things associated with changing the statistical significance setting. In general, a higher setting is more accurate and increases the time required for Convert to declare significant results because it requires a larger sample size. A lower statistical significance level decreases the amount of time needed to declare significant results, but lowering the setting also increases the chance that some of the results will be false positives.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14270703247245"></p>
+<p>You will also be able to see many other options. Simply make your desired changes and save.</p>

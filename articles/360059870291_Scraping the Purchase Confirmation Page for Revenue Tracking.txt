@@ -1,0 +1,58 @@
+Scraping the Purchase Confirmation Page for Revenue Tracking
+Issue Description
+There are certain cases in which is not possible to track revenue through the other methods Convert provides. This may be due to, that they do not use GA, they use a custom installation of GA Ecommerce or it is not possible to refer to the revenue amount from javascript variables on the page.
+Solution
+So, in these cases, you could set up Convert to scrape the purchase confirmation page for the revenue after it has been rendered and then send it to Convert.
+To do this you need to install some javascript code in Project Configuration > Global Javascript.
+Also, you will need to go through the purchase confirmation and find the following items:
+
+Purchase Confirmation URL
+CSS Selector for the purchase revenue amount.
+CSS Selector for the amount of the products.
+
+To find the CSS selectors you can look at the following article on how to find a selector of certain content.
+Once you got the selectors, you can fill them in the variables of the script.
+
+		// replace purchase confirmation URL:
+    pc_url = 'https://www.domain.com/checkout/onepage/success/';
+
+    // replace the revenue purchase amount selector
+    revenue_selector = 'tr.subtotal > td.amount > .price').text();
+
+    // replace the product count selector
+    product_cnt_selector = 'ul.items-qty > li.item > .content';
+
+    // replace with revenue goal id
+    goal_id = '10000001';
+
+    // Only executes on the purchase confirmation page
+    if(location.href.includes(purch_conf_url)) {
+
+    // waits for the DOM to have loaded
+    document.addEventListener("DOMContentLoaded", function(event) {
+
+    // Extracts the revenue from the order details page
+    var revenue = convert.$(document).find(revenue_selector).text();
+  
+    // Removes the dollar sign if present
+    revenue = revenue.replace(/\$/g, '');
+  
+    // Extracts the product count from the page
+    var products_cnt = convert.$(document).find(product_cnt_selector).text();
+
+    // Extracts product count data and calculates a total if count on different rows
+    //var products_cnt = 0;
+    //convert.$(document).find('ul.items-qty > li.item > .content').each(function() {
+    //products_cnt += parseInt(this.innerHTML, 10);
+    //}
+    console.log('Reported Data to Convert:');
+    console.log('Revenue:'+revenue);
+    console.log('Products Count:'+products_cnt);
+  
+    // Forwards the data to Convert.
+    window._conv_q = window._conv_q || [];
+    window._conv_q.push(["pushRevenue",revenue,products_cnt,'100312556']);
+
+    });
+
+    }

@@ -1,0 +1,28 @@
+Correct and improve traffic bucketing on uneven Split URL Experiments
+<p> </p>
+<p>Sometimes, it occurs that you get uneven Split URL experiments where you see that the Original shows much more visitor traffic than the Variation does. Some of the traffic that was bucketed by the Locations and Audience conditions might not make it into the variation, because it does not match the Original URL Pattern, resulting in more traffic on the original. </p>
+<h2>Solution</h2>
+<p>To solve this, the following regex formula matches every URL bucketed by the Locations and appends any parameters from the visitors' URL to the end of the Variation URL. This prevents uneven experiments caused by the default <strong>Transfer Query Parameters</strong> option.</p>
+<p>It also transfers URL query parameters present on the URL in which was bucketed onto the experiment.</p>
+<p>Change the Variations configuration to: </p>
+<p><strong>Original URL:</strong></p>
+<p>([a-z]{1,2}tps?):\/\/((?:(?!(?:\/|#|\?|&amp;)).)+)(?:(\/(?:(?:(?:(?!(?:#|\?|&amp;)).)+\/))?))?(?:((?:(?!(?:\.|$|\?|#)).)+))?(?:(\.(?:(?!(?:\?|$|#)).)+))?(?:(\?(?:(?!(?:$|#)).)+))?(?:(#.+))?<br><br><em>Yes, include this strange-looking text. This is a regex expression that should match all the traffic that matches your experiment Locations and Audience conditions, even if it does not look anything like a URL. </em><br><br><strong>Variation 1</strong>:</p>
+<p><a href="https://myvariationurl">https://myvariationurl</a><strong>$7$6<br></strong></p>
+<p><strong>The modal should look like:</strong><strong><img src="https://support.convert.com/hc/article_attachments/10570635058701" alt="Summary_-_CRO-176___n_checkout_Offer_Table_Optimisation_Series___v1b_-_fixed_regex_-_Convert__1_.png"><br></strong></p>
+<div class="special-content special-content--tips">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-04.png" alt="Tip"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p><strong>Do not include your Original URL on the Original URL Pattern text box. Check the Support Regular Expressions option. Do not enable the Transfer Original URL variables to the variation URL.</strong> If you missed something, it will not work as expected.</p>
+</div>
+</div>
+<div class="special-content special-content--tips">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-04.png" alt="Tip"></div>
+<div class="special-content__info">
+<h3>Tips</h3>
+<p>If your Variation already also has a query parameter and you want to append another query parameter from the visitor's URL, the above will not work. See this article instead: <a href="https://support.convert.com/hc/en-us/articles/360000940871-Transfer-Query-Parameters-from-Original-to-a-Variation-that-also-has-Query-Parameters">https://convert.zendesk.com/hc/en-us/articles/360000940871-Transfer-Query-Parameters-from-Original-to-a-Variation-that-also-has-Query-Parameters</a></p>
+</div>
+</div>
+<p>keyword: Catch all Regex</p>
+<p> </p>
+<p> </p>

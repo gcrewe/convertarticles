@@ -1,0 +1,15 @@
+Integrate Convert Experiences with RudderStack
+Convert-Rudderstack Integration
+RudderStack is an open-source, warehouse-first customer data platform (CDP) that builds your CDP on your data warehouse for you. It provides a powerful transformation framework to process your event data on the fly.
+For each experiment, the integration uses semantic track events to pass along the experiment name and variation name that the visitor is currently bucketed into (if any).
+Add Tracking Code Snippets
+Make sure the Convert tracking code and the RudderStack tracking code (rudder-analytics.js) are installed on your page. You will need your Write Key and Data Plane URL that you can find in your Rudderstack account:
+
+Send Events to RudderStack
+The example code below is using the track API call and will send Convert Experience and Variation names to RudderStack. This can be inserted inside Convert on the Project > Configuration > Project Global Javascript and will be appended to the page, before any experiment is evaluated and executed after the variations have been decided.
+/* Push Convert data to external tracking tool */function afterVariationsDecidedActions(){console.log('afterVariationDecidedActions() called');var exp = convert.currentData.experiments;var number_of_experiments = Object.keys(exp).length;var loop_counter = 0;for (var expID in exp){// Next Line is where the code to send the // data goesrudderanalytics.track('Convert Experiences', {Exp_Name: expID,Var_Name: exp[expID].variation_id});console.log('Convert is sending data for the following experiment/variation to your third party too: '+expID+','+exp[expID].variation_id)}}_conv_q = window._conv_q || [];_conv_q.push({what: 'addListener',params: {event: 'snippet.experiences_evaluated',handler: (event) => afterVariationsDecidedActions()}})
+View Convert Data in RudderStack
+Using a semantic event in RudderStack, you will be able to view all of your Convert Experiences data as they associate to the values that you pass in the event.
+When you log in to your RudderStack account, you should go to your Live Events. There, you can see all of the track events that you are sending through RudderStack.
+
+ 

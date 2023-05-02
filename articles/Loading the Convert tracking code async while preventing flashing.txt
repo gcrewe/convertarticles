@@ -1,0 +1,12 @@
+Loading the Convert tracking code async while preventing flashing
+<h2>Overview</h2>
+<p>It is possible that because of performance reasons you may not want to load the Convert snippet in sync mode. However, this may cause flashing due to the fact that the page elements may load before the Convert snippet is loaded and run.</p>
+<h2>Solution</h2>
+<p>This is a method that will aid in preventing flashing when loading the Convert snippet on async mode. <span>This workaround would be to disable the sync loading and default body hides. This while hiding the body for a determined period of time. It would prevent the Convert script from stopping the rest of your page loading while the Convert snippet loads.<br></span></p>
+<p>Modify the Convert tracking code to load async, by adding the "async" parameter to the script tag.</p>
+<pre>&lt;!-- begin Convert Experiences code--&gt;&lt;script type="text/javascript" async src="//cdn-3.convertexperiments.com/js/10014852-10014302.js"&gt;&lt;/script&gt;&lt;!-- end Convert Experiences code --&gt;</pre>
+<p>Add the following snippet to just after your tracking code:</p>
+<pre>&lt;script&gt;<br>(function(){<br>//disables the automatic body hiding of the convert script
+ var _conv_prevent_bodyhide = true;<br>//the duration, in mili seconds, for which the body is kept hidden if Convert tracking code does not load.<br> var hideTimeout = 500; //modify this to whatever you think it's suitable<br> <br> var cssToHide = "body {visibility: hidden !important;}",<br> headElement = document.head || document.getElementsByTagName("headElement")[0],<br> styleElement = document.createElement("style");<br> headElement.appendChild(styleElement);<br> styleElement.type = "text/css";<br> styleElement.id = "convert_hide_body";//do not change this<br> if (styleElement.styleSheet){<br> styleElement.styleSheet.cssText = cssToHide;<br> } else {<br> styleElement.appendChild(document.createTextNode(cssToHide));<br> }<br> setTimeout(function() {var c_h = document.getElementById("convert_hide_body"); if(c_h) c_h.outerHTML = "";}, hideTimeout)<br> })();<br>&lt;/script&gt;</pre>
+<p>This might work in most cases, but you might run on to race conditions getting a flash then.</p>
+<p>The only guaranteed way to not flashing in most cases is to load the tracking code in sync mode.</p>

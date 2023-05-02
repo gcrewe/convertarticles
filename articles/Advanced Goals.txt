@@ -1,0 +1,40 @@
+Advanced Goals
+<h2>Overview</h2>
+<p>Tracking a conversion sometimes does not depend solely on only one event occurring. Sometimes, we might want to track conversions only if two or more events have occurred. </p>
+<p>For example, I might want to track people that reached a page, or stage of the funnel, but only when they have passed through a specific page, as there might be several routes to that particular page.</p>
+<p>Convert template goals only track a specific event, such as a page visit, form submission, element click, purchase, etc. So it is not possible to track this type of event solely with these goals. <br><br>You can create Advanced goals with the Advanced Goal Template, that evaluate conditions such as another Goal being previously triggered/converted along with other <a href="https://support.convert.com/hc/en-us/articles/115000021251" target="_blank" rel="noopener">visitor-based data conditions</a>, that are joined by AND and LOGICAL operators to track anything you might require. </p>
+<h2>How to Create an Advanced goal</h2>
+<p>To solve this, you can utilize the Advanced Goal editor. </p>
+<p>So, let's carry on with the scenario we wrote in the "<em>Issue"</em> section. Let say that we want to track people that get to the final funnel page with the URL, <a href="https://www.domain.com/finalstep.html,">https://www.domain.com/finalstep.html,</a> but we only want to track people, which have visited step 2 in the funnel with the URL <a href="https://www.domain.com/step2.html.">https://www.domain.com/step2.html.</a></p>
+<p>A requirement for tracking a compounded goal using this method is that the first conversion has to happen previously to the page view in which the second conversion occurs. </p>
+<ol>
+<li>So, first let's go and create our Step 2 page visit goal, using the Page Visit Goal template:<br><img src="https://support.convert.com/hc/article_attachments/6449223551629/mceclip0.png" alt="mceclip0.png">
+</li>
+<li>Now we will create the second goal to monitor when the second page is reached and also check if the first conversion happened. <br><br>To do this, let's create a second goal and we will name it, <em>"Final Step through Step 2"</em>. We have to create an advanced goal:<br><br>We will first add a condition to test if the first <em>"Step 2"</em> goal has been triggered. Search for the <em>"Triggered Goal"</em> condition under <em>"Visitor Data"</em>, and then drag it from the right column to the main pane:<br><br><img src="https://support.convert.com/hc/article_attachments/6449272098061/mceclip1.png" alt="mceclip1.png">
+</li>
+<li>Then create the second condition to track test if the visitor has reached the final stage page. For this, we need to drag the condition <em>"Content &gt; Page URL" </em>to the main condition pane beside the <em>"AND"</em>.<br><br>And we should add the final page URL. The goal should look like the following at the end of the configuration. Save it, once it is configured the same way:<br><br><img src="https://support.convert.com/hc/article_attachments/6449316824589/mceclip2.png" alt="mceclip2.png">
+</li>
+<li>Include all other conditions that you feel should be important for your advanced goal to be shown as Converted. Make sure that you understand how these logical conditions will be evaluated in the way that you nest them and join them using AND and OR logical operators. </li>
+<li>Make sure that the Advanced Goal and all other included goals in the advanced goal are attached to your experiment.</li>
+</ol>
+<h2>Testing an Advanced Goal</h2>
+<ol>
+<li>Open a fresh incognito session.</li>
+<li>Navigate to the test URL, and get bucketed in the experiment that has the goals attached. Verify this with the <a href="https://support.convert.com/hc/en-us/articles/204506699" target="_blank" rel="noopener">Convert Chrome Debugger Extension</a> by searching the experiment id in the Chrome Developer Tools console log.</li>
+<li>Trigger each of the goals included in the Advanced goal, one by one. Verify that they are triggered by searching the goals in the Chrome Developer Tools console log.</li>
+<li>Once you are sure that all the goals included in the Advanced goal, have been triggered, then navigate to any of the pages where your Convert Project tracking code has been included. With this page view, the Advanced goal will be evaluated. Verify on the Chrome Developer Tools console log that the goal has been triggered, and evaluated to true, by searching its goal id. </li>
+<li>You can also check the goal conversion on the Convert app. Make sure before you start the testing of your goals, you set a <a href="https://support.convert.com/hc/en-us/articles/205146745" target="_blank" rel="noopener">QA audience</a> for your experiment, and that you include it on the URL when visiting the page with the experiment.</li>
+<li>In the Chrome debugger, you will be able to see the result of the evaluation of each of the conditions included in the Advanced goal, being 'Goal Triggered equals to true' or anything else<strong>. </strong>If the join of the results of the conditions based on the AND's and ORs joins setup in the advanced goal result on false, the goal will not be triggered or set as converted.</li>
+<li>You can use the <a href="https://support.convert.com/hc/en-us/articles/360004647132" target="_blank" rel="noopener">QA Guide</a> which is a very detailed guide on how to debug your experiments after they have been configured and before they are launched to all the public.</li>
+</ol>
+<h2>Page View Required for Advanced Goal Evaluation</h2>
+<p>Convert requires that a page view is executed by the visitor after it has triggered the goals contained in the Advanced Goal, so it has a chance of being evaluated. <br><br>If the goals included in your Advanced Goals, are event goals, such as click goals, link goals, revenue goals, then it will be required that the visitor does a page view after these goals have been set as converted, for the Advanced Goal to be evaluated. </p>
+<h2>Common Pitfalls</h2>
+<p>If the Advanced goal is not triggering as expected, these are things that have to be considered:</p>
+<ol>
+<li>
+<strong>All Conditions Evaluating as True: </strong>Check if all the conditions included in the Advanced goal are returning true when the Advanced goal is being evaluated. You can find this out, by <strong>Testing the Advanced Goal</strong>, and searching for the goal id in the Chrome Developer Tools while having turned on the <a href="https://support.convert.com/hc/en-us/articles/204506699" target="_self">Chrome Debugger Extension</a>.</li>
+<li>
+<strong>Page View Does not Occur after event goals triggered: </strong>It might be the case that your goal includes <strong>Triggered Goal</strong> conditions and that the goal included are event goals such as click goals, link goals, revenue goals, scroll goals, custom JS goals, and that there is no pageview by your visitors after this goal has been evaluated. So, you should verify that the page view occurs after the included goals in the Advanced Goal are triggered or signaled as converted.</li>
+</ol>
+<p><strong>tag: </strong>Compounded Goals</p>

@@ -1,0 +1,14 @@
+My changes created on the Visual Editor don't get saved when using Squarespace
+<h2>Introduction</h2>
+<p>When attempting to create experiments with the Visual Editor on pages hosted by <a href="https://www.squarespace.com/">Squarespace</a>, the changes don't seem to get saved.</p>
+<p>Convert's Visual Editor relies on the page element classes to remember which element must be changed.</p>
+<p>Squarespace creates dynamic classes, which confuses the Visual Editor, and does not let it remember the elements that must be changed.</p>
+<h2>Ignore Dynamic Classes</h2>
+<p>The method to get around this problem is to configure the Visual Editor to ignore these dynamic classes. </p>
+<ol>
+<li>Go to the Visual Editor, and hover over the gear icon.</li>
+<li>Then select the "Element Selection Settings". </li>
+<li>And enter the "yui" text on the form, and "Save Changes". This means that when selecting elements inside the editor, ignore attribute (classes, IDs) values that contain yui. This is mandatory since YUI and BLOCK-YUI selectors are dynamic inside Squarespace. <br><br><img src="https://support.convert.com/hc/article_attachments/360035830632/mceclip0.png" alt="mceclip0.png">
+</li>
+</ol>
+<p>This will allow you to create your experiments with pages hosted on Squarespace. You will need to do the same for each experiment you create on a Squarespace pages.</p>

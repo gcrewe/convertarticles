@@ -1,0 +1,16 @@
+How to enable SSO Login feature for my Convert account?
+<h2>What is SSO?</h2>
+<p>Single Sign On or commonly known as SSO is an identification mechanism that allows users to log in using a single set of id and password for multiple connected but independent software systems. SSO authentication provides access to multiple applications by sharing the authentication token seamlessly between them. </p>
+<h2>How do I enable SSO authentication for my account?</h2>
+<p>Setting up SSO authentication for your Convert account can be achieved by following the steps below:</p>
+<ol>
+<li>Click on "Account Settings" <img src="https://support.convert.com/hc/article_attachments/4423891949581/mceclip0.png" alt="mceclip0.png">
+</li>
+<li>Click "Enable Single Sign On" button under the Single Sign On section: <img src="https://support.convert.com/hc/article_attachments/4423870423309/mceclip1.png" alt="mceclip1.png">
+</li>
+<li> On clicking the Enable Single Sign On button, you would receive a confirmation message at the top of the screen indicating that Convert has received the SSO request.</li>
+</ol>
+<p>Once the above process has been completed, Convert's Support team will contact you to process the request.</p>
+<p> <strong>Note : </strong>This feature is available on selected plans only. Learn more about our pricing plans and the features they offer here : <a class="PrimaryLink BaseLink" href="https://www.convert.com/pricing/" target="_blank" rel="noreferrer noopener">https://www.convert.com/pricing/</a></p>
+<p>  </p>
+<p> </p>

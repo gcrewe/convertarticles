@@ -1,0 +1,31 @@
+Integrate Convert Experiences with HubSpot
+<h2 id="convert-fullstory-integration">Convert-HubSpot Integration</h2>
+<p><a href="https://www.hubspot.com/" target="_self">HubSpot </a>i<span>s a full-featured marketing suite that includes a landing page builder, tools for email and SEO, a form builder for gating content, and a repository for managing leads generated from campaigns</span>. In HubSpot you can also define<span> </span><a href="https://knowledge.hubspot.com/events/create-visited-url-events" target="_blank" rel="noopener">visited URL events</a>,<span> </span><a href="https://knowledge.hubspot.com/events/create-submitted-form-events" target="_blank" rel="noopener">submitted form events</a>,<span> </span><a href="https://knowledge.hubspot.com/events/create-clicked-element-events" target="_blank" rel="noopener">clicked element events</a><span>, and </span><a href="https://knowledge.hubspot.com/events/create-custom-events" target="_blank" rel="noopener">custom events</a>, and HubSpot will count when such an event is completed. You can then analyze these completions with the events analytics tool and see how many events are completed in a certain timeframe.</p>
+<p>This article will walk you through how to send data from Convert experiences/variations to your HubSpot account. For each experiment, the integration will pass along the experiment name and variation name that the visitor is currently bucketed into (if any) as a snapshot.</p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the <a href="https://knowledge.hubspot.com/reports/install-the-hubspot-tracking-code" target="_self">HubSpot tracking code</a> are installed on your page. HubSpot tracking code looks like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360051111992/mceclip0.png" alt="mceclip0.png"></p>
+<h2 id="activate-integration-manually">Activate Integration Manually</h2>
+<p>Once you have the two tracking codes in your website, then you should add this extra code to track <a href="https://knowledge.hubspot.com/events/create-custom-events" target="_self">custom events</a> (one for experiment name and one for variation name).<span> </span><em>You can add this to the<span> </span><a href="https://support.convert.com/hc/en-us/articles/115000006251-Project-Experience-Experiment-or-Personalization-Variation-Javascript" target="_blank" rel="noopener">Project Global Javascript</a><span> </span>section or directly on your pages, after the HubSpot and Convert tracking codes.</em></p>
+<pre><code>   
+    var refObject = window['convert']['data']['experiments']
+	for (var key in window["convert"]["currentData"]["experiments"]) {
+		if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+			continue;
+		}}
+            
+	var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+	var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+	curExperimentName = curExperimentName.replace("Test #", "Test ");
+	var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+	curVariant = curVariant.replace("Var #", "Variation ");
+
+var _hsq = window._hsq = window._hsq || [];
+_hsq.push(["trackEvent", {
+        id: curVariant,
+        value: ''
+    }]);
+</code></pre>
+<h2>View Convert data in HubSpot</h2>
+<p>After integration is enabled and your experiment is activated, you will be able to find in your HubSpot account the custom user data that you sent. <span>Please note: Events will only be processed for accounts with </span><strong>Marketing Hub Enterprise</strong><span>. Tracked events can show up in contacts' timelines.</span></p>
+<p><span style="box-sizing: border-box;" data-sheets-value='{"1":2,"2":"In your HubSpot account, navigate to &lt;strong&gt;Reports&lt;/strong&gt; &gt; &lt;strong&gt;Analytics Tools&lt;/strong&gt;."}' data-sheets-userformat='{"2":14337,"3":{"1":0},"14":[null,2,0],"15":"Arial","16":10}' data-sheets-formula='=""'>In your HubSpot account, navigate to<span> </span><strong>Reports</strong><span> </span>&gt;<span> </span><strong>Analytics Tools</strong>. </span><span style="color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit; font-weight: inherit;">Click</span><span style="color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit; font-weight: inherit;"> </span><strong style="color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit;">Behavorial Events</strong><span style="color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit; font-weight: inherit;">. You will see a table with the Variation IDs you just sent.</span><span></span></p>

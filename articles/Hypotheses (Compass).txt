@@ -1,0 +1,131 @@
+Hypotheses (Compass)
+<p><span>This article gives information on what is a hypothesis, how to create it, and how to use it in Convert.</span></p>
+<h2><span>What is a Hypothesis</span></h2>
+<p>Instead of randomly testing ideas that you ‘feel’ are good, the focus should be on building a solid hypothesis that maximizes chances for winning.</p>
+<p>A hypothesis is an assumption that a proposed change in your website would lead to visitors taking the action that you want them to.</p>
+<p><span>Many avenues can be explored to find good hypotheses. The image below by the popular Conversion Expert, </span><a title="Craig's Twitter Handle" href="https://twitter.com/OptimiseOrDie">Craig Sullivan</a><span>, shows several ways in which you can collect meaningful insights.</span></p>
+<p><span><img src="https://static.wingify.com/vwo/uploads/sites/3/2014/03/craig_surveyetc.jpg" alt="Getting the right insights for your hypotheses"></span></p>
+<p>In Convert, you build hypotheses manually, through the <strong>Compass</strong> left menu, based on your internal insights you have collected. As a part of your internal research, you identify the problem areas in your website; the factors that are contributing to your visitors not converting into customers, thus leading to conversion leaks. Hypothesizing follows next.</p>
+<p><span>A Hypothesis is created to plug those leaks and fix the conversion issues. For example, if you notice that the sign-up button—visible only when a user scrolls down the page—is not fetching enough clicks, you can build a hypothesis that moving the sign-up button above the fold should attract more clicks. For validating the hypothesis, you can run an experience.</span></p>
+<h2>How to Create a Hypothesis</h2>
+<p><span>You typically create a hypothesis to depict a projected change and it's potential impact on your website conversions.</span></p>
+<p>In Convert, you can create a Hypothesis from the top tab that is called <strong>Compass</strong>:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14269625739661"></p>
+<p>Once you are there, click on the New Hypothesis blue button on the right top corner:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14269626100877"></p>
+<p>A new window will appear where you need to start filling in details for your new hypothesis:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423756611597/mceclip2.png" alt="mceclip2.png"></p>
+<ul>
+<li>
+<strong>Hypothesis Name</strong>: <span>Enter a brief informative name of the Hypothesis. </span>
+</li>
+<li>
+<strong>Objective</strong>: <span>Enter the problem that you are addressing and also e</span><span>nter a solution that you expect will solve the Hypothesis problem. For example, changing the color of Sign-up button from orange to green may attract more clicks. </span>
+</li>
+<li>
+<strong>Prioritization Score</strong>: <span>Prioritization will help you organize the multiple hypotheses in a logical order. Enter a score for each prioritizing parameter based on the prioritization model you have selected. Compass will calculate the priority score for the hypothesis based on the score you provide to each parameter. To know more about prioritizing Hypothesis, click </span><a href="https://support.convert.com/hc/en-us/articles/360037227891#how-to-prioritize-a-hypothesis" target="_self">here</a><span>.</span>
+</li>
+<li>
+<strong>Status of Hypothesis</strong>: Select a status of the hypothesis based on these values:
+<ul>
+<li>
+<span class="wysiwyg-underline">Draft</span>: means that anyone can continue working on the hypothesis</li>
+<li>
+<span class="wysiwyg-underline">Completed</span>: hypothesis has been finalized and can be turned into an experiment</li>
+<li>
+<span class="wysiwyg-underline">Applied</span>: hypothesis is now applied to an experiment (A/B or Split URL)</li>
+<li>
+<span class="wysiwyg-underline">Archived</span>: hypothesis has been applied, experiment has run and hypothesis is no longer needed</li>
+</ul>
+</li>
+<li>
+<strong>Tags</strong>: <span>Enter tags to make the Hypothesis easily searchable.</span>
+</li>
+<li>
+<strong>Start and End dates</strong>: enter dates for your hypothesis. Start date could be a past date when you or your colleagues actually came up to this hypothesis. End date can be the date when you expect that the hypothesis is turned into an experience.</li>
+<li>
+<strong>Summary</strong>: Give a summary of your hypothesis.</li>
+</ul>
+<h2>How to Prioritize a Hypothesis</h2>
+<p>While you create hypotheses, one of the details that you need to enter is the prioritization score.</p>
+<p>Prioritizing will help you sort the multiple hypotheses in a scientific manner. The closer a hypothesis is to the top of the list, the higher is its priority. There is a rating system in the dashboard to help you choose a hypothesis you feel has the maximum probability of accomplishing the change in conversion towards the desired direction.</p>
+<p>Every time you create a new hypothesis, you are presented with the option to rate the hypothesis by giving it the<span> </span><strong>Prioritization Score</strong>.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423775826189/mceclip3.png" alt="mceclip3.png"></p>
+<p>There are two prioritization models you can use: PIE or ICE.</p>
+<h3>PIE prioritization model</h3>
+<p><span>This model of hypothesis prioritization ranks hypotheses according to their Potential for improvement, Importance and Ease. </span><span>In the PIE model, hypotheses are ranked from highest to lowest priority, using a scale of 1 to 5. </span></p>
+<p>There are three parameters you must rate on a scale of 1 to 5:</p>
+<ul>
+<li>
+<strong>Potential:</strong><span> </span>On a scale of 1 to 5 (1 being the lowest, and 5 being the highest), select <span>how likely it is that the hypothesis will result in an overall improvement</span>?</li>
+<li>
+<strong>Importance</strong>: On a scale of 1 to 5 (1 being the lowest, and 5 being the highest), select how crucial the visitor landing on the test pages (for which the hypothesis is created) is.</li>
+<li>
+<strong>Ease:</strong><span> </span>On a scale of 1 to 5 (1 being the most difficult, and 5 being the easiest), select the complexity of the hypothesis. Rate how difficult it’ll be to implement the changes identified for the hypothesis.</li>
+</ul>
+<h3>ICE prioritization model</h3>
+<p><span>The </span><u>Impact</u><span>, </span><u>Confidence</u><span>, and </span><u>Ease </u><span>model is very similar to PIE, except it uses a confidence factor in place of “potential”. </span></p>
+<p>There are three parameters you must rate on a scale of 1 to 5:</p>
+<ul>
+<li>
+<strong>Impact:</strong><span> </span>On a scale of 1 to 5 (1 being the lowest, and 5 being the highest), impact <span>demonstrates how much your hypothesis will positively affect the key metric you are trying to improve.</span>
+</li>
+<li>
+<strong>Confidence</strong>: <span>On a scale of 1 to 5 (1 being the lowest, and 5 being the highest), confidence shows how sure you are about Impact. It is also about ease of implementation in some way.</span>
+</li>
+<li>
+<strong>Ease:</strong><span> </span>On a scale of 1 to 5 (1 being the most difficult, and 5 being the easiest), ease <span>is about the easiness of implementation. It is an estimation of how much effort and resources are required to implement this hypothesis</span>.</li>
+</ul>
+<h3>Considerations before you rate your hypothesis</h3>
+<ol>
+<li>
+<p><strong>How confident are you of achieving the uplift?: </strong>Prototyping the user persona you are targeting can help you in determining the potential of a hypothesis. With a sound understanding of your audience, you can make an educated assumption on whether the hypothesis will address the users’ apprehensions and doubts and nudge them to convert.</p>
+</li>
+<li>
+<p><strong>How valuable is the traffic you are running this test for?: </strong>Your website may be attracting visitors in large numbers, but not all visitors become buyers. Not all convert. For example, a hypothesis built around the checkout page holds higher importance than the one built around the product features page.</p>
+</li>
+<li>
+<p><strong>How easy is it to implement this test?: </strong>Next comes determining the ease of implementing your test. Try to answer some questions: Would it require a lot of strategizing on your part to implement the hypothesis? What is the effort needed in designing and developing the solution proposed by the hypothesis? Can the changes suggested in the hypothesis be implemented using just the Visual Editor, or does it warrant adding custom code?</p>
+</li>
+</ol>
+<h2 class="article-title" title="How to Use the Hypotheses Dashboard">How to Use the Hypotheses screen</h2>
+<p>To access the Hypotheses screen, on the top tab, click <strong>Compass</strong>.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14269660948237"></p>
+<p dir="ltr">On this screen, you can perform the following actions:</p>
+<ul>
+<li dir="ltr">
+<p dir="ltr">Manage and track hypotheses based on various statuses as mentioned above.</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Create a hypothesis as described above</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Sort, search and filter hypotheses</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Edit or delete a hypothesis</p>
+</li>
+<li dir="ltr">Turn a Hypothesis into an Experience</li>
+</ul>
+<h2>How to sort, search and filter hypotheses</h2>
+<p>You can sort the various columns by using this arrow:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14269661767181"></p>
+<p>You can also <span>filter or unfilter the hypotheses that you view in the Hypotheses screen:</span></p>
+<p><img src="https://support.convert.com/hc/article_attachments/14269662300685"></p>
+<p>This dropdown has different options of which you can select what you would like to see which are:</p>
+<ul>
+<li>Filter by Status</li>
+<li>Filter by Score</li>
+</ul>
+<p><img src="https://support.convert.com/hc/article_attachments/14269673889549"></p>
+<p>You can select them alternatively, to provide you with the best view that fits your work at any moment.</p>
+<p>Finally, you can search your Hypotheses based on names or tags:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14269664379277"></p>
+<h2>How to Edit or Delete a Hypothesis</h2>
+<p>Use the 3 dot icon on the right side to edit or delete an existing hypothesis:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14269676117773"></p>
+<h2>How to Turn a Hypothesis to an Experience</h2>
+<p>When a hypothesis has the status of Completed, which means all editing on the hypothesis has been done, there is a way to turn that hypothesis into an experience (<a href="https://support.convert.com/hc/en-us/articles/205107815-Create-a-New-Experiment" target="_self">A/B</a> or <a href="https://support.convert.com/hc/en-us/articles/204490279-Set-Up-Your-First-Split-URL-Experiment" target="_self">Split URL</a> at the moment). Simply use these icons from the 3 dot icon:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14269710159373"></p>
+<h2>Share with Collaborators</h2>
+<p>We do not have additional access levels for Compass, rather we use the existing hierarchy structure that is described <a href="https://support.convert.com/hc/en-us/articles/205151065-Collaborators-Share-With-Multiple-Users-Accounts" target="_self">here</a>.</p>

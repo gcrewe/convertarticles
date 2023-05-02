@@ -1,0 +1,36 @@
+Create a New Experience
+<h2>Create a new experience</h2>
+<p>After entering your name and email address for the free trial, you will be redirected to your <a href="https://support.convert.com/hc/en-us/articles/205150985-What-is-a-Project">projects</a> page. Click on the "New Experience" button on the right of the screen to begin creating a new experience:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423757048973/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Set up a new A/B test</h2>
+<p>Once you click on that button, you will see this popup. For our purposes, we will create an A/B experience:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/10297787056269" alt="mceclip0.png"></p>
+<p>For this example, we are going to call the experiment “My First A/B Test.” Then, enter your URL in the second box. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/10297856579085" alt="mceclip1.png"></p>
+<p>Click the "Create Experience" button.</p>
+<h2>Choose the website URL you would like to test</h2>
+<p>You will be taken to the <a href="https://support.convert.com/hc/en-us/articles/360001098232-The-Visual-Editor-in-Convert-Experiences" target="_self">Visual Editor</a> that displays the URL you chose and a toolbar on the top such as the below example:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360088258872/visual_editor.PNG" alt="visual_editor.PNG"></p>
+<h2>Change the appearance of different variations of your website</h2>
+<p>If you look at the Page Variations section in the top left, you will notice that "Variation 1" is selected by default. This means that any changes we make to this version of the URL will not affect the original URL.</p>
+<p>This will result in a classic A/B test, in which the "A" version is the original page and the "B" version is Variation 1.</p>
+<p>Let’s edit an element by hovering over it with our mouse, causing an orange outline to appear:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360035818552/mceclip4.png" alt="mceclip4.png"></p>
+<p>If we click on the element, a menu should pop up beside it like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360035818431/mceclip5.png" alt="mceclip5.png"></p>
+<p>Let’s add a background color by clicking on “Add BG Color”. A window will display that gives us many options:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360035818451/mceclip6.png" alt="mceclip6.png"></p>
+<p>Let’s keep it simple for this example by selecting the orange square, which is the third box in the second row. Once you have done that, click OK. You will notice that the element has changed color like so:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360035818491/mceclip7.png" alt="mceclip7.png"></p>
+<p>Changes are saved automatically. Click continue:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360035818732/mceclip8.png" alt="mceclip8.png"></p>
+<h2>Activate your experience so that you can begin to analyze the results</h2>
+<p>Now you will be taken to the <a href="https://support.convert.com/hc/en-us/articles/360031978452-Experience-Summary" target="_self">Experience Summary</a> page. There are many ways to customize your experience from this page, but for now let’s focus on the basics:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6441761267341/mceclip0.png" alt="mceclip0.png"></p>
+<p>Make sure to <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">install your project code</a>, located at the top of the screen:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6441792508685/mceclip2.png" alt="mceclip2.png"></p>
+<p>Click on it to view the necessary code and insert it into your header:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6441796874637/mceclip1.png" alt="mceclip1.png"></p>
+<p>Now from the status options activate your experience</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6441818455053/mceclip3.png" alt="mceclip3.png"></p>
+<p>Congratulations! Your experience is now activated.</p>

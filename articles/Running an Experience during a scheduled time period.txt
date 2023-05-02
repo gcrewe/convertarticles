@@ -1,0 +1,43 @@
+Running an Experience during a scheduled time period
+<h2>Introduction</h2>
+<p>Convert lets you schedule your experiments or campaigns to start and stop them at specific times. </p>
+<div class="special-content special-content--tips">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-04.png" alt="Tip"></div>
+<div class="special-content__info">
+<h3>Tips</h3>
+<p>This is the more advanced option to stop your experiments at a certain time, but the harder to implement. However, if you would like an easier way you can use the <a href="https://support.convert.com/hc/en-us/articles/360042871212" target="_self">maximum days</a> setting on the Stats section, or you can also use the audience segmentation <a href="https://support.convert.com/hc/en-us/articles/115000021251#visit-time" target="_self">visit time field.</a></p>
+</div>
+</div>
+<h2>Add Moment.js Library</h2>
+<p>First, you will need to include the <a href="http://momentjs.com/">moment.js</a> library into your project. You can do this by adding the following line into the <a href="https://support.convert.com/hc/en-us/articles/115000006251" target="_blank" rel="noopener">Global Project Javascript</a>:</p>
+<pre><code class="language-javascript">
+convert.$.getScript("https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.3/moment.min.js", function(){
+
+  console.log("moment.js has been included.");
+
+});
+</code></pre>
+<p>It will look like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423902636557/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Add JS Condition on Audiences</h2>
+<p>Now include the following code as a <a href="https://support.convert.com/hc/en-us/articles/205159965-Targeting-Experiments-and-Firing-Goals-Based-on-a-JS-Condition">Javascript Condition</a> on your Audience, replacing the date and time shown in bold below with the specific date(s) and time(s) you are targetting:</p>
+<pre><code>(function() {
+	if (typeof moment == 'undefined') {
+		convert_recheck_experiment();
+	} else {
+		return moment().isBetween('<strong>2018-01-12 00:00:01', '2018-01-15 23:59:59'</strong>);
+	}
+})()
+</code></pre>
+<p>It will look similar to the screenshot below:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6443175511053/mceclip0.png" alt="mceclip0.png"></p>
+<p><span class="wysiwyg-color-red"><strong><em>Moment will interpret the date as the user's local computer time, but if you want to specify a time zone or UTC offset or do anything more complex, please refer to the official documentation:</em></strong></span></p>
+<p><a href="https://momentjs.com/guides/">https://momentjs.com/guides/</a></p>
+<p><a href="http://momentjs.com/docs/">http://momentjs.com/docs/</a></p>
+<div class="special-content special-content--tips">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-04.png" alt="Tip"></div>
+<div class="special-content__info">
+<h3>Related:</h3>
+<p><strong><a href="https://support.convert.com/hc/en-us/articles/360040857771-Scheduling-Experiences" target="_blank" rel="noopener">Scheduling Experiences </a></strong></p>
+</div>
+</div>

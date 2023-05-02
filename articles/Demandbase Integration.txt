@@ -1,0 +1,26 @@
+Demandbase Integration
+<h2>Overview</h2>
+<p><a href="https://www.demandbase.com/" target="_self">Demandbase</a> is a data aggregator for companies to personalize websites and email campaigns based on this data.</p>
+<p>Convert can use the data provided for testing to chosen segments.</p>
+<h2>Install the Demandbase tracking code</h2>
+<p>This should be installed on the webpages which you want to personalize before the Convert tracking code.</p>
+<h2>Build the audience you want to target from Demandbase data</h2>
+<p>For that you can reference the following page to see what data is available to you:</p>
+<p><a href="https://support.demandbase.com/hc/en-us/articles/203233110-Firmographic-Attributes-Overview" target="_blank" rel="noopener">Firmographic Attributes Overview</a></p>
+<p>You can also type the following in the console of a webpage where you have installed Demandbase to see what is available to you:<br><br><em><span class="il">Demandbase</span>.Segments</em></p>
+<p>For example, you can have the visitor company information if you type:</p>
+<p><em> <span class="il">Demandbase</span>.Segments.CompanyPro <wbr></wbr> file<br><br></em> From this you can start creating conditions to create segments.</p>
+<p>For example: You can create a condition like the following to target companies with a small amount of employees:</p>
+<p><em> <span class="il">Demandbase</span>.Segments.CompanyPro <wbr></wbr> file.employee_range == "Small"</em></p>
+<h2>Configure your experience to use the condition you have created</h2>
+<p><em>Create your experience and create your changes, if you have not done so.</em></p>
+<p><em>Edit your audience settings and select "Create Audience" to add your condition. The condition should be added as a <a href="https://support.convert.com/hc/en-us/articles/205159965-Targeting-Experiments-and-Firing-Goals-Based-on-a-JavaScript-Condition" target="_self">JS Condition</a> in the audience settings and its code should look like the following:<br></em></p>
+<p class="codepen" style="height: 195px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-height="195" data-theme-id="31058" data-default-tab="js" data-user="gcrewe" data-slug-hash="KELaWm" data-pen-title="Demandbase Integration JS Condition">See the Pen <a href="https://codepen.io/gcrewe/pen/KELaWm/"> Demandbase Integration JS Condition</a> by Convert.com (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p> </p>
+<p>The code should be configured in the following way in the 'Create Audience' section of the Audience settings:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6448373132301/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Run a <a href="https://support.convert.com/hc/en-us/articles/205146745-QA-Testing-Your-Experiments-Before-Putting-Them-Live" target="_self">QA</a> in your experience</h2>
+<p>You can always paste the condition in the browser console to see if it returns true and your experience is running when it should.</p>
+<p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+</p>

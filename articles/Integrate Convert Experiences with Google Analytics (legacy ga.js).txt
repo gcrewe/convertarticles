@@ -1,0 +1,32 @@
+Integrate Convert Experiences with Google Analytics (legacy ga.js)
+<h2 id="introduction">Introduction</h2>
+<p>You can have your experiments' data and statistics sent from Convert Experiences inside<span> </span><a href="https://www.google.com/analytics/">Google Analytics</a><span> </span>(<a href="https://developers.google.com/analytics/devguides/collection/gajs" target="_self" rel="undefined">Classic Analytics ga.js</a>) and this way you are able to build rich reports that can bring valuable insights about how specific experiments perform on certain segments of users.</p>
+<div class="special-content special-content--tips">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-04.png" alt="Tip"></div>
+<div class="special-content__info">
+<h3>Tips</h3>
+<p><strong>Please follow below steps only if you are using the legacy <a href="https://developers.google.com/analytics/devguides/collection/gajs" target="_self" rel="undefined">Classic Analytics ga.js</a>.</strong></p>
+<p><strong>For integrating with <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs" target="_self" rel="undefined">Universal Analytics analytics.js</a> or <a href="https://developers.google.com/analytics/devguides/collection/gtagjs" target="_self" rel="undefined">Global Site Tag gtag.js</a> please read <a href="https://support.convert.com/hc/en-us/articles/205160075" target="_self">these</a> instructions.</strong></p>
+<p><strong>For integrating with <a href="https://developers.google.com/analytics/devguides/collection/ga4" target="_self">Google Analytics 4 properties</a> please read <a href="https://support.convert.com/hc/en-us/articles/360058788431-Integrate-Convert-with-GA4-via-Google-Tag-Manager" target="_self">these</a> instructions.</strong></p>
+</div>
+</div>
+<h2 id="add-tracking-codes-(convert-+-ga)"><span>Add Tracking Codes (Convert + GA)</span></h2>
+<p>Make sure that both tracking codes (Convert + GA) are added on your website head section. Google Analytics tracking code should be placed<span> </span><strong>after<span> </span></strong>Convert Experiments code.</p>
+<p>For Convert tracking code you can read<span> </span><a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Convert-Tracking-Code-JavaScript-" target="_self">these instructions</a>.</p>
+<p>For GA Classic Analytics (ga.js) you can read <a href="https://developers.google.com/analytics/devguides/collection/gajs" target="_self">these instructions</a>.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/115003527612/mceclip10.png"></p>
+<h2 id="enable-the-integration-through-convert ">Enable the Integration through Convert </h2>
+<p>After setting up your A/B experience, go to Experiment Summary by editing the experiment. Once you are in the Experiment Summary, go to Experiment section and then select Add/Edit Integrations:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423903641229/mceclip0.png" alt="mceclip0.png"></p>
+<p>Integrate through the use of <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingCustomVariables" target="_self">Google Analytics Custom Variables</a> - this is the choice if you are using the Google Analytics Classic tracking (ga.js). In that case you need to select one of the five available Google Analytics Dimensions. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423903653517/mceclip1.png" alt="mceclip1.png"></p>
+<p>Make sure you do not have multiple experiments running in the same time using the same dimension. Reusing a dimension for experiments that run in different periods is fine though.</p>
+<h2 id="see-convert-data-in-ga-reports- ">See Convert data in GA reports  </h2>
+<div>After setting up this integration, the test data will start appearing inside Google Analytics as follows. If you have<span> </span><a href="https://support.convert.com/hc/en-us/articles/204506339-Prevent-Experiment-Details-Data-Leak-with-Data-Anonymization">Data Anonymization</a><span> </span>enabled,<span> </span><a href="https://support.convert.com/hc/en-us/articles/204506639-Where-Do-I-Find-my-Experiment-and-Variation-IDs">Variation IDs</a><span> </span>(instead of Variation names) will be sent to GA.</div>
+<div> </div>
+<div><strong>Since you are using the ga.js tracking and therefore the custom variables, the data will be visible in two locations:</strong></div>
+<div>
+<p>Under <strong>Audience --&gt; Custom --&gt; Custom Variables</strong>, there will be a variable named CONVERT-XXXX where XXXXX will be the experiment ID inside Convert Experiments. You can see the Convert experiment id in the address bar when you edit your experiment.<span> </span><img src="https://support.convert.com/hc/article_attachments/360090279012/mceclip1.png" alt="mceclip1.png"></p>
+<p>Under that variable, you will see your testing combinations.<span> </span><img src="https://support.convert.com/hc/article_attachments/360090250851/mceclip2.png" alt="mceclip2.png"></p>
+<p>On each pageview of a tested page we also send an event to Google Analytics. You can find those under <strong>Real Time --&gt; Events</strong> inside your Google Analytics. You can use the events to see reports of how many times a variation has been seen (not just by how many visitors).<span> </span><img src="https://support.convert.com/hc/article_attachments/360090250371/mceclip0.png" alt="mceclip0.png"></p>
+</div>

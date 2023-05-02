@@ -1,0 +1,20 @@
+Resources: Explore a Demo Project! 
+<h2><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">Trial Users - Welcome Screen</span></h2>
+<p><span style="font-size: 15px;">Ok, you just signed up for a trial with us, great!  We have released a new welcome screen (available for all users, yes, trial users included!) that will be presented right after you log in for the first time in our app:<br><img src="https://support.convert.com/hc/article_attachments/4423756346509/mceclip0.png" alt="mceclip0.png"><br></span></p>
+<h2><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">Explore Demo Project</span></h2>
+<p><span style="font-size: 15px;">This option will create a new project called Demo Project, including experiences of different types (A/A, A/B. Split url), statuses (Scheduled, Paused, Active, Draft, etc) available to test, explore and discover more about Convert and its features.<br></span></p>
+<p><img src="https://support.convert.com/hc/article_attachments/14269725075597"></p>
+<h2><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">Explore Summary of a Demo A/B Test Experiment</span></h2>
+<p><span style="font-size: 15px;">This option will take you to the <a href="https://support.convert.com/hc/en-us/articles/360031978452-Experience-Summary" target="_blank" rel="noopener">Experience Summary</a> section. Here you have visibility of details, integrations, goals, audiences and more. The setup of an experience is configured in this section. </span></p>
+<p><img src="https://support.convert.com/hc/article_attachments/14269726425869"></p>
+<h2><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">Explore Report of a Demo A/B Test Experiment...</span></h2>
+<p> <span style="font-size: 15px;">This option will take you to the <a href="https://support.convert.com/hc/en-us/articles/204490289-Test-Report-Graphs" target="_blank" rel="noopener">Experience Report</a> section. Visits, conversions, improvement, conversion rate and analytics related metrics are available here, and all data is presented in Real-Time!</span></p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423775626125/mceclip3.png" alt="mceclip3.png"></p>
+<h2><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">Create a new Project</span></h2>
+<p><span style="font-size: 15px;">If you feel ready to create and configure your first Project, this is the option for you. It will bring you the  firsts steps needed to create a project from scratch:</span></p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423769868941/mceclip4.png" alt="mceclip4.png"></p>
+<p> </p>
+<h2><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">Start the Welcome Screen Manually</span></h2>
+<p><span style="font-size: 15px;">This welcome screen will not be presented again automatically, if you want to trigger the Welcome Screen, just access the following link while logged in on the app:</span></p>
+<h3><a href="https://v2.app.convert.com/accounts/10001?demo_project=true" target="_self" rel="undefined">https://app.convert.com/accounts/10001?demo_project=true</a></h3>
+<p>Using this method will also work on collaborator accounts.</p>

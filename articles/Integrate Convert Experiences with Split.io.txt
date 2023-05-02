@@ -1,0 +1,29 @@
+Integrate Convert Experiences with Split.io
+<h2>Convert-Split.io Integration</h2>
+<p>Integration of <a href="https://www.split.io/">Split.io</a> with Convert Experiences powers your product decisions with a unified solution for feature flagging and experimentation. You will need the Integrate package to be able to achieve the steps below.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360021791371/mceclip1.png"></p>
+<p>For each experiment, the integration can pass along the experiment name/id and variation name/id that the visitor is currently bucketed into.</p>
+<h2>Add Tracking Code Snippets</h2>
+<p>First make sure the Convert tracking code is <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">installed</a> on your page.</p>
+<p>On every page that you want to install Split, paste the javascript SDK as described <a href="https://docs.split.io/docs/javascript-sdk-overview">here</a>.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360021790171/mceclip0.png"></p>
+<h2>Send Custom Events</h2>
+<p>You should then create the custom events you want to send (e.g. Convert Experiment Name and Convert Variation Name that the website visitor is bucketed into) by using the track method. The track method allows you to record any actions your customers perform. Each action is known as an event and corresponds to an event type. You can send a custom event from anywhere in the page where Convert experiences are running.</p>
+<p>Example code for sending Experiment Name and Variation Name:</p>
+<pre><code>var refObject = window['convert']['data']['experiments']
+        for (var key in window["convert"]["currentData"]["experiments"]) {
+            if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+                continue;
+            }}
+            
+var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+    var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+    curExperimentName = curExperimentName.replace("Test #", "Test ");
+    var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+    curVariant = curVariant.replace("Var #", "Variation ");
+
+var queued = client.track('ConvertExperiment', curExperimentName);
+var queued = client.track('ConvertVariation', curVariant); </code></pre>
+<h2>View Convert Data in Split</h2>
+<p>Track events can be found in the <strong>Event Types</strong> tab in <strong>Admin Settings</strong>. Click <strong>view</strong> next to an event type to see all of the corresponding events. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/360021791791/mceclip2.png"></p>

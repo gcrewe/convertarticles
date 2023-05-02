@@ -1,0 +1,26 @@
+What's New - April 2022
+Updates:
+
+We have added a search option in the Countries dropdown in Audience section and Timezone dropdown in Project settings
+
+All experiment reports now honor the timezone selected in the Project Setting section
+Experiment reports now have short-hand filters in the date picker
+
+You can now easily locate and navigate to experiments in which specific goals are being used
+
+We have improved the Convert Chrome extension so it works better with a broader variety of cookie consent settings 
+
+The Convert Shopify custom app now supports advanced page tags for better targeting. Page tags are automatically added when installing the custom app.
+
+We have now simplified the goal creation process by providing a single interface for creating goals using a template, creating advanced goals or importing goals
+The custom Convert Shopify app now supports multiple currencies
+
+
+We’ve added the Global Experience CSS to the visual editor in addition to the existing Global Experience JavaScript
+
+The Site area summary of the experiment now shows the regex formula
+
+The site area validation has been improved to make it more accurate
+
+ 
+ 

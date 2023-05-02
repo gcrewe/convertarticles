@@ -1,0 +1,18 @@
+My Experiments Stopped, What Happened?
+<h2>Understand Stopped Experiments</h2>
+<div class="user_formatted header_section clearfix">
+<p><span data-mce-mark="1">Convert Experiments helps you set up tests and tries to bring testing best practices inside the software. For example we consider an experiment successful (enough) at 97% and not before, and we suggest on every new test to let the test run for a minimum of 7 days. You can change these minimum days and add maximum days as well.</span></p>
+<h2><span data-mce-mark="1">Automations</span></h2>
+<p><span data-mce-mark="1">However, there are some automations you should be aware of:</span></p>
+<ol>
+<li><span data-mce-mark="1">An experiment is marked as "Completed" after at least one variation performs better with a significance greater than 97% (or what you have chosen for Confidence Level) OR all the variations were stopped because they performed worse AND the automation called "Stop Losing Variations" is checked. This automation can only be stopped by setting a minimum running time. For example, setting a minimum running time for 6 month will remove the automation for the whole duration of six months. </span></li>
+<li><span data-mce-mark="1">An experiment can <strong>keep winning variation</strong> running - after test is marked as completed, the winning variation is kept active (this setting is off by default)</span></li>
+<li>An experiment can <strong>stop losing variations</strong> - when a variation is decided as being losing (performs worse with a significance of more than 97%) it is stopped and all traffic is redistributed across the other active ones.</li>
+</ol>
+<p><span data-mce-mark="1">You can do this by selecting the Stats &amp; Settings menu in the Experience Summary. </span></p>
+<p><img src="https://support.convert.com/hc/article_attachments/14270537974797"></p>
+<p><img src="https://support.convert.com/hc/en-us/article_attachments/14270540383117/93f000129f65ad779e3ef3e46fa5204bc872a9ecab4620d33cf3d0c52f4bd053.png"></p>
+<h2>Restarting your Experiment</h2>
+<p>Before you restart an experiment, you may need to change your Automation Settings first (mentioned in the beginning of this article); otherwise the experiment may stop again.</p>
+<p>In order to restart your experiment, go to your Experience Summary and in the Status section, click the "Completed" drop-down button and change it to Active.  Then, be sure to click the "Activate Experience" button on the bottom right of the page.</p>
+</div>

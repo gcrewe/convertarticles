@@ -1,0 +1,18 @@
+Setting an end date for running an experiment.
+<p>It is possible to set an end date for an A/B experiment. You only have to go into the "Summary" screen of your experiment and select the "Stats" section.</p>
+<p>Within there you can specify the number of days you want the experiment to finish. So, if your starting date is January 1st and you want to run it until January 15th, then just set the "Maximum Days" to "15".</p>
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>Note that the cutoff date is in on defined on the GTM time zone.</p>
+</div>
+</div>
+<div class="special-content special-content--tips">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-04.png" alt="Tip"></div>
+<div class="special-content__info">
+<h3>Tips</h3>
+<p>If you want more control on the cutoff time, you can also use the audience segmentation <a href="https://support.convert.com/hc/en-us/articles/115000021251#visit-time" target="_self">Visit Time field</a>, or use the <a href="https://support.convert.com/hc/en-us/articles/115000612132-Running-an-Experience-during-a-scheduled-time-period" target="_self">moment.js option</a>. However, the option listed here is the simplest one to implement.</p>
+</div>
+</div>
+<p><img src="https://support.convert.com/hc/article_attachments/14272445231117"></p>

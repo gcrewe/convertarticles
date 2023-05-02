@@ -1,0 +1,23 @@
+Bucketing Visitors into an Experiment and Variation Programmatically
+<h2>Why would I do this?</h2>
+<p>This article is generally meant for customers that want to handle the bucketing of visitors themselves, if they have made randomization with another tool.</p>
+<p>Sometimes you might want to decide which visitors see which variation of an experiment based on some custom internal logic. Be sure the population gets split in a random fashion as otherwise results might be biased. Example, if you show variation A to only visitors that are new to the site and variation B to only visitors that have at least 5 browsing sessions but did not buy yet, it's probably more likely that B would get a higher conversion rate and eventually win.</p>
+<h2>How to bucket the visitor a specific experiment-variation pair?</h2>
+<p>To do that, just trigger the following javascript code:</p>
+<pre><code class="language-javascript">
+window._conv_q = window._conv_q || [];
+window._conv_q.push(['assignVariation',"experiment_id","variation_id"]); <br><br></code></pre>
+<p>Replace the experiment_id and variation_id with the ids of your experiment and variation respectively. Make sure the above code is fired after the main tracking snippet. When the main snippet runs, the Locations targeting rules will be evaluated and if matched, the user will be assigned on the variation when the polling occurs (experiment conditions tested) or the experiment is manually triggered. Because the polling already would have occurred when this code has been triggered, then it would have to be triggered manually, or on the next page load automatically.</p>
+<p>The polling sequence which tests all experiment conditions is run like this:</p>
+<pre>window._conv_q <span class="token operator">=</span> _conv_q <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <br>window._conv_q<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"run"</span><span class="token punctuation">,</span><span class="token string">"true"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre>
+<p><span class="token punctuation">To manually trigger the specific experiment the code is:<br></span></p>
+<pre><span class="token punctuation">window._conv_q = window._conv_q || [];<br>window._conv_q.push(["executeExperiment",<code class="language-javascript">"experiment_id"</code>]); <br></span></pre>
+<p><span class="token punctuation">So the whole code might look like this in the end just manually triggering the experiment:</span></p>
+<pre><code>experimentrun = 1; // This is to match the JS Condition on the Locations</code><br><code>window._conv_q = window._conv_q || [];</code><br><code>window._conv_q.push(['assignVariation',"100122263","1001175348"]);</code><br><code>window._conv_q.push(["executeExperiment","100122263"]); // This only if you want to execute the experiment on the same page.</code></pre>
+<div class="special-content special-content--tips">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-04.png" alt="Tip"></div>
+<div class="special-content__info">
+<h3>Tips</h3>
+<p>You can find out how to determine your experiment and variation id by reading this <a href="https://support.convert.com/hc/en-us/articles/204506639-Where-Do-I-Find-the-Experiment-s-Respectively-Variation-s-IDs">article</a>.</p>
+</div>
+</div>

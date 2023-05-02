@@ -1,0 +1,26 @@
+Integrate Convert Experiences with ClickFunnels
+Convert-ClickFunnels Integration
+ClickFunnels is a website and sales funnel builder for entrepreneurs. A sales funnel is a marketing strategy designed to turn cold prospects into long-term customers by funneling them through five stages. The “funnel” metaphor means you’ll begin with a large audience of prospective buyers that will eventually pare down to a smaller group of highly-targeted, high-value customers.
+
+The final goal is not to make a sale, at least not a single sale. Instead the goal is create returning customers with life-time value.
+
+Breaking the buyer’s journey down into smaller steps (i.e., stages) allows you to be more precise about how and when you present offers.
+This article will walk you through how to add Convert tracking code to your ClickFunnels sales funnels. 
+Add Tracking Code Snippet in your Funnel
+To create your first funnel page please read these instructions.
+There are two areas where you can add your Convert tracking code to your funnel depending on your tracking goals. 
+Add to a Specific Page in your Funnel
+
+From within your page, click on Settings.
+Click on Tracking Code.
+Click on the Header or Footer tab and add your Convert tracking code
+
+
+Add to the Entire Funnel (All Pages)
+
+From within your funnel, click on Settings.
+Paste your pixel in the Head Tracking Code.
+
+Scroll down the page and click on Save And Update Settings
+
+

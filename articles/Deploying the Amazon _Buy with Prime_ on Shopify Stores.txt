@@ -1,0 +1,34 @@
+Deploying the Amazon “Buy with Prime” on Shopify Stores
+<p><br>Deploying the Amazon Buy with Prime widget quickly without modifying the Shopify theme is now possible with Convert Experiences. These instructions work for all Convert Experience and Convert Deploy customers.</p>
+<h2>Step 1</h2>
+<p>Install the Convert Experience Shopify custom app by <a href="https://support.convert.com/hc/en-us/articles/4407190415373-Integrate-with-Shopify-through-our-Custom-Convert-App">following the instructions here</a>.</p>
+<h2>Step 2</h2>
+<p>Setting up the product pages you want to target is easy. Amazon Buy with Prime only works on product pages that are added to your Amazon merchant console, but this Deploy Convert Experience will pick up the correct SKUs and only show the Buy with Prime button on those pages.</p>
+<p>Copy the URL of one of the product pages where you want to have the Amazon Buy with Prime widget, and inside the Convert app, create <strong>New Experience -&gt; Deploy</strong>, and paste that URL. This will lead you to our visual editor.</p>
+<p>In it, choose the button or element below which you want to have the Amazon Buy with Prime widget and click <strong>Insert HTML -&gt; After selected element.</strong></p>
+<p><img src="https://support.convert.com/hc/article_attachments/8992798055181/ksnip_20220907-012945.png" alt="ksnip_20220907-012945.png"></p>
+<p><span>In the free field that appears, you can paste the code below while making sure to replace the values for your Amazon merchant <strong>site-id</strong> and <strong>widget-id</strong>.</span></p>
+<pre><code class="language-markup">
+&lt;!-- Beginning of Buy With Prime Widget --&gt;
+&lt;script defer src='https://bootstrap.prod.scoville.dubai.aws.dev/bwp.js'&gt;&lt;/script&gt;
+&lt;div 
+id="amzn-buy-now" 
+data-site-id="xxxxxxx" 
+data-widget-id="w-xxxxxxx" 
+&lt;/div&gt;
+&lt;script&gt;document.getElementById("amzn-buy-now").data-sku=_conv_product_sku;&lt;/script&gt;
+&lt;!-- End of Buy With Prime Widget --&gt;
+</code></pre>
+<h2>Step 3</h2>
+<p>Change the “Locations” of the summary:<br><img src="https://support.convert.com/hc/article_attachments/14269812812941"></p>
+<p>Change it to ”Start with” and the beginning of your Shopify product page URL, the part that is common for all product pages.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14269814280717"></p>
+<h2>Step 4</h2>
+<p>Change the status of the experiment to “Active”</p>
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>We will automatically fill the SKU (based on Shopify’s own <strong>product.selected_or_first_available_variant.sku</strong> value) and automatically target the location of the Amazon Buy with Prime widget to be placed at your chosen place. If you’d like to tweak the location and display further, please modify the Javascript / CSS surrounding the widget. Our visual editor allows you to do that easily.</p>
+</div>
+</div>

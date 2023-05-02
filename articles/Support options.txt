@@ -1,0 +1,12 @@
+Support options
+<h2>Chat</h2>
+<p>You can find the chat option from the Help icon:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423772638221/mceclip0.png" alt="mceclip0.png"></p>
+<p>Once you click on that the Help menu appears where you need to select the "Chat with a Human":</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423778222989/mceclip1.png" alt="mceclip1.png"></p>
+<p>You can then start a new conversation or see the existing ones:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423772701965/mceclip2.png" alt="mceclip2.png"></p>
+<h2>E-Mail</h2>
+<p>You can email our support at support@convert.com.</p>
+<h2>Phone</h2>
+<p>We provide this line: +1-888-666-9711 which you can find on our website and you can call us if you have any questions.</p>

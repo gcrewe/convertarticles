@@ -1,0 +1,9 @@
+Convert does not work on Shopify Checkout Pages
+Issue
+If you are trying to run Convert on your Shopify checkout pages (pages after /cart and before /thank_you) and it does not work, then you need to be aware that Shopify has configured its application since March 1st, 2021 to not allow third-party scripts such as Convert to run in its checkout pages, due to measures taken to increase security on its checkout section. However, if you had scripts setup you had scripts inserted before this date in the Additional Scripts Checkout section on the Shopify configuration, it will let them run as they have been before this date.
+Solution
+
+Shopify allows modifying the checkout liquid template on its Shopify Plus packages, therefore allowing you to insert third-party scripts on it, therefore solving this issue.
+However, if you are not willing to upgrade to Shopify Plus, then you could settle with only tracking purchases, without modifying the checkout, then you can do Revenue Tracking by using our Shopify webhook integration. This will allow you to add revenue generated in your Shopify store.
+
+Please contact Convert if you have any questions about the options provided. 

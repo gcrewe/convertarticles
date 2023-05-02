@@ -1,0 +1,13 @@
+Tracking multiple conversions with Convert
+<h2>Issue</h2>
+<p>Convert Experiences goals only tracks the first conversion of a visitor bucketed on an experiment. However, in some instance it might be pertinent to track multiple conversions. </p>
+<h2>Solution</h2>
+<p>The only way to track multiple conversions, is using the Convert Experiences goal revenue send code. </p>
+<p>This code would need to be integrated to anything you are tracking, but you need to integrate the code to the event that you want to track. <br><br>So, you cannot track multiple goals with normal URL Goals, Click Goals, Form Submission Goals, Advanced Goals unless you use the code to submit them.</p>
+<p>The code submitting multiple conversions would look like the following:</p>
+<p class="codepen" style="height: 158px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-height="158" data-theme-id="31058" data-default-tab="js" data-user="gcrewe" data-slug-hash="PXvVbr" data-pen-title="Multiple Conversion Tracking">See the Pen <a href="https://codepen.io/gcrewe/pen/PXvVbr/"> Multiple Conversion Tracking</a> by Convert.com (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p> </p>
+<p>Then in the report you will need to look at the data differently. You will have to look at <em>Revenue in the place of Visitors</em>, and you will have to look at <em>Revenue per Visitor instead of Conversion Rate</em>. <br><br><img src="https://support.convert.com/hc/article_attachments/4423901942669/mceclip0.png" alt="mceclip0.png"><br><br></p>
+<p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+</p>

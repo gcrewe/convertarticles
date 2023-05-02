@@ -1,0 +1,29 @@
+What's new - Aug 2022
+Features:
+1. We now have a new experience creation screen, which makes it easy for the users to enter all the information needed to create the experiment through a single step:
+ 
+2. You can now search for collaborators on your account, by entering their name or email address in the Search field
+
+3. We have now added a markup option on the Hypothesis Text Area. You can use markups bar like:
+
+
+numbers
+
+
+Bullets
+
+
+Bold
+
+
+Italic
+
+
+Underline
+
+
+Intend and reduce indented
+
+
+ 
+ 

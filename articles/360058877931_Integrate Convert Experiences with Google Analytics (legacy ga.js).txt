@@ -1,0 +1,31 @@
+Integrate Convert Experiences with Google Analytics (legacy ga.js)
+Introduction
+You can have your experiments' data and statistics sent from Convert Experiences inside Google Analytics (Classic Analytics ga.js) and this way you are able to build rich reports that can bring valuable insights about how specific experiments perform on certain segments of users.
+
+
+
+Tips
+Please follow below steps only if you are using the legacy Classic Analytics ga.js.
+For integrating with Universal Analytics analytics.js or Global Site Tag gtag.js please read these instructions.
+For integrating with Google Analytics 4 properties please read these instructions.
+
+
+Add Tracking Codes (Convert + GA)
+Make sure that both tracking codes (Convert + GA) are added on your website head section. Google Analytics tracking code should be placed after Convert Experiments code.
+For Convert tracking code you can read these instructions.
+For GA Classic Analytics (ga.js) you can read these instructions.
+
+Enable the Integration through Convert 
+After setting up your A/B experience, go to Experiment Summary by editing the experiment. Once you are in the Experiment Summary, go to Experiment section and then select Add/Edit Integrations:
+
+Integrate through the use of Google Analytics Custom Variables - this is the choice if you are using the Google Analytics Classic tracking (ga.js). In that case you need to select one of the five available Google Analytics Dimensions. 
+
+Make sure you do not have multiple experiments running in the same time using the same dimension. Reusing a dimension for experiments that run in different periods is fine though.
+See Convert data in GA reports  
+After setting up this integration, the test data will start appearing inside Google Analytics as follows. If you have Data Anonymization enabled, Variation IDs (instead of Variation names) will be sent to GA.
+ 
+Since you are using the ga.js tracking and therefore the custom variables, the data will be visible in two locations:
+
+Under Audience --> Custom --> Custom Variables, there will be a variable named CONVERT-XXXX where XXXXX will be the experiment ID inside Convert Experiments. You can see the Convert experiment id in the address bar when you edit your experiment. 
+Under that variable, you will see your testing combinations. 
+On each pageview of a tested page we also send an event to Google Analytics. You can find those under Real Time --> Events inside your Google Analytics. You can use the events to see reports of how many times a variation has been seen (not just by how many visitors). 

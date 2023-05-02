@@ -1,0 +1,23 @@
+How to configure GTM  to fire a specific experiment from a GTM Event
+<p>First, you need to create a custom HTML tag in GTM. This tag will contain the manual activation code.</p>
+<p>In the custom HTML tag, paste the following code:</p>
+<pre><code class="language-javascript">
+window.runExperiment = 1;
+_conv_q = window._conv_q || [];
+_conv_q.push(["executeExperiment","{{experiment_id_here}}"]);
+</code></pre>
+<p>Replace <code>{{experiment_id_here}}</code> with the actual experiment ID from Convert Experiences.</p>
+<ul>
+<li>
+<p>Next, you need to create a GTM trigger that will fire the custom HTML tag.</p>
+</li>
+<li>
+<p>In the trigger configuration, select the type of trigger you want to use. For example, you may want to use a custom event trigger if you want to fire the experiment when a specific event occurs on the page.</p>
+</li>
+<li>Add a JS Condition to the Site Area of your experiment with <code class="language-javascript">window.runExperiment == 1;</code>
+</li>
+<li>
+<p>Finally, publish the changes in GTM to activate the experiment on your website.</p>
+</li>
+</ul>
+<p>That's it! You have now successfully configured GTM to fire the manual activation code from a GTM Event.</p>

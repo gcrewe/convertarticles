@@ -1,0 +1,64 @@
+New Tracking Structure - Advanced Integrations
+<h2>Perform Advanced Integrations</h2>
+<p>Convert provides a way to send visitors and conversion data back to the Convert servers from third-party applications using HTTP requests. This allows you to send conversion data from CRM's, e-commerce, and any system where the conversion does not happen on the same site as the visitor arrives.<br><br>Both <strong>HTTP POST</strong> and the <strong>REST API </strong><strong>HTTP GET</strong> requests can be used to notify the Convert of these conversions. <br><br>You will need to make the requests to the following URL:<br><a href="https://10000001.metrics.convertexperiments.com/track" target="_self">https://10000001.metrics.convertexperiments.com/track<br></a>Where the10000001 is your <strong>project id</strong>.</p>
+<ol>
+<li>
+<strong>Using the HTTP POST method.<br><br></strong>You will need to submit a POST request that looks like the following:
+<pre>{<br> "cid":"12345",<br> "pid":"12345",<br> "seg":{<br> "browser":"CH",<br> "devices":["DESK"],<br> "source":"direct",<br> "campaign":"",<br> "new":1,<br> "ctry":"RO",<br> "cust":["123","456"]<br> },<br> "vid":"1588166554499-0.2020703998482254",<br> "ev":[ <br> {"evt":"viewExp","vars":["12345","6789"],"exps":["ABCD","DEF"]},<br> {"evt":"hitGoal","goals":[12345],"vars":["12345","6789"],"exps":["ABCD","DEF"]},<br> {"evt":"tr","goals":[12345],"vars":["12345","6789"],"exps":["ABCD","DEF"],"r":123.23,"prc": 2}<br> ]<br>}:<br><br></pre>
+</li>
+<li>
+<p><strong>Using the REST API HTTP GET Method<br><br></strong>Issue a <strong>GET Request</strong> to the above URL with the above JSON as query string params.</p>
+<p>Eg: <a href="https://10024405.metrics.convertexperiments.com/track">https://10024405.metrics.convertexperiments.com/track?cid=12345&amp;pid=12345&amp;seg[browser]=CH&amp;seg[devices][]=DESK&amp;seg[source]=direct&amp;seg[campaign]=test_campaign&amp;seg[new]=1&amp;seg[cust][]=123&amp;seg[cust][]=456&amp;vid=1588166554499-0.2020703998482254&amp;ev[0][evt]=viewExp&amp;ev[0][vars][]=12345&amp;ev[0][vars][]=6789&amp;ev[0][exps][]=ABCD&amp;ev[0][exps][]=DEF&amp;ev[1][evt]=hitGoal&amp;ev[1][goals][]=12345&amp;ev[1][vars][]=12345&amp;ev[1][vars][]=6789&amp;ev[1][exps][]=ABCD&amp;ev[1][exps][]=DEF</a></p>
+</li>
+</ol>
+<p> </p>
+<p><strong>Parameters explanation:<br></strong></p>
+<ol>
+<li>
+<strong>cid: </strong>The account id. </li>
+<li>
+<strong>pid: </strong>The project id.</li>
+<li>
+<strong>seg: (optional)</strong>This is a group of properties that can be sent with each event.
+<ul>
+<li>
+<strong>browser: </strong>One of IE, CH, FF, OP, SF, OTH.</li>
+<li>
+<strong>devices: </strong>Device, one or more of DESK, OTHDEV , IPAD, ALLTAB, OTHTAB, OTHPH, IPH, ALLPH.</li>
+<li>
+<strong>source:</strong> One of direct, referral, Search, Campaign.</li>
+<li>
+<strong>campaign: </strong>A string representing a custom campaign.</li>
+<li>
+<strong>new: </strong>0 if a new visitor in this session, 1 if returning.</li>
+<li>
+<strong>ctry</strong>: Two-letter ISO country code.</li>
+<li>
+<strong>cust</strong>: Array of IDs of custom audiences setup into the project as segments.</li>
+</ul>
+</li>
+<li>
+<strong>vid</strong>: Session ID</li>
+<li>
+<strong>ev: </strong>List of events that will be sent.<br>
+<ul>
+<li>
+<strong>evt: </strong>tracked event type which has to be one of "hitGoal" (conversion of a goal), "viewExp"(view of an experiment's variation), "tr"(transaction).</li>
+<li>
+<strong>exps: </strong>list of experiences' IDs the user was bucketed into</li>
+<li>
+<strong>vars: </strong>list of variations' IDs the user was bucketed into</li>
+<li>
+<strong>r</strong> represents the transaction amount.</li>
+<li>
+<strong>prc</strong> would represent the ordered products count. </li>
+</ul>
+</li>
+</ol>
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>Your tracking requests will need to include the user-agent header with a value. You can use any value. This is required for the request to go through our firewall and be recorded. Otherwise, you will get a 301 HTTP error. </p>
+</div>
+</div>

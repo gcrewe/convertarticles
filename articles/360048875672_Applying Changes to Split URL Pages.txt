@@ -1,0 +1,23 @@
+Applying Changes to Split URL Pages
+Intro
+Split URL created, configured and tested, everything is working as expected: traffic is being evenly distributed, query parameters are being transferred, audiences, goals, all set! We are ready to start this Split URL test, except if you also want to apply styles on the experiment pages...
+Since Split URLs tests do not offer the possibility to customize/style pages through the Visual Editor, an option is to set up an "hybrid" experiment: Split URL + Deploy Experiment
+Setup your Split URL Experiment
+Create your Split URL experiment as usual, detailed instructions can be found here: Set Up Your First Split URL Experiment
+Get the Experience and Variations IDs
+ Once you have finished configuring the variations of the experience, take note of the Variations IDs, from the Experience summary page, copy the link from the preview of the variation:
+
+The link copied will be similar to this:
+https://url.com/?convert_action=convert_vpreview&convert_v=100368636&convert_e=10036216
+v=100368636 -This is the Variation ID: 100368636
+e=10036216 - This is the Experience ID: 10036216
+Setup a Deploy for your Variation Page
+Now it is time to create a deploy for your variation page. Use the visual editor to apply styles and customize the page. 
+Setup a Custom Audience for your Deploy
+To show the deploy only to visitors  coming from the Split URL Test and the specific variation, we will include a Custom Audience:
+JS Condition 1: (replace with the Split URL Original Page URL)
+document.referrer == "https://urlFromtheOriginalPage.com"
+JS Condition 2: (replace with the Experience and Variation ID previously noted)
+convert.historicalData.experiments[splitURLExpID].variation_id == "variationID"
+ 
+This is it! You have successfully applied styles to a Split URL Experiment Page!

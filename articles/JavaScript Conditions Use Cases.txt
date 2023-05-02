@@ -1,0 +1,109 @@
+JavaScript Conditions Use Cases
+<p>JavaScript is the most widely used scripting language on earth. Javascript can be used with Convert in a diversity of cases. This article is all about JS conditions examples that can be used targeting URLs, cookies, variables, and others. The codes are from real use case scenarios.</p>
+<h2>Where Javascript can be implemented?</h2>
+<p><span style="font-size: 15px;">Basically everywhere, <a href="https://support.convert.com/hc/en-us/articles/205159965-Targeting-Experiments-and-Firing-Goals-Based-on-a-JavaScript-Condition#target-based-on-javascript-condition" target="_blank" rel="noopener">Goals</a>, <a href="https://support.convert.com/hc/en-us/articles/115000021251#js-condition" target="_blank" rel="noopener">Audiences</a>, <a href="https://support.convert.com/hc/en-us/articles/206631623-Target-experiment-based-on-a-custom-Javascript-condition-that-evaluates-true-at-a-later-stage" target="_blank" rel="noopener">Locations</a>, <a href="https://support.convert.com/hc/en-us/articles/115000006251-Project-Experience-Experiment-or-Personalization-Variation-Javascript#global-experience-javascript" target="_blank" rel="noopener">Experience</a>, <a href="https://support.convert.com/hc/en-us/articles/115000006251-Project-Experience-Experiment-or-Personalization-Variation-Javascript#variation-javascript" target="_blank" rel="noopener">Variation</a>, and <a href="https://support.convert.com/hc/en-us/articles/115000006251-Project-Experience-Experiment-or-Personalization-Variation-Javascript#global-project-javascript" target="_self">Project</a>.</span></p>
+<p><span class="wysiwyg-font-size-x-large">Comparison Operators</span></p>
+<p><span class="wysiwyg-font-size-medium">Case: <strong>x = 5 </strong>and<strong> y = 3</strong></span></p>
+<table class="w3-table-all notranslate" style="height: 308px; width: 680px; border-color: black; margin-right: auto; margin-left: auto;">
+<tbody>
+<tr style="height: 22px;">
+<th style="width: 118px; height: 22px;">Operator</th>
+<th style="width: 271px; height: 22px;">Description</th>
+<th style="width: 173px; height: 22px;">Comparing</th>
+<th style="width: 105px; height: 22px;">Returns</th>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 110px; height: 44px;" rowspan="2">==</td>
+<td style="width: 263px; height: 44px;" rowspan="2">equal to</td>
+<td style="width: 165px; height: 22px;">x == 8</td>
+<td style="width: 97px; height: 22px;">false</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 165px; height: 22px;">x == 5</td>
+<td style="width: 97px; height: 22px;">true</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 110px; height: 44px;" rowspan="2">===</td>
+<td style="width: 263px; height: 44px;" rowspan="2">equal value and equal type</td>
+<td style="width: 165px; height: 22px;">x === "5"</td>
+<td style="width: 97px; height: 22px;">false</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 165px; height: 22px;">x === 5</td>
+<td style="width: 97px; height: 22px;">true</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 110px; height: 22px;">!=</td>
+<td style="width: 263px; height: 22px;">not equal</td>
+<td style="width: 165px; height: 22px;">x != 8</td>
+<td style="width: 97px; height: 22px;">true</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 110px; height: 44px;" rowspan="2">!==</td>
+<td style="width: 263px; height: 44px;" rowspan="2">not equal value or not equal type</td>
+<td style="width: 165px; height: 22px;">x !== "5"</td>
+<td style="width: 97px; height: 22px;">true</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 165px; height: 22px;">x !== 5</td>
+<td style="width: 97px; height: 22px;">false</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 110px; height: 22px;">&gt;</td>
+<td style="width: 263px; height: 22px;">greater than</td>
+<td style="width: 165px; height: 22px;">x &gt; 8</td>
+<td style="width: 97px; height: 22px;">false</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 110px; height: 22px;">&lt;</td>
+<td style="width: 263px; height: 22px;">less than</td>
+<td style="width: 165px; height: 22px;">x &lt; 8</td>
+<td style="width: 97px; height: 22px;">true</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 110px; height: 22px;">&gt;=</td>
+<td style="width: 263px; height: 22px;">greater than or equal to</td>
+<td style="width: 165px; height: 22px;">x &gt;= 8</td>
+<td style="width: 97px; height: 22px;">false</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 110px; height: 22px;">&lt;=</td>
+<td style="width: 263px; height: 22px;">less than or equal to</td>
+<td style="width: 165px; height: 22px;">x &lt;= 8</td>
+<td style="width: 97px; height: 22px;"><em>true</em></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 110px; height: 22px;">&amp;&amp;</td>
+<td style="width: 263px; height: 22px;">and</td>
+<td style="width: 165px; height: 22px;">(x &lt; 10 &amp;&amp; y &gt; 1) </td>
+<td style="width: 97px; height: 22px;"><em>is true</em></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 110px; height: 22px;">||</td>
+<td style="width: 263px; height: 22px;">or</td>
+<td style="width: 165px; height: 22px;">(x === 5 || y === 5)</td>
+<td style="width: 97px; height: 22px;"><em><span>is false</span></em></td>
+</tr>
+</tbody>
+</table>
+<p class="wysiwyg-text-align-right"><span class="wysiwyg-font-size-small"><em>source: https://www.w3schools.com/</em></span></p>
+<p><span class="wysiwyg-font-size-x-large">Examples:</span></p>
+<h2>Referral URL</h2>
+<pre><em>// Equal<br>document.referrer == "YourURL.com"</em><br><br><em>// Not Equal<br>document.referrer != "YourURL.com"</em><br><br><em>// Contains<br>document.referrer.includes('somethingtocheck') == true/false</em></pre>
+<h2>URL/Parameter/Query String :: Contains</h2>
+<pre>window.location.href.includes('yourstring') == true<br><br>window.location.href.includes('\?yourstring') || window.location.href.includes('\&amp;yourstring')  == true<br><br>window.location.href.includes('yourstring') &amp;&amp; window.location.href.includes('yourstring2')  == true</pre>
+<h2>URL using Regex</h2>
+<pre>//Starts with<br>window.location.href.match(/https?:\/\/(www.yourdomain.com\//).length &gt; 0<br><br>//Using wildcards (same as contains)<br>window.location.href.match(/(.*)\/(child\/child1\/child2)(|\/)(.*)/).length &gt; 0</pre>
+<h2>Cookies</h2>
+<pre>//Cookie is present<br>document.cookie.indexOf('cookieName') &gt; -1 <br><br>//Cookie is not present<br>document.cookie.indexOf('cookieValue') &gt; -1 == false<br><br>// Cookie is present and contains<br>document.cookie.indexOf('cookieName') &gt; -1 &amp;&amp; document.cookie.indexOf('cookieValue') &gt; -1</pre>
+<h2>Variables</h2>
+<pre>//Variable is present<br>typeof yourvariable != 'undefined'<br><br>//Variable is not present<br><em>typeof yourvariable == 'undefined'</em><br><br>//Variable contains/not contains<br><em>yourvariable.includes('valuetocheck') == true/false</em></pre>
+<h2>Elements</h2>
+<pre>//Element is present<br><em>document.getElementById("intro") != null</em><br><em>document.getElementsByClassName("intro") != null</em><br><em>convert.$('.selector').length != 0<br><br></em>//Element is not present<br>document.getElementById("intro")<em> == null<br>document.getElementsByClassName("intro") == null<br>convert.$('.selector').length == 0</em></pre>
+<h2>Screen Size</h2>
+<pre>screen.width == 1920<br>screen.height == 1080</pre>
+<h2>Min/Max Screen Size </h2>
+<div class="intercom-interblocks-code">
+<pre>window.matchMedia("(min-width: 768px)").matches<br>window.matchMedia("(max-width: 1024px)").matches</pre>
+</div>
+<div class="intercom-interblocks-paragraph no-margin intercom-interblocks-align-left"></div>

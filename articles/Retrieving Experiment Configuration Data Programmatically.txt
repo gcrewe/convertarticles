@@ -1,0 +1,20 @@
+Retrieving Experiment Configuration Data Programmatically
+<p>If you ever need to download a project, experiment and variation configuration data programmatically it is possible through the download of a JSON formatted file, through a REST endpoint.<br><br>This will list the following:</p>
+<ul>
+<li>Project experiences that are Running or Completed.</li>
+<li>All the meta-data related to the experience.</li>
+<li>Variation list with its meta-data.</li>
+<li>Global Project JS</li>
+<li>Global Experience JS for each one.</li>
+<li>Code Editor code for each variation.</li>
+<li>Variation Custom JS</li>
+<li>Variation Custom CSS</li>
+</ul>
+<p><br>The rest end-point is based on your <a href="https://support.convert.com/hc/en-us/articles/205160065-How-Do-I-Find-My-Project-Number-" target="_self">Project ID</a></p>
+<p>The URL of the endpoint will be formatted like the following:</p>
+<p><strong>https://cdn-3.convertexperiments.com/JSON/XXXXXX-XXXXXX.json</strong>.<br><br>Where XXXXXX-XXXXXX is the number corresponding to your Account ID-<a href="https://support.convert.com/hc/en-us/articles/205160065-How-Do-I-Find-My-Project-Number-" target="_self">Project ID</a>.  You can find both of these on your <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Convert-Tracking-Code-JavaScript-" target="_self">Convert Tracking Code snippet</a> in your Project Configuration:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423874913677/mceclip0.png" alt="mceclip0.png"></p>
+<p>This is a sample output of a REST call:<br><br></p>
+<p class="codepen" data-height="574" data-theme-id="31058" data-slug-hash="zLQbmE" data-default-tab="css" data-user="gcrewe" data-pen-title="OutputforExperimentRestCall">
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+</p>

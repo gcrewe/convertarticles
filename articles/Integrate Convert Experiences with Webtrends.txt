@@ -1,0 +1,43 @@
+Integrate Convert Experiences with Webtrends
+<h2 id="convert-oracle-bluekai-integration">Convert-Webtrends Infinity Analytics Integration</h2>
+<p>Integration of <a href="https://www.webtrends.com/" target="_blank" rel="noopener">Webtrends</a> with Convert Experiences will help you to import Convert data into your Webtrends account. </p>
+<p>For each experiment, the integration can pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>This integration is still in beta status. Use with caution the steps described below.</p>
+</div>
+</div>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the <a href="https://analytics.webtrends.help/docs/getting-started" target="_self" rel="undefined">Webtrends Analytics Tag</a> are installed on your site.</p>
+<h2 id="send-convert-data">Send Convert data through Multitrack</h2>
+<p>The <a href="https://analytics.webtrends.help/docs/sending-custom-data-with-multitrack" target="_self">MultiTrack function</a> lets you track events other than page loads.</p>
+<p>Multitrack is flexible and allows you to track just about any type of event you want. Here are just a few examples of the events you can track:</p>
+<ul>
+<li>Virtual page views</li>
+<li>File downloads</li>
+<li>The clicking of offsite links</li>
+<li>The clicking of anchor links</li>
+<li>Ad views</li>
+</ul>
+<pre><code>Webtrends.multiTrack({
+  var refObject = window['convert']['data']['experiments']
+    for (var key in window["convert"]["currentData"]["experiments"]) {
+        if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+            continue;
+        }}
+            
+	var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+	var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+	curExperimentName = curExperimentName.replace("Test #", "Test ");
+	var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+	curVariant = curVariant.replace("Var #", "Variation ");  
+	
+	args: {
+        "WT.ti": curExperimentName,
+        "WT.mc_id": curVariant
+    }   
+}) </code></pre>
+<h2 id="view-convert-data-in-bluekai">View Convert Data in Webtrends</h2>
+<p>In order to see the Convert data sent, you must login into your Webtrends account and go to your Reports. </p>

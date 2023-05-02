@@ -1,0 +1,23 @@
+Integrate Convert Experiences with Klaviyo
+<h2 id="convert-lucky-orange-integration">Convert-Klaviyo Integration</h2>
+<p><span><a href="https://www.klaviyo.com/" target="_self">Klaviyo</a> helps growth-focused eCommerce brands drive more sales with super-targeted, highly relevant email, Facebook and Instagram marketing.</span></p>
+<p>For each experiment, the integration uses custom events to pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a><span> </span>and the<span><a href="https://help.luckyorange.com/article/123-where-can-i-find-my-tracking-code" target="_self"> Klaviyo snippet</a> </span>are installed on your page. Once you have added the codes to your website, you will be able to use Klaviyo account to start sending <span>more personalised emails to your customers through smart data decisions</span>.  </p>
+<h2 id="activate-convert-lucky-orange-integration ">Activate Convert-Klaviyo Integration </h2>
+<p>Add the code below to your website right after the Convert + Klaviyo tracking codes which will send Convert Experience and Variation names to your Klaviyo account. We are using<a href="https://www.klaviyo.com/docs/getting-started" target="_self"><span> event tracking</span></a>:</p>
+<pre><code>&lt;script&gt;<br>var refObject = window['convert']['data']['experiments'];
+<br>for (var key in window["convert"]["currentData"]["experiments"]) {
+		if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+			continue;
+}}
+
+var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+curExperimentName = curExperimentName.replace("Test #", "Test ");
+var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+curVariant = curVariant.replace("Var #", "Variation ");
+
+<span>_learnq.push(['track', 'Convert Experience', { 'Experience' : curExperimentName , 'Variation' : curVariant }]);</span><br>&lt;/script&gt;</code></pre>
+<h2 id="view-convert-data-in-lucky-orange-recordings">View Convert Data in Klaviyo</h2>
+<p>Using a custom event, you will be able to view all of your Convert Experiences data as they associate to the values that you pass in the event in your Klaviyo account<span>.</span></p>

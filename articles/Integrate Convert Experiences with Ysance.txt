@@ -1,0 +1,23 @@
+Integrate Convert Experiences with Ysance
+<h2>Convert-Ysance Integration</h2>
+<p>Integration of <a href="https://www.ysance.com/data-services/fr/home/" target="_self" rel="undefined">Ysance</a> with Convert Experiences will help you to import Convert data into your Segment warehouse. </p>
+<p>For each experiment, the integration uses semantic track events to pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>This integration is still in beta status. Use with caution the steps described below.</p>
+</div>
+</div>
+<h2>Add Tracking Code Snippets</h2>
+<p>Make sure the Convert tracking code and the Ysance tracker.min.js are installed on your page. </p>
+<h2>Activate Integration in Convert</h2>
+<p>Go to your Convert experience settings and under Integrations select the Ysance. Add the Custom Dimension that you want to use and then click Save and Continue. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/4572962869517/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Activate Integration Manually</h2>
+<p>If you do not want to activate the integration through Convert Experiences interface, you can activate it manually by adding this code:</p>
+<pre><code>&lt;script&gt;<br> var _y_account = 'YT-000081-1';<br> var _y_domain_id = '0324';
+
+trackPage = function() {<br> // Send Custom Data <br> _wt1Q.push(['setCustomData', 1, ]);<br> _wt1Q.push(['trackPage', {}]);<br> };<br><br></code>window.ytrackAsyncInit = function() {<br>// Tracking Configuration<br>var _wt1Q = this._wt1Q || [];<br><br>window.Ytrack.init({<br>'account': _y_account,<br>'domain_id': _y_domain_id,<br>'domain_version': '1',<br>'parts' : {<br>'6e747f7': true<br>}<br>});<br>_wt1Q.setTrackAccept(true);<br>trackPage();<br>};<br>// Call tracker DMP Ysance<br>(function() {<br>var e = document.createElement('script');<br>e.async = true;<br>e.src = '//prod-js.aws.y-track.com/' + _y_account + '/v5/tracker.min.js';<br>var s = document.getElementsByTagName('script')[0];<br>s.parentNode.insertBefore(e, s);<br>}());<br>&lt;/script&gt;</pre>
+<h2>View Convert Data in Ysance</h2>
+<p>You will be able to view all of your Convert Experiences data in Ysance.</p>

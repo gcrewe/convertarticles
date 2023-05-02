@@ -1,0 +1,30 @@
+Integrate Convert Experiences with Pendo
+Convert-Pendo Integration
+Pendo is a product-analytics app built to help software companies develop products that resonate with customers. The app allows software makers to embed in their products a wide range of tools that can lead both to a better product experience for users and new insights for the product team.
+This article will walk you through how to send data from Convert experiences/variations to your Pendo account. For each experiment, the integration will pass along the experiment name and variation name that the visitor is currently bucketed into (if any) as a track event.
+Add Tracking Code Snippets
+Make sure the Convert tracking code and the Pendo code are installed on your page. Pendo tracking code installation instructions can be found here.
+
+Activate Integration Manually
+Once you have the two tracking codes in your website, then you should add this extra code to track events  (one for experiment name and one for variation name). You can add this to the Project Global Javascript section or directly on your pages, after the Kissmetrics and Convert tracking codes.
+   
+    var refObject = window['convert']['data']['experiments']
+	for (var key in window["convert"]["currentData"]["experiments"]) {
+		if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+			continue;
+		}		
+            
+	var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+	var curExperimentName = refObject[key] && refObject[key].n ? refObject[key].n : "unknown experiment name";
+	curExperimentName = curExperimentName.replace("Test #", "Test ");
+	var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+	curVariant = curVariant.replace("Var #", "Variation ");
+
+pendo.track("Convert", {
+  'Experiment Name': 'curExperimentName',
+  'Variation Name': 'curVariant'
+});
+
+}
+View Convert data in Pendo
+After integration is enabled and your experiment is activated, you will be able to find in your Pendo account the custom user data that you sent.

@@ -1,0 +1,31 @@
+Integrate Convert Experiences with New Relic
+<h2 id="convert-eulerian-integration">Convert-New Relic Integration</h2>
+<p><a href="https://newrelic.com/">New Relic</a> is the all-in-one Web application performance tool that lets you see the performance from the end-user experience, through servers, and down to the line of application code. This article will walk you through how to push custom attributes and events to New Relic.</p>
+<p>For each experiment, the integration will pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> is installed on your page.</p>
+<p>In addition, the New Relic javascript code should be installed on your page. New Relic tracking code looks like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000561231/mceclip0.png"></p>
+<h2>Activate Integration Manually</h2>
+<p>Once you verify that the tracking codes are installed add this extra code to your website to track custom attributes:</p>
+<pre><code>		var refObject = window['convert']['data']['experiments']
+	for (var key in window["convert"]["currentData"]["experiments"]) {
+		if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+			continue;
+		}}
+            
+	var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+	var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+	curExperimentName = curExperimentName.replace("Test #", "Test ");
+	var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+	curVariant = curVariant.replace("Var #", "Variation ");
+
+if (typeof newrelic == 'object') {		
+newrelic.setCustomAttribute('Exp Name', curExperimentName);
+newrelic.setCustomAttribute('Var Name', curVariant);
+}</code></pre>
+<h2 id="view-convert-data-in-heap-analytics">View Convert Data in New Relic</h2>
+<p>You will be able to view all of your Convert Experiences data as they associate to the values that you pass in these attributes and events.</p>
+<p>Once logged in, go to New Relic Insights &gt; Data Explorer &gt; Events and search for the custom attribute you created:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000571232/mceclip1.png"></p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000574832/mceclip0.png"></p>

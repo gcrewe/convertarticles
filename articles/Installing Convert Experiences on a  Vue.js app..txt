@@ -1,0 +1,17 @@
+Installing Convert Experiences on a  Vue.js app.
+<h2>Alternative Vue.js Solutions</h2>
+<p>Vue.js is a <a href="https://support.convert.com/hc/en-us/articles/205159975-Running-Experiments-on-Single-Page-Apps" target="_blank" rel="noopener">Single Page App</a> (SPA) Framework. That means that Vue.js needs a special process to install Convert on it.</p>
+<p>A normal web app loads changes via page loads. On SPAs, the changes are loaded via Views which do not need to load the page again.</p>
+<p>With the standard implementation, Convert will enable experience changes just after the page has loaded.</p>
+<p>The optimal place to enable the changes is after the view has been shown or mounted. Please see the following <a href="https://medium.com/@brockreece/vue-parent-and-child-lifecycle-hooks-5d6236bd561f">article</a> to understand the Vue.JS lifecycle.</p>
+<p>This article explains how to configure your app to Convert to enable those changes after the view has loaded.</p>
+<h2>Solution</h2>
+<p>1) Install the Convert JS tracking code in the HTML of your pages as per the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Convert-Tracking-Code-JavaScript" target="_blank" rel="noopener">instructions</a>. Choose the method that is more convenient for you.</p>
+<p>2) Add the following code to your export default statement:</p>
+<p class="codepen" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-height="300" data-theme-id="31058" data-default-tab="js" data-user="gcrewe" data-slug-hash="MLBZXp" data-pen-title="Vue.js Triggering Polling Sequence">See the Pen <a href="https://codepen.io/gcrewe/pen/MLBZXp/"> Vue.js Triggering Polling Sequence</a> by Convert.com (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p><br>This code will trigger Convert's polling sequence when the view is "mounted". The polling sequence is the one that checks every single experiment condition for each experience that you have created in your project.<br><br>However, you can also trigger a specific experiment to be enabled with the following code:</p>
+<p class="codepen" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-height="300" data-theme-id="31058" data-default-tab="js" data-user="gcrewe" data-slug-hash="JxBwVa" data-pen-title="Vue.js Triggering a Specific Experiment">See the Pen <a href="https://codepen.io/gcrewe/pen/JxBwVa/"> Vue.js Triggering a Specific Experiment</a> by Convert.com (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p><br>Just consider that the experiment conditions will still be tested even with this statement, but only for that specific experiment.</p>
+<p>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+</p>

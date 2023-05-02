@@ -1,0 +1,21 @@
+Check if Convert Experiences Is Installed Correctly
+<h2>Introduction</h2>
+<p>To start running A/B tests on your site, you'll need to add a small snippet of code to the &lt;head&gt; tag of your site's code. This snippet contains your unique Project ID, and it allows the experiments you create in Convert to execute on your site. It automatically updates to run any test you create in the Convert Editor. You don’t have to change a thing</p>
+<p>Here are some steps you can take to verify if the Convert Experiences code is installed fine on your website.</p>
+<h2>Project Configuration</h2>
+<p>Go to you Project Configuration, add the URL of the page that has the code and click the verify icon. </p>
+<div class="special-content special-content--tips">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-04.png" alt="Tip"></div>
+<div class="special-content__info">
+<h3>Tips</h3>
+<p>Please note that if this shows a red icon that this is not always proof that the tracking code is not installed.  If you believe that it is installed and yet it shows here that it is not, refer to the next suggestions for verifying this (also please feel free to contact us to verify).<br><img src="https://support.convert.com/hc/article_attachments/4423773242125/mceclip0.png" alt="mceclip0.png"></p>
+</div>
+</div>
+<h2>Check Source Code</h2>
+<p><img src="https://support.convert.com/hc/article_attachments/360050332252/mceclip1.png" alt="mceclip1.png"></p>
+<h2>Check Elements in Chrome Developer Console</h2>
+<p>If you are familiar with Chrome Developer tools, open it and select the Elements tab.  Simply do a search for the word "convert" and locate the script if it exists on the page (you must also ensure that it is the script for the correct Project by comparing it to the snippet shown in your Project Configuration).</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360001456631/mceclip0.png"></p>
+<h2>Install Convert Chrome Debugger</h2>
+<p>Install <a style="background-color: #ffffff; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px;" href="https://support.convert.com/hc/en-us/articles/204506699">Convert debugger</a>, a Google Chrome extension and under Console find Convert messages and warnings:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/115003818531/mceclip2.png"></p>

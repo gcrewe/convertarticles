@@ -1,0 +1,21 @@
+Reset Experiment Data
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>Resetting the report does not reset the experiment ID or visitor cookies. What this means is, previous visitors that were on the report before the reset, are still bucketed in the experiment.</p>
+<p>An example of how this could affect your report going forward, is that a visitor that was bucketed and showed on the previous report, could come back to the site the experiment is running on, and any goals that they did not previously trigger, but trigger now, would show up on the report as a conversion. However, their return visit is not added again, because visitors are unique and only counted on their first visit on the experiment.  You actually could see a new report with 1 conversion but 0 visitors.</p>
+<p>If you want to prevent this, it is suggested that you clone your experiment instead of resetting the report, and then Archive the old experiment.</p>
+</div>
+</div>
+<h2>How to Reset My Experiments Data</h2>
+<div class="entry-container">
+<div class="share_button_container">
+<p>You can reset your experiment's stats (the whole experiment, not just "some" data) at any time by going to Report and clicking the three-dot menu. <br><br></p>
+</div>
+</div>
+<div class="user_formatted header_section clearfix">
+<p><img src="https://support.convert.com/hc/article_attachments/10126286858765" alt="Report_-_Hiding_Content_on_a_Page_-_Convert.png"></p>
+<p> </p>
+<p><em><strong>CAUTION: Resetting experiment data will erase all stats stored for that experiment up to the moment you did the reset. You cannot undo this operation!</strong></em></p>
+</div>

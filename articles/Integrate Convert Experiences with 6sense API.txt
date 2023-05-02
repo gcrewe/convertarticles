@@ -1,0 +1,22 @@
+Integrate Convert Experiences with 6sense API
+<h2 id="convert-microsoft-clarity-integration">Convert-6sense Integration</h2>
+<p><a href="https://6sense.com/" target="_self">6sense</a><span> is a predictive prospect analysis and lead scoring software that gathers data on your prospective buyers, analyzes their requirements, and predicts their behavior across various stages of the buyer journey.</span></p>
+<p>For each experiment, the integration uses page attributes to pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<p>Also, Convert can query the data aggregated by 6sense and target based on this. You can find this integration in this <a href="https://support.convert.com/hc/en-us/articles/4412030060173" target="_blank" rel="noopener">article</a>.</p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a><span> </span>and the 6sense auto event tracking code are installed on your page. Once you have added the codes to your website, you will be able to send Convert data to your 6sense account.  </p>
+<h2>Test 6sense installation</h2>
+<p>Test that 6sense is properly installed on your site. Go to your browser console and paste the following code:</p>
+<pre>var visitorData = JSON.parse(localStorage._6senseCompanyDetails);</pre>
+<p>Then type:</p>
+<pre>visitorData;</pre>
+<p>It should return all the data available for you to target like this:</p>
+<pre>{<br>"company": {<br>"domain": "xxxxxx.io",<br>"name": "Apollo",<br>"region": "North America",<br>"country": "United States",<br>"state": "Texas",<br>"city": "Dallas",<br>"industry": "Software and Technology",<br>"country_iso_code": "US",<br>"address": "",<br>"zip": "",<br>"phone": "2023741312",<br>"employee_range": "20 - 49",<br>"revenue_range": "$5M - $10M",<br>"employee_count": "28",<br>"annual_revenue": "5285000",<br>"is_blacklisted": false,<br>"state_code": "09",<br>"industry_v2": [<br>{<br>"industry": "Software",<br>"subindustry": ""<br>},<br>{<br>"industry": "Information Technology",<br>"subindustry": ""<br>}<br>],<br>"sic_description": "Prepackaged Software",<br>"sic": "XXXXX",<br>"naics": "XXXX",<br>"naics_description": "Software Publishers"<br>},<br>"scores": [<br>{<br>"product": "myproduct",<br>"product_display_name": "My Product",<br>"intent_score": 45,<br>"buying_stage": "Awareness",<br>"profile_score": 84,<br>"profile_fit": "Strong"<br>}<br>],<br>"segments": {<br>"ids": [],<br>"names": [],<br>"list": []<br>},<br>"confidence": "Very High"<br>}</pre>
+<h2 id="activate-convert-clarity-integration ">Activate Convert-6sense Integration </h2>
+<p>So, let's say that we want to target an experiment that targets all visitors that are on the "Awareness" buying stage.</p>
+<p>Let's create an audience in Convert called "Awareness Stage". We are going to do it by adding a JS Condition with the following code:</p>
+<pre>(function() {<br>var visitorData = JSON.parse(localStorage._6senseCompanyDetails);<br>if(typeof(visitorData)=="undefined") {<br>convert_recheck_experiment(); return false;} <br>else return (visitorData.scores[0].buying_stage == "Awareness");<br>})()</pre>
+<p>The Audience should be configured like this:<br><br><img src="https://support.convert.com/hc/article_attachments/6448326261005/mceclip0.png" alt="mceclip0.png"><br>The Audience Type we are going to set to<strong> Transient</strong>, as this is a data field that will change and we would want the visitor to no longer experience the same as he moves through the buying stages.</p>
+<h2>Add the 6sense audience to your Experience</h2>
+<p>Next, just add the audience to the experience you will like to target to this audience.</p>
+<p>If you have any questions on how to use this, let us know in support, and we will gladly help you. </p>

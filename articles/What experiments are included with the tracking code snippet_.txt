@@ -1,0 +1,13 @@
+What experiments are included with the tracking code snippet?
+<p>The experiments included with the snippet are the ones with the following Statuses:</p>
+<ol>
+<li>Active</li>
+<li>Paused</li>
+<li>Completed</li>
+</ol>
+<p>Experiments not included on the snippet are:</p>
+<ol>
+<li>Draft</li>
+<li>Archived</li>
+</ol>
+<p>To improve performance, you should archive any experiments that are not being used, to prevent including it with the snippet.</p>

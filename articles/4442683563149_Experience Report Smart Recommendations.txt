@@ -1,0 +1,25 @@
+Experience Report Smart Recommendations
+Introduction
+Deriving meaningful insights from your experiences and applying them to improve your website conversion rate is your ultimate objective. The experience reports help you validate the hypothesis you test and derive a better understanding of your website's visitor behavior. 
+We introduced some smart recommendations on the experience report that are described below.
+Enable Smart Recommendations
+You can go to your Project Configuration and enable the Smart Recommendations from here:
+
+View Smart Recommendations
+There are two places where you can view these smart recommendations.
+First, you can see some additional messages displayed on the summary part of the report:
+
+Possible messages you can see depending on your results are:
+
+Significant & lift negative: We are observing that variant ${variant_name} is the best performing one with a negative lift of ${lift}%. The experiment for the goal ${primary_goal_name} is significant. We suggest to extract learnings and design a new hypothesis.
+Significant & positive lift: Congratulations! For ${primary_goal_name}, ${variant_name} is currently winning with an improvement of ${lift}%. The experiment is significant.”
+Insignificant, positive lift: More visitors are needed to draw a valid conclusion for ${primary_goal_name}. We only see that ${variant_name} is the best performing one with a lift of ${lift}%, but needs more visitors before a definitive conclusion can be given.
+Insignificant, negative lift: More visitors are needed to draw a valid conclusion for ${primary_goal_name}. Please keep the test running before a conclusion can be drawn.
+
+Second, you can view some additional recommendations in the goal/variation expanded box:
+
+
+Congratulations {variation.name} is a winner, we are sure with 00% statistical confidence.
+Unfortunately, {variation.name} performed worse than the {baselineText}, we are sure with 00% statistical confidence.
+{variation.name} seems to be performing better than the {baselineText}, but we can't be sure yet
+It's too early to judge for {variation.name}

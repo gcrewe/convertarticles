@@ -1,0 +1,11 @@
+Integrate Convert Experiences with PrestaShop
+<h2 id="introduction" class="c0 c4">Introduction</h2>
+<p class="c0"><span>Integrating <a href="https://www.prestashop.com/" target="_self">PrestaShop</a> with Convert allows you to create and run Convert Experiences with your PrestaShop website. The end-to-end process of integrating PrestaShop with Convert involves the following steps</span></p>
+<h2 id="set-up-an-new-experiment-in-convert-experiments" class="c0 c4">Set up an New Experiment in Convert Experiments</h2>
+<p class="c0">Create a new experiment using your store URL and start creating variations of elements you want to test.</p>
+<p class="c0"><img src="https://support.convert.com/hc/article_attachments/360088852471/mceclip0.png" alt="mceclip0.png"></p>
+<h2 id="install-the-convert-tracking-code" class="c0 c4">Install the Convert Tracking Code</h2>
+<p class="c0">Copy the Convert tracking code for the current project:</p>
+<p class="c0"><img src="https://support.convert.com/hc/article_attachments/4423874788621/mceclip0.png" alt="mceclip0.png"></p>
+<p class="c0">Go to <span>/themes/classic/templates/_partials/head.tpl and add the above code. The head.tpl file is parsed by the Smarty template engine and attempts to interpret all instances of { and }. The way to resolve this is to wrap the inserted javascript code in <a href="https://www.smarty.net/docsv2/en/language.function.literal" target="_self">{literal}{/literal} tags</a>. </span></p>
+<p class="c0"><span><img src="https://support.convert.com/hc/article_attachments/360088854031/mceclip1.png" alt="mceclip1.png"></span></p>

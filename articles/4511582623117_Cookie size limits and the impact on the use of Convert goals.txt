@@ -1,0 +1,53 @@
+Cookie size limits and the impact on the use of Convert goals
+Cookies
+A web cookie (sometimes known as a "cookie") is a small piece of data stored by a website in a user's web browser. A cookie can give the browser information about a person's visit or past visits when they visit a website. This information may be used by the site to remember preferences set during a prior visit or to recall behavior from one of those previous visits.
+Have you ever gone to an e-commerce site and put something in your shopping cart but never finished the transaction? You've seen a cookie in action if you went back to that website later and found your products waiting for you in your cart.
+The size of a cookie
+The user agent determines the size of a cookie. You should count the bytes in the full "name=value" combination, including the equal-sign, when determining the size of your cookie.
+
+Cookie limits imposed by RFC
+While it may appear to be a strange joke, browsers do impose cookie limits. A browser should be able to accept at least 300 cookies with a maximum size of 4096 bytes, as stipulated by RFC 2109 (#6.3), RFC 2965 (#5.3), and RFC 6265. (including all parameters, so not just the value itself). While the majority of browsers adhere to the RFC (you can check the actual limits of the browsers and even test your browser in real-time here).
+We got the following information for their newest versions after running this test in a few browsers:
+
+Google Chrome - 4096 bytes
+Internet Explorer - 5117 bytes
+Firefox - 4097 bytes
+Microsoft Edge - 4097 bytes
+
+Typically, the following are allowed:
+
+300 cookies in total
+4096 bytes per cookie
+20 cookies per domain
+81920 bytes per domain
+
+Even though the RFC has suggested limits on cookie sizes, different browsers have implemented limits in subtly different ways, creating interoperability issues and providing a browser fingerprinting mechanism which neither we at Convert, nor the browsers want to take part in.
+Request size
+Another key aspect that is sometimes forgotten is the size of the subsequent request when cookies are used.
+Let's say the total size of your cookies is 4kB. The website downloads new resources when you visit it (like CSS, JS, images etc.). If the requests all come from the same domain, the cookie header will be included to all of them, making the request much larger than it would otherwise be.
+While we don't have to worry about this on PCs with fast connections, an increasing portion of the Internet's user population is using mobile devices. While the number of mobile device users is fast increasing, operator coverage is still limited, and in many regions of the world, EDGE and similar speeds are still the norm. Every kilobyte counts at EDGE speeds.
+When many cookies are set, how does the browser respond?
+As for what happens when you exceed the cookie limits, that depends on each browser and which limit you exceed. 
+Except for Safari (you can set all cookies, regardless of the number), there are two methods:
+
+The least recently used (LRU) method: When the cookie has reached the limit, the oldest cookie is automatically kicked out to give some space to the latest cookie. Internet Explorer and Opera use this method.
+The random method: Firefox is unique, although the last set of cookies is always retained, it seems to randomly decide which cookies are retained. There seems to be no plan.
+
+So, what does it all mean?
+Consider the following scenario: you have a nice-looking website that works, but you later add a third-party script for analytics, marketing, or a content experiment, and you lose control of your website visitors' cookies!
+If your clients' cookie size grows to a size that your web server cannot handle, users will be unable to access your website. And the worst part is that you may not even be aware of the problem unless one of your visitors contacts you (and from our experience, just a small percentage of visitors will report a problem).
+Large cookies, in general, should be avoided because they are sent with every request to a server, consuming bandwidth and slowing down website speed even if they are not utilized on this page.
+Convert and cookie sizes
+How does that impact Convert?
+In Convert, each experience made (all experiences including Deploy) uses 37 characters/bytes in the cookie of the visitors. Each goal triggered during an experience will add another 13 characters/bytes.
+example Convert cookie value: vi:1*sc:2*cs:1374079443*fs:1374074823*pv:4*seg:{100246.1}*exp:{10001236.{v.10008683-g.{10001841.1}}-10001237.{v.10008687-g.{10001841.1}}}*ps:1374074823
+For companies that use cookies to do transparent and compliant A/B testing this might cap the amount of experiences and goals they can run (or even add under their project) since most browsers have a limit of 4096 bytes per domain per cookie. 
+If you want to support most browsers, then don't exceed 30 cookies per domain, and don't exceed 4095 bytes per cookie.
+Example
+To understand the impact of using cookies as a method to store experiences and goal conversions, the below example uses the 37 bytes per experience and 13 bytes per goal (deployments do not have goals).
+If you are running 30 experiences with 10 goals each or 10 experiences with 30 goals you have possibly exceeded the cookie limit. 
+
+When cookie capping is really happening?
+This is hard to say, as the maximum experiences and goals only reach the cookie cap when all experiences and all goals are fired for the visitor. So that may be a small percentage of the visitors. If you are testing on different user groups e.g. 20 tests in 2 different groups, each 10 goals it does not automatically mean every visitor will hit the 6741 bytes cap. It’s very unlikely that a website with consumers and business users using different logins will be exposed to the same experiences and then fire all the goals.
+This article is a guideline to consider when running dozens of experiences. We have other features and plans that offer userID storage and reconnect that do not have limits like cookie capping. 
+Talk to your account manager for the best solution for your business and how to be reactive with diagnosis and remedying of the problem before it does any real damage to your business.

@@ -1,0 +1,13 @@
+How to avoid a low Cumulative Layout Shift (CLS) score due to the Google Page Experience Update
+<h2>What is the Google Page Experience Update?</h2>
+<p>Google recently announced a new algorithm that would rank <span>web pages based on the visitor's experience of interacting with the web page.</span></p>
+<p><span>The Page Experience update will be officially rolled out in mid-June. But you can still look up the Core Web Vitals score for your website under the <strong>Lighthouse</strong> section of the Google Web Developers Tool or with a tool like <strong>GTMetrix</strong>. </span></p>
+<p><span>We have tested the Convert script and we have found that its implementation does not affect the CLS score. </span></p>
+<h2>Our recommendation</h2>
+<p>To avoid a low Cumulative Layout Shift (CLS) score, we recommend the following:</p>
+<ol>
+<li>Plan your variation implementation to not affect the CLS score. Make sure your code or WYSIWYG change does not cause layout shift, and that the dimension of the main components of your page does not change, as part of the experiment.</li>
+<li>Find your variation CLS Score by using <strong>Forced Variation URLs </strong>to trigger your experiment and find out the score with a CLS tool. You can use the <strong>Lighthouse</strong> Page Analitycs component of<strong> Chrome Developer Tools</strong> under<strong> Performance</strong>. This will provide you the score and will point to any issues you may have regarding <strong>Layout Shifts</strong>. You can do this under <a href="https://support.convert.com/hc/en-us/articles/205146745" target="_blank" rel="noopener">QA mode</a> to prevent your general visitors to be affected by this.</li>
+<li>If you already have a considerable CLS Score already, do the same as the previous point, for each of the variations/deployments running. This will allow you to detect what variation/deployment is causing the issues, and then fix it or pause it.</li>
+</ol>
+<p>If you still have a considerable CLS score after following the points above, contact support, and let us know so we can help you diagnose the issue.</p>

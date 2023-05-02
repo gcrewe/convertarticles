@@ -1,0 +1,24 @@
+Integrate Convert Experiences with comScore
+<h2 id="convert-woopra-integration">Convert-comScore Integration</h2>
+<p>Convert can use <a href="https://www.comscore.com/Insights/Blog/comScore-Introduces-Digital-Analytix-Overcoming-Pain-Points-with-Digital-Data">comScore Digital Analytix’s</a> custom labels to tag your visitors with the experiments and variations to which they've been added. Once the integration is enabled, you will be able to build reports in comScore Digital Analytix based on Convert experiments and variations visitors have seen.</p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Convert-Tracking-Code-Javascript">Convert tracking code</a> and the comScore Digital Analytix’s tracking code are installed on your page. </p>
+<h2>Create Custom Labels</h2>
+<ol>
+<li>After you have added the code snippet to your test pages, create custom labels to add the variables to the comScore Digital Analytix measurement URL. Add the following variables to each Digital Analytix measurement URL, using the following custom labels:
+<ul>
+<li>
+<code>exp_id</code> – Identifies the experiment</li>
+<li>
+<code>var_id</code> – Identifies the variation</li>
+</ul>
+</li>
+<li>Make sure that both the labels are added to each measurement for accurate reporting. The following are some examples:
+<ul>
+<li>Sitestat.com Measurement Domain: nl.sitestat.com/corp/site/s?name=home.page&amp;exp_id=”+ convert.data['experiments'][experimentId].id + “&amp;var_id=” + convert.currentData.experiments[experimentId].variation_id+”</li>
+<li>Scorecardresearch.com Measurement Domain: http://b.scorecardresearch.com/b?c1=2&amp;c2=1234567&amp;exp_id=”+ convert.data['experiments'][experimentId].id + “&amp;var_id=” + convert.currentData.experiments[experimentId].variation_id+”?</li>
+</ul>
+</li>
+</ol>
+<h2 class="prettyprint prettyprinted"><span class="tag">View Convert Data in comScore Dashboard</span></h2>
+<p>Once you've enabled the Convert comScore Digital Analytix integration and started your experiment, you can view this data in your comScore Digital Analytix account.</p>

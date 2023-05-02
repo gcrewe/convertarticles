@@ -1,0 +1,32 @@
+Integrate Convert Experiences with Heap Analytics
+<h2>Convert-Heap Analytics Integration</h2>
+<p>Integration of <a href="https://heapanalytics.com/">Heap Analytics</a> with Convert Experiences will help you to import Convert data into your Heap Analytics account. </p>
+<p>For each experiment, the integration uses variables and events to pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<h2>Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the <a href="https://heapanalytics.com/app/install">Heap Analytics code</a> are installed on your page.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000014931/mceclip0.png"></p>
+<h2>Activate Integration in Convert</h2>
+<p>Go to your Convert experience settings and under Integrations select the Heap Analytics. Then click Save and Continue. Once activated, Heap will automatically capture all active experiments and exposed variation as a property on all events for a given page.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423896453389/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Activate Integration Manually</h2>
+<p>If you do not want to activate the integration through Convert interface, you can send manually additionally custom events with this code:</p>
+<pre><code>var refObject = window['convert']['data']['experiments']
+	for (var key in window["convert"]["currentData"]["experiments"]) {
+			if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+				continue;
+	}}
+            
+var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+curExperimentName = curExperimentName.replace("Test #", "Test ");
+var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+curVariant = curVariant.replace("Var #", "Variation ");
+		
+heap.track('Convert Experiences', {
+	Exp_Name: curExperimentName,
+	Var_Name: curVariant
+	});</code></pre>
+<h2>View Convert Data in Heap Analytics</h2>
+<p>Using a Custom Event in Heap Analytics, you will be able to view all of your Convert Experiences data as they associate to the values that you pass in the event.</p>
+<p>When you log in to your Heap Analytics account, you should go to Organize - Events - Custom Events and find the one for Convert Experiences. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/360000079492/mceclip0.png"></p>

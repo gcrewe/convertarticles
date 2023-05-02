@@ -1,0 +1,32 @@
+Using Clearbit with Convert Experiences
+<h2>Introduction</h2>
+<p>Now you can use <a href="https://clearbit.com/reveal">Clearbit Reveal</a> together with Convert Experiences. This will allow you to use the provided visitor data by Clearbit to target your experiences.</p>
+<p>You can target specific segments derived from Clearbit data and find valuable insights about your visitors.</p>
+<p>Following are the steps to use the Clearbit data to segment your Convert Experiences.</p>
+<h2>Add Tracking Codes</h2>
+<p>Please make sure that you insert Clearbit Reveal tracking code before Convert's tracking code. By doing this, Clearbit data will be available for Convert to segment on.</p>
+<p>Clearbit Reveal tracking code looks like this: https://help.clearbit.com/hc/en-us/articles/360063559573</p>
+<p>Convert tracking code can be found under Project Configuration:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423896487821/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Create an Experience</h2>
+<p>Go to your Experiences and either create a new experience or use one of your existing:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423904245645/mceclip1.png" alt="mceclip1.png"></p>
+<h2>Add Audience</h2>
+<p>Create a <strong>"New Audience". </strong>Scroll down and select JS condition.</p>
+<p>Then you will need to insert the Clearbit code that will define the users that will be targeted on the Experience.</p>
+<p>For example:</p>
+<p>You could target any visitors at companies with 75 or more employees.</p>
+<p>The Clearbit code needed would look like the following:</p>
+<pre><code class="language-javascript">
+(function() {
+   if(window.reveal &amp;&amp; window.reveal.company.category.sector) {
+     if (window.reveal.company.category.sector == "Health Care") return true;
+   }
+   else { convert_recheck_experiment(); return false; }
+})()
+</code></pre>
+<p>The code would be inserted in the JS Condition as in the following screen:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6448546395405/mceclip0.png" alt="mceclip0.png"></p>
+<p>After this, you are done and can launch your experiment. </p>
+<h2>View Convert Data in GA through Custom Reports</h2>
+<p>You can view Convert data in GA Custom Reports.</p>

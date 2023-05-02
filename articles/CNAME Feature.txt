@@ -1,0 +1,17 @@
+CNAME Feature
+<p>With the recent browser security upgrades regarding the third-party domain cookies, there has been a limitation on how long visitors can be tracked with the standard Convert installation. These limitations vary per type of browser but can block you from having a full picture of returning visitors, and classifying old visitors, as new ones. That might limit you from getting insights in regard to analyzing behavior on fresh new visitors and old visitors on your site.</p>
+<p>A way to overcome these limitations is to change Convert cookies from being a third party to becoming first-party. The way to achieve this is to serve the convert script from your own domain. And that is why Convert has launched this feature. Now you can create a CNAME record for your subdomain on your DNS server that points to Convert CDN infrastructure.</p>
+<ol>
+<li>Ask your account executive, customer success, or support agent about getting this feature, if you do not have it already under your plan. The time it will take, will be from three to four business days to set up.<br><br>
+</li>
+<li>After you are sure you have this feature enabled, choose a subdomain that you want to use such as "metrics", so your Convert script can be served from "metrics.yourdomain.com". <strong>Make sure you are already not using this subdomain in your infrastructure.<br><br></strong>
+</li>
+<li>Go to your Project Configuration and fill the CNAME modal with the new subdomain.<br><br><img src="https://support.convert.com/hc/article_attachments/4423907462925/mceclip0.png" alt="mceclip0.png"><br><br><br><img src="https://support.convert.com/hc/article_attachments/4423907471501/mceclip1.png" alt="mceclip1.png"><br><br>You will get a confirmation that the system has recorded your request.<br><br><img src="https://support.convert.com/hc/article_attachments/360057882071/blobid3.png" alt="blobid3.png">
+</li>
+<li>After this, you will receive specific instructions from a Convert support agent.<br><br><strong>The steps after this are for providing an idea of what should be expected to be done on your end before you request the CNAME feature on your subdomain. However, the actual instructions sent to you may vary. </strong>
+</li>
+<li>Once the CNAME setup has been done you will receive a confirmation via email. Then you can create the CNAME record in your DNS server. </li>
+<li>After you have setup the CNAME record notify support responding through the same chat or email conversation that you started, that this the CNAME record setup has been completed. </li>
+<li>You will be notified once the whole setup has been completed.</li>
+<li>After this, the tracking requests for your project go to that domain and set back cookies. You should be able to track visitors more efficiently utilizing first-party cookies as part of your testing.</li>
+</ol>

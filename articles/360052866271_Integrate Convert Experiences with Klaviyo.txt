@@ -1,0 +1,23 @@
+Integrate Convert Experiences with Klaviyo
+Convert-Klaviyo Integration
+Klaviyo helps growth-focused eCommerce brands drive more sales with super-targeted, highly relevant email, Facebook and Instagram marketing.
+For each experiment, the integration uses custom events to pass along the experiment name and variation name that the visitor is currently bucketed into (if any).
+Add Tracking Code Snippets
+Make sure the Convert tracking code and the Klaviyo snippet are installed on your page. Once you have added the codes to your website, you will be able to use Klaviyo account to start sending more personalised emails to your customers through smart data decisions.  
+Activate Convert-Klaviyo Integration 
+Add the code below to your website right after the Convert + Klaviyo tracking codes which will send Convert Experience and Variation names to your Klaviyo account. We are using event tracking:
+<script>var refObject = window['convert']['data']['experiments'];
+for (var key in window["convert"]["currentData"]["experiments"]) {
+		if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+			continue;
+}}
+
+var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+var curExperimentName = refObject[key] && refObject[key].n ? refObject[key].n : "unknown experiment name";
+curExperimentName = curExperimentName.replace("Test #", "Test ");
+var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+curVariant = curVariant.replace("Var #", "Variation ");
+
+_learnq.push(['track', 'Convert Experience', { 'Experience' : curExperimentName , 'Variation' : curVariant }]);</script>
+View Convert Data in Klaviyo
+Using a custom event, you will be able to view all of your Convert Experiences data as they associate to the values that you pass in the event in your Klaviyo account.

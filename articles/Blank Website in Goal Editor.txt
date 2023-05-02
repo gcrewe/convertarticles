@@ -1,0 +1,12 @@
+Blank Website in Goal Editor
+<h2>Introduction</h2>
+<p>This article will help you when you want to use the Goal template "Click something on a page" and your website is not loaded fine on the Goal Editor to find the selector.</p>
+<h2>Website is not loaded fine in Goal Editor</h2>
+<p>When you select the Goal template "Click something on a page", Convert automatically loads your website to find the appropriate selector:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360020450432/mceclip0.png"></p>
+<p>If this is blank/empty, it means that your website cannot be loaded through Goal Editor. In that case you should use the Visual Editor.</p>
+<h2>Use Visual Editor to Track Clicks on Goals</h2>
+<p>Go to your experience summary and select the "Edit Variation". Inside the Visual Editor, select the element you want and the left menu will appear. In this menu, select the last option "Click tracking":</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14349864023437"></p>
+<p>Name your goal and save it. Then go to your Goals and see the newly created Goal. The element has been filled in for you:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14349876709133"></p>

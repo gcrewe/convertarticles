@@ -1,0 +1,22 @@
+Use the Convert API
+<h2>Introduction</h2>
+<p>The <a href="https://www.convert.com/api/" target="_self">Full Stack REST API</a> allows you to interface with Convert programmatically to build customized integrations and workflows. For example, you can create feature flags from an automated script, build custom dashboards of feature test results, or connect your experiments to other project management tools.</p>
+<p>To explore the REST API, we recommend an API client called<span> </span><a href="http://www.getpostman.com/" target="_self">Postman</a>. Using Postman, you can import an<span> </span>API collection<span> </span>with example requests for each Full Stack API method. See below for instructions on setting up Postman to explore the API. If you are interested in this, let <a href="mailto:support@convert.com">support@convert.com</a> know and will provide you with a sample collection file.</p>
+<p><span>To integrate the API into your application, you'll need to generate an API token and use it to call the API directly from your code. For an overview of using the REST API, see the </span>Integrate the REST API<span> section below.</span></p>
+<h2><span>Explore the API</span></h2>
+<p>To explore the Full Stack REST API collection:</p>
+<ol>
+<li value="1">
+<a href="https://www.getpostman.com/apps" target="_self">Install Postman</a><span> </span>if you haven't already installed it on your machine.</li>
+<li value="2">Click the<span> </span><em>Import</em><span> </span>button.</li>
+<li value="3">Choose<span> </span><em>Import File</em>.</li>
+<li value="4">Select the <em>Convert API.postman_collection.json</em> file that support team will provide to you</li>
+<li value="5">Click<span> </span><em>Collections</em><span> </span>in the left pane, then click a folder to see the available methods.</li>
+</ol>
+<p><img src="https://support.convert.com/hc/article_attachments/360030327992/mceclip0.png" alt="mceclip0.png"></p>
+<p>By default, this collection links to a sample project and you need to update Pre-request script with your own <em>ApplicationID</em> and <em>ApplicationSecretKey </em>and also to update project, experience, goal, audiences, reports IDs.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360030328252/mceclip1.png" alt="mceclip1.png"></p>
+<p>You can find your own keys here:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423779386253/mceclip0.png" alt="mceclip0.png"></p>
+<h2><span>Integrate the API</span></h2>
+<p>For production use cases, you'll want to integrate these API calls directly into your own application. For a full guide to all our REST API endpoints, see the<span> </span><a href="https://api.convert.com/doc/" target="_self">Convert V1 REST API reference</a>. This reference describes each endpoint's methods and fields.</p>

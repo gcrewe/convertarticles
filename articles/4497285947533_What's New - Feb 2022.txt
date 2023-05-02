@@ -1,0 +1,37 @@
+What's New - Feb 2022
+On March 8th, Convert is releasing a new version of its web app.
+Here are the changes you will see as a part of the new version:
+
+
+Columns and filtering in the experiment report now has sorting and ordering functionality
+
+
+Experiment Report has been updated and has a new report with a view of goals/variations but also the existing variations/goals angle. https://support.convert.com/hc/en-us/articles/204490289-Experiment-Report
+
+
+Introduced advice and suggestions in the report to give more concrete action/suggestions per variation: https://support.convert.com/hc/en-us/articles/4442683563149-Experience-Report-Smart-Recommendations
+
+
+Change History is provided on Experience level and project level, previously it was only available on account level: https://support.convert.com/hc/en-us/articles/360017961312-Track-User-Changes-with-Change-History
+
+
+Introduced Accounts as top-level selection. It allows users to add new user levels and simplifies switching for people that have large client sets like agencies. 
+
+
+Goals can now have the status of Archive which allows users to remove goals from the overview but not break the flow https://support.convert.com/hc/en-us/articles/204494109-Goals#archive-goals
+
+
+Report and graphs are now viewed in the time zone of the project settings https://support.convert.com/hc/en-us/articles/204506349-Project-Configuration
+
+
+Project Timezone now also shifts reporting stats (was not happening in old app) making reporting now on project timezone instead of GMT) https://support.convert.com/hc/en-us/articles/204506349-Project-Configuration
+
+
+Introduced the “stopped” column in experiment overviews so you can get all info you need https://support.convert.com/hc/en-us/articles/114094116591-The-Experience-Overview-Screen#experience-overview-columns
+
+
+Introduced two new graphs in the report for more details and analysis https://support.convert.com/hc/en-us/articles/204490289-Experiment-Report
+
+
+Sample Rate Mismatch is implemented on reports allowing easier detection of possible errors https://support.convert.com/hc/en-us/articles/4412567998221-What-is-SRM-
+

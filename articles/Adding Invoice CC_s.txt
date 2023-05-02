@@ -1,0 +1,5 @@
+Adding Invoice CC's
+<p>When you have multiple people that would like to receive the invoice, you can add their emails in the billing details of the Convert Experiences account.</p>
+<p>In Account Settings &gt; Name &amp; Billing, we have added the option to modify all your billing details. You can add the company details, VAT and other details and the CC's for the invoice.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423870620941/mceclip0.png" alt="mceclip0.png"></p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423884810765/mceclip1.png" alt="mceclip1.png"></p>

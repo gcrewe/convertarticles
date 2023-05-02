@@ -1,0 +1,22 @@
+Integrate Convert Experiences with 6sense API
+Convert-6sense Integration
+6sense is a predictive prospect analysis and lead scoring software that gathers data on your prospective buyers, analyzes their requirements, and predicts their behavior across various stages of the buyer journey.
+For each experiment, the integration uses page attributes to pass along the experiment name and variation name that the visitor is currently bucketed into (if any).
+Also, Convert can query the data aggregated by 6sense and target based on this. You can find this integration in this article.
+Add Tracking Code Snippets
+Make sure the Convert tracking code and the 6sense auto event tracking code are installed on your page. Once you have added the codes to your website, you will be able to send Convert data to your 6sense account.  
+Test 6sense installation
+Test that 6sense is properly installed on your site. Go to your browser console and paste the following code:
+var visitorData = JSON.parse(localStorage._6senseCompanyDetails);
+Then type:
+visitorData;
+It should return all the data available for you to target like this:
+{"company": {"domain": "xxxxxx.io","name": "Apollo","region": "North America","country": "United States","state": "Texas","city": "Dallas","industry": "Software and Technology","country_iso_code": "US","address": "","zip": "","phone": "2023741312","employee_range": "20 - 49","revenue_range": "$5M - $10M","employee_count": "28","annual_revenue": "5285000","is_blacklisted": false,"state_code": "09","industry_v2": [{"industry": "Software","subindustry": ""},{"industry": "Information Technology","subindustry": ""}],"sic_description": "Prepackaged Software","sic": "XXXXX","naics": "XXXX","naics_description": "Software Publishers"},"scores": [{"product": "myproduct","product_display_name": "My Product","intent_score": 45,"buying_stage": "Awareness","profile_score": 84,"profile_fit": "Strong"}],"segments": {"ids": [],"names": [],"list": []},"confidence": "Very High"}
+Activate Convert-6sense Integration 
+So, let's say that we want to target an experiment that targets all visitors that are on the "Awareness" buying stage.
+Let's create an audience in Convert called "Awareness Stage". We are going to do it by adding a JS Condition with the following code:
+(function() {var visitorData = JSON.parse(localStorage._6senseCompanyDetails);if(typeof(visitorData)=="undefined") {convert_recheck_experiment(); return false;} else return (visitorData.scores[0].buying_stage == "Awareness");})()
+The Audience should be configured like this:The Audience Type we are going to set to Transient, as this is a data field that will change and we would want the visitor to no longer experience the same as he moves through the buying stages.
+Add the 6sense audience to your Experience
+Next, just add the audience to the experience you will like to target to this audience.
+If you have any questions on how to use this, let us know in support, and we will gladly help you. 

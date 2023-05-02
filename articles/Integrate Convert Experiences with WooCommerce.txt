@@ -1,0 +1,29 @@
+Integrate Convert Experiences with WooCommerce
+<h2 id="convert-oracle-bluekai-integration">Convert-WooCommerce Integration</h2>
+<p>Integration of <a href="https://woocommerce.com/">WooCommerce</a> with Convert Experiences will help you to import Convert data into your WooCommerce eCommerce platform. For each experience, the integration can pass along the revenue information from the order received page.</p>
+<p>This article assumes you already have a Wordpress site.</p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the <a href="https://docs.woocommerce.com/document/installing-uninstalling-woocommerce/">WooCommerce</a> are installed on your Wordpress site.</p>
+<h2>Add WooCommerce Conversion Tracking plugin on Your Wordpress site</h2>
+<p>You need to install the WooCommerce Conversion Tracking plugin for your Wordpress site:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6177221028621/mceclip1.png" alt="mceclip1.png"></p>
+<p>Once you do this you will be able to see the Conversion Tracking option under WooCommerce:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6177255624461/mceclip2.png" alt="mceclip2.png"></p>
+<h2>Create a Revenue goal</h2>
+<p>Create a Revenue goal from the Goal templates in your experience.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/6177177144461/mceclip0.png" alt="mceclip0.png"></p>
+<p>Select Manual Revenue Tracking:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423908610189/mceclip1.png" alt="mceclip1.png"></p>
+<h2 id="send-convert-data">Add Manual Revenue Tracking Code to the Order Received Page</h2>
+<p>After you have saved the goal, go edit it and you will find the JavaScript code below. You will need to copy and paste this script in the Conversion Tracking option we described above. You need to replace revenue with {order_total} as this is the WooCommerce variable that shows the total amount of the order placed:</p>
+<pre><code class="language-markup">
+&lt;script&gt;
+    window._conv_q = window._conv_q || [];
+    window._conv_q.push(["pushRevenue",revenue,products_cnt,goal_id]);
+&lt;/script&gt;</code></pre>
+<p><img src="https://support.convert.com/hc/article_attachments/6177249414029/mceclip3.png" alt="mceclip3.png"></p>
+<h2 id="view-convert-data-in-bluekai">View Revenue Data in Convert</h2>
+<p>In order to see the revenue data sent, you must login into your Convert account and go to your Reports. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/6177309028365/mceclip5.png" alt="mceclip5.png"></p>
+<p><img src="https://support.convert.com/hc/article_attachments/6177324249741/mceclip4.png" alt="mceclip4.png"></p>
+<p><img src="https://support.convert.com/hc/article_attachments/6177340080525/mceclip6.png" alt="mceclip6.png"></p>

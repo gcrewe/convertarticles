@@ -1,0 +1,20 @@
+Integrate Convert Experiences with CNZZ Statistics
+<h2>Convert-CNZZ Statistics Integration</h2>
+<p>Integration of <a href="http://www.cnzz.com/o_index.php">CNZZ Statistics</a> with Convert Experiences will help you to import Convert data into your CNZZ account. </p>
+<p>For each experiment, the integration uses a unique Custom Dimension to pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>This integration is still in beta status. Use with caution the steps described below.</p>
+</div>
+</div>
+<h2>Create a Custom Dimension in CNZZ</h2>
+<p>Sign in to your CNZZ account and create a Custom Dimension as your optimization tracking variable. Keep the index value as you will need it when you will activate the integration through the Convert settings.</p>
+<h2>Add Tracking Code Snippets</h2>
+<p>Make sure the Convert tracking code and the CNZZ statistics code are installed on your page. </p>
+<h2>Activate Integration in Convert</h2>
+<p>Go to your Convert experience settings and under Integrations select the CNZZ. Assign the Conversion Dimension slot number to match the slot number created in CNZZ. Then click Save and Continue:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423904226829/mceclip0.png" alt="mceclip0.png"></p>
+<h2>View Convert Data in CNZZ</h2>
+<p>Using a Custom Report in CNZZ, you will be able to view all of your Convert Experiences data as they associate with the values that you pass in the Custom Dimension.</p>

@@ -1,0 +1,3 @@
+Maximum File Size for Images Uploaded via Visual Editor
+<p> The maximum file size you can upload to your library is 2MB per image file.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360012540991/mceclip0.png"></p>

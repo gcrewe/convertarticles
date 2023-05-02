@@ -1,0 +1,17 @@
+Test Click Goals to make sure they target the right elements
+<h2>Custom jQuery Selectors</h2>
+<p>Setting up click goals might get tricky when you want to track multiple elements at once. That is done through custom <a href="https://api.jquery.com/category/selectors/" target="_blank" rel="noopener">jQuery selectors</a> that are used in the goal setup/edit process.</p>
+<p><strong>Note, when setting up click goals with custom selectors, try to match A tags instead of elements that are inside of those A tags. For example, in a structure like below a good selector would be <em>a.link_class</em> instead of <em>a.link_class &gt; img</em></strong></p>
+<p><strong>&lt;a href="" class="link_class"&gt;&lt;img src="" /&gt;&lt;/a&gt;</strong></p>
+<p><img src="https://support.convert.com/hc/article_attachments/6448935629069/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Steps using JS Console</h2>
+<p>If you need to make sure what elements will be tracked, you can do so, following the steps (we will use Chrome browser here but any other browser that has a JS console could be used):</p>
+<ol>
+<li>Open the page where the elements are supposed to be found;</li>
+<li>Copy the selector you are using in your goal's settings, as shown in the above image;</li>
+<li>Do <a style="background-color: #ffffff;" href="https://developers.google.com/web/tools/chrome-devtools/iterate/inspect-styles/basics?hl=en" target="_blank" rel="noopener">Inspect Element </a>on that page and go to the Console;</li>
+<li>Type the following in the console: <em><strong>convert.$("selector here") </strong>(you'd replace <strong>selector here</strong> with the actual selector)</em>;</li>
+</ol>
+<p><img src="https://support.convert.com/hc/article_attachments/360020528431/mceclip1.png"></p>
+<p>Hit the <strong>Enter key</strong> and you should see listed all the elements that will be tracked through that selector: </p>
+<p><img src="https://support.convert.com/hc/article_attachments/360020621232/mceclip2.png"></p>

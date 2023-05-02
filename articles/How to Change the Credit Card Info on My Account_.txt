@@ -1,0 +1,6 @@
+How to Change the Credit Card Info on My Account?
+<h2>Find Your Billing Information and Change It</h2>
+<p>From the right dropdown menu, click on Account Settings. Next, go to Name &amp; Billing tab.</p>
+<p>Use the actions to update or add your Payment Method:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423892286733/mceclip0.png" alt="mceclip0.png"></p>
+<p>From there, you can change your credit card info to bill your new card. Click save and your new card will be charged on the next billing cycle.</p>

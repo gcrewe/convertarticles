@@ -1,0 +1,33 @@
+Integrate Convert Experiences with FullStory
+<h2>Convert-FullStory Integration</h2>
+<p><a style="background-color: #ffffff; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px;" href="https://www.fullstory.com">FullStory</a> helps companies record and analyze their customer interactions by recording user sessions, providing detailed step-by-step logs of everything customers did during their sessions and storing that information for later retrieval and analysis. FullStory can then be searched for specific events, including link usage, rage clicks or dead clicks. In addition to data on individual sessions, FullStory can also retrieve analytics on aggregate customer behavior, showing the most clicked items, the most rage clicked areas, the most navigated to sites, etc.</p>
+<p>This article will walk you through how to send data from Convert experiences/variations to your FullStory account. For each experiment, the integration will pass along the experiment name and variation name that the visitor is currently bucketed into (if any) as a snapshot.</p>
+<p><span>For more use cases regarding this integration you can read our </span><a href="https://www.convert.com/blog/business-strategy/convert-fullstory-improve-conversions/" target="_self" rel="undefined">FullStory blog article</a><span>.</span></p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the FullStory recording snippet are installed on your pages. FullStory tracking code looks like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360007863031/mceclip0.png"></p>
+<div class="user_formatted header_section clearfix">
+<h2>Activate Integration Manually</h2>
+<p>Once you have the two tracking codes in your website, then you should add this extra code to track <a href="https://help.fullstory.com/develop-js/setuservars">custom user variables</a> (one for experiment name and one for variation name). <em>You can add this to the <a href="https://support.convert.com/hc/en-us/articles/115000006251-Project-Experience-Experiment-or-Personalization-Variation-Javascript" target="_blank" rel="noopener">Project Global Javascript</a> section or directly on your pages, after the Full Story and Convert tracking codes.</em></p>
+<pre><code>   
+    var refObject = window['convert']['data']['experiments']
+	for (var key in window["convert"]["currentData"]["experiments"]) {
+		if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+			continue;
+		}}
+            
+	var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+	var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+	curExperimentName = curExperimentName.replace("Test #", "Test ");
+	var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+	curVariant = curVariant.replace("Var #", "Variation ");
+
+
+FS.setUserVars({<br> "Experiment Name" : curExperimentName,<br> "Variation Name" : curVariant<br>});
+</code></pre>
+<h2>View Convert data in FullStory</h2>
+<p>After integration is enabled and your experiment is activated, you will be able to find in your FullStory account the custom user data that you sent. Use the <a href="https://help.fullstory.com/fs-launchpad/youve-got-sessions">OmniSearch feature</a> to search for what you want. In each session two extra user variables will be added, one for experiment name and one for variation name:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360007863731/mceclip1.png"></p>
+<p> </p>
+<div> </div>
+</div>

@@ -1,0 +1,10 @@
+Preventing Flicker in Cloudflare Rocket Loader Integration
+According to Cloudflare Rocket Loader's documentation, it prioritizes your website’s content (text, images, fonts, and more) by deferring the loading of all of your JavaScript until after rendering.
+This could cause a delay in loading our Convert Snippet and result in a noticeable flicker effect.
+To avoid this, we recommend including the attribute data-cfasync="false" to our snippet.
+For instance, if the snippet appears as follows:
+<script type="text/javascript" src="//cdn-4.convertexperiments.com/js/12345678-12345678.js"></script>
+The updated snippet would look like this:
+<script data-cfasync="false" type="text/javascript" src="//cdn-4.convertexperiments.com/js/12345678-12345678.js"></script>
+By doing so, Rocket Loader will ignore our Convert snippet while optimizing the loading of other scripts on the page, as per the Rocket Loader documentation:
+https://developers.cloudflare.com/fundamentals/speed/rocket-loader/ignore-javascripts/

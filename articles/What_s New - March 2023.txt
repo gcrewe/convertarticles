@@ -1,0 +1,107 @@
+What's New - March 2023
+<p><span class="wysiwyg-font-size-large">New features:</span></p>
+<p> </p>
+<div class="intercom-interblocks">
+<div class="intercom-interblocks-subheading intercom-interblocks-align-left">
+<h2>
+<strong>1. New Visual Editor (Beta)</strong>:</h2>
+</div>
+</div>
+<div class="intercom-interblocks">
+<div class="intercom-interblocks-paragraph intercom-interblocks-align-left">
+<p>You can access Convert's New Visual Editor, by clicking on the New Visual Editor button on the current visual editor.</p>
+</div>
+</div>
+<div class="intercom-interblocks">
+<div class="intercom-interblocks-paragraph intercom-interblocks-align-left">
+<p>The New Visual editor offers key benefits like:</p>
+</div>
+</div>
+<div class="intercom-interblocks">
+<div class="intercom-interblocks-ordered-list">
+<ol>
+<li>Each individual change is now connected on the DOM level to avoid duplicates</li>
+<li>Easier re-editing and deletion of changes made in the past without editing the whole code</li>
+</ol>
+</div>
+</div>
+<div class="intercom-interblocks">
+<div class="intercom-interblocks-paragraph intercom-interblocks-align-left">
+<p>Once you enable the new Visual editor for an experiment, you will not be able to switch back to the older visual editor. So we suggest you explore it on experiment clones and in your own playground to see if it improves the usability of your site.</p>
+</div>
+</div>
+<div class="intercom-interblocks">
+<div class="intercom-interblocks-subheading intercom-interblocks-align-left">
+<h2> </h2>
+<h2><strong>2. User Role Matrix Update</strong></h2>
+</div>
+</div>
+<div class="intercom-interblocks">
+<div class="intercom-interblocks-paragraph intercom-interblocks-align-left">
+<p>We’ve updated the user role permissions and now allow admins (in addition to account owners) to take the following actions:</p>
+</div>
+</div>
+<div class="intercom-interblocks">
+<div class="intercom-interblocks-ordered-list">
+<ol>
+<li>Create and edit collaborators on their accounts.</li>
+<li>Create projects</li>
+</ol>
+</div>
+</div>
+<div class="intercom-interblocks">
+<div class="intercom-interblocks-paragraph intercom-interblocks-align-left">
+<p>A new Reviewer user role has also been added. More details can be found on the below link:</p>
+</div>
+</div>
+<div class="intercom-interblocks">
+<div class="intercom-interblocks-paragraph intercom-interblocks-align-left">
+<p><a href="https://support.convert.com/hc/en-us/articles/205151065-Collaborators-Share-With-Multiple-Users-Accounts">https://support.convert.com/hc/en-us/articles/205151065-Collaborators-Share-With-Multiple-Users-Accounts</a></p>
+</div>
+</div>
+<div class="intercom-interblocks">
+<div class="intercom-interblocks-paragraph intercom-interblocks-align-left">
+<p>These new user roles and permissions will allow our agency customers to flexibly handle customer/client accounts.</p>
+</div>
+</div>
+<div class="intercom-interblocks">
+<div class="intercom-interblocks-subheading intercom-interblocks-align-left">
+<h2> </h2>
+<h2><strong>3. New Bayesian Stats</strong></h2>
+</div>
+</div>
+<div class="intercom-interblocks">
+<div class="intercom-interblocks-paragraph intercom-interblocks-align-left">
+<p>We now offer Frequentist AND Bayesian methods in every account plan we released in 2023.</p>
+</div>
+</div>
+<div class="intercom-interblocks">
+<div class="intercom-interblocks-paragraph intercom-interblocks-align-left">
+<p>Additionally, you can also:</p>
+</div>
+</div>
+<div class="intercom-interblocks">
+<div class="intercom-interblocks-ordered-list">
+<ol>
+<li>Make your own stats engine with power, one/two-tails</li>
+<li>Multiple comparisons correct like Bonferroni and Sidak</li>
+</ol>
+</div>
+</div>
+<div class="intercom-interblocks">
+<div class="intercom-interblocks-paragraph intercom-interblocks-align-left">
+<p>More details on the stat feature can be found on the below link:</p>
+</div>
+</div>
+<div class="intercom-interblocks">
+<div class="intercom-interblocks-paragraph intercom-interblocks-align-left">
+<p><a href="https://support.convert.com/hc/en-us/articles/10157554451085">https://support.convert.com/hc/en-us/articles/10157554451085</a></p>
+<h2> </h2>
+<h2><strong>4. Updated wordpress plugin</strong></h2>
+<p data-pm-slice="1 1 []">We updated our wordless plugin to make sure it works with more recent versions of Wordpress.</p>
+<h2> </h2>
+<h2><strong>4. Filters on Live logs</strong></h2>
+<p data-pm-slice="1 1 []">A new dropdown filter has been added to Live logs so that you can filter for specific event types.</p>
+<p data-pm-slice="1 1 []"><img src="https://support.convert.com/hc/article_attachments/14752521865869" alt="IMG_3816.PNG"></p>
+</div>
+</div>

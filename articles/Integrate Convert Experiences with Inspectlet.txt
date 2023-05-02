@@ -1,0 +1,32 @@
+Integrate Convert Experiences with Inspectlet
+<h2>Convert-Inspectlet Integration</h2>
+<p><span><a href="https://www.inspectlet.com/" target="_self">Inspectlet</a> records videos of your site visitors as they use your site, allowing you to see everything they do. See every mouse movement, scroll, click, and keypress on your site. You never need to wonder how visitors use your site again.</span></p>
+<p>This article will walk you through how to send data from Convert experiences/variations to your Inspectlet account. For each experiment, the integration will pass along the experiment name and variation name that the visitor is currently bucketed into as a snapshot.</p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the <a href="https://www.inspectlet.com/docs#installinginspectlet" target="_self">Inspectlet code</a> are installed on your page. Inspectlet tracking code looks like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360048714232/mceclip0.png" alt="mceclip0.png"></p>
+<div class="user_formatted header_section clearfix">
+<h2>Activate Integration Manually</h2>
+<p>Once you have the two tracking codes in your website, then you should add this extra code to <a href="https://www.inspectlet.com/docs#tagging" target="_self">tag session recordings</a> (one for experiment name and one for variation name). <em>You can add this to the <a href="https://support.convert.com/hc/en-us/articles/115000006251-Project-Experience-Experiment-or-Personalization-Variation-Javascript" target="_blank" rel="noopener">Project Global Javascript</a> section or directly on your pages, after the Inspectlet and Convert tracking codes.</em></p>
+<pre><code>   
+    var refObject = window['convert']['data']['experiments']
+	for (var key in window["convert"]["currentData"]["experiments"]) {
+		if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+			continue;
+		}		
+            
+	var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+	var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+	curExperimentName = curExperimentName.replace("Test #", "Test ");
+	var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+	curVariant = curVariant.replace("Var #", "Variation ");
+
+	__insp.push(['tagSession', {'Experiment Name':curExperimentName}]);
+	__insp.push(['tagSession', {'Variation Name':curVariant}]);
+}</code></pre>
+<h2>View Convert data in Inspectlet</h2>
+<p>After integration is enabled and your experiment is activated, you will be able to find in your Inspectlet account the custom user data that you sent. Go to Dashboard -&gt;  Session Recordings</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360048714292/mceclip1.png" alt="mceclip1.png"></p>
+<p>to search for what you want. In each visitor session two extra properties will be added, one for experiment name and one for variation name:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360048835451/mceclip2.png" alt="mceclip2.png"></p>
+</div>

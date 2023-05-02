@@ -1,0 +1,27 @@
+Integrate Convert Experiences with ClickFunnels
+<h2 id="convert-fullstory-integration">Convert-ClickFunnels Integration</h2>
+<p><a href="https://www.clickfunnels.com/" target="_self">ClickFunnels</a> i<span>s a website and sales funnel builder for entrepreneurs</span>. A sales funnel is a marketing strategy designed to turn cold prospects into long-term customers by funneling them through five stages. The “funnel” metaphor means you’ll begin with a large audience of prospective buyers that will eventually pare down to a smaller group of highly-targeted, high-value customers.</p>
+<blockquote class="wp-block-quote">
+<p>The final goal is<span> </span><em>not</em><span> </span>to make a sale, at least not a single sale. Instead the goal is create returning customers with life-time value.</p>
+</blockquote>
+<p>Breaking the buyer’s journey down into smaller steps (i.e., stages) allows you to be more precise about how and when you present offers.</p>
+<p>This article will walk you through how to add Convert tracking code to your ClickFunnels sales funnels. </p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippet in your Funnel</h2>
+<p>To create your first funnel page please read these <a href="https://help.clickfunnels.com/hc/en-us/articles/360010284234" target="_self">instructions</a>.</p>
+<p><span>There are two areas where you can add your <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> to your funnel depending on your tracking goals. </span></p>
+<h3 class="p2"><span class="s1">Add to a Specific Page in your Funnel</span></h3>
+<ul class="ul1">
+<li class="li1"><span class="s1">From within your page, click on <strong>Settings</strong>.</span></li>
+<li class="li1"><span class="s1">Click on <strong>Tracking Code</strong>.</span></li>
+<li class="li1"><span class="s1">Click on the <strong>Header</strong> or <strong>Footer</strong> tab and add your Convert tracking code</span></li>
+</ul>
+<p><span class="s1"><img src="https://support.convert.com/hc/article_attachments/360065330332/mceclip0.png" alt="mceclip0.png"></span></p>
+<h3 class="p2"><span class="s1">Add to the Entire Funnel (All Pages)</span></h3>
+<ul class="ul1">
+<li class="li1"><span class="s1">From within your funnel, click on <strong>Settings</strong>.</span></li>
+<li class="li1"><span class="s1">Paste your pixel in the <strong>Head Tracking Code</strong>.</span></li>
+<li class="li1">
+<span class="s1">Scroll down the page and click on <strong>Save And Update Settings</strong></span><span class="s1"></span>
+</li>
+</ul>
+<p><span class="s1"><strong><img src="https://support.convert.com/hc/article_attachments/360065520931/mceclip1.png" alt="mceclip1.png"></strong></span></p>

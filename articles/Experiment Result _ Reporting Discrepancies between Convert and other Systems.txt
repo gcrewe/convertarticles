@@ -1,0 +1,28 @@
+Experiment Result / Reporting Discrepancies between Convert and other Systems
+<h2>Discrepancies are Common</h2>
+<p>There is no need to be alarmed if you see discrepancies between Convert reporting and other systems. It is a common scenario - a customer starts to gather data from their first Convert experiment and compares it with other data gathered in other systems such as analytic or e-commerce engines. </p>
+<p>In the beginning, the discrepancies may seem huge and completely out of sync, but getting to know what the common pitfalls are will help you understand why.  Discrepancies are usually not caused by your system configuration but may be understood by knowing the differences likely to be encountered when comparing metrics in other systems.</p>
+<p>Please read the following to learn what these common pitfalls are.</p>
+<div class="special-content special-content--tips">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-04.png" alt="Tip"></div>
+<div class="special-content__info">
+<h3>Google Analytics</h3>
+<p>There is a Google Analytics document related to this same subject in the following <a href="https://support.convert.com/hc/en-us/articles/205160525-Why-Convert-Experiences-Data-is-Different-from-Google-Analytics">article</a>.</p>
+</div>
+</div>
+<h2>Comparing Apples to Apples</h2>
+<div class="user_formatted header_section clearfix">
+<p>It is very common when trying to understand these discrepancies to find that you may not be comparing the same metrics and that the discrepancies are a result of comparing completely different metrics.</p>
+<h2>Visitors in Convert vs. Other Systems</h2>
+<p>Visitors in Convert are unique visitors that go through an experiment. They are only counted once while the convert cookie exists in the visitor browser (the cookie duration is for 6 months from the last visit). So in practical terms, we will count each visitor only once per Experiment.</p>
+<p>Other systems often count a visitor again each time they visit a site in a new session. This is common in Google Analytics and maybe the same in other engines. </p>
+<h2>Conversions</h2>
+<p>By default, Convert will only record the first conversion of a unique visitor. Other engines usually count conversions each time the same visitor triggers it. This is a common source of confusion when comparing purchases in Convert vs purchases on other platforms.</p>
+<h2>Latency in Data Reporting </h2>
+<p>Other systems might have up to a 48-hour latency before visitor activity appears in their reports. Visitors and conversions are incremented in near real-time on Convert reports.</p>
+<h2>Different Time Zones</h2>
+<p>In addition to being careful to select the same custom date range when comparing, mismatched time zones can also show a huge difference in the data that you see in other platforms versus Convert Experiences. While your other platform might use a time zone that was configured by you, Convert Experiences currently displays report data using UTC.</p>
+<h2>Split Tests  </h2>
+<p>Sometimes you may see reporting discrepancies because of Split Test redirects.  Please see this article for more information: <a href="https://support.convert.com/hc/en-us/articles/205160405-How-Do-I-Prevent-My-Analytics-Tool-Recording-a-Hit-on-Original-When-a-Split-URL-Variation-is-shown">https://convert.zendesk.com/hc/en-us/articles/205160405-How-Do-I-Prevent-My-Analytics-Tool-Recording-a-Hit-on-Original-When-a-Split-URL-Variation-is-shown</a></p>
+<p> </p>
+</div>

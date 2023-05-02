@@ -1,0 +1,17 @@
+Integrate Convert Experiences with Eulerian Technologies
+<h2>Convert-Eulerian Integration</h2>
+<p>Integration of <a href="https://www.eulerian.com/">Eulerian Technologies</a> with Convert Experiences will help you to import Convert data into your Eulerian Technologies Analytics account. </p>
+<p>For each experiment, the integration passes along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<div class="special-content special-content--important">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>This integration is still in beta status. Use with caution the steps described below.</p>
+</div>
+</div>
+<h2>Add Tracking Code Snippets</h2>
+<p>Make sure the Convert tracking code and the Eulerian Analytics code (eanalytics) are installed on your page. </p>
+<h2>Activate Integration in Convert</h2>
+<p>Go to your Convert experience settings and under Integrations select the Eulerian. Then click Save and Continue. </p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423908680717/mceclip0.png" alt="mceclip0.png"></p>
+<p> </p>

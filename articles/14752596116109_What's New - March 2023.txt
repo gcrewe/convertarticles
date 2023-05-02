@@ -1,0 +1,106 @@
+What's New - March 2023
+New features:
+ 
+
+
+
+1. New Visual Editor (Beta):
+
+
+
+
+You can access Convert's New Visual Editor, by clicking on the New Visual Editor button on the current visual editor.
+
+
+
+
+The New Visual editor offers key benefits like:
+
+
+
+
+
+Each individual change is now connected on the DOM level to avoid duplicates
+Easier re-editing and deletion of changes made in the past without editing the whole code
+
+
+
+
+
+Once you enable the new Visual editor for an experiment, you will not be able to switch back to the older visual editor. So we suggest you explore it on experiment clones and in your own playground to see if it improves the usability of your site.
+
+
+
+
+ 
+2. User Role Matrix Update
+
+
+
+
+We’ve updated the user role permissions and now allow admins (in addition to account owners) to take the following actions:
+
+
+
+
+
+Create and edit collaborators on their accounts.
+Create projects
+
+
+
+
+
+A new Reviewer user role has also been added. More details can be found on the below link:
+
+
+
+
+https://support.convert.com/hc/en-us/articles/205151065-Collaborators-Share-With-Multiple-Users-Accounts
+
+
+
+
+These new user roles and permissions will allow our agency customers to flexibly handle customer/client accounts.
+
+
+
+
+ 
+3. New Bayesian Stats
+
+
+
+
+We now offer Frequentist AND Bayesian methods in every account plan we released in 2023.
+
+
+
+
+Additionally, you can also:
+
+
+
+
+
+Make your own stats engine with power, one/two-tails
+Multiple comparisons correct like Bonferroni and Sidak
+
+
+
+
+
+More details on the stat feature can be found on the below link:
+
+
+
+
+https://support.convert.com/hc/en-us/articles/10157554451085
+ 
+4. Updated wordpress plugin
+We updated our wordless plugin to make sure it works with more recent versions of Wordpress.
+ 
+4. Filters on Live logs
+A new dropdown filter has been added to Live logs so that you can filter for specific event types.
+
+

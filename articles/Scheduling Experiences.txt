@@ -1,0 +1,16 @@
+Scheduling Experiences
+<h2>Introduction</h2>
+<p>Convert has the feature to schedule your experiences to start on a future date, for example on a holiday.</p>
+<h2>Scheduling your Experience</h2>
+<p>After creating your experience and before changing the status from "Draft", you can define a date to start and activate the experience. This option can be found on  <strong><em>Experience Summary &gt; Status Button</em></strong> :<br><br><img src="https://support.convert.com/hc/article_attachments/14272478855309"></p>
+<p><br>Changing the status to Scheduled will trigger the calendar widget, just select the date desired for the experience to start:</p>
+<p><br><img src="https://support.convert.com/hc/article_attachments/14272481251085"></p>
+<p><span class="wysiwyg-color-red"><strong>Note: The timezone used for scheduling is GMT.</strong></span></p>
+<p> </p>
+<div class="special-content special-content--tips">
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-04.png" alt="Tip"></div>
+<div class="special-content__info">
+<h3>Related:</h3>
+<p><strong><a href="https://support.convert.com/hc/en-us/articles/115000612132-Running-an-Experience-during-a-scheduled-time-period" target="_blank" rel="noopener">Running an Experience during a scheduled time period</a></strong></p>
+</div>
+</div>

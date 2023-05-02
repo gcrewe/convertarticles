@@ -1,0 +1,19 @@
+Segmenting a Decrease Bounce Rate Goal
+<h2>Issue</h2>
+<p>There is currently no one-step way of configuring a Decrease Bounce Rate goal per device (desktop, mobile, tablet) within the app.</p>
+<p>The following solution allows you to create Decrease Bounce Rate goals for different type of devices: desktop, mobile, and tablet.</p>
+<p>*Be aware that a device can be classified in more than one category.</p>
+<h2>Solution</h2>
+<ol>
+<ol>
+<li>First, create a Custom JavaScript goal from the goal templates and attach it to your experiment.<br><br><img src="https://support.convert.com/hc/article_attachments/5989646535437/mceclip0.png" alt="mceclip0.png"><br><br>
+</li>
+<li>After you create it, copy the ID of your goal. You can find the ID if you go to the goals page.<br><br><img src="https://support.convert.com/hc/en-us/article_attachments/14269924060557/2aec2d2cc81869071d9a5c780ad2378da58cabf23638c634d776bf476d3b90ea.png"><br><br><br>
+</li>
+<li>Then, you will have to add the following code to the Global JavaScript section of your Project. You can find this section by clicking on the Setting menu item on the left sidebar and scrolling down to the Global JavaScript text box. <br><br>Un-comment the appropriate line for the segmentation of the type of device type you want to track. Only leave one un-commented; otherwise this solution code will not work properly.<br><br>
+<p class="codepen" data-height="471" data-theme-id="31058" data-slug-hash="JwWLmX" data-default-tab="js" data-user="gcrewe" data-pen-title="Decrease Bounce Rate Device Segmented Goal Code">See the Pen <a href="https://codepen.io/gcrewe/pen/JwWLmX/">Decrease Bounce Rate Device Segmented Goal Code</a> by Convert.com (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p><br>You can make sure that you did not make any syntax errors in the code by checking it in the browser console. Just paste the code and press enter. You should see any errors you might have introduced while editing it. <br><br>Now you are ready to go!</p>
+</li>
+</ol>
+<script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+</ol>

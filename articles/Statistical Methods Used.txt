@@ -1,0 +1,12 @@
+Statistical Methods Used
+<p> </p>
+<p>On the Convert report, we support two kinds of stats, Frequentist and Bayesian.</p>
+<h2>Frequentist</h2>
+<p>Our Frequentist stats are based on the Z significance test, you have the option to configure the following:</p>
+<p>The<strong> confidence</strong> value. <em>For regular tests, 95% confidence is the standard, but for mission-critical experiments best to choose 99% confidence</em>.</p>
+<p>The <strong>test type</strong> one-tail or two-tails Z-test. We advise you for standardized tests to use a one-tail setting. One tail reaches significance sooner and is usually good enough. But for mission-critical experiments, two-tails is best, as it takes a bit more time to reach significance.</p>
+<p>For the multiple comparison <strong>correction</strong> methods, we offer Bonferroni, Sidak, or None. For all intents and purposes, Sidak is the best for every use case that we know, especially for mission-critical experiments. It adequately controls the family-wise error rate while not influencing the power too much. However, we give you a choice to use it or not.</p>
+<p>Lastly, you will notice a <strong>Sensible Defaults</strong> menu. For all the above settings, we provide you with a shortcut to set “preferred” values depending on if your want to run a “standard” test or a very important one, .i.e a “mission-critical” one.</p>
+<h2>Bayesian</h2>
+<p>For bayesian, we give you the option to set a <strong>decision threshold</strong>, above which you would be satisfied with the chance to win probability. The default is 95%, but up to you to adjust it to the level of your liking. For maximum certainty, a value of 99% would be ideal.</p>
+<p>About our priors: W<span>e use uninformative priors, meaning that before the start of the test, each variant has an equal chance of being superior or lower to the others. As the test runs and we gather data, the prior of each variant is updated to create a posterior distribution.</span></p>

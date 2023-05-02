@@ -1,0 +1,14 @@
+Integrate Convert Experiences with Tealium
+Convert-Tealium Integration
+Tealium IQ is a universal Javascript library that creates a Universal Data Object (UDO) for all the elements on the page. From there this data is sent to the Data Layer in Tealium and can be sent to all the different vendors (to Convert for example) via the tag.
+There are two ways you can integrate Tealium iQ with your website: you can use Tealium's tag manager or their JavaScript library. This section discusses using Tealium iQ (JS library utag.sync.js) to serve Convert experiences.
+It will be completely flicker-free and work correctly. For more insights into how to leverage the utag.sync.js template, please reference implementing synchronous code within TiQ using utag.sync.js.
+Grab your Convert tracking code
+Make sure you have the Convert tracking code.
+Ensure utag.sync.js is enabled
+See the article on Publish Configuration and Generate utag.sync.js. It is just a simple case of enabling this and then saving your latest version.
+Open the utag.sync template and add your code
+You will now be able to access the utag.sync.js template in the templates drop-down (see this article for how to access the templates) and paste in the Convert tracking code at the bottom.
+Note: You can easily add JavaScript above here to add conditional logic to determine which pages Convert experiences should run on.
+Save and Publish
+Go ahead and 'Save Profile Template' and then publish the version! You are now live.

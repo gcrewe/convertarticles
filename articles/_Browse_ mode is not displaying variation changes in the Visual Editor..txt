@@ -1,0 +1,9 @@
+“Browse” mode is not displaying variation changes in the Visual Editor.
+<p><span style="font-weight: 400;">When editing a <a href="https://support.convert.com/hc/en-us/articles/205160345-Multipage-Experiments">multipage experiment</a>, changes that can only be reached with "Browse Mode" enabled are not shown. Instead the original variation, is shown.</span></p>
+<p>The Visual Editor will not show the changes of a variation if they are reached on "Browse" mode. It will only display the changes from the page that is first loaded in the variation.</p>
+<p>This can be rather frustrating, and sometimes difficult when we want to re-edit changes that we have already made.</p>
+<p>However, if you are editing the variation, and you already know what you need to change, you may want to do it by editing the variation code, as with the Visual Editor is not possible.</p>
+<p>You will need the help of somebody who understands HTML and jQuery, so he can help you write the changes in the variation code section. Alternatively, you can ask for help to support, who may aid you if the needed changes on the variation code are small.</p>
+<p><span style="font-weight: 400;">To know more about writing custom variation code in your experiment please read </span><a href="https://support.convert.com/hc/en-us/articles/205152825-Advanced-Writing-Custom-Variation-Code-Inside-Variation-Code-Area"><span style="font-weight: 400;">this article</span></a><span style="font-weight: 400;">.</span></p>
+<p><img src="https://support.convert.com/hc/article_attachments/360035833331/mceclip0.png" alt="mceclip0.png"><br><br></p>
+<p> </p>

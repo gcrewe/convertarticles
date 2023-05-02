@@ -1,0 +1,65 @@
+Integrate with Shopify through our Custom Convert App
+<h2>Introduction</h2>
+<p>Our Convert custom app automates the installation process. It is, by far, the easiest way for Shopify stores to get started on Convert, and there is almost no learning curve.</p>
+<p>Additionally, this app allows you to track revenue on all Shopify plans, not just Plus plans (which have custom checkout domains). </p>
+<h2>Requirements</h2>
+<h3>Do I need a particular plan or contract with the partner to use the integration?</h3>
+<p>You will need a Shopify store. The app is 100% free.</p>
+<h3>Do I need to have the partner’s technology installed already?</h3>
+<p>Yes, you will only need this app if you have a Shopify store.</p>
+<h3>Is there any other special configuration needed?</h3>
+<p>You will need to have your own Convert API Keys and a Revenue goal created inside your Convert account. Other than that, the app allows you to install Convert on your Shopify store very easily. It’s by far the fastest, easiest way to get Convert up and running on Shopify. <strong>If your plan, does not have the API feature, ask the support team for a set of API keys to install the app.</strong></p>
+<h3>Do I need to be the Shopify Shop Owner to complete the installation?</h3>
+<p data-pm-slice="1 1 []">When the Shopify partner's account where the app is created does not belong to the owner, it needs to be at least a "collaborator" with collaborator permissions, as mentioned <a href="https://help.shopify.com/en/manual/your-account/staff-accounts/collaborator-accounts" target="_self">here</a>. I<span>n short words, Convert Custom App does not need to be created by the Shop Owner, as it can be created by a collaborator. </span><span>The app installation still needs to be performed by the Shop Owner.</span></p>
+<h2>Create your own Convert API Keys</h2>
+<p>You need to be the account owner and create your own Convert API Keys. Go to Account Settings:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/5288948643469/mceclip6.png" alt="mceclip6.png"></p>
+<p>Select the API-Keys tab menu from the top and then hit on the New API-Key button to generate your own:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/5288999240461/mceclip7.png" alt="mceclip7.png"></p>
+<p>You will need this pair of keys to connect the custom Shopify app that you are going to create in the next sections with your Convert account.</p>
+<h2>Create a Revenue Goal</h2>
+<p>You now need to create a simple revenue goal and add it to an experiment you run on your Shopify Store.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/5288772034701/mceclip4.png" alt="mceclip4.png"></p>
+<p><img src="https://support.convert.com/hc/en-us/article_attachments/14274756466189/fe9b01dab57dbc429c42a6e6bd27d086bf4468b690e7b1325a74dc4f7631fc4c.png"></p>
+<h2>Create a Shopify Custom App and Configured it.</h2>
+<p data-pm-slice="1 1 []">Follow the instruction in the following video and use this URL for the helper tool to get the Shopify App values: <a class="ProsemirrorEditor-link" href="https://helper.convertapps.net/custom-app-info" target="_blank" rel="noopener">https://helper.convertapps.net/custom-app-info</a></p>
+<div style="padding: 56.25% 0 0 0; position: relative;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" title="Convert Shopify Custom App Installation" src="https://player.vimeo.com/video/753042234?h=108be09964&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allowfullscreen=""></iframe></div>
+<p data-pm-slice="1 1 []">
+<script src="https://player.vimeo.com/api/player.js"></script>
+</p>
+<h2>Recharge or Carthook</h2>
+<p>If you are using third-party checkout solutions like <a href="https://rechargepayments.com/" target="_self">Recharge</a> or <a href="https://carthook.com/" target="_self">Carthook</a>, you need to select the "Use Webhook method" checkbox:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/7281446210189/mceclip18.png" alt="mceclip18.png"></p>
+<p><span>When the webhook method is used, we listen to the order's paid event from Shopify, this will get triggered for any cart solution that is used, including Recharge and Carthook.</span></p>
+<p><span>The only thing that the webhook does not track is <a href="https://help.shopify.com/en/manual/online-store/dynamic-checkout" target="_self">dynamic checkout buttons</a>, like "Buy Now".</span></p>
+<h2>Multi-currency support</h2>
+<p>You can select the "Multi-currency support" checkbox if you want to automatically convert to the currency of your choice to be used in Convert reports.</p>
+<p><span>We use a client-side Shopify lib to do the currency exchange calculation, so if you select the webhook method above the multi-currency support is not available.</span></p>
+<p><img src="https://support.convert.com/hc/article_attachments/7281446829197/mceclip19.png" alt="mceclip19.png"></p>
+<h2>Revenue Conversions in Convert Reporting Dashboard</h2>
+<p>Once you have the first purchase on your Shopify store where you run the Convert experiment with the attached revenue goal you should see the first goal conversion</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4407185458957/mceclip11.png" alt="mceclip11.png"></p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423874565261/mceclip2.png" alt="mceclip2.png"></p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423874568461/mceclip3.png" alt="mceclip3.png"></p>
+<p><img src="https://support.convert.com/hc/article_attachments/4423944820749/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Advanced Page Tagging</h2>
+<p>You may use the <a href="https://support.convert.com/hc/en-us/articles/205152665-Targeting-with-Advanced-Page-Tagging" target="_self">advanced page tags</a> to target your Shopify visitors and pages. The values are populated with <a href="https://shopify.dev/api/liquid/objects" target="_self">Shopify objects</a>, as we show below. Use them in Site Area and Audiences to make your experience targeting even more specific:</p>
+<p class="codepen" data-height="369" data-theme-id="31058" data-slug-hash="zdLzQP" data-default-tab="html" data-user="gcrewe" data-embed-version="2" data-pen-title="Shopify Integration - Step 2 - Shopify Tracking Code">See the Pen <a href="https://codepen.io/gcrewe/pen/zdLzQP/">Shopify Integration - Step 2 - Shopify Tracking Code</a> by George Crewe (<a href="https://codepen.io/gcrewe">@gcrewe</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</p>
+<h2>Delete Convert App from Shopify</h2>
+<p>In order to delete the custom app you created, you need to go <span>to/admin/apps and click the About this app option:</span></p>
+<p><span><img src="https://support.convert.com/hc/article_attachments/7281473889677/mceclip22.png" alt="mceclip22.png"></span></p>
+<p><span>and then click the Delete app:</span></p>
+<p><span><img src="https://support.convert.com/hc/article_attachments/7281504175629/mceclip23.png" alt="mceclip23.png"></span></p>
+<p><span>This message is a default Shopify message for all custom apps. You will still be able to re-install the app if you wish without our help.</span></p>
+<p><img src="https://support.convert.com/hc/article_attachments/7281522927373/mceclip24.png" alt="mceclip24.png"></p>
+<p> </p>
+<div class="special-content__icon"><img src="//p4.zdassets.com/hc/theme_assets/9802/200002237/support_icon-08.png" alt="Important"></div>
+<div class="special-content__info">
+<h3>Important</h3>
+<p>Note that if a previous installation is deleted from the App instead of being deleted from the Shop, then a request to clear the DB cache must be raised with the Support team in order to ensure a fresh installation.</p>
+</div>
+<p><br>Keyword: 'shopify app'</p>
+<p> </p>

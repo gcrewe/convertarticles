@@ -1,0 +1,43 @@
+Split Test Shopify Plus Theme Designs
+<h2>Introduction</h2>
+<p><span>While the idea behind using Shopify is to create a website and use their shopping cart to sell, ship, and manage your products, it often strikes us as to how one Shopify theme on your website would perform against the other, especially knowing that Shopify now offers a <a href="https://themes.shopify.com/" target="_self">wide range of themes</a>.</span></p>
+<p><span>Using <a href="https://support.convert.com/hc/en-us/articles/204490279-Set-Up-Your-First-Split-URL-Experiment" target="_self">Convert’s Split URL option</a>, you can put two or more Shopify themes (applied to your website) to compete against one another. </span></p>
+<p><span></span><span>Now, let us go through the stepwise flow of setting up a Split URL experience to test one Shopify theme against another.</span> </p>
+<p>The instructions below are for <a href="https://www.shopify.com/plus/pricing?itcat=pricing" target="_self"><strong>Shopify Plus</strong> subscriptions</a>. These instructions cannot work on Shopify basic subscriptions as Shopify implemented changes to their platform that prevents third-party scripts from running on checkout pages, thus you will not be able to hide the preview banner on the checkout pages.</p>
+<h2>Select Shopify Themes</h2>
+<p>You can select two different <a href="https://themes.shopify.com/" target="_self">Shopify themes</a>. The main theme will be the one you are showing live to the Shopify store visitors, while the other that you want to test against will be in preview mode (not published).</p>
+<h2>Install Convert Tracking Code in both Themes</h2>
+<p>You should follow the <a href="https://support.convert.com/hc/en-us/articles/204506429-Shopify-A-B-Testing-Integration-Convert-Experiences">instructions</a> and install Convert tracking code in <strong>both</strong> Shopify themes that you want to Split Test.</p>
+<p>You can also install the Convert tracking code on <a href="https://support.convert.com/hc/en-us/articles/204506429-Shopify-A-B-Testing-Integration-Convert-Experiences#step-4:-add-the-checkout-page-domain-to-your-project" target="_self">checkout pages</a> to be able to track revenue by <a href="https://support.convert.com/hc/en-us/articles/204506429-Shopify-A-B-Testing-Integration-Convert-Experiences#step-6:-google-analytics-revenue-tracking" target="_self">GA</a>, or <a href="https://support.convert.com/hc/en-us/articles/204506429-Shopify-A-B-Testing-Integration-Convert-Experiences#step-7:-manual-revenue-tracking" target="_self">our manual revenue tracking code</a> or via <a href="https://support.convert.com/hc/en-us/articles/360054379512-Add-Revenue-Tracking-to-Shopify-via-Webhook" target="_self" rel="undefined">webhooks</a>.</p>
+<h2>Find Shopify Preview Theme ID</h2>
+<p>Edit the code of the unpublished theme from within the Shopify admin.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4408704718477/mceclip1.png" alt="mceclip1.png"></p>
+<p>Then, y<span>ou can copy the theme ID from the admin URL, /admin/themes/xxxxxxxx.</span></p>
+<p>You will need this ID so that you can append <code class="marketing-code">?preview_theme_id=xxxxxxxx</code> as a variation URL for the Split URL test (that we describe on the next section).</p>
+<h2>Create Split URL test</h2>
+<p>Create a Split URL test.<br><br>In the "<span>Edit Split Url Variations" section i</span>nsert on the <strong>Original URL</strong> field the following code:</p>
+<pre><a href="https://app.convert.com/#">^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?</a></pre>
+<p>Use the following as the <strong>Variation URL</strong>, where the <code class="marketing-code">preview_theme_id</code> variable is what you discovered from the previous step (you should replace 123456 with your own preview theme ID):</p>
+<pre><a href="https://app.convert.com/#">$1$3$5?preview_theme_id=123456&amp;$7</a></pre>
+<p><br><code class="marketing-code">The resulting URL will be something like this <a class="vglnk" href="http://www.store.com%241/?preview_theme_id=65568381&amp;%242" rel="nofollow">http://www.store.com?preview_theme_id=123456&amp;</a></code>.</p>
+<p>Then enable “Support Regular Expressions” and "Transfer Original URL variables to the variation URL". Your test variations will look like this (except the theme ID will be different):<br><br><img src="https://support.convert.com/hc/article_attachments/4423917527693/mceclip0.png" alt="mceclip0.png"></p>
+<h2>Locations</h2>
+<p>Make sure that the Locations includes all the pages on your website. It could be something like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14273881359757"></p>
+<p>And exclude pages when the query string contains: <code class="marketing-code">preview_theme_id=123456</code>. This is very important, so when you activate the experiment, it does not cause a loop. If you see a loop, you will know what you missed.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/14273884269837"></p>
+<h2>Hide Shopify Preview Bar</h2>
+<p>When the preview theme template is enabled there is a banner that appears specifying that it is a preview template.</p>
+<p><img src="https://support.convert.com/hc/article_attachments/4409590497037/mceclip0.png" alt="mceclip0.png"></p>
+<p>However, this can be removed with CSS added to Shopify. In the section <strong>Online Store</strong> / <strong>Preferences</strong> / <strong>Google Analytics</strong>, add the following code:</p>
+<pre>(function() {<br> var css_override = document.createElement("style");<br> document.getElementsByTagName("head")[0].appendChild(css_override);<br> })();<br><br>var css = 'iframe#preview-bar-iframe { display: none !important; }', <br>head = document.head || document.getElementsByTagName('head')[0], <br>style = document.createElement('style'); <br>style.type = 'text/css';<br><br>if (style.styleSheet) { <br> style.styleSheet.cssText = css; <br>} else { <br> style.appendChild(document.createTextNode(css)); <br>} <br>head.appendChild(style);</pre>
+<p><img src="https://support.convert.com/hc/article_attachments/360025396472/mceclip0.png">Note that on slow network connections, the preview banner may still show for a split-second, but in most cases does not.</p>
+<h2>Redirect issues</h2>
+<p><strong>If you notice any redirect issues with the above setup you need to add a dummy query parameter to your variation.</strong></p>
+<p>Simply use for <strong>Original</strong> the regex formula as described below </p>
+<pre><a href="https://app.convert.com/#">^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?</a></pre>
+<p>Use the following as the <strong>Variation URL</strong>, where the <code class="marketing-code">preview_theme_id</code> should match your own and append on the end a dummy query pamareter, here we used test=1:</p>
+<pre><a href="https://app.convert.com/#">$1$3$5?preview_theme_id=123456&amp;$7&amp;test=1</a></pre>
+<p>Then in Locations you need also to exclude that query parameter together with your preview_theme_id:</p>
+<p><img src="https://support.convert.com/hc/en-us/article_attachments/14273937980173/3752cd6439c3d4246315f953a429c0c8f6e7257240bf6294393c6887c819c285.png"></p>
+<p> </p>

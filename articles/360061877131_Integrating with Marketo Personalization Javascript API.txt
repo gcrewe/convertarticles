@@ -1,0 +1,24 @@
+Integrating with Marketo Personalization Javascript API
+Overview
+Marketo offers personalization options via its Javascript API. Here we are going to refer to how to access Marketo website visitor stored data and how to personalize with it. This integration allows you to target experiences based on Marketo stored marketing data via its user context personalization javascript api.
+Instructions
+This integration refers to Marketo personalization API related to the User Context documented in this article.Let's say that we want to target an experience for users that are part of a certain Marketo campaign. 
+1) First we need to create the experience we want to target in Convert.
+2) We need to create an Advanced Audience and add a JS Condition to it.
+3) Then you need to set the JS Condition to query Marketo and return true or false. We are going to utilize two examples provided in the Marketo documentation. Each of these JS Conditions should return a boolean value.a) Targeting the experience based on the state location based on Marketo stored data:
+
+(function() {
+   if(typeof(rtp.userContext.location.state)=="undefined") {
+       convert_recheck_experiment(); return false;} 
+   else return (rtp.userContext.location.state == 'CA');
+})()
+
+b) Targeting the experience if the visitor viewed a certain campaign.
+
+(function() {
+if(typeof(rtp.userContext.viewedCampaign('45'))=="undefined") {
+convert_recheck_experiment(); return false;} 
+else return (rtp.userContext.viewedCampaign('45'));
+})()
+
+With these instructions, you should be able to accomplish the targeting to the users based on Marketo data.

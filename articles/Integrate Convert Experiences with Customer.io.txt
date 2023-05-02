@@ -1,0 +1,42 @@
+Integrate Convert Experiences with Customer.io
+<h2 id="convert-eulerian-integration">Convert-Customer.io Integration</h2>
+<p><a href="https://customer.io/">Customer.io</a> is a behavioral email platform that harnesses user activity and profile data to send targeted campaigns at scale. This article will walk you through how to push custom data to Customer.io.</p>
+<p>For each experiment, the integration will pass along the experiment name and variation name that the visitor is currently bucketed into (if any).</p>
+<h2 id="add-tracking-code-snippets">Add Tracking Code Snippets</h2>
+<p>Make sure the <a href="https://support.convert.com/hc/en-us/articles/205151015-How-to-Install-the-Main-Tag-Code-Javascript">Convert tracking code</a> and the Customer.io javascript code are installed on your page. Customer.io tracking code looks like this:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360002123031/mceclip0.png"></p>
+<p><img src="https://support.convert.com/hc/article_attachments/360002102812/mceclip1.png"></p>
+<h2>Activate Integration Manually</h2>
+<p>Now, you should add this extra code to your website and use <a href="https://learn.customer.io/developer-documentation/javascript-quick-start.html">Customer.io identify function</a> to send customer data. Be sure to modify it with the attributes that you would like to send:</p>
+<pre><code>
+	var refObject = window['convert']['data']['experiments']
+			for (var key in window["convert"]["currentData"]["experiments"]) {
+				if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+					continue;
+				}}
+            
+		var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+		var curExperimentName = refObject[key] &amp;&amp; refObject[key].n ? refObject[key].n : "unknown experiment name";
+		curExperimentName = curExperimentName.replace("Test #", "Test ");
+		var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+		curVariant = curVariant.replace("Var #", "Variation ");
+		
+		
+	_cio.identify({
+     // Required attributes
+     id: 'user_287',           // Unique id for the currently signed in user in your application.
+
+     // Strongly recommended attributes
+     email: 'user@domain.com', // Email of the currently signed in user.
+     created_at: 1339438758,   // Timestamp in your system that represents when
+                               // the user first signed up. You'll want to send it
+                               // as seconds since the epoch.
+
+     // Example attributes (you can name attributes what you wish)
+     Exp_Name: curExperimentName,       
+     Var_Name: curVariant     
+   });
+</code></pre>
+<h2 id="view-convert-data-in-heap-analytics">View Convert Data in Customer.io</h2>
+<p>You will be able to view all of your Convert Experiences data. Once logged in, go to People and search for the custom table attributes you created:</p>
+<p><img src="https://support.convert.com/hc/article_attachments/360002103312/mceclip0.png"></p>

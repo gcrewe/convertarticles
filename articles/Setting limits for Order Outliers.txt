@@ -1,0 +1,12 @@
+Setting limits for Order Outliers
+<p>Sometimes, you may feel that a big order on your e-commerce site, throws your experiment revenue numbers off and that you are not getting an accurate picture. </p>
+<p>Convert enables you to disregard certain orders based on amount thresholds you can configure. We call this "Order Outliers". </p>
+<p>This setting has to be enabled before the orders are taken for them to be included or disregarded. This action cannot be setup retroactively. </p>
+<p>For this to work, you need to have <a href="https://support.convert.com/hc/en-us/articles/204495499-Add-Revenue-Tracking-to-Your-Site" target="_blank" rel="noopener">revenue tracking</a> enabled on your site.</p>
+<p>For example, let's say that we want to ignore any sales below the amount of 5 of your base currency, and 1000. So to do this:</p>
+<ol>
+<li><span style="line-height: 1.5;">We first open the Stats &amp; Settings section of our experience in the "Experience Summary" screen.<br><img src="https://support.convert.com/hc/article_attachments/14270024545293"><br></span></li>
+<li>Then enter the Order Outliers limits in the appropriate boxes, and save the configuration:<br><br><img src="https://support.convert.com/hc/article_attachments/14270036812557">
+</li>
+</ol>
+<p>After this, Convert will disregard the orders that don't fall within these limits. </p>

@@ -1,0 +1,14 @@
+Trigger Convert polling when URL hash changes
+<h2>Issue Description</h2>
+<p>Convert experiments do not run when the URL has a hash.</p>
+<p>For example:</p>
+<p>A website homepage loads with the following URL:</p>
+<p><a href="https://domain.com/">https://domain.com/</a></p>
+<p>After clicking on a link the page loads something like this:</p>
+<p><a href="http://domain.com/#features">http://domain.com/#features</a></p>
+<p>But, if we setup an experiment with that URL, and the user, does not load that URL as the first visit to the site, the experiment will not trigger. </p>
+<p>This is a common issue of <a href="https://support.convert.com/hc/en-us/articles/360030902972" target="_self">single page apps (SPAs).</a></p>
+<h2>Solution</h2>
+<p>Just add the following code to the <strong>Project Global JS section</strong> of your project.</p>
+<pre>convert.$(document).ready(function () {<br> convert.$(window).on('hashchange', function () {<br> _conv_q = _conv_q || []; <br> _conv_q.push(["run","true"]);<br> });<br>});</pre>
+<p><em>Note: Please test it with your SPA framework, as it might not detect hash changes in all frameworks.</em></p>
