@@ -1,0 +1,13 @@
+Reducing the goals tracked to increase page performance
+Overview
+While using Convert, you have the possibility to reduce the number of goals being tracked and placed on the snippet that the visitor downloads from the Convert servers. This improves the script performance, and facilitates debugging experiments during QA and when issues arise.
+Page Performance Impact 
+Adding goals to your project has implications for the Convert script performance. This might affect the performance of the page you are testing on if you add a large number of goals to your project.
+You can find the amount of recommended number of goals in the following article.
+We recommend that you only create only the goals that you need, so you do not run into any of these performance issues.
+Goal Tracking Limit Setting
+However, now Convert has added a feature to automatically stop tracking goals after they have been unattached to running experiments.
+This setting will stop tracking the unattached goals after a certain amount of days. Currently, the setting is for 30 days. However, you can change this to other time thresholds of your choosing. This threshold setting can be changed from the Project Configuration, called Do not track unused goals after.
+
+The tracking will remain for the time threshold is set, so that means that if you set it to 30 days, and 5 days later you decide to re-attach your goals again to your experiment, the data for those goals will still show on the experiment report. 
+ 
