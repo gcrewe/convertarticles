@@ -1,0 +1,15 @@
+Customized experiment reports
+In May 2023, Convert released the Customize Reports feature. 
+ 
+This feature allows you to do the following:
+1. Report report sections, so that insights that are of most value to you can be presented first.
+2. Show/Hide sections in the report that are relevant to your tracking analysis.
+ 
+This feature can be accessed by going into the Experiment report and clicking on the Customize button.
+
+ 
+This will then open a configuration panel for you where you can re-order the different report sections and also show/hide them according to your preferences.
+
+So checkout this new feature and share your thoughts in the comment section!
+ 
+ 
