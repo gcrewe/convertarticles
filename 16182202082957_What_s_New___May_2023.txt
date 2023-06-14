@@ -1,0 +1,8 @@
+What's New - May 2023
+Updates:
+1. You can now click on a change in the Visual Editor and it will scroll to the section of the web page where the change was made.
+
+2. You can now Preview variations in an incognito window to avoid any cache or cookie issues.
+
+3. You can now customize the experiment report as per your preferences. Click here to read more. 
+ 
