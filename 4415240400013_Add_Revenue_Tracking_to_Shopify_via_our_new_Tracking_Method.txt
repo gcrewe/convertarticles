@@ -1,0 +1,38 @@
+Add Revenue Tracking to Shopify via our new Tracking Method
+Shopify combined with our new Tracking Method
+Instead of using the Google Analytics Ecommerce code or the Manual Revenue Tracking code or the webhook solution to capture revenue on your store, you can use our new tracking method and combine it with your Shopify store.
+This method of tracking revenue conversions is more robust than the manual revenue tracking method of creating a Revenue Goal that tracks the "Thank you" page. The reason is that is actually triggered when an order is created, rather than when a visitor visits the thank you page. 
+It also solves the current problem we have with the webhook solution that does not track conversions that happen through the dynamic checkouts button like the Buy Now button, Amazon Pay, Paypal... etc. 
+Add the Convert Script to your Shopify Theme
+To integrate the two platforms, please go to Sales Channels > Online Store > Themes > More Actions > Edit Code
+
+Select the theme.liquid file and paste the Convert tracking script just before the first "{% if %}" section, as shown in the screenshot below:
+
+Don't forget to save your changes in Shopify.
+Create a Revenue Goal in your Convert account
+Go to goals and select the template Revenue Goal:
+
+Add your Goal name and select either Manual Revenue Tracking or GA since it does not matter. Write down the Goal ID since you will use it in the next step:
+
+Add code to your Global Project Javascript
+Add this JS code to the "Global Project Javascript". Be sure to update the revenue_goal_id in the code below with your own which you created in the previous step:
+See the Pen  Revenue via advanced Tracking method by Convert.com (@gcrewe) on CodePen.
+
+
+
+Add code on the checkout Shopify section
+Then you need to add this code on the checkout section (/admin/settings/checkout) of your Shopify:
+
+See the Pen  Revenue Checkout Shopify via Tracking method by Convert.com (@gcrewe) on CodePen.
+
+
+
+Access your Convert Report
+Once you complete your first purchase on your Shopify store:
+
+You will start receiving revenue data in your report:
+
+Live logs can also be used to verify the data:
+
+Compatibility with other Upsell and Subscription Shopify Plugins
+This integration is not currently compatible with other upsell and subscription plugins that use the Shopify API to create orders within Shopify. 
