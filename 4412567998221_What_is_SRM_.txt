@@ -1,0 +1,16 @@
+What is SRM?
+Introduction
+SRM stands for Sample Ratio Mismatch, it is simply a mismatch between the expected number of samples (visitors in the case of A/B testing) between variants.
+Let’s say that our site gets around 15k visitors per week. We have 3 variants, the control (which is the original unchanged page), and 2 variations. How much traffic do you expect each one to receive if it was equally allocated? The answer would be that each variant should receive 15,000 / 3 = 5000 visitors, in an ideal world.
+Now it is very unlikely that each variant would receive exactly 5000 visitors, but a number very close to that, like 4982, or 5021. That slight variation is normal, and due to simple randomness! But we can intuitively sense that if one of the variants received 3500 visitors and the others around 5000, then something might be wrong for that one!
+The SRM test is a test that uses the Chi-square goodness of fit test to test for such problems, instead of using our own “intuition”. It will know for instance if 4850, or 4750 visitors compared to the other number of visitors received are “normal” or not! If there is a big enough variation, our test will trigger at 99% confidence!
+As for unequal allocations, SRM tests also work because the respective proportions of allocations are known and taken into account.
+You might ask, how often is it “normal” to see an SRM? As explained by Lukas Vermeer in his SRM FAQ, even big tech firms do obverse a natural SRM frequency of 6% to 10% in their experiments.
+Now if the SRM repeats more frequently, it warrants a deeper investigation into the experiment design for instance. If you encounter such problems, please do not hesitate to reach out to us, we are always here to help!
+For an in depth SRM analysis check also our blog article here.
+Enable SRM checks for your reports
+You can enable the SRM checks on your Project Configuration > More Settings and be able to see the SRM tags on the report itself. 
+
+The tag will look like this:
+
+ 
