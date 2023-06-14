@@ -1,0 +1,25 @@
+Targeting visitors included on Hubspot lists
+Overview
+It is possible to target and post-segment visitors that are members of Hubspot lists or Hubspot Campaigns with Convert experiences on Hubspot web pages.
+This allows you to leverage the investment the organization might have in their Hubspot lists.
+Hubspot Templates
+It is possible to achieve this by modifying the Hubspot templates by assigning the Hubspot Template variable list to a Custom Convert Page Tag. This allows you to use this Custom Page Tag to target experiences or create post-segmentation segments.
+To do this, modify the Hubspot template, and insert the following code at the beginning and inside of the HEAD tag.
+<!--begin Convert Experiences code--> 
+<script type="text/javascript">
+// The following line assign the Convert page tag variable with the Hubspot template variable
+let _conv_custom_v1 = {request_contact.list_memberships};
+let _conv_custom_v2 = {content.campaign_name};
+</script>
+<script type="text/javascript" src="//cdn-3.convertexperiments.com/js/123456789-123456789.js"></script>
+<!-- end Convert Experiences code -->
+
+Make sure that the project id, of the Convert tracking code, corresponds to your own Convert Project Tracking code, replacing the 1234568-123456789.js with your own. You will not need to insert the Convert tracking code again on your page. If you already have it inserted on your pages, you might want to remove it or make sure that the page-tag variable is assigned before the Convert tracking code is declared.You can map other Hubspot variables as needed, or you could assign it to your owned name variables and call them directly from a JS Condition. The variables have to be assigned while editing the Hubspot templates as described above.
+Creating the Convert Audiences or Segments with the Convert Custom Page Tags
+Create an Audience or Segment within the Advanced Audience Editor when creating a Custom Audience.
+Select a Custom Page Tag condition and compare it to the Hubspot List or Hubspot Campaign that you want to target. If you are targeting different Hubspot Lists or Hubspot Campaigns use a separate condition for each as in the example pictured below. Hubspot Lists numbers can be found on the URL when editing them.
+
+ 
+When creating the conditions, make sure it does not match any other of your existing campaigns.
+Targeting visitors that have met certain criteria in Hubspot
+To do this, simply create a contact list in Hubspot build with the criteria available in Hubspot under your plan and then target the list in Convert as explained above.
