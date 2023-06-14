@@ -1,0 +1,10 @@
+Tracking clicks inside iFrame
+Overview
+Tracking conversions on iFrames that are located in another domain might be necessary, while you are testing. This article describes the option that you have for doing so.
+If you control the iFrame content
+If the frame content is under control, you only need to add the tracking code for your Convert project to the frame page. This will allow tracking anything on the iframe page.
+If the iframe content is under another domain, you will need to also add the domain to the Project Configuration > Active Domains section and enable cross-domain tracking.
+If you do not control the iFrame 
+In this case, you will not be able to track any events inside the frame, as you would not be able to insert the tracking code on that frame. However, we have found a partial solution that allows us to track clicks on the frame itself, but not on any specific button or element inside it.
+To do this, you need to insert the following JS code on the Project Configuration > Global Project Javascript. or on the Experiment Global Javascript, depending on if you want to make it available for all experiments or just your current experiment.
+var monitor = setInterval(function(){    var elem = document.activeElement;    if(elem && elem.tagName == 'IFRAME'){        clearInterval(monitor);        window._conv_q = window._conv_q || [];        // Replace 123456789 with your goal id       _conv_q.push(["triggerConversion","123456789"]);    }}, 100);
