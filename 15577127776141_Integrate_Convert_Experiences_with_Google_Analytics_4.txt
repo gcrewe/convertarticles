@@ -1,0 +1,95 @@
+Integrate Convert Experiences with Google Analytics 4
+Introduction
+In order to gather visitor data for your websites for analytical reasons, you can use Google Analytics 4 (GA4), the most recent version of Google Analytics. You can transmit data from your Convert experiences to GA4 for additional analysis by linking your Convert account with GA4.
+Create a GA4 Property
+Login to the admin side of your GA account and create a GA4 property.
+
+Add a Web Data Stream in GA (optional)
+Add a Web data stream to your new GA4 property (this is optional):
+
+Enter your URL and website name as requested. 
+After entering the required site information, you will be given a Measurement ID: G-XXXXXXXX (example below). 
+
+You may be wondering how many data streams are needed for your specific use case. Try going with one web stream initially, you can always add more later.
+Add Tracking Codes
+Make sure both Convert Tracking code and GA4 code are added on your website.
+Project Level Integration
+Integrating your Convert experiences with GA4 on a project level is a one-time setup. You do not need to repeat this procedure for every new Convert experience.
+In order to enable GA4 integration for your Convert account and apply the integration to your experiences, perform the following steps.
+Go to your Project Configuration, and select Integrations. Select the checkbox for Google Analytics and then select the radio button for Google Analytics 4 Integration.
+
+Click on the "Continue with Google to select property" button and sign into your Google account:
+
+Finish the 2-step verification:
+
+Allow Convert to access your Google account:
+
+Select the GA4 property and data stream you want:
+
+Once you do that, the property will be auto-populated on the field and a green message will let you know that the link between the two tools was successful:
+
+If you now go to a specific experience, you will notice that the integration is added to the integrations section of the summary:
+
+Activate your experience and you will see that Convert allows you to create audiences in your GA4 account for your Convert experience. This way, it saves you from having to repeat configuring your filters in GA4 to create audiences. Click on the Create GA4 Audiences:
+
+Then check your GA4 Audiences:
+
+With your new GA4 audiences, you will be able to filter data per variation. GA4 audiences are just recording visitors to them based on the definition. 
+
+Experience Level Integration
+Instead of integrating all Convert experiences with your GA4 account, you have the option to do that per experience. 
+Simply go to the specific experience you want and start the integration from here:
+
+Cannot save GA4 Audiences
+Google allows up to 255 characters in experience names to be saved when creating GA4 audiences. This means if you have longer experience names, you might encounter this error:
+
+In such cases, try to shorten the experience names before you create the GA4 audiences, and after the activation you can change these to what you want.
+Revenue Tracking
+Revenue tracking is still not available.
+View Convert Data in GA4 Reports
+
+On your GA4 dashboard, go to Reports > Acquisition > Traffic Acquisition. This shows the acquisition overview of all users by default.
+
+
+You can add a comparison to it by clicking on Add comparison. On the Build Comparison panel, specify the dimension as Audience name, select the relevant audiences that you want to include for comparison, and click OK. Then, click Apply.
+
+
+
+Now that you have set up all the audiences, you can set up the metrics for which you want to view the performances of the individual audiences. To do this, click Customize report.
+
+
+
+On the Customize report panel, you can add the parameters such as bounce rate and checkouts, etc. For this, go to Metrics > Add metric, select the relevant metric, and click Apply.
+
+
+You can now see the report of the specified audiences for the specified metrics.
+
+Create Custom GA4 Reports via Explore
+Another way to analyze the Convert visitor data in GA4 is to build custom reports in GA4 based on the values pushed from Convert via the integration. To do this, perform the following steps:
+Under Explorations, click on Blank to create a new exploration from scratch.
+
+Under Variables > SEGMENTS, click on ‘+’ to create a new segment. In the Create a custom segment section, click on User segment.
+
+In the segment creation popup, click on the Add new con… dropdown and search for Experience - variant ID and click on it.
+
+Now, you can add filters to the selected condition by clicking on the + Add filter button, specify the condition in this format - CONV, and click Apply.
+
+Now, you can add metrics and dimensions as required to further drill down your Convert experience audiences in GA4. You can customize the report by adding more segments to compare. 
+Convert Events to GA4
+
+We send events to GA4 (which are used in the audience definition above) so those events can be used for any reports allowed for events. The events we send are according to the official GA doc:
+
+event name:  experience_impression
+
+event property exp_variant_string = CONV-100018331-100099919, first number is the exp ID and second is the variation ID
+
+
+
+
+Archive an Experience with GA4 integration enabled
+Once you archive an experience that has the GA4 integration enabled you will be given this option, to either delete or keep the GA4 audeinces on the GA4 side:
+
+ 
+ 
+
+
