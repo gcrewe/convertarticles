@@ -1,0 +1,33 @@
+Integrate Convert Experiences with Plausible
+Introduction
+Plausible.io is a privacy-friendly analytics service that is an attractive alternative to Google Analytics. It only stores data that enables a simple analysis of visits to your website. In doing so, Plausible does not track the user across multiple websites (does not store cross-site cookies).
+With the Convert-Plausible integration, unique visitors to your experiments’ variations will be passed into Plausible using custom event goals.
+Read more about how you can use Plausible as an alternative to GA.
+Add Tracking Codes
+To set up the integration, you should install the Plausible tracking code according to their instructions. It looks like this:
+
+You should also install the Convert tracking code (instructions can be found here).
+
+Custom Event Goals
+Create a Plausible custom event goal. 
+Example of the data we send to Plausible:current Experiment Name*, current Variation*
+* Depends on whether you have chosen data anonymization or not (more information on this can be found here)
+
+Enable the Integration Manually
+This example code can send Experiment and Variation names to your Plausible goal:
+var refObject = window['convert']['data']['experiments']
+			for (var key in window["convert"]["currentData"]["experiments"]) {
+				if (!window["convert"]["currentData"]["experiments"].hasOwnProperty(key)) {
+					continue;
+				}}
+            
+		var currentExperiment = window["convert"]["currentData"]["experiments"][key];
+		var curExperimentName = refObject[key] && refObject[key].n ? refObject[key].n : "unknown experiment name";
+		curExperimentName = curExperimentName.replace("Test #", "Test ");
+		var curVariant = currentExperiment['variation_name'] ? currentExperiment['variation_name'] : "unknown variant";
+		curVariant = curVariant.replace("Var #", "Variation ");
+		
+	plausible('Convert', {props: {Experiment: curExperimentName}});
+	plausible('Convert', {props: {Variation: curVariant}});
+View Convert Data in Plausible
+Once you enable the integration you can view Experiment ID, Variation ID in Plausible dashboard:
